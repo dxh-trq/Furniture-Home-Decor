@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wishlist — Morrow</title>
-  <meta name="description" content="Pieces you’ve saved, grouped by room.">
+  <title>How to choose a sofa that fits your room and your doorway — Morrow</title>
+  <meta name="description" content="The four measurements that decide whether a sofa works in your home, and a checker for your doorway.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
@@ -199,7 +199,7 @@
           </div>
         </li>
         <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
-        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html" aria-current="page">Inspiration</a></li>
         <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
         <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
       </ul>
@@ -212,7 +212,7 @@
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
       </a>
-      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist" aria-current="page">
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
       </a>
       <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
@@ -223,242 +223,183 @@
   </div>
 </header>
 
-<main id="main" class="wishlist-page">
+<main id="main" class="article-page">
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
         <li><a href="index.html">Home</a></li>
-        <li><span aria-current="page">Wishlist</span></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><span aria-current="page">Buying guides</span></li>
       </ol>
     </nav>
 
-    <header class="wl-head">
-      <div>
-        <h1 class="wl-head__title">Wishlist</h1>
-        <p class="wl-head__lede"><span data-total-count>8</span> saved pieces, grouped by the room they’re for.</p>
-      </div>
-      <div class="wl-head__actions">
-        <button class="btn btn--ghost" type="button" data-share>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
-          Share list
-        </button>
-        <button class="btn btn--primary" type="button" data-add-all>Add all to cart</button>
+    <header class="ahead">
+      <p class="post__meta"><span>Buying guide</span><span>8 min read</span></p>
+      <h1 class="ahead__title">How to choose a sofa that fits your room and your doorway</h1>
+      <p class="ahead__deck">Most sofa returns have nothing to do with comfort. The sofa was too deep for the room, or it never made it past the stairs. Here’s how to avoid both.</p>
+      <div class="byline">
+        <span class="byline__avatar" aria-hidden="true">M</span>
+        <div>
+          <p class="byline__name">Maya Okafor</p>
+          <p class="byline__role">Senior stylist, 18 September 2026</p>
+        </div>
+        <div class="share">
+          <button class="icon-btn icon-btn--round" type="button" data-copy-link aria-label="Copy link to this article">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          </button>
+          <a class="icon-btn icon-btn--round" href="#" aria-label="Share on Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M11 8.5c3-1 5 .5 5 3s-2 4-3.5 3.5M12 10l-2.5 11"/></svg></a>
+        </div>
       </div>
     </header>
 
-    <p class="wl-alert" data-drop-alert>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12 12 20 4 12V4h8z"/><circle cx="8.5" cy="8.5" r="1.5"/></svg>
-      <span data-drop-text><strong>2 pieces</strong> are cheaper than when you saved them.</span>
-      <button class="line__action" type="button" data-show-drops>Show price drops</button>
-    </p>
+    <figure class="ahero">
+      <svg class="post-art ahero__art" viewBox="0 0 400 260" aria-hidden="true"><rect width="400" height="260" fill="#E4DFD3"/><rect y="212" width="400" height="48" fill="#D3C7B2"/><use href="#s-sofa" x="60" y="70" width="280" height="190" style="color:#8E9A7B;--leg:#5C3E28"/></svg>
+    </figure>
 
-    <p class="wl-guest">Browsing as a guest. <a href="account.html#sign-in">Sign in</a> to keep your wishlist on every device.</p>
+    <div class="article">
+      <aside class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title" class="toc__title">In this guide</h2>
+        <ol class="toc__list">
+            <li><a href="#measure-room" data-toc="measure-room">Measure the room</a></li>
+            <li><a href="#measure-route" data-toc="measure-route">Measure the way in</a></li>
+            <li><a href="#depth" data-toc="depth">Choose seat depth and height</a></li>
+            <li><a href="#fabric" data-toc="fabric">Pick the fabric last</a></li>
+            <li><a href="#checklist" data-toc="checklist">Before you order</a></li>
+        </ol>
+      </aside>
 
-    <div class="wl-bar">
-      <div class="chip-tabs" role="group" aria-label="Filter by room">
-        <button class="chip-tab" type="button" data-board-filter="all" aria-pressed="true">All <span data-board-count="all">8</span></button>
-        <button class="chip-tab" type="button" data-board-filter="living" aria-pressed="false">Living room <span data-board-count="living">5</span></button>
-        <button class="chip-tab" type="button" data-board-filter="dining" aria-pressed="false">Dining room <span data-board-count="dining">2</span></button>
-        <button class="chip-tab" type="button" data-board-filter="bedroom" aria-pressed="false">Bedroom <span data-board-count="bedroom">1</span></button>
+      <div class="prose">
+        <p class="prose__lead">Before you look at a single colour, spend ten minutes with a tape measure. You need four numbers: the wall, the walkway, the narrowest doorway and the tightest turn on the way in.</p>
+
+        <h2 id="measure-room"><span class="prose__step">1</span>Measure the room</h2>
+        <p>Measure the wall the sofa will sit against, then take off at least 30 cm so it doesn’t look squeezed in. A 3-seat sofa at 220 cm needs a wall of around 250 cm. Next, measure out from the wall: a sofa, a coffee table and a walkway need about 95 + 45 + 90 cm of floor.</p>
+        <p>Mark the footprint on the floor with painter’s tape and leave it for a day. You’ll know within an evening whether it feels right.</p>
+        <aside class="tip">
+          <p class="tip__title">Stylist’s tip</p>
+          <p>Leave about 45 cm between the front of the sofa and the coffee table. Close enough to reach a cup, far enough to walk past.</p>
+        </aside>
+
+        <h2 id="measure-route"><span class="prose__step">2</span>Measure the way in</h2>
+        <p>This is the step people skip. Walk the route from the street to the room and measure the width of every doorway, hallway and stair turn. The number that matters is the narrowest one.</p>
+        <figure class="diagram">
+          <svg viewBox="0 0 520 330" role="img" aria-labelledby="diagram-cap">
+            <rect width="520" height="330" fill="#F8F8F5"/>
+            <rect x="170" y="30" width="180" height="250" fill="none" stroke="#7A5236" stroke-width="10"/>
+            <rect x="200" y="84" width="120" height="190" rx="10" fill="#8E9A7B" opacity=".9"/>
+            <rect x="214" y="96" width="92" height="30" rx="8" fill="#000" opacity=".08"/>
+            <path d="M175 18 H345 M175 10 V26 M345 10 V26" stroke="#1C1F1B" stroke-width="2"/>
+            <text x="260" y="12" text-anchor="middle" class="dim-text">Door width</text>
+            <path d="M372 35 V275 M364 35 H380 M364 275 H380" stroke="#1C1F1B" stroke-width="2"/>
+            <text x="392" y="160" class="dim-text">Door height</text>
+            <path d="M200 296 H320" stroke="#C28E2E" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="260" y="318" text-anchor="middle" class="dim-text dim-text--accent">Sofa on its back, legs off</text>
+            <text x="30" y="150" class="dim-text">Measure the</text>
+            <text x="30" y="166" class="dim-text">narrowest point</text>
+          </svg>
+          <figcaption id="diagram-cap">A sofa goes through a doorway on its back, so its height (with the legs off) has to be narrower than the door, and its depth shorter than the door is tall.</figcaption>
+        </figure>
+
+        <section class="fit" aria-labelledby="fit-title">
+          <h3 id="fit-title" class="fit__title">Will it fit through your door?</h3>
+          <p class="fit__lede">Enter your narrowest doorway and we’ll check it against the Alder sofa.</p>
+          <form class="fit__form" data-fit novalidate>
+            <div class="field">
+              <label for="fit-w">Door width (cm)</label>
+              <input id="fit-w" type="number" inputmode="numeric" min="40" max="300" placeholder="e.g. 76" aria-describedby="fit-w-err">
+              <p class="field__error" id="fit-w-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="fit-h">Door height (cm)</label>
+              <input id="fit-h" type="number" inputmode="numeric" min="150" max="300" placeholder="e.g. 200" aria-describedby="fit-h-err">
+              <p class="field__error" id="fit-h-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="fit-size">Sofa</label>
+              <select id="fit-size">
+                <option value="2">Alder 2-seat, 190 cm</option>
+                <option value="3" selected>Alder 3-seat, 220 cm</option>
+                <option value="c">Alder corner, arrives in 2 pieces</option>
+              </select>
+            </div>
+            <button class="btn btn--primary" type="submit">Check</button>
+          </form>
+          <div class="fit__result" data-fit-result role="status" aria-live="polite" hidden></div>
+        </section>
+
+        <h2 id="depth"><span class="prose__step">3</span>Choose seat depth and height</h2>
+        <p>Seat depth changes how a sofa feels more than anything else. Around 55 cm suits people who sit upright or are under 170 cm. Deeper seats, 60 cm and over, are for lounging with your legs up, and usually need a cushion behind your back if you want to sit straight.</p>
+        <blockquote class="pull">“Sit on it the way you actually sit at home, not the way you sit in a showroom.”</blockquote>
+        <p>Seat height matters if anyone in your home finds low seats hard to get out of. 45 cm is standard. Anything under 40 cm feels lounge-like and looks lower in a room.</p>
+
+        <div class="story-product card">
+          <a class="story-product__media card__media" href="product.html" style="color:#8E9A7B;--leg:#5C3E28"><svg class="art" viewBox="0 0 200 160" role="img" aria-label="Alder 3-seat sofa"><use href="#s-sofa"/></svg></a>
+          <div class="story-product__body">
+            <p class="story-product__kicker">Shop this story</p>
+            <h3 class="card__name"><a href="product.html">Alder 3-seat sofa</a></h3>
+            <p class="card__meta">Seat depth 58 cm, height 45 cm. Legs unscrew for tight doorways.</p>
+            <div class="story-product__foot">
+              <p class="price">$1,890</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+              <a class="link" href="product.html">View details</a>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="fabric"><span class="prose__step">4</span>Pick the fabric last</h2>
+        <p>Once you know the size and shape, fabric is easier. Bouclé hides wear and suits homes with pets that don’t scratch. Linen softens beautifully but creases. Leather is the easiest to wipe clean and gets better with age. Order swatches and look at them in morning and evening light before you decide.</p>
+        <p><a class="link" href="services.html#swatches">Order up to six free swatches</a></p>
+
+        <h2 id="checklist"><span class="prose__step">5</span>Before you order</h2>
+        <ul class="checklist">
+          <li>The wall is at least 30 cm wider than the sofa</li>
+          <li>There’s 90 cm of walkway in front of the coffee table</li>
+          <li>The narrowest doorway is wider than the sofa’s height with legs off</li>
+          <li>Stair turns and lifts are measured, including the ceiling above the stairs</li>
+          <li>You’ve seen the fabric in your own light</li>
+        </ul>
+        <p>Still unsure? Our stylists will check your measurements on a free video call.</p>
+        <p><a class="btn btn--ghost" href="services.html">Book a free design call</a></p>
       </div>
-      <label class="sort">
-        <span>Sort by</span>
-        <select data-sort>
-          <option value="recent">Recently saved</option>
-          <option value="drops">Price drops first</option>
-          <option value="price-asc">Price, low to high</option>
-          <option value="price-desc">Price, high to low</option>
-        </select>
-      </label>
     </div>
 
-    <div class="wl-layout">
-      <ul class="wl-grid" data-grid>
-        <li class="card wcard" data-id="ren" data-board="living" data-price="760" data-added="2026-09-20" data-order="0" style="--leg:#3B2A1E">
-          <a class="card__media" href="product.html" style="color:#9A6240">
-            
-            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Ren lounge chair"><use href="#s-armchair"/></svg>
-          </a>
-          <button class="wcard__remove" type="button" data-remove aria-label="Remove Ren lounge chair from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
-          <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Ren lounge chair</a></h3>
-            <p class="card__meta">Cognac leather, walnut legs</p>
-            <p class="price wcard__price">$760</p>
-            
-            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
-            <div class="wcard__foot">
-              <button class="btn btn--small" type="button" data-move>Move to cart</button>
-              <p class="wcard__added">Saved 20 Sep</p>
-            </div>
-          </div>
+    <aside class="author">
+      <span class="byline__avatar byline__avatar--lg" aria-hidden="true">M</span>
+      <div>
+        <p class="author__kicker">Written by</p>
+        <p class="author__name">Maya Okafor</p>
+        <p class="author__bio">Maya has spent twelve years helping people furnish homes of every size, from studio flats to farmhouses. She leads Morrow’s free design calls.</p>
+      </div>
+    </aside>
+
+    <section class="section related-posts">
+      <div class="section__head">
+        <h2 class="section__title">Keep reading</h2>
+        <a class="link" href="blog.html">All articles</a>
+      </div>
+      <ul class="jgrid">
+        <li class="jcard" data-cat="guides" data-title="bouclé, linen or leather? choosing a fabric you’ll live with">
+          <a class="jcard__media" href="blog-post.html" tabindex="-1" aria-hidden="true"><svg class="post-art" viewBox="0 0 400 260" aria-hidden="true"><rect width="400" height="260" fill="#E6DDD0"/><circle cx="130" cy="130" r="62" fill="#DCD4C3"/><circle cx="200" cy="130" r="62" fill="#8E9A7B"/><circle cx="270" cy="130" r="62" fill="#9A6240"/></svg></a>
+          <p class="post__meta"><span>Buying guides</span><span>7 min read</span></p>
+          <h3 class="jcard__title"><a href="blog-post.html">Bouclé, linen or leather? Choosing a fabric you’ll live with</a></h3>
+          <p class="jcard__excerpt">Pets, children, sunlight and how often you’ll wash the covers. How each fabric holds up after two years.</p>
+          <p class="jcard__by">Maya Okafor, 28 Aug 2026</p>
         </li>
-        <li class="card wcard" data-id="arc" data-board="living" data-price="390" data-added="2026-09-14" data-order="1" data-drop style="--leg:#5C3E28">
-          <a class="card__media" href="product.html" style="color:#B08A5E">
-            <span class="badge badge--sale">$70 less</span>
-            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Arc wall mirror"><use href="#s-mirror"/></svg>
-          </a>
-          <button class="wcard__remove" type="button" data-remove aria-label="Remove Arc wall mirror from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
-          <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Arc wall mirror</a></h3>
-            <p class="card__meta">Natural oak, 60 × 100 cm</p>
-            <p class="price wcard__price"><span class="price__now">$390</span></p>
-            <p class="wcard__drop">Was $460 when you saved it</p>
-            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
-            <div class="wcard__foot">
-              <button class="btn btn--small" type="button" data-move>Move to cart</button>
-              <p class="wcard__added">Saved 14 Sep</p>
-            </div>
-          </div>
+        <li class="jcard" data-cat="guides" data-title="how to size a rug (and the mistake almost everyone makes)">
+          <a class="jcard__media" href="blog-post.html" tabindex="-1" aria-hidden="true"><svg class="post-art" viewBox="0 0 400 260" aria-hidden="true"><rect width="400" height="260" fill="#E8E2D6"/><use href="#s-rug" x="60" y="10" width="280" height="240" style="color:#9AA488;--leg:#5C3E28"/></svg></a>
+          <p class="post__meta"><span>Buying guides</span><span>5 min read</span></p>
+          <h3 class="jcard__title"><a href="blog-post.html">How to size a rug (and the mistake almost everyone makes)</a></h3>
+          <p class="jcard__excerpt">If the front legs of your sofa don’t sit on it, the rug is too small. Sizes that work for every room.</p>
+          <p class="jcard__by">Maya Okafor, 7 Aug 2026</p>
         </li>
-        <li class="card wcard" data-id="mira" data-board="living" data-price="540" data-added="2026-09-10" data-order="2" style="--leg:#5C3E28">
-          <a class="card__media" href="product.html" style="color:#9AA488">
-            
-            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Mira wool rug"><use href="#s-rug"/></svg>
-          </a>
-          <button class="wcard__remove" type="button" data-remove aria-label="Remove Mira wool rug from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
-          <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Mira wool rug</a></h3>
-            <p class="card__meta">Sage, 200 × 300 cm</p>
-            <p class="price wcard__price">$540</p>
-            
-            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
-            <div class="wcard__foot">
-              <button class="btn btn--small" type="button" data-move>Move to cart</button>
-              <p class="wcard__added">Saved 10 Sep</p>
-            </div>
-          </div>
-        </li>
-        <li class="card wcard" data-id="drift" data-board="living" data-price="690" data-added="2026-09-03" data-order="3" style="--leg:#5C3E28">
-          <a class="card__media" href="product.html" style="color:#6B4A33">
-            
-            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Drift coffee table"><use href="#s-coffeetable"/></svg>
-          </a>
-          <button class="wcard__remove" type="button" data-remove aria-label="Remove Drift coffee table from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
-          <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Drift coffee table</a></h3>
-            <p class="card__meta">Smoked oak, 120 cm</p>
-            <p class="price wcard__price">$690</p>
-            
-            <p class="card__stock"><span class="dot dot--order"></span>Only 3 left</p>
-            <div class="wcard__foot">
-              <button class="btn btn--small" type="button" data-move>Move to cart</button>
-              <p class="wcard__added">Saved 3 Sep</p>
-            </div>
-          </div>
-        </li>
-        <li class="card wcard" data-id="terra" data-board="living" data-price="85" data-added="2026-08-05" data-order="4" style="--leg:#5C3E28">
-          <a class="card__media" href="product.html" style="color:#B7775A">
-            
-            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Terra planter"><use href="#s-plant"/></svg>
-          </a>
-          <button class="wcard__remove" type="button" data-remove aria-label="Remove Terra planter from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
-          <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Terra planter</a></h3>
-            <p class="card__meta">Unglazed terracotta, 40 cm</p>
-            <p class="price wcard__price">$85</p>
-            
-            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
-            <div class="wcard__foot">
-              <button class="btn btn--small" type="button" data-move>Move to cart</button>
-              <p class="wcard__added">Saved 5 Aug</p>
-            </div>
-          </div>
-        </li>
-        <li class="card wcard" data-id="halo" data-board="dining" data-price="168" data-added="2026-08-28" data-order="5" data-drop style="--leg:#2B2F2A">
-          <a class="card__media" href="product.html" style="color:#6F7A5E">
-            <span class="badge badge--sale">$42 less</span>
-            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Halo pendant light"><use href="#s-pendant"/></svg>
-          </a>
-          <button class="wcard__remove" type="button" data-remove aria-label="Remove Halo pendant light from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
-          <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Halo pendant light</a></h3>
-            <p class="card__meta">Moss, powder-coated aluminium</p>
-            <p class="price wcard__price"><span class="price__now">$168</span></p>
-            <p class="wcard__drop">Was $210 when you saved it</p>
-            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
-            <div class="wcard__foot">
-              <button class="btn btn--small" type="button" data-move>Move to cart</button>
-              <p class="wcard__added">Saved 28 Aug</p>
-            </div>
-          </div>
-        </li>
-        <li class="card wcard" data-id="fold" data-board="dining" data-price="240" data-added="2026-08-20" data-order="6" style="--leg:#5C3E28">
-          <a class="card__media" href="product.html" style="color:#B08A5E">
-            
-            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Fold dining chair, set of 2"><use href="#s-chair"/></svg>
-          </a>
-          <button class="wcard__remove" type="button" data-remove aria-label="Remove Fold dining chair, set of 2 from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
-          <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Fold dining chair, set of 2</a></h3>
-            <p class="card__meta">Natural oak</p>
-            <p class="price wcard__price">$240</p>
-            
-            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
-            <div class="wcard__foot">
-              <button class="btn btn--small" type="button" data-move>Move to cart</button>
-              <p class="wcard__added">Saved 20 Aug</p>
-            </div>
-          </div>
-        </li>
-        <li class="card wcard" data-id="linden" data-board="bedroom" data-price="1480" data-added="2026-08-12" data-order="7" style="--leg:#5C3E28">
-          <a class="card__media" href="product.html" style="color:#A48A6A">
-            
-            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Linden bed"><use href="#s-bed"/></svg>
-          </a>
-          <button class="wcard__remove" type="button" data-remove aria-label="Remove Linden bed from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
-          <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Linden bed</a></h3>
-            <p class="card__meta">Oat linen, queen</p>
-            <p class="price wcard__price">$1,480</p>
-            
-            <p class="card__stock"><span class="dot dot--order"></span>Made to order, 6–8 weeks</p>
-            <div class="wcard__foot">
-              <button class="btn btn--small" type="button" data-move>Move to cart</button>
-              <p class="wcard__added">Saved 12 Aug</p>
-            </div>
-          </div>
+        <li class="jcard" data-cat="guides" data-title="the five measurements to take before buying a dining table">
+          <a class="jcard__media" href="blog-post.html" tabindex="-1" aria-hidden="true"><svg class="post-art" viewBox="0 0 400 260" aria-hidden="true"><rect width="400" height="260" fill="#E6DDD0"/><use href="#s-sideboard" x="60" y="70" width="280" height="190" style="color:#B08A5E;--leg:#5C3E28"/><path d="M66 60 H334 M66 54 V66 M334 54 V66" stroke="#1C1F1B" stroke-width="2"/></svg></a>
+          <p class="post__meta"><span>Buying guides</span><span>5 min read</span></p>
+          <h3 class="jcard__title"><a href="blog-post.html">The five measurements to take before buying a dining table</a></h3>
+          <p class="jcard__excerpt">Room size is only the start. Chair clearance, leg positions and how many people you really host.</p>
+          <p class="jcard__by">Maya Okafor, 26 Jun 2026</p>
         </li>
       </ul>
-
-      <aside class="room" aria-labelledby="room-title" data-room>
-        <div class="room__frame">
-          <svg class="room__art" viewBox="0 0 800 480" role="img" aria-labelledby="room-desc">
-            <desc id="room-desc" data-room-desc>Your saved pieces arranged in a room.</desc>
-            <rect width="800" height="480" fill="#D8DDCD"/>
-            <rect y="380" width="800" height="100" fill="#C8B596"/>
-            <rect y="376" width="800" height="6" fill="#BBA682"/>
-            <g data-scene="living">
-              <svg x="100" y="392" width="600" height="84" viewBox="0 0 200 160" preserveAspectRatio="none" data-for="mira"><use href="#s-rug" style="color:#9AA488"/></svg>
-              <use href="#s-mirror" x="300" y="50" width="200" height="160" style="color:#B08A5E" data-for="arc"/>
-              <use href="#s-armchair" x="50" y="181" width="280" height="224" style="color:#9A6240;--leg:#3B2A1E" data-for="ren"/>
-              <use href="#s-coffeetable" x="300" y="258" width="240" height="192" style="color:#6B4A33" data-for="drift"/>
-              <use href="#s-plant" x="570" y="240" width="200" height="160" style="color:#B7775A" data-for="terra"/>
-            </g>
-            <g data-scene="dining" display="none">
-              <use href="#s-pendant" x="280" y="0" width="240" height="192" style="color:#6F7A5E;--leg:#2B2F2A" data-for="halo"/>
-              <use href="#s-chair" x="150" y="212" width="240" height="192" style="color:#B08A5E" data-for="fold"/>
-              <use href="#s-chair" x="410" y="212" width="240" height="192" style="color:#B08A5E" data-for="fold"/>
-            </g>
-            <g data-scene="bedroom" display="none">
-              <use href="#s-bed" x="180" y="72" width="440" height="352" style="color:#A48A6A;--leg:#5C3E28" data-for="linden"/>
-            </g>
-          </svg>
-        </div>
-        <div class="room__body">
-          <h2 id="room-title" class="room__title">See it together</h2>
-          <p class="room__lede"><span data-room-name>Living room</span>: <span data-room-count>5</span> pieces, <strong data-room-total>$2,465</strong></p>
-          <p class="room__hint">Your saved pieces in one room, so you can check they work together. Remove something and it leaves the room.</p>
-          <a class="btn btn--light room__cta" href="services.html">Get a free design call</a>
-        </div>
-      </aside>
-    </div>
-
-    <div class="acc-empty wl-empty" data-empty hidden>
-      <svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#DCD4C3;--leg:#B08A5E"/></svg>
-      <h2 data-empty-title>Nothing saved yet</h2>
-      <p data-empty-text>Tap the heart on any piece and it will wait for you here.</p>
-      <a class="btn btn--primary" href="shop.html">Browse living room</a>
-    </div>
+    </section>
   </div>
 </main>
 
@@ -526,6 +467,6 @@
 <div class="toast" role="status" aria-live="polite" hidden></div>
 
 <script src="assets/js/main.js"></script>
-<script src="assets/js/wishlist.js"></script>
+<script src="assets/js/post.js"></script>
 </body>
 </html>
