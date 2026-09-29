@@ -53,5 +53,7 @@ Planning docs:
 - `services.html` — design services: three service options, how it works, a 4-step booking form (service, room, time, details) with a live summary and confirmation, and the free swatch picker at `services.html#swatches` (up to 6 from 14 fabrics). Logic in `assets/js/services.js`.
   Available times are simulated; connect your scheduling tool and swatch fulfilment in the two submit handlers.
 
+- `trade.html` — trade program: benefits, a savings calculator (yearly spend → tier, discount, savings and unlocked perks, synced with the tier table), contract specifications, project case studies, an application form with resale-certificate upload, and trade FAQs. Logic in `assets/js/trade.js`; tier thresholds and discounts are in `TIERS`.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.

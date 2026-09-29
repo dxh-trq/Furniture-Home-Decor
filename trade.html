@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trade program — Morrow</title>
+  <meta name="description" content="Trade pricing, a dedicated account manager and contract-grade furniture for interior designers, architects and hospitality.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="trade-page">
+  <section class="trade-hero">
+    <div class="container trade-hero__inner">
+      <div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Trade program</span></li></ol>
+        </nav>
+        <h1 class="trade-hero__title">Furniture for the projects you design</h1>
+        <p class="trade-hero__lede">Trade pricing, an account manager who knows your projects, and pieces built to contract standards. For interior designers, architects, hospitality and workplace teams.</p>
+        <div class="trade-hero__ctas">
+          <a class="btn btn--light" href="#apply">Apply in 5 minutes</a>
+          <a class="btn trade-hero__ghost" href="#calculator">See what you’d save</a>
+        </div>
+      </div>
+      <dl class="trade-hero__facts">
+        <div><dt>Trade discount</dt><dd>15–25%</dd></div>
+        <div><dt>Approval</dt><dd>2 working days</dd></div>
+        <div><dt>Fee to join</dt><dd>None</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title tsec-title">What you get</h2>
+      <ul class="tbenefits">
+        <li class="tbenefit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12 12 20 4 12V4h8z"/><circle cx="8.5" cy="8.5" r="1.5"/></svg><h3>Trade pricing</h3><p>15% off everything from your first order, rising to 25% as your projects grow.</p></li>
+        <li class="tbenefit"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><h3>Your own account manager</h3><p>One person who knows your projects, holds stock and chases lead times for you.</p></li>
+        <li class="tbenefit"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="4"/><circle cx="16" cy="8" r="4"/><circle cx="12" cy="15" r="4"/></svg><h3>Samples on loan</h3><p>Full fabric books, finish chips and stone samples, sent free and collected when you’re done.</p></li>
+        <li class="tbenefit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/></svg><h3>Tax-exempt buying</h3><p>Upload your resale certificate once and we’ll remove sales tax from eligible orders.</p></li>
+        <li class="tbenefit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17 17 3l4 4L7 21H3z"/><path d="m14 6 4 4M11 9l2 2M8 12l2 2"/></svg><h3>Custom sizes and COM</h3><p>Sofas in custom lengths and depths, and upholstery in your client’s own material.</p></li>
+        <li class="tbenefit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 18V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1"/><path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-1"/><path d="M9 18h6"/><circle cx="7" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg><h3>Project delivery</h3><p>Hold orders in our warehouse and deliver everything to site on one day, white glove.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section tcalc-sec" id="calculator" aria-labelledby="calc-title">
+    <div class="container">
+      <div class="tcalc" data-calc>
+        <div class="tcalc__input">
+          <h2 id="calc-title" class="section__title">What would you save?</h2>
+          <p class="tcalc__lede">Move the slider to your expected spend with us over a year, across all your projects.</p>
+          <label class="tcalc__label" for="calc-spend">Yearly spend</label>
+          <div class="tcalc__row">
+            <span class="tcalc__prefix" aria-hidden="true">$</span>
+            <input id="calc-num" class="tcalc__num" type="text" inputmode="numeric" aria-label="Yearly spend in dollars" value="40,000">
+          </div>
+          <input id="calc-spend" class="tcalc__range" type="range" min="0" max="250000" step="1000" value="40000" aria-valuetext="$40,000">
+          <div class="tcalc__scale" aria-hidden="true"><span>$0</span><span>$25k</span><span>$100k</span><span>$250k</span></div>
+        </div>
+        <div class="tcalc__out" aria-live="polite">
+          <p class="tcalc__tier">You’d be a <strong data-calc-tier>Partner</strong> member</p>
+          <p class="tcalc__save"><span data-calc-save>$8,000</span> <small>saved a year</small></p>
+          <p class="tcalc__rate"><span data-calc-rate>20%</span> off every order</p>
+          <p class="tcalc__next" data-calc-next>Spend $60,000 more a year to reach Contract (25%).</p>
+          <ul class="tcalc__perks">
+              <li data-perk-tier="studio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Trade pricing on every order</span></li>
+              <li data-perk-tier="studio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Samples on loan</span></li>
+              <li data-perk-tier="studio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Tax-exempt buying</span></li>
+              <li data-perk-tier="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Dedicated account manager</span></li>
+              <li data-perk-tier="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Custom sizes and COM</span></li>
+              <li data-perk-tier="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>30-day payment terms</span></li>
+              <li data-perk-tier="contract"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Consolidated project delivery</span></li>
+              <li data-perk-tier="contract"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span>Contract-grade specifications</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title tsec-title">Three tiers, no fees</h2>
+      <div class="ttable-wrap">
+        <table class="ttable" data-tier-table>
+          <caption class="visually-hidden">Trade tiers and what each includes</caption>
+          <thead>
+            <tr><th scope="col"><span class="visually-hidden">Benefit</span></th><th scope="col" data-col="studio">Studio</th><th scope="col" data-col="partner">Partner</th><th scope="col" data-col="contract">Contract</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Trade discount</th><td>15%</td><td>20%</td><td>25%</td></tr>
+            <tr><th scope="row">Annual spend</th><td>Any</td><td>$25,000+</td><td>$100,000+</td></tr>
+            <tr><th scope="row">Samples on loan</th><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td></tr>
+            <tr><th scope="row">Tax-exempt buying</th><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td></tr>
+            <tr><th scope="row">Dedicated account manager</th><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/></svg><span class="visually-hidden">Not included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td></tr>
+            <tr><th scope="row">Custom sizes and COM</th><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/></svg><span class="visually-hidden">Not included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td></tr>
+            <tr><th scope="row">30-day payment terms</th><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/></svg><span class="visually-hidden">Not included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td></tr>
+            <tr><th scope="row">Consolidated project delivery</th><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/></svg><span class="visually-hidden">Not included</span></td><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/></svg><span class="visually-hidden">Not included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td></tr>
+            <tr><th scope="row">Contract-grade specifications</th><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/></svg><span class="visually-hidden">Not included</span></td><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/></svg><span class="visually-hidden">Not included</span></td><td><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg><span class="visually-hidden">Included</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="ttable__note">Your tier is reviewed every January based on the previous 12 months, and never goes down mid-year.</p>
+    </div>
+  </section>
+
+  <section class="section tspec-sec">
+    <div class="container tspec">
+      <div>
+        <h2 class="section__title">Built for contract use</h2>
+        <p>Hotel lobbies and office lounges see more use in a month than a living room does in a year. Our contract versions are tested for it.</p>
+        <a class="btn btn--light" href="contact.html">Ask for spec sheets</a>
+      </div>
+      <dl class="tspec__list">
+        <div><dt>Fire safety</dt><dd>CAL TB 117-2013 as standard; BS 5852 on request</dd></div>
+        <div><dt>Abrasion</dt><dd>Contract fabrics rated 100,000+ double rubs</dd></div>
+        <div><dt>Frames</dt><dd>Kiln-dried hardwood, 10-year commercial warranty</dd></div>
+        <div><dt>Lead times</dt><dd>6–8 weeks standard, 10–12 weeks for custom sizes</dd></div>
+        <div><dt>Quantities</dt><dd>Orders of 200+ pieces, phased to your programme</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Recent trade projects</h2>
+        <a class="link" href="contact.html">Tell us about yours</a>
+      </div>
+      <ul class="tprojects">
+        <li class="tproject">
+          <div class="tproject__art" aria-hidden="true"><svg viewBox="0 0 400 260"><rect width="400" height="260" fill="#E6DCCB"/><rect y="200" width="400" height="60" fill="#CDBB9E"/><use href="#s-bed" x="40" y="60" width="320" height="200" style="color:#8E9A7B;--leg:#5C3E28"/><use href="#s-pendant" x="280" y="0" width="100" height="80" style="color:#C28E2E;--leg:#2B2F2A"/></svg></div>
+          <p class="tproject__place">Hudson, NY</p>
+          <h3>The Linden Hotel</h3>
+          <p class="tproject__scope">42 guest rooms and a lobby lounge</p>
+          <p class="tproject__by">Designed by Studio Ferris</p>
+        </li>
+        <li class="tproject">
+          <div class="tproject__art" aria-hidden="true"><svg viewBox="0 0 400 260"><rect width="400" height="260" fill="#DCE0D2"/><rect y="200" width="400" height="60" fill="#C8B596"/><use href="#s-sofa" x="20" y="90" width="220" height="160" style="color:#4A4D48;--leg:#5C3E28"/><use href="#s-armchair" x="230" y="100" width="150" height="140" style="color:#9A6240;--leg:#3B2A1E"/></svg></div>
+          <p class="tproject__place">Chicago, IL</p>
+          <h3>Northside Offices</h3>
+          <p class="tproject__scope">Reception and three breakout lounges</p>
+          <p class="tproject__by">Designed by Hale & Oduya Architects</p>
+        </li>
+        <li class="tproject">
+          <div class="tproject__art" aria-hidden="true"><svg viewBox="0 0 400 260"><rect width="400" height="260" fill="#E8E2D6"/><rect y="200" width="400" height="60" fill="#CDBB9E"/><use href="#s-chair" x="30" y="90" width="160" height="150" style="color:#6B4A33;--leg:#5C3E28"/><use href="#s-chair" x="210" y="90" width="160" height="150" style="color:#6B4A33;--leg:#5C3E28"/><use href="#s-pendant" x="140" y="0" width="120" height="96" style="color:#6F7A5E;--leg:#2B2F2A"/></svg></div>
+          <p class="tproject__place">Austin, TX</p>
+          <h3>Olive & Salt</h3>
+          <p class="tproject__scope">Restaurant dining room, 84 covers</p>
+          <p class="tproject__by">Designed by Maria Ortega Interiors</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section tapply-sec" id="apply" aria-labelledby="apply-title">
+    <div class="container tapply">
+      <div class="tapply__intro">
+        <h2 id="apply-title" class="section__title">Apply to join</h2>
+        <p>It takes about five minutes. We review every application within two working days and email you either way.</p>
+        <ul class="tapply__need">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Your business name and website or portfolio</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>A resale certificate, if you’d like tax-exempt buying</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>A rough idea of your yearly spend</li>
+        </ul>
+      </div>
+      <div>
+        <form class="tapply__form" data-apply novalidate>
+          <fieldset class="topics">
+            <legend>What best describes your business?</legend>
+            <div class="topics__grid tapply__types">
+              <label class="topic"><input type="radio" name="biz" value="Interior designer"><span>Interior designer</span></label>
+              <label class="topic"><input type="radio" name="biz" value="Architect"><span>Architect</span></label>
+              <label class="topic"><input type="radio" name="biz" value="Hospitality"><span>Hospitality</span></label>
+              <label class="topic"><input type="radio" name="biz" value="Home stager"><span>Home stager</span></label>
+              <label class="topic"><input type="radio" name="biz" value="Workplace"><span>Workplace</span></label>
+              <label class="topic"><input type="radio" name="biz" value="Other"><span>Other</span></label>
+            </div>
+            <p class="field__error" id="biz-err" hidden></p>
+          </fieldset>
+          <div class="field-grid">
+              <div class="field">
+                <label for="tr-first">First name</label>
+                <input id="tr-first" name="tr-first" type="text" autocomplete="given-name" aria-describedby="tr-first-err">
+                <p class="field__error" id="tr-first-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="tr-last">Last name</label>
+                <input id="tr-last" name="tr-last" type="text" autocomplete="family-name" aria-describedby="tr-last-err">
+                <p class="field__error" id="tr-last-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="tr-email">Work email</label>
+                <input id="tr-email" name="tr-email" type="email" autocomplete="email" aria-describedby="tr-email-err">
+                <p class="field__error" id="tr-email-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="tr-phone">Phone</label>
+                <input id="tr-phone" name="tr-phone" type="tel" autocomplete="tel" aria-describedby="tr-phone-err">
+                <p class="field__error" id="tr-phone-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="tr-company">Business name</label>
+                <input id="tr-company" name="tr-company" type="text" autocomplete="organization" aria-describedby="tr-company-err">
+                <p class="field__error" id="tr-company-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="tr-site">Website or portfolio</label>
+                <input id="tr-site" name="tr-site" type="url" autocomplete="url" placeholder="https://" aria-describedby="tr-site-err">
+                <p class="field__error" id="tr-site-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="tr-spend">Expected yearly spend</label>
+                <select id="tr-spend" name="spend" aria-describedby="tr-spend-err">
+                  <option value="">Select</option>
+                  <option>Under $25,000</option>
+                  <option>$25,000–$100,000</option>
+                  <option>Over $100,000</option>
+                </select>
+                <p class="field__error" id="tr-spend-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="tr-cert">Resale certificate <span class="field__opt">(optional)</span></label>
+                <input id="tr-cert" type="file" accept=".pdf,image/*" class="tapply__file" aria-describedby="tr-cert-err">
+                <p class="field__error" id="tr-cert-err" hidden></p>
+              </div>
+              <div class="field field--full">
+                <label for="tr-about">Tell us about your projects <span class="field__opt">(optional)</span></label>
+                <textarea id="tr-about" rows="4" placeholder="e.g. Boutique hotels and residential in the Hudson Valley, 6–10 projects a year"></textarea>
+              </div>
+            </div>
+            <label class="check check--inline"><input type="checkbox" id="tr-agree"><span class="check__box" aria-hidden="true"></span><span>I agree to the <a href="terms.html">trade terms</a></span></label>
+            <p class="field__error" id="tr-agree-err" hidden></p>
+          <button class="btn btn--primary tapply__submit" type="submit">Send application</button>
+        </form>
+        <div class="tapply__done" data-apply-done hidden tabindex="-1">
+          <div class="confirm__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg></div>
+          <h3>Application received</h3>
+          <p data-apply-text></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container sv-faq">
+      <h2 class="section__title">Trade questions</h2>
+      <div>
+        <details class="qa"><summary>Who can join?</summary><p>Anyone who specifies or buys furniture for clients as part of their business: interior designers, architects, stagers, hospitality and workplace teams, and retailers. We may ask for a portfolio or business registration.</p></details>
+        <details class="qa"><summary>Can I use my discount on personal orders?</summary><p>Yes, on orders for your own home, up to $10,000 a year.</p></details>
+        <details class="qa"><summary>How do client orders work?</summary><p>Order under your trade account with your client’s delivery address, or ship to our warehouse to hold for a project. Invoices come to you, never to your client, and never show retail prices.</p></details>
+        <details class="qa"><summary>Can I get samples of finishes and stone?</summary><p>Yes. Trade members can borrow full fabric books, finish chips and stone samples for 30 days, free both ways.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html" aria-current="page">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/trade.js"></script>
+</body>
+</html>
