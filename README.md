@@ -46,5 +46,9 @@ Planning docs:
 - `stores.html` — showroom locator: search by city or ZIP, or use the browser's location, to sort showrooms by distance; an illustrated map with pins (select a pin or a card); live open / closed status in each showroom's time zone; filters; and design-appointment booking. Logic in `assets/js/stores.js`.
   Each card has `data-lat`, `data-lng`, `data-tz` and `data-hours` (JSON, Sunday first). City and ZIP lookup uses a small built-in table; replace `locate()` with a geocoding API for full coverage.
 
+- `404.html` — page-not-found: an empty room with a "Sofa not found" outline, the address that was requested, page suggestions based on it (e.g. `/sofas-old` suggests Sofas), site search, quick links and popular products. Logic in `assets/js/404.js` (the `PAGES` list is the search index; add new pages there).
+  Hosting: most static hosts (Netlify, Vercel, GitHub Pages, Cloudflare Pages) serve `404.html` automatically. On Apache add `ErrorDocument 404 /404.html`; on nginx `error_page 404 /404.html;`.
+  A missing page can be requested at any depth (e.g. `/lighting/old`), so `404.html` resolves links from the site root when served over http(s). If the site lives in a subfolder, set `SITE_ROOT` in the small script at the top of `404.html` to that path (e.g. `/Furniture-Home-Decor/`).
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
