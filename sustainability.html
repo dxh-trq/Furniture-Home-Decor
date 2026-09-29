@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sustainability — Morrow</title>
+  <meta name="description" content="What our furniture costs the planet, what we’re doing about it, and what we haven’t solved yet. Our footprint, materials and 2030 targets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="sustain-page">
+  <section class="container su-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><span aria-current="page">Sustainability</span></li></ol>
+    </nav>
+    <h1 class="su-hero__title">The greenest sofa is the one you <em>never replace</em></h1>
+    <p class="su-hero__lede">Furniture is heavy, and making it has a cost. We’re not a zero-impact company, and anyone selling sofas who says they are isn’t being straight with you. Here’s what our furniture costs the planet, what we’re doing about it, and what we haven’t solved yet.</p>
+    <ul class="su-stats">
+      <li><strong>100%</strong><span>FSC-certified oak and birch in every frame</span></li>
+      <li><strong>70%</strong><span>recycled fibre in our bouclé</span></li>
+      <li><strong>Plastic-free</strong><span>packaging on all furniture since 2024</span></li>
+      <li><strong>2,300</strong><span>pieces collected and refurbished last year</span></li>
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="fp-title">
+    <div class="container"><div class="su-fp">
+      <div class="su-fp__head">
+        <div>
+          <p class="su-eyebrow">Footprint of one Alder 3-seat sofa</p>
+          <h2 id="fp-title" class="section__title"><span data-su-total>269</span> kg CO₂e, from forest to your front room</h2>
+        </div>
+        <p class="su-fp__note">Estimated for the full life of the sofa, in kilograms of carbon dioxide equivalent. Independently checked in 2026. Select a part of the bar to see where it comes from.</p>
+      </div>
+      <div class="su-bar" role="group" aria-label="Footprint by stage"><button type="button" class="su-seg" data-seg="wood" style="--w:38;--c:#7A5236" aria-pressed="false"><span class="visually-hidden">Wood frame, 38 kg</span></button><button type="button" class="su-seg" data-seg="foam" style="--w:52;--c:#C28E2E" aria-pressed="true"><span class="visually-hidden">Foam and fillings, 52 kg</span></button><button type="button" class="su-seg" data-seg="fabric" style="--w:46;--c:#A9B19C" aria-pressed="false"><span class="visually-hidden">Fabric, 46 kg</span></button><button type="button" class="su-seg" data-seg="metal" style="--w:32;--c:#555B52" aria-pressed="false"><span class="visually-hidden">Springs and fittings, 32 kg</span></button><button type="button" class="su-seg" data-seg="make" style="--w:41;--c:#36402F" aria-pressed="false"><span class="visually-hidden">Making it, 41 kg</span></button><button type="button" class="su-seg" data-seg="ship" style="--w:24;--c:#8A9479" aria-pressed="false"><span class="visually-hidden">Shipping to our hubs, 24 kg</span></button><button type="button" class="su-seg" data-seg="deliver" style="--w:18;--c:#B7775A" aria-pressed="false"><span class="visually-hidden">Delivery to you, 18 kg</span></button><button type="button" class="su-seg" data-seg="end" style="--w:18;--c:#D5D8CD" aria-pressed="false"><span class="visually-hidden">Packaging and end of life, 18 kg</span></button></div>
+      <div class="su-fp__body">
+        <ul class="su-keys">
+            <li><button type="button" class="su-key" data-seg="wood" aria-pressed="false"><span class="su-key__dot" style="--c:#7A5236"></span>Wood frame<span class="su-key__kg">38 kg</span></button></li>
+            <li><button type="button" class="su-key" data-seg="foam" aria-pressed="true"><span class="su-key__dot" style="--c:#C28E2E"></span>Foam and fillings<span class="su-key__kg">52 kg</span></button></li>
+            <li><button type="button" class="su-key" data-seg="fabric" aria-pressed="false"><span class="su-key__dot" style="--c:#A9B19C"></span>Fabric<span class="su-key__kg">46 kg</span></button></li>
+            <li><button type="button" class="su-key" data-seg="metal" aria-pressed="false"><span class="su-key__dot" style="--c:#555B52"></span>Springs and fittings<span class="su-key__kg">32 kg</span></button></li>
+            <li><button type="button" class="su-key" data-seg="make" aria-pressed="false"><span class="su-key__dot" style="--c:#36402F"></span>Making it<span class="su-key__kg">41 kg</span></button></li>
+            <li><button type="button" class="su-key" data-seg="ship" aria-pressed="false"><span class="su-key__dot" style="--c:#8A9479"></span>Shipping to our hubs<span class="su-key__kg">24 kg</span></button></li>
+            <li><button type="button" class="su-key" data-seg="deliver" aria-pressed="false"><span class="su-key__dot" style="--c:#B7775A"></span>Delivery to you<span class="su-key__kg">18 kg</span></button></li>
+            <li><button type="button" class="su-key" data-seg="end" aria-pressed="false"><span class="su-key__dot" style="--c:#D5D8CD"></span>Packaging and end of life<span class="su-key__kg">18 kg</span></button></li>
+        </ul>
+        <div class="su-detail" data-su-detail aria-live="polite">
+          <p class="su-detail__kg"><strong data-su-kg></strong> kg <span data-su-pct></span></p>
+          <h3 data-su-label></h3>
+          <div data-su-text></div>
+        </div>
+      </div>
+      <template data-stage="wood" data-label="Wood frame" data-kg="38"><p>FSC-certified oak and birch plywood from managed forests in Pennsylvania and Finland.</p><p class="su-detail__do"><strong>What we’re doing:</strong> Legs are turned from frame offcuts, so no timber is bought just for them.</p></template><template data-stage="foam" data-label="Foam and fillings" data-kg="52"><p>Seat foam is still made from oil. It’s our biggest single material impact.</p><p class="su-detail__do"><strong>What we’re doing:</strong> We use 40% recycled foam today and are testing a plant-based foam for 2027.</p></template><template data-stage="fabric" data-label="Fabric" data-kg="46"><p>Bouclé is 70% recycled polyester and 30% wool. Linen is European flax, which needs no irrigation.</p><p class="su-detail__do"><strong>What we’re doing:</strong> Covers unzip and can be replaced, so a sofa doesn’t need replacing when the fabric wears.</p></template><template data-stage="metal" data-label="Springs and fittings" data-kg="32"><p>Steel pocket springs and zig-zag webbing, made from 60% recycled steel.</p><p class="su-detail__do"><strong>What we’re doing:</strong> Springs carry a 10-year warranty and are fully recyclable at the end.</p></template><template data-stage="make" data-label="Making it" data-kg="41"><p>Our workshop in Hickory, North Carolina: heating, machinery, glue and the team’s commute.</p><p class="su-detail__do"><strong>What we’re doing:</strong> The workshop runs on 64% renewable electricity, with the rest by 2028.</p></template><template data-stage="ship" data-label="Shipping to our hubs" data-kg="24"><p>Fabrics come by sea from Portugal. Frames travel by truck from our workshop.</p><p class="su-detail__do"><strong>What we’re doing:</strong> No air freight, ever. We’ve moved to rail for our longest routes.</p></template><template data-stage="deliver" data-label="Delivery to you" data-kg="18"><p>The last mile, in our own two-person vans.</p><p class="su-detail__do"><strong>What we’re doing:</strong> 22% of our fleet is electric. That’s behind where we want it to be.</p></template><template data-stage="end" data-label="Packaging and end of life" data-kg="18"><p>Cardboard corners and reusable blankets, and eventually taking the sofa apart.</p><p class="su-detail__do"><strong>What we’re doing:</strong> We take back any Morrow piece and refurbish or strip it for parts.</p></template>
+    </div></div>
+  </section>
+
+  <section class="section">
+    <div class="container su-life">
+      <div class="su-life__intro">
+        <h2 class="section__title">The longer it lasts, the lighter it gets</h2>
+        <p>A sofa’s footprint is mostly made before it reaches you. Keeping it longer spreads that cost over more years. A typical sofa is replaced every 7 years.</p>
+        <label class="su-life__label" for="su-years">Keep your sofa for <strong data-su-years>20 years</strong></label>
+        <input id="su-years" class="tcalc__range" type="range" min="5" max="30" step="1" value="20" aria-valuetext="20 years">
+        <div class="su-life__scale" aria-hidden="true"><span>5 years</span><span>30 years</span></div>
+      </div>
+      <div class="su-life__chart">
+        <div class="su-cmp">
+          <div class="su-cmp__row is-ours">
+            <div class="su-cmp__label"><strong>One Alder sofa</strong><span data-su-ours-note></span></div>
+            <div class="su-cmp__track"><span data-su-ours-bar></span></div>
+            <div class="su-cmp__val"><strong data-su-ours></strong><span>kg a year</span></div>
+          </div>
+          <div class="su-cmp__row">
+            <div class="su-cmp__label"><strong>Typical sofas</strong><span data-su-them-note></span></div>
+            <div class="su-cmp__track"><span data-su-them-bar></span></div>
+            <div class="su-cmp__val"><strong data-su-them></strong><span>kg a year</span></div>
+          </div>
+        </div>
+        <p class="su-life__result" data-su-result aria-live="polite"></p>
+        <p class="su-life__small">Typical sofa: 240 kg CO₂e each, replaced every 7 years (industry average). Alder: 269 kg, plus one set of new covers every 10 years (30 kg).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">What it’s made of</h2>
+        <a class="link" href="about.html#anatomy-title">Inside an Alder sofa</a>
+      </div>
+      <div class="su-mats">
+      <article class="su-mat">
+        <div class="su-mat__art" style="color:#A9B19C;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></div>
+        <h3>Fabric</h3>
+        <p>70% recycled bouclé, European linen and vegetable-tanned leather. Every fabric is tested for 50,000 rubs before we use it.</p>
+      </article>
+      <article class="su-mat">
+        <div class="su-mat__art" style="color:#7A5236;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sidetable"/></svg></div>
+        <h3>Wood</h3>
+        <p>Solid FSC-certified oak and walnut, and birch plywood only where it adds strength. Finished with plant-based oils, not lacquer.</p>
+      </article>
+      <article class="su-mat">
+        <div class="su-mat__art" style="color:#D8CDB8;--leg:#B8A98C"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable"/></svg></div>
+        <h3>Stone</h3>
+        <p>Travertine offcuts from a family quarry in Tivoli, cut to size rather than quarried for us.</p>
+      </article>
+      <article class="su-mat">
+        <div class="su-mat__art" style="color:#C28E2E;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp"/></svg></div>
+        <h3>Metal</h3>
+        <p>Recycled steel springs, and lamp bodies in recycled aluminium, spun and powder-coated without solvents.</p>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="takeback">
+    <div class="container"><div class="su-loop">
+      <div class="su-loop__head">
+        <h2 class="section__title">Nothing we make should end up in landfill</h2>
+        <p>Every Morrow piece has a way back to us. Last year we collected 2,300 pieces: 71% went back to new homes as seconds, 24% were stripped for parts, and 5% were recycled.</p>
+        <a class="btn btn--light" href="contact.html">Book a take-back collection</a>
+      </div>
+      <ol class="su-loop__steps">
+        <li class="su-loop__step"><span class="su-loop__num" aria-hidden="true">1</span><h3>Buy once</h3><p>Pieces designed to be repaired, with frames guaranteed for 10 years.</p><a class="link" href="shop.html">Shop furniture</a></li>
+        <li class="su-loop__step"><span class="su-loop__num" aria-hidden="true">2</span><h3>Keep it going</h3><p>Replacement covers, legs and cushions, even for retired designs.</p><a class="link" href="warranty.html#parts">Parts and repairs</a></li>
+        <li class="su-loop__step"><span class="su-loop__num" aria-hidden="true">3</span><h3>Give it back</h3><p>We collect any Morrow piece you no longer need, and give you store credit.</p><a class="link" href="#takeback">Take-back</a></li>
+        <li class="su-loop__step"><span class="su-loop__num" aria-hidden="true">4</span><h3>Live again</h3><p>Returned pieces are refurbished in our workshop and sold as seconds.</p><a class="link" href="shop.html?sale=1">Shop seconds</a></li>
+      </ol>
+    </div></div>
+  </section>
+
+  <section class="section">
+    <div class="container su-goals">
+      <div>
+        <h2 class="section__title">Our 2030 targets</h2>
+        <p class="su-goals__lede">Where we are today, including the ones we’re behind on. Updated every April.</p>
+      </div>
+      <ul class="su-targets">
+          <li class="su-target is-done">
+            <div class="su-target__row"><strong>FSC-certified wood in every frame</strong><span class="su-target__status">Done</span></div>
+            <div class="su-target__bar" role="img" aria-label="100% of a 100% target"><span style="--p:100"></span></div>
+            <div class="su-target__nums"><span>100% today</span><span>Goal: 100%</span></div>
+          </li>
+          <li class="su-target is-done">
+            <div class="su-target__row"><strong>Plastic-free furniture packaging</strong><span class="su-target__status">Done</span></div>
+            <div class="su-target__bar" role="img" aria-label="100% of a 100% target"><span style="--p:100"></span></div>
+            <div class="su-target__nums"><span>100% today</span><span>Goal: 100%</span></div>
+          </li>
+          <li class="su-target is-track">
+            <div class="su-target__row"><strong>Recycled or natural fibre in all fabrics</strong><span class="su-target__status">On track</span></div>
+            <div class="su-target__bar" role="img" aria-label="82% of a 100% target"><span style="--p:82"></span></div>
+            <div class="su-target__nums"><span>82% today</span><span>Goal: 100%</span></div>
+          </li>
+          <li class="su-target is-track">
+            <div class="su-target__row"><strong>Renewable electricity in our workshop</strong><span class="su-target__status">On track</span></div>
+            <div class="su-target__bar" role="img" aria-label="64% of a 100% target"><span style="--p:64"></span></div>
+            <div class="su-target__nums"><span>64% today</span><span>Goal: 100%</span></div>
+          </li>
+          <li class="su-target is-behind">
+            <div class="su-target__row"><strong>Electric delivery vans</strong><span class="su-target__status">Behind</span></div>
+            <div class="su-target__bar" role="img" aria-label="22% of a 60% target"><span style="--p:37"></span></div>
+            <div class="su-target__nums"><span>22% today</span><span>Goal: 60%</span></div>
+          </li>
+          <li class="su-target is-behind">
+            <div class="su-target__row"><strong>Pieces collected for reuse each year</strong><span class="su-target__status">Behind</span></div>
+            <div class="su-target__bar" role="img" aria-label="2,300 of a 10,000 target"><span style="--p:23"></span></div>
+            <div class="su-target__nums"><span>2,300 today</span><span>Goal: 10,000</span></div>
+          </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title tsec-title">What we haven’t solved</h2>
+      <div class="su-opens">
+        <article class="su-open"><h3>Foam</h3><p>Most seat foam is still made from oil. Plant-based foams we’ve tested so far sag within two years, and we won’t sell a sofa that does.</p></article>
+        <article class="su-open"><h3>Stone from Italy</h3><p>Travertine is heavy and travels a long way. We only use offcuts and ship by sea, but it’s still our highest-carbon product per kilo.</p></article>
+        <article class="su-open"><h3>Leather</h3><p>Our leather is a by-product of the food industry and vegetable-tanned, but cattle farming has a large footprint we can’t fix.</p></article>
+        <article class="su-open"><h3>Delivery miles</h3><p>Two-person delivery is how furniture arrives safely, but it means vans. Our electric fleet is growing slower than we planned.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container"><div class="su-report">
+      <div class="su-report__doc" aria-hidden="true"><span>Morrow</span><strong>Impact report 2026</strong><em>42 pages</em></div>
+      <div>
+        <h2 class="section__title">Read the full report</h2>
+        <p>Our methods, the numbers behind this page, supplier audits and the independent review. No gloss, just the data.</p>
+        <div class="su-report__ctas">
+          <a class="btn btn--primary" href="#" data-su-report>Download the report (PDF, 4 MB)</a>
+          <a class="btn btn--ghost" href="contact.html">Ask us a question</a>
+        </div>
+      </div>
+    </div></div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html" aria-current="page">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/sustainability.js"></script>
+</body>
+</html>

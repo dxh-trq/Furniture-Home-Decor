@@ -64,5 +64,8 @@ Planning docs:
 - `warranty.html` — warranty: cover summary, a "What's covered on your piece" checker (choose a furniture type and delivery date to see each part's cover on a 10-year timeline, with what's still covered today), covered / not covered lists, how a claim works, a claim form with photo thumbnails and a note for issues that usually aren't covered, parts and repairs beyond the warranty, and warranty FAQs. Logic in `assets/js/warranty.js`.
   Cover lengths per part are in `COVER`. Front end only: send claims (with `files`) to your help desk in the submit handler.
 
+- `sustainability.html` — sustainability: an honest opening with headline figures (matching the About page), the footprint of one Alder sofa as a bar you can explore by stage (materials, making, shipping, delivery, end of life, each with what we're doing about it), a "keep it longer" slider comparing yearly CO₂e against typical sofas, materials, the buy / repair / give back / live again loop with take-back, 2030 targets with progress (including ones that are behind), what we haven't solved, and the impact report. Logic in `assets/js/sustainability.js`.
+  Footprint figures are generated into the page (the bar and its `<template data-stage>` notes); lifespan assumptions are constants in the script. All figures are placeholders: replace them with your own assessed numbers. The report button shows a "coming soon" message until you link a PDF.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
