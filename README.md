@@ -50,5 +50,8 @@ Planning docs:
   Hosting: most static hosts (Netlify, Vercel, GitHub Pages, Cloudflare Pages) serve `404.html` automatically. On Apache add `ErrorDocument 404 /404.html`; on nginx `error_page 404 /404.html;`.
   A missing page can be requested at any depth (e.g. `/lighting/old`), so `404.html` resolves links from the site root when served over http(s). If the site lives in a subfolder, set `SITE_ROOT` in the small script at the top of `404.html` to that path (e.g. `/Furniture-Home-Decor/`).
 
+- `services.html` — design services: three service options, how it works, a 4-step booking form (service, room, time, details) with a live summary and confirmation, and the free swatch picker at `services.html#swatches` (up to 6 from 14 fabrics). Logic in `assets/js/services.js`.
+  Available times are simulated; connect your scheduling tool and swatch fulfilment in the two submit handlers.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
