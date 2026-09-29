@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your account — Morrow</title>
+  <meta name="description" content="Track deliveries, manage orders, addresses and preferences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="lookbook.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="account-page">
+  <!-- Signed out: sign in / create account -->
+  <section class="container auth" data-auth hidden aria-labelledby="auth-title">
+    <h1 id="auth-title" class="auth__title">Your account</h1>
+    <div class="auth__grid">
+      <form class="auth__card" data-signin novalidate>
+        <h2>Sign in</h2>
+        <div class="field-grid">
+              <div class="field field--full">
+                <label for="si-email">Email</label>
+                <input id="si-email" name="si-email" type="email" value="" autocomplete="email" required aria-describedby="si-email-err">
+                <p class="field__error" id="si-email-err" hidden></p>
+              </div>
+              <div class="field field--full">
+                <label for="si-password">Password</label>
+                <input id="si-password" name="si-password" type="password" value="" autocomplete="current-password" required aria-describedby="si-password-err">
+                <p class="field__error" id="si-password-err" hidden></p>
+              </div>
+        </div>
+        <a class="auth__forgot" href="#forgot" data-forgot>Forgot your password?</a>
+        <button class="btn btn--primary auth__submit" type="submit">Sign in</button>
+      </form>
+      <form class="auth__card auth__card--new" data-register novalidate>
+        <h2>New to Morrow?</h2>
+        <ul class="auth__perks">
+          <li>Track every delivery and book dates</li>
+          <li>Keep a wishlist and get price-drop alerts</li>
+          <li>Save addresses and access details for faster checkout</li>
+        </ul>
+        <div class="field-grid">
+              <div class="field field--full">
+                <label for="re-name">First name</label>
+                <input id="re-name" name="re-name" type="text" value="" autocomplete="given-name" required aria-describedby="re-name-err">
+                <p class="field__error" id="re-name-err" hidden></p>
+              </div>
+              <div class="field field--full">
+                <label for="re-email">Email</label>
+                <input id="re-email" name="re-email" type="email" value="" autocomplete="email" required aria-describedby="re-email-err">
+                <p class="field__error" id="re-email-err" hidden></p>
+              </div>
+              <div class="field field--full">
+                <label for="re-password">Password</label>
+                <input id="re-password" name="re-password" type="password" value="" autocomplete="new-password" required aria-describedby="re-password-err">
+                <p class="field__error" id="re-password-err" hidden></p>
+              </div>
+        </div>
+        <p class="field__hint">At least 8 characters.</p>
+        <button class="btn btn--ghost auth__submit" type="submit">Create account</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Signed in -->
+  <div class="container account" data-account>
+    <aside class="acc-side">
+      <div class="acc-user">
+        <span class="acc-user__avatar" aria-hidden="true" data-initial>H</span>
+        <div><p class="acc-user__name" data-user-name>Hannah Reyes</p><p class="acc-user__since">Member since 2024</p></div>
+      </div>
+      <nav class="acc-nav" aria-label="Account">
+        <ul>
+          <li><a class="acc-nav__link" href="#overview" data-nav="overview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg><span>Overview</span></a></li>
+          <li><a class="acc-nav__link" href="#orders" data-nav="orders"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg><span>Orders</span></a></li>
+          <li><a class="acc-nav__link" href="#wishlist" data-nav="wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><span>Wishlist</span><span class="acc-nav__count" data-wish-count>4</span></a></li>
+          <li><a class="acc-nav__link" href="#swatches" data-nav="swatches"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="4"/><circle cx="16" cy="8" r="4"/><circle cx="12" cy="15" r="4"/></svg><span>Swatches</span></a></li>
+          <li><a class="acc-nav__link" href="#addresses" data-nav="addresses"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Addresses</span></a></li>
+          <li><a class="acc-nav__link" href="#payment" data-nav="payment"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg><span>Payment methods</span></a></li>
+          <li><a class="acc-nav__link" href="#settings" data-nav="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>Settings</span></a></li>
+          <li><button class="acc-nav__link acc-nav__signout" type="button" data-signout><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h4a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-4"/><path d="M10 16l4-4-4-4M14 12H4"/></svg><span>Sign out</span></button></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="acc-main">
+      <!-- Overview -->
+      <section class="acc-panel" data-panel="overview" aria-labelledby="p-overview">
+        <h1 id="p-overview" class="acc-panel__title">Hello, <span data-first-name>Hannah</span></h1>
+        <p class="acc-panel__lede">One order on its way. Here’s where everything is.</p>
+
+        <article class="trackcard">
+          <header class="trackcard__head">
+            <div><h2>Order MR-48213</h2><p>Placed 29 September 2026</p></div>
+            <a class="link" href="#orders" data-nav-jump="orders">View order</a>
+          </header>
+          <div class="trackcard__grid">
+            <div class="shipcard">
+              <div class="shipcard__head">
+                <h3>Delivery 1 of 2</h3>
+                <p class="pill pill--progress">Booked</p>
+              </div>
+              <p class="shipcard__when">Fri, Oct 9, 5pm–8pm</p>
+              <p class="shipcard__what">Lumen floor lamp, Tove side table, Loma vase × 2</p>
+              <ol class="track"><li class="is-done"><span class="track__dot" aria-hidden="true"></span><strong>Ordered</strong><span>Sep 29</span></li><li class="is-done"><span class="track__dot" aria-hidden="true"></span><strong>Packed</strong><span>Oct 2</span></li><li aria-current="step"><span class="track__dot" aria-hidden="true"></span><strong>Delivery booked</strong><span>Fri, Oct 9</span></li><li><span class="track__dot" aria-hidden="true"></span><strong>Delivered</strong></li></ol>
+              <button class="btn btn--ghost btn--small-ghost" type="button" data-reschedule>Change date</button>
+            </div>
+            <div class="shipcard">
+              <div class="shipcard__head">
+                <h3>Delivery 2 of 2</h3>
+                <p class="pill pill--order">Being made</p>
+              </div>
+              <p class="shipcard__when">Week of November 16</p>
+              <p class="shipcard__what">Alder 3-seat sofa in cognac bouclé</p>
+              <ol class="track"><li class="is-done"><span class="track__dot" aria-hidden="true"></span><strong>Ordered</strong><span>Sep 29</span></li><li aria-current="step"><span class="track__dot" aria-hidden="true"></span><strong>In the workshop</strong><span>Frame and springs</span></li><li><span class="track__dot" aria-hidden="true"></span><strong>Delivery booked</strong><span>We’ll call you</span></li><li><span class="track__dot" aria-hidden="true"></span><strong>Delivered</strong></li></ol>
+              <p class="shipcard__note">We’ll call you to book a day once it leaves the workshop.</p>
+            </div>
+          </div>
+        </article>
+
+        <ul class="acc-tiles">
+          <li><a class="acc-tile" href="#wishlist" data-nav-jump="wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg><strong><span data-wish-count>4</span> saved pieces</strong><span>One has dropped in price</span></a></li>
+          <li><a class="acc-tile" href="#swatches" data-nav-jump="swatches"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="4"/><circle cx="16" cy="8" r="4"/><circle cx="12" cy="15" r="4"/></svg><strong>4 swatches</strong><span>Delivered 12 September</span></a></li>
+          <li><a class="acc-tile" href="#addresses" data-nav-jump="addresses"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><strong><span data-address-count>2</span> addresses</strong><span>Home is your default</span></a></li>
+          <li><a class="acc-tile acc-tile--dark" href="services.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg><strong>Book a free design call</strong><span>45 minutes with a stylist, on video</span></a></li>
+        </ul>
+      </section>
+
+      <!-- Orders -->
+      <section class="acc-panel" data-panel="orders" aria-labelledby="p-orders" hidden>
+        <h1 id="p-orders" class="acc-panel__title">Orders</h1>
+        <p class="acc-panel__lede">Returns are free within 30 days of delivery.</p>
+        <ul class="orders">
+        <li class="order" data-order="MR-48213">
+          <div class="order__head">
+            <div class="order__meta">
+              <h3 class="order__no">Order MR-48213</h3>
+              <p>Placed 29 September 2026</p>
+            </div>
+            <p class="pill pill--progress">In progress</p>
+            <p class="order__total">$2,965.76</p>
+          </div>
+          <div class="order__thumbs"><span class="osum__thumb" style="color:#EBD9AE;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp"/></svg></span><span class="osum__thumb" style="color:#D9CFBF;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sidetable"/></svg></span><span class="osum__thumb" style="color:#36402F;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase"/></svg><span class="osum__qty" aria-hidden="true">2</span></span><span class="osum__thumb" style="color:#9A6240;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></span></div>
+          <details class="order__details" open>
+            <summary>Order details</summary>
+            <ul class="osum__items">
+              <li class="osum__item"><span class="osum__thumb" style="color:#EBD9AE;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp"/></svg></span><span class="osum__info"><strong>Lumen floor lamp</strong><span>Natural linen</span></span><span class="osum__price">$320</span></li>
+              <li class="osum__item"><span class="osum__thumb" style="color:#D9CFBF;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sidetable"/></svg></span><span class="osum__info"><strong>Tove side table</strong><span>Travertine</span></span><span class="osum__price">$280</span></li>
+              <li class="osum__item"><span class="osum__thumb" style="color:#36402F;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase"/></svg><span class="osum__qty" aria-hidden="true">2</span></span><span class="osum__info"><strong>Loma vase</strong><span>Moss, qty 2</span></span><span class="osum__price">$130</span></li>
+              <li class="osum__item"><span class="osum__thumb" style="color:#9A6240;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></span><span class="osum__info"><strong>Alder 3-seat sofa</strong><span>Cognac bouclé, 3-seat</span></span><span class="osum__price">$1,890</span></li>
+            </ul>
+            <p class="order__note">Two deliveries. The first is booked for Fri, Oct 9, 5pm–8pm.</p>
+          </details>
+          <div class="order__actions">
+            <a class="btn btn--small" href="#overview">Track delivery</a>
+            <button class="btn btn--ghost btn--small-ghost" type="button" data-invoice="MR-48213">Download invoice</button>
+            
+          </div>
+        </li>
+        <li class="order" data-order="MR-45502">
+          <div class="order__head">
+            <div class="order__meta">
+              <h3 class="order__no">Order MR-45502</h3>
+              <p>Placed 8 September 2026</p>
+            </div>
+            <p class="pill pill--done">Delivered 15 September</p>
+            <p class="order__total">$401.00</p>
+          </div>
+          <div class="order__thumbs"><span class="osum__thumb" style="color:#6F7A5E;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-pendant"/></svg><span class="osum__qty" aria-hidden="true">2</span></span><span class="osum__thumb" style="color:#C28E2E;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase"/></svg></span></div>
+          <details class="order__details">
+            <summary>Order details</summary>
+            <ul class="osum__items">
+              <li class="osum__item"><span class="osum__thumb" style="color:#6F7A5E;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-pendant"/></svg><span class="osum__qty" aria-hidden="true">2</span></span><span class="osum__info"><strong>Halo pendant light</strong><span>Moss, qty 2</span></span><span class="osum__price">$336</span></li>
+              <li class="osum__item"><span class="osum__thumb" style="color:#C28E2E;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase"/></svg></span><span class="osum__info"><strong>Loma vase</strong><span>Ochre</span></span><span class="osum__price">$65</span></li>
+            </ul>
+            <p class="order__note">Delivered to 48 Orchard Street. Free returns until 15 October.</p>
+          </details>
+          <div class="order__actions">
+            <button class="btn btn--small" type="button" data-buy-again="Halo pendant light" data-qty="3">Buy again</button>
+            <button class="btn btn--ghost btn--small-ghost" type="button" data-invoice="MR-45502">Download invoice</button>
+            <button class="line__action" type="button" data-return="MR-45502">Start a return</button>
+          </div>
+        </li>
+        <li class="order" data-order="MR-39120">
+          <div class="order__head">
+            <div class="order__meta">
+              <h3 class="order__no">Order MR-39120</h3>
+              <p>Placed 2 June 2026</p>
+            </div>
+            <p class="pill pill--done">Delivered 14 June</p>
+            <p class="order__total">$1,054.00</p>
+          </div>
+          <div class="order__thumbs"><span class="osum__thumb" style="color:#7A5236;--leg:#3B2A1E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard"/></svg></span></div>
+          <details class="order__details">
+            <summary>Order details</summary>
+            <ul class="osum__items">
+              <li class="osum__item"><span class="osum__thumb" style="color:#7A5236;--leg:#3B2A1E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard"/></svg></span><span class="osum__info"><strong>Stilla sideboard</strong><span>Walnut, 180 cm</span></span><span class="osum__price">$1,054</span></li>
+            </ul>
+            <p class="order__note">Delivered by white glove to 48 Orchard Street. The 30-day return window has closed.</p>
+          </details>
+          <div class="order__actions">
+            <button class="btn btn--small" type="button" data-buy-again="Stilla sideboard" data-qty="1">Buy again</button>
+            <button class="btn btn--ghost btn--small-ghost" type="button" data-invoice="MR-39120">Download invoice</button>
+            
+          </div>
+        </li>
+        </ul>
+      </section>
+
+      <!-- Wishlist -->
+      <section class="acc-panel" data-panel="wishlist" aria-labelledby="p-wishlist" hidden>
+        <h1 id="p-wishlist" class="acc-panel__title">Wishlist</h1>
+        <p class="acc-panel__lede">We’ll email you if anything here drops in price or runs low.</p>
+        <ul class="acc-wish" data-wish-grid>
+          <li class="card" style="--leg:#3B2A1E">
+            <a class="card__media" href="product.html" style="color:#9A6240">
+              
+              <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Ren lounge chair"><use href="#s-armchair"/></svg>
+            </a>
+            <button class="wish" aria-pressed="true" aria-label="Remove Ren lounge chair from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+            <div class="card__body">
+              <h3 class="card__name"><a href="product.html">Ren lounge chair</a></h3>
+              <p class="card__meta">Aniline leather, walnut</p>
+              <div class="card__foot">
+                <p class="price">$760</p>
+                <button class="btn btn--small" data-add>Add to cart</button>
+              </div>
+            </div>
+          </li>
+          <li class="card" style="--leg:#5C3E28">
+            <a class="card__media" href="product.html" style="color:#B08A5E">
+              <span class="badge badge--sale">Price dropped</span>
+              <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Arc wall mirror"><use href="#s-mirror"/></svg>
+            </a>
+            <button class="wish" aria-pressed="true" aria-label="Remove Arc wall mirror from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+            <div class="card__body">
+              <h3 class="card__name"><a href="product.html">Arc wall mirror</a></h3>
+              <p class="card__meta">Oak frame, 60 × 100 cm</p>
+              <div class="card__foot">
+                <p class="price"><span class="price__now">$390</span> <s>$460</s></p>
+                <button class="btn btn--small" data-add>Add to cart</button>
+              </div>
+            </div>
+          </li>
+          <li class="card" style="--leg:#5C3E28">
+            <a class="card__media" href="product.html" style="color:#9AA488">
+              
+              <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Mira wool rug"><use href="#s-rug"/></svg>
+            </a>
+            <button class="wish" aria-pressed="true" aria-label="Remove Mira wool rug from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+            <div class="card__body">
+              <h3 class="card__name"><a href="product.html">Mira wool rug</a></h3>
+              <p class="card__meta">Hand-tufted wool, 200 × 300 cm</p>
+              <div class="card__foot">
+                <p class="price">$540</p>
+                <button class="btn btn--small" data-add>Add to cart</button>
+              </div>
+            </div>
+          </li>
+          <li class="card" style="--leg:#5C3E28">
+            <a class="card__media" href="product.html" style="color:#6B4A33">
+              <span class="badge">Only 3 left</span>
+              <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Drift coffee table"><use href="#s-coffeetable"/></svg>
+            </a>
+            <button class="wish" aria-pressed="true" aria-label="Remove Drift coffee table from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+            <div class="card__body">
+              <h3 class="card__name"><a href="product.html">Drift coffee table</a></h3>
+              <p class="card__meta">Solid oak, 120 cm</p>
+              <div class="card__foot">
+                <p class="price">$690</p>
+                <button class="btn btn--small" data-add>Add to cart</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="acc-empty" data-wish-empty hidden>
+          <h2>Your wishlist is empty</h2>
+          <p>Tap the heart on any piece to save it here.</p>
+          <a class="btn btn--primary" href="shop.html">Browse living room</a>
+        </div>
+      </section>
+
+      <!-- Swatches -->
+      <section class="acc-panel" data-panel="swatches" aria-labelledby="p-swatches" hidden>
+        <h1 id="p-swatches" class="acc-panel__title">Swatches</h1>
+        <p class="acc-panel__lede">Free fabric samples you’ve ordered. You can order up to six at a time.</p>
+        <article class="sw-order">
+          <header class="sw-order__head">
+            <div><h2>Swatch order SW-2291</h2><p>Ordered 9 September 2026</p></div>
+            <p class="pill pill--done">Delivered 12 September</p>
+          </header>
+          <ul class="sw-list">
+              <li><span class="texture sw-chip" data-type="boucle" style="--fabric:#8E9A7B" aria-hidden="true"></span><span>Sage bouclé</span></li>
+              <li><span class="texture sw-chip" data-type="boucle" style="--fabric:#DCD4C3" aria-hidden="true"></span><span>Oat bouclé</span></li>
+              <li><span class="texture sw-chip" data-type="boucle" style="--fabric:#9A6240" aria-hidden="true"></span><span>Cognac bouclé</span></li>
+              <li><span class="texture sw-chip" data-type="linen" style="--fabric:#6F7A5E" aria-hidden="true"></span><span>Moss linen</span></li>
+          </ul>
+        </article>
+        <a class="btn btn--primary" href="services.html#swatches">Order more swatches</a>
+      </section>
+
+      <!-- Addresses -->
+      <section class="acc-panel" data-panel="addresses" aria-labelledby="p-addresses" hidden>
+        <h1 id="p-addresses" class="acc-panel__title">Addresses</h1>
+        <p class="acc-panel__lede">Access details help our team bring the right equipment for large pieces.</p>
+        <ul class="addr-list" data-addr-list>
+          <li class="addr is-default">
+            <p class="addr__tag" data-default-tag>Default</p>
+            <h2 class="addr__name">Home</h2>
+            <p>Hannah Reyes<br>48 Orchard Street, Apt 3B<br>New York, NY 10002<br>(212) 555-0142</p>
+            <p class="addr__access">Apartment, 3rd floor, elevator</p>
+            <div class="addr__actions"><button class="line__action" type="button" data-addr-default>Set as default</button><button class="line__action" type="button" data-addr-remove>Remove</button></div>
+          </li>
+          <li class="addr">
+            <p class="addr__tag" data-default-tag>Default</p>
+            <h2 class="addr__name">Studio</h2>
+            <p>Hannah Reyes<br>210 Kent Avenue, Unit 4<br>Brooklyn, NY 11249<br>(212) 555-0142</p>
+            <p class="addr__access">Ground floor, narrow doorway</p>
+            <div class="addr__actions"><button class="line__action" type="button" data-addr-default>Set as default</button><button class="line__action" type="button" data-addr-remove>Remove</button></div>
+          </li>
+        </ul>
+        <details class="addr-new" data-addr-new>
+          <summary class="btn btn--ghost">Add an address</summary>
+          <form class="addr-form" data-addr-form novalidate>
+            <div class="field-grid">
+              <div class="field field--full">
+                <label for="an-label">Label, e.g. Home or Parents</label>
+                <input id="an-label" name="an-label" type="text" value="" required aria-describedby="an-label-err">
+                <p class="field__error" id="an-label-err" hidden></p>
+              </div>
+              <div class="field field--full">
+                <label for="an-street">Street address</label>
+                <input id="an-street" name="an-street" type="text" value="" autocomplete="address-line1" required aria-describedby="an-street-err">
+                <p class="field__error" id="an-street-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="an-city">City</label>
+                <input id="an-city" name="an-city" type="text" value="" autocomplete="address-level2" required aria-describedby="an-city-err">
+                <p class="field__error" id="an-city-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="an-zip">ZIP code</label>
+                <input id="an-zip" name="an-zip" type="text" value="" autocomplete="postal-code" required aria-describedby="an-zip-err">
+                <p class="field__error" id="an-zip-err" hidden></p>
+              </div>
+            </div>
+            <button class="btn btn--primary" type="submit">Save address</button>
+          </form>
+        </details>
+      </section>
+
+      <!-- Payment -->
+      <section class="acc-panel" data-panel="payment" aria-labelledby="p-payment" hidden>
+        <h1 id="p-payment" class="acc-panel__title">Payment methods</h1>
+        <p class="acc-panel__lede">Cards are stored securely by our payment provider. We never see your full card number.</p>
+        <ul class="pay-list">
+          <li class="paycard is-default">
+            <span class="paycard__brand">Visa</span>
+            <div><p class="paycard__no">Visa ending in 4242</p><p class="paycard__exp">Expires 12/29</p></div>
+            <p class="addr__tag">Default</p>
+            <button class="line__action" type="button" data-card-remove>Remove</button>
+          </li>
+          <li class="paycard">
+            <span class="paycard__brand paycard__brand--mc">MC</span>
+            <div><p class="paycard__no">Mastercard ending in 5454</p><p class="paycard__exp">Expires 03/28</p></div>
+            <button class="line__action" type="button" data-card-remove>Remove</button>
+          </li>
+        </ul>
+        <p class="acc-note">To add a card, check out with it and tick “Save this card”.</p>
+      </section>
+
+      <!-- Settings -->
+      <section class="acc-panel" data-panel="settings" aria-labelledby="p-settings" hidden>
+        <h1 id="p-settings" class="acc-panel__title">Settings</h1>
+        <p class="acc-panel__lede">Your details, what we send you, and your password.</p>
+        <form class="acc-block" data-profile novalidate>
+          <h2 class="acc-block__title">Profile</h2>
+          <div class="field-grid">
+              <div class="field">
+                <label for="pf-first">First name</label>
+                <input id="pf-first" name="pf-first" type="text" value="Hannah" autocomplete="given-name" required aria-describedby="pf-first-err">
+                <p class="field__error" id="pf-first-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="pf-last">Last name</label>
+                <input id="pf-last" name="pf-last" type="text" value="Reyes" autocomplete="family-name" required aria-describedby="pf-last-err">
+                <p class="field__error" id="pf-last-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="pf-email">Email</label>
+                <input id="pf-email" name="pf-email" type="email" value="hannah@example.com" autocomplete="email" required aria-describedby="pf-email-err">
+                <p class="field__error" id="pf-email-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="pf-phone">Phone</label>
+                <input id="pf-phone" name="pf-phone" type="tel" value="(212) 555-0142" autocomplete="tel" required aria-describedby="pf-phone-err">
+                <p class="field__error" id="pf-phone-err" hidden></p>
+              </div>
+          </div>
+          <button class="btn btn--primary" type="submit">Save changes</button>
+        </form>
+
+        <div class="acc-block">
+          <h2 class="acc-block__title">Messages from us</h2>
+          <ul class="prefs">
+            <li class="pref">
+              <div><label for="pref-new" class="pref__label">New arrivals</label><p class="pref__desc" id="pref-new-desc">A short email when new collections launch, about once a month.</p></div>
+              <button class="switch" id="pref-new" type="button" role="switch" aria-checked="true" aria-describedby="pref-new-desc"><span class="switch__knob"></span></button>
+            </li>
+            <li class="pref">
+              <div><label for="pref-sale" class="pref__label">Sales and offers</label><p class="pref__desc" id="pref-sale-desc">Early access to seasonal sales.</p></div>
+              <button class="switch" id="pref-sale" type="button" role="switch" aria-checked="true" aria-describedby="pref-sale-desc"><span class="switch__knob"></span></button>
+            </li>
+            <li class="pref">
+              <div><label for="pref-sms" class="pref__label">Delivery texts</label><p class="pref__desc" id="pref-sms-desc">A text the day before and when the team is 30 minutes away.</p></div>
+              <button class="switch" id="pref-sms" type="button" role="switch" aria-checked="true" aria-describedby="pref-sms-desc"><span class="switch__knob"></span></button>
+            </li>
+            <li class="pref">
+              <div><label for="pref-care" class="pref__label">Care tips</label><p class="pref__desc" id="pref-care-desc">Seasonal reminders for caring for wood, stone and fabric.</p></div>
+              <button class="switch" id="pref-care" type="button" role="switch" aria-checked="false" aria-describedby="pref-care-desc"><span class="switch__knob"></span></button>
+            </li>
+          </ul>
+        </div>
+
+        <form class="acc-block" data-password novalidate>
+          <h2 class="acc-block__title">Password</h2>
+          <div class="field-grid">
+              <div class="field">
+                <label for="pw-current">Current password</label>
+                <input id="pw-current" name="pw-current" type="password" value="" autocomplete="current-password" required aria-describedby="pw-current-err">
+                <p class="field__error" id="pw-current-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="pw-new">New password</label>
+                <input id="pw-new" name="pw-new" type="password" value="" autocomplete="new-password" required aria-describedby="pw-new-err">
+                <p class="field__error" id="pw-new-err" hidden></p>
+              </div>
+          </div>
+          <button class="btn btn--ghost" type="submit">Update password</button>
+        </form>
+
+        <div class="acc-block acc-block--danger">
+          <h2 class="acc-block__title">Delete account</h2>
+          <p>This removes your saved addresses, wishlist and order history from your account. Orders in progress will still be delivered.</p>
+          <button class="line__action acc-danger" type="button" data-delete>Delete my account</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/account.js"></script>
+</body>
+</html>

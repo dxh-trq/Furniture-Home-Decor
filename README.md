@@ -23,5 +23,9 @@ Planning docs:
   Includes delivery access details (floor, elevator, narrow doorways), a delivery-day picker, card number formatting with brand detection and Luhn check, and inline validation.
   Front end only: connect your payment provider and order API in `placeOrder()`. Tax rates in `checkout.js` are demo values.
 
+- `account.html` — customer account: overview with delivery tracking, orders, wishlist, swatches, addresses, payment methods and settings, in `assets/js/account.js`.
+  Sections are linkable (`account.html#orders`). Signing out shows the sign-in / create-account forms (`account.html#sign-in`).
+  Front end only: connect the forms to your auth and customer APIs.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
