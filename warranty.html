@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warranty — Morrow</title>
+  <meta name="description" content="10 years on frames and springs, 2 years on fabric and finishes, and parts for life. Check your cover and make a claim.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="warranty-page">
+  <section class="container rt-hero">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol><li><a href="index.html">Home</a></li><li><a href="faq.html">Help</a></li><li><span aria-current="page">Warranty</span></li></ol>
+      </nav>
+      <h1 class="rt-hero__title">Built to last, and we put it in writing</h1>
+      <p class="rt-hero__lede">We make furniture to be used every day for decades. If something we made fails, we’ll repair it, send a part, or replace it. Free, and with no receipts to find.</p>
+      <div class="wr-hero__ctas">
+        <a class="btn btn--primary" href="#claim">Make a claim</a>
+        <a class="btn btn--ghost" href="#cover">Check your cover</a>
+      </div>
+    </div>
+    <ul class="rt-facts">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><strong>10 years</strong><span>On frames, springs and solid wood construction</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/></svg><strong>2 years</strong><span>On fabric, leather, foam, finishes and lighting</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-2-2 8-8-1.3-1.3a4 4 0 0 1-5-5L11 3.4 9.6 2 7 4.6 8.4 6"/><path d="M3 21l6-6"/></svg><strong>Parts for life</strong><span>Covers, legs and cushions, even for retired designs</span></li>
+    </ul>
+  </section>
+
+  <section class="section wr-cover-sec" id="cover" aria-labelledby="cover-title">
+    <div class="container">
+      <div class="wr-cover">
+        <div class="wr-cover__head">
+          <div>
+            <h2 id="cover-title" class="book__title">What’s covered on your piece</h2>
+            <p class="rt-panel__lede">Choose what you have and when it arrived to see what’s still covered today.</p>
+          </div>
+          <div class="field wr-cover__date">
+            <label for="wr-date">Delivered on</label>
+            <input id="wr-date" type="date">
+          </div>
+        </div>
+        <fieldset class="dl-seg wr-types">
+          <legend class="visually-hidden">Type of furniture</legend>
+            <label class="slot"><input type="radio" name="wr-type" value="sofa" checked><span>Sofas and chairs</span></label>
+            <label class="slot"><input type="radio" name="wr-type" value="table"><span>Tables</span></label>
+            <label class="slot"><input type="radio" name="wr-type" value="storage"><span>Storage</span></label>
+            <label class="slot"><input type="radio" name="wr-type" value="bed"><span>Beds</span></label>
+            <label class="slot"><input type="radio" name="wr-type" value="lighting"><span>Lighting</span></label>
+            <label class="slot"><input type="radio" name="wr-type" value="rug"><span>Rugs</span></label>
+        </fieldset>
+        <div class="wr-cover__bar">
+          <p class="wr-cover__sum" data-wr-sum aria-live="polite"></p>
+          <p class="wr-legend" aria-hidden="true"><span class="is-used">Time since delivery</span><span class="is-left">Cover remaining</span></p>
+        </div>
+        <div class="wr-chart">
+          <div class="wr-axis" aria-hidden="true"><span></span><div class="wr-axis__scale"><span style="--at:0">0</span><span style="--at:20">2</span><span style="--at:40">4</span><span style="--at:60">6</span><span style="--at:80">8</span><span style="--at:100">10 yrs</span><span class="wr-axis__now">Today</span></div><span></span></div>
+          <ul class="wr-rows" data-wr-rows></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container wr-yesno">
+      <div class="wr-list wr-list--yes">
+        <h2>Covered</h2>
+        <p>Defects in materials or in the way we made it, in normal home use.</p>
+        <ul>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Frames that crack, split or come loose at the joints</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Springs and webbing that break or lose their tension</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Seams that open and zips that fail in normal use</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Foam that loses more than 15% of its height</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Finishes that peel, bubble or crack</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Drawer runners, hinges and wiring that stop working</li>
+        </ul>
+      </div>
+      <div class="wr-list wr-list--no">
+        <h2>Not covered</h2>
+        <p>Things that happen to well-loved furniture. We can still help, for a fee.</p>
+        <ul>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>Normal wear, like softening seats and fabric pilling</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>Stains, spills and fading from direct sunlight</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>Scratches and damage from pets, knocks or moving house</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>Pieces used outdoors or in commercial spaces</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>Changes or repairs made by someone other than us</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>Natural variation in wood grain, stone and leather</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container how">
+      <h2 class="section__title">How a claim works</h2>
+      <ol class="how__steps">
+        <li class="how__step"><span class="how__num" aria-hidden="true">1</span><h3>Tell us</h3><p>Send photos and a few words below. No receipt needed, we have your order.</p></li>
+        <li class="how__step"><span class="how__num" aria-hidden="true">2</span><h3>We look</h3><p>A member of our workshop team replies within 2 working days.</p></li>
+        <li class="how__step"><span class="how__num" aria-hidden="true">3</span><h3>We fix it</h3><p>A replacement part by post, a technician at home, or a new piece if it can’t be repaired.</p></li>
+        <li class="how__step"><span class="how__num" aria-hidden="true">4</span><h3>Cover carries on</h3><p>Repairs don’t reset or shorten your warranty.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section wr-claim-sec" id="claim" aria-labelledby="claim-title">
+    <div class="container">
+      <div class="rt-tool wr-claim">
+        <div>
+          <h2 id="claim-title" class="book__title">Make a claim</h2>
+          <p class="rt-panel__lede">It takes about three minutes. Something damaged in the first 7 days after delivery? Use this form too.</p>
+        </div>
+        <form class="wr-form" data-wr-form novalidate>
+          <div class="field-grid">
+            <div class="field">
+              <label for="wr-order">Order number</label>
+              <input id="wr-order" placeholder="e.g. MR-45502" autocapitalize="characters" aria-describedby="wr-order-hint wr-order-err">
+              <p class="field__hint" id="wr-order-hint">Bought in a showroom? Use the number on your receipt.</p>
+              <p class="field__error" id="wr-order-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="wr-email">Email</label>
+              <input id="wr-email" type="email" autocomplete="email" aria-describedby="wr-email-err">
+              <p class="field__error" id="wr-email-err" hidden></p>
+            </div>
+            <div class="field field--full">
+              <label for="wr-piece">Which piece?</label>
+              <select id="wr-piece" aria-describedby="wr-piece-err"><option value="">Choose a piece</option><option>Alder sofa</option><option>Otto armchair</option><option>Ren lounge chair</option><option>Drift coffee table</option><option>Tove side table</option><option>Stilla sideboard</option><option>Lumen floor lamp</option><option>Halo pendant light</option><option>Mira rug</option><option>Something else</option></select>
+              <p class="field__error" id="wr-piece-err" hidden></p>
+            </div>
+          </div>
+          <fieldset class="dl-seg wr-issues" id="wr-issue" aria-describedby="wr-issue-err">
+            <legend>What’s wrong?</legend>
+              <label class="slot"><input type="radio" name="wr-issue" value="frame"><span>Frame creaks or feels loose</span></label>
+              <label class="slot"><input type="radio" name="wr-issue" value="springs"><span>Seat sags or springs have gone</span></label>
+              <label class="slot"><input type="radio" name="wr-issue" value="seams"><span>Seam, zip or fabric has failed</span></label>
+              <label class="slot"><input type="radio" name="wr-issue" value="finish"><span>Finish is peeling or cracking</span></label>
+              <label class="slot"><input type="radio" name="wr-issue" value="part"><span>A part is broken or missing</span></label>
+              <label class="slot"><input type="radio" name="wr-issue" value="light"><span>Light or switch stopped working</span></label>
+              <label class="slot"><input type="radio" name="wr-issue" value="stain"><span>Stain or spill</span></label>
+              <label class="slot"><input type="radio" name="wr-issue" value="pet"><span>Pet or accidental damage</span></label>
+              <label class="slot"><input type="radio" name="wr-issue" value="other"><span>Something else</span></label>
+          </fieldset>
+          <p class="field__error" id="wr-issue-err" hidden></p>
+          <div class="wr-note" data-wr-note hidden>
+            <p><strong>This usually isn’t covered by the warranty,</strong> but we can almost always help. Send the claim anyway and we’ll suggest the right fix, like a <a class="link" href="faq.html#faq-spills">cleaning tip</a>, replacement covers or a workshop repair, with a price before we start.</p>
+          </div>
+          <div class="field">
+            <label for="wr-photos">Photos</label>
+            <label class="upload" for="wr-photos">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v4h16v-4"/></svg>
+              <span><strong>Choose photos</strong> or drag them here. One of the whole piece and one close-up. Up to 5, 10 MB each.</span>
+            </label>
+            <input class="visually-hidden" id="wr-photos" type="file" accept="image/*" multiple aria-describedby="wr-photos-err">
+            <ul class="wr-thumbs" data-wr-files></ul>
+            <p class="field__error" id="wr-photos-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="wr-desc">Tell us what happened</label>
+            <textarea id="wr-desc" rows="4" placeholder="When did you notice it? Does it happen all the time, or only sometimes?" aria-describedby="wr-desc-err"></textarea>
+            <p class="field__error" id="wr-desc-err" hidden></p>
+          </div>
+          <div class="book__nav"><button class="btn btn--primary" type="submit">Send claim</button></div>
+        </form>
+
+        <div class="rt-done" data-wr-done hidden tabindex="-1">
+          <div class="confirm__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg></div>
+          <h3>Claim <span data-wr-ref></span> is with our workshop</h3>
+          <p data-wr-done-text></p>
+          <button class="btn btn--ghost" type="button" data-wr-again>Make another claim</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wr-parts-sec" id="parts">
+    <div class="container">
+      <div class="section__head wr-parts-head">
+        <h2 class="section__title">Keep it going</h2>
+        <p>Beyond the warranty, we keep making the parts that wear out, so a Morrow piece never has to be thrown away.</p>
+      </div>
+      <div class="wr-parts">
+        <article class="wr-part">
+          <div class="wr-part__art" style="color:#6F7A5E;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></div>
+          <h3>Replacement covers</h3>
+          <p>Fresh covers for any Morrow sofa or chair, in any current fabric. From $190.</p>
+        </article>
+        <article class="wr-part">
+          <div class="wr-part__art" style="color:#7A5236;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sidetable"/></svg></div>
+          <h3>Legs and feet</h3>
+          <p>Oak, walnut or black legs, screw-in, from $60 a set. A quick way to change the look too.</p>
+        </article>
+        <article class="wr-part">
+          <div class="wr-part__art" style="color:#A4583A;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg></div>
+          <h3>Workshop refurbishment</h3>
+          <p>New foam, a new cover and a re-oiled frame, collected and returned. From $390.</p>
+        </article>
+        <article class="wr-part">
+          <div class="wr-part__art" style="color:#C28E2E;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase"/></svg></div>
+          <h3>Care kits</h3>
+          <p>Fabric shampoo, leather balm, wood oil and stone sealant. From $24.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container sv-faq">
+      <h2 class="section__title">Warranty questions</h2>
+      <div>
+        <details class="qa"><summary>Do I need to register my furniture?</summary><p>No. Your warranty starts on your delivery date and is linked to your order automatically.</p></details>
+        <details class="qa"><summary>Does the warranty move with the furniture if I sell it?</summary><p>Yes. The warranty belongs to the piece, not the buyer. The new owner just needs the original order number.</p></details>
+        <details class="qa"><summary>What about pieces I bought as seconds or ex-display?</summary><p>They have the full 10-year frame warranty. Fabric and finish cover is 1 year, as they’ve already been used.</p></details>
+        <details class="qa"><summary>Is the warranty in addition to my legal rights?</summary><p>Yes. It doesn’t affect your rights under consumer law, and we’ll always honour whichever gives you more.</p></details>
+        <details class="qa"><summary>Can I read the full terms?</summary><p>Yes. They’re in our <a class="link" href="terms.html">terms of sale</a>, in plain English.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html" aria-current="page">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/warranty.js"></script>
+</body>
+</html>

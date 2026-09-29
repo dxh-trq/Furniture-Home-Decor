@@ -61,5 +61,8 @@ Planning docs:
 - `shipping.html` — delivery (kept at the address the footer already links to): a ZIP delivery checker (nearest of seven hubs on the map, earliest date or made-to-order window, days you could choose, evening availability, and the cost with white glove and the free-delivery threshold), a comparison of the two services, a delivery-day timeline, lead times for in-stock and made-to-order pieces, a "get ready" checklist remembered on the device, and delivery FAQs. Logic in `assets/js/delivery.js`.
   Prices and lead times are constants at the top (`FREE_OVER`, `STANDARD`, `WHITE_GLOVE`, `DISPATCH_DAYS`, `MADE_WEEKS`); keep them in step with `cart.js` and `checkout.js`. Hubs are the `data-hub` pins in the map. ZIP lookup is a rough table by ZIP prefix; use your carrier's API in production.
 
+- `warranty.html` — warranty: cover summary, a "What's covered on your piece" checker (choose a furniture type and delivery date to see each part's cover on a 10-year timeline, with what's still covered today), covered / not covered lists, how a claim works, a claim form with photo thumbnails and a note for issues that usually aren't covered, parts and repairs beyond the warranty, and warranty FAQs. Logic in `assets/js/warranty.js`.
+  Cover lengths per part are in `COVER`. Front end only: send claims (with `files`) to your help desk in the submit handler.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.

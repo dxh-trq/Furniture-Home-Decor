@@ -30,7 +30,7 @@
     { url: 'faq.html', title: 'Help and FAQs', keys: 'faq faqs help questions support' },
     { url: 'returns.html', title: 'Returns', keys: 'return returns refund refunds exchange policy' },
     { url: 'shipping.html', title: 'Delivery', keys: 'delivery deliveries shipping ship how long white glove zip dates cost' },
-    { url: 'faq.html#faq-warranty-cover', title: 'Warranty', keys: 'warranty guarantee repair repairs damaged broken' },
+    { url: 'warranty.html', title: 'Warranty and repairs', keys: 'warranty guarantee repair repairs damaged broken claim parts' },
     { url: 'stores.html', title: 'Showrooms', keys: 'stores store showroom showrooms shop locations visit near me locator' },
   ];
 
