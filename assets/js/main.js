@@ -150,14 +150,17 @@
   const countEl = $('[data-cart-count]');
   const cartBtn = $('.cart-btn');
   let count = 0;
+  const addToCart = (qty = 1) => {
+    count += qty;
+    countEl.textContent = count;
+    cartBtn.setAttribute('aria-label', `Cart, ${count} item${count === 1 ? '' : 's'}`);
+    countEl.classList.remove('bump');
+    void countEl.offsetWidth;
+    countEl.classList.add('bump');
+  };
   $$('[data-add]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      count += 1;
-      countEl.textContent = count;
-      cartBtn.setAttribute('aria-label', `Cart, ${count} item${count === 1 ? '' : 's'}`);
-      countEl.classList.remove('bump');
-      void countEl.offsetWidth;
-      countEl.classList.add('bump');
+      addToCart(1);
       const card = btn.closest('.card');
       const name = $('.card__name', card).textContent.trim();
       const colour = $('.swatches [aria-checked="true"]', card)?.getAttribute('aria-label');
@@ -177,6 +180,9 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => { toastEl.hidden = true; }, 2600);
   }
+
+  // shared helpers for page scripts (shop.js, product.js)
+  window.Morrow = { addToCart, toast };
 
   /* ---------- Newsletter ---------- */
   const form = $('[data-newsletter]');
