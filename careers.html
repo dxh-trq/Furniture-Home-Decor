@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Careers — Morrow</title>
+  <meta name="description" content="Join the people who make, sell and deliver Morrow furniture. Open roles with pay shown, in our workshop, showrooms, delivery teams and studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="careers-page">
+  <section class="container cr-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><span aria-current="page">Careers</span></li></ol>
+    </nav>
+    <div class="cr-hero__grid">
+      <div>
+        <h1 class="cr-hero__title">Make things that last. Including a career.</h1>
+        <p class="cr-hero__lede">We’re 214 people who make, sell and deliver furniture built for decades. We show the pay on every role, promote from within, and give everyone a share of the profit.</p>
+        <a class="btn btn--primary" href="#roles">See 12 open roles</a>
+      </div>
+      <ul class="cr-hero__facts">
+        <li><strong>214</strong><span>people across 14 cities</span></li>
+        <li><strong>61%</strong><span>of our leads were promoted from within</span></li>
+        <li><strong>4.1 years</strong><span>average time people stay</span></li>
+        <li><strong>100%</strong><span>of roles advertised with their pay</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title tsec-title">Where you could work</h2>
+      <div class="cr-teams">
+        <article class="cr-team">
+          <div class="cr-team__art" style="color:#6F7A5E;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></div>
+          <div class="cr-team__head"><h3>Workshop</h3><span>38 people</span></div>
+          <p>Framers, upholsterers and finishers in Hickory, North Carolina, making every sofa and chair by hand.</p>
+          <button type="button" class="link" data-team-jump="workshop">See workshop roles</button>
+        </article>
+        <article class="cr-team">
+          <div class="cr-team__art" style="color:#A4583A;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg></div>
+          <div class="cr-team__head"><h3>Showrooms</h3><span>46 people</span></div>
+          <p>Stylists and showroom teams in six cities, helping people sit, touch and choose.</p>
+          <button type="button" class="link" data-team-jump="showrooms">See showrooms roles</button>
+        </article>
+        <article class="cr-team">
+          <div class="cr-team__art" style="color:#7A5236;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard"/></svg></div>
+          <div class="cr-team__head"><h3>Delivery</h3><span>84 people</span></div>
+          <p>Two-person teams from seven hubs who carry every piece to the room it belongs in.</p>
+          <button type="button" class="link" data-team-jump="delivery">See delivery roles</button>
+        </article>
+        <article class="cr-team">
+          <div class="cr-team__art" style="color:#C28E2E;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk"/></svg></div>
+          <div class="cr-team__head"><h3>Studio</h3><span>46 people</span></div>
+          <p>Design, customer care, operations and tech, in Brooklyn and remote across the US.</p>
+          <button type="button" class="link" data-team-jump="studio">See studio roles</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cr-roles-sec" id="roles" aria-labelledby="roles-title">
+    <div class="container">
+      <div class="section__head">
+        <h2 id="roles-title" class="section__title">Open roles</h2>
+        <p class="cr-roles__note">Every role shows its pay range. We don’t negotiate outside it, so everyone doing the same job is paid fairly.</p>
+      </div>
+      <div class="cr-filters">
+        <div class="chip-tabs" role="group" aria-label="Filter by team"><button class="chip-tab" type="button" data-cr-team="all" aria-pressed="true">All teams <span>12</span></button><button class="chip-tab" type="button" data-cr-team="workshop" aria-pressed="false">Workshop <span>3</span></button><button class="chip-tab" type="button" data-cr-team="showrooms" aria-pressed="false">Showrooms <span>3</span></button><button class="chip-tab" type="button" data-cr-team="delivery" aria-pressed="false">Delivery <span>2</span></button><button class="chip-tab" type="button" data-cr-team="studio" aria-pressed="false">Studio <span>4</span></button></div>
+        <div class="cr-filters__row">
+          <label class="jsearch">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <span class="visually-hidden">Search roles</span>
+            <input type="search" placeholder="Search roles" data-cr-search>
+          </label>
+          <div class="field cr-loc">
+            <label class="visually-hidden" for="cr-loc">Location</label>
+            <select id="cr-loc" data-cr-loc><option value="">All locations</option><option value="Brooklyn, NY">Brooklyn, NY</option><option value="Brooklyn, NY or remote">Brooklyn, NY or remote</option><option value="Chicago, IL">Chicago, IL</option><option value="Dallas, TX">Dallas, TX</option><option value="Denver, CO">Denver, CO</option><option value="Hickory, NC">Hickory, NC</option><option value="Los Angeles, CA">Los Angeles, CA</option><option value="Remote, US">Remote, US</option></select>
+          </div>
+        </div>
+      </div>
+      <p class="jcount" aria-live="polite" data-cr-count></p>
+      <ul class="cr-roles" data-cr-roles>
+        <li class="cr-role" id="role-upholsterer-hickory" data-team="workshop" data-loc="Hickory, NC" data-text="upholsterer workshop hickory, nc full time cover and finish our sofas and armchairs, from cutting to the final stitch.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-upholsterer-hickory-body">
+              <span class="cr-role__name">Upholsterer<small>Workshop</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hickory, NC</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$48,000–$62,000</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-upholsterer-hickory-body" hidden>
+            <p class="cr-role__summary">Cover and finish our sofas and armchairs, from cutting to the final stitch.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Cut, sew and fit covers on 6–8 pieces a week</li><li>Check frames and springs before covering</li><li>Train apprentices on the bench next to you</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>2+ years of upholstery experience, furniture or automotive</li><li>An eye for straight seams and matched patterns</li><li>Happy standing and lifting through the day</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Upholsterer, Hickory, NC">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-upholsterer-hickory">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-apprentice-hickory" data-team="workshop" data-loc="Hickory, NC" data-text="apprentice upholsterer workshop hickory, nc full time our 18-month apprenticeship takes you from no experience to a qualified upholsterer, paid from day one.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-apprentice-hickory-body">
+              <span class="cr-role__name">Apprentice upholsterer<small>Workshop</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hickory, NC</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$40,000–$46,000</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-apprentice-hickory-body" hidden>
+            <p class="cr-role__summary">Our 18-month apprenticeship takes you from no experience to a qualified upholsterer, paid from day one.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Learn every stage, from framing to final covers</li><li>Work alongside a mentor on real orders</li><li>Pass three skills checks, each with a pay rise</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>No experience needed</li><li>Patience and care with your hands</li><li>Reliable, and keen to learn a trade</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Apprentice upholsterer, Hickory, NC">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-apprentice-hickory">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-quality-hickory" data-team="workshop" data-loc="Hickory, NC" data-text="quality inspector workshop hickory, nc full time be the last pair of hands on every piece before it leaves our workshop.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-quality-hickory-body">
+              <span class="cr-role__name">Quality inspector<small>Workshop</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hickory, NC</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$50,000–$58,000</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-quality-hickory-body" hidden>
+            <p class="cr-role__summary">Be the last pair of hands on every piece before it leaves our workshop.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Inspect frames, seams and finishes against our standards</li><li>Track faults and work with the bench to fix causes</li><li>Review warranty claims with our care team</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>Experience in furniture, joinery or manufacturing quality</li><li>Clear written notes</li><li>Calm, fair and thorough</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Quality inspector, Hickory, NC">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-quality-hickory">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-stylist-brooklyn" data-team="showrooms" data-loc="Brooklyn, NY" data-text="interior stylist showrooms brooklyn, ny full time help customers plan rooms in the showroom and on video calls.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-stylist-brooklyn-body">
+              <span class="cr-role__name">Interior stylist<small>Showrooms</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Brooklyn, NY</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$58,000–$68,000 + commission</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-stylist-brooklyn-body" hidden>
+            <p class="cr-role__summary">Help customers plan rooms in the showroom and on video calls.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Run free 45-minute design appointments</li><li>Put together fabric, layout and product plans</li><li>Follow up so every order is right first time</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>A background in interiors, retail design or styling</li><li>Confident drawing a floor plan</li><li>Warm with people and honest about what fits</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Interior stylist, Brooklyn, NY">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-stylist-brooklyn">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-stylist-chicago" data-team="showrooms" data-loc="Chicago, IL" data-text="interior stylist showrooms chicago, il full time help customers plan rooms in our wicker park showroom and on video calls.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-stylist-chicago-body">
+              <span class="cr-role__name">Interior stylist<small>Showrooms</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Chicago, IL</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$56,000–$66,000 + commission</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-stylist-chicago-body" hidden>
+            <p class="cr-role__summary">Help customers plan rooms in our Wicker Park showroom and on video calls.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Run free 45-minute design appointments</li><li>Put together fabric, layout and product plans</li><li>Host evening events with local designers</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>A background in interiors, retail design or styling</li><li>Confident drawing a floor plan</li><li>Warm with people and honest about what fits</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Interior stylist, Chicago, IL">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-stylist-chicago">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-lead-la" data-team="showrooms" data-loc="Los Angeles, CA" data-text="showroom lead showrooms los angeles, ca full time open and lead our new arts district showroom, opening 14 november 2026.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-lead-la-body">
+              <span class="cr-role__name">Showroom lead<small>Showrooms</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Los Angeles, CA</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$72,000–$84,000 + bonus</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-lead-la-body" hidden>
+            <p class="cr-role__summary">Open and lead our new Arts District showroom, opening 14 November 2026.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Hire and coach a team of eight</li><li>Own the showroom’s sales and service</li><li>Shape how the space is laid out and used</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>3+ years leading a retail or hospitality team</li><li>Experience opening a new store is a plus</li><li>Love for good furniture and good service</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Showroom lead, Los Angeles, CA">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-lead-la">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-crew-denver" data-team="delivery" data-loc="Denver, CO" data-text="delivery team member delivery denver, co full time carry, unwrap and place furniture in customers’ homes as part of a two-person team.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-crew-denver-body">
+              <span class="cr-role__name">Delivery team member<small>Delivery</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Denver, CO</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$22–$25 an hour</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-crew-denver-body" hidden>
+            <p class="cr-role__summary">Carry, unwrap and place furniture in customers’ homes as part of a two-person team.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>4–6 deliveries a day, Monday to Saturday with two days off</li><li>Assemble white glove orders</li><li>Protect floors, walls and furniture on every visit</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>Comfortable lifting heavy items with a partner</li><li>Friendly and tidy in people’s homes</li><li>We train you in safe lifting and assembly</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Delivery team member, Denver, CO">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-crew-denver">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-driver-dallas" data-team="delivery" data-loc="Dallas, TX" data-text="delivery driver delivery dallas, tx full time drive one of our vans and lead a two-person delivery team.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-driver-dallas-body">
+              <span class="cr-role__name">Delivery driver<small>Delivery</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Dallas, TX</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$24–$27 an hour</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-driver-dallas-body" hidden>
+            <p class="cr-role__summary">Drive one of our vans and lead a two-person delivery team.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Plan the day’s route with our hub team</li><li>Lead each delivery and keep customers updated</li><li>Look after your van, including our first electric ones</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>A clean driving licence (no CDL needed)</li><li>1+ year driving a van or truck</li><li>Calm under pressure and good with people</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Delivery driver, Dallas, TX">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-driver-dallas">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-care-remote" data-team="studio" data-loc="Remote, US" data-text="customer care specialist studio remote, us full time help customers by phone, chat and email with orders, deliveries and returns.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-care-remote-body">
+              <span class="cr-role__name">Customer care specialist<small>Studio</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Remote, US</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$50,000–$56,000</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-care-remote-body" hidden>
+            <p class="cr-role__summary">Help customers by phone, chat and email with orders, deliveries and returns.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Answer 30–40 conversations a day</li><li>Fix problems end to end, not pass them on</li><li>Spot patterns and suggest improvements</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>Experience in customer service</li><li>Clear, kind writing</li><li>Available on a rota covering 9am–7pm Eastern</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Customer care specialist, Remote, US">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-care-remote">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-engineer-brooklyn" data-team="studio" data-loc="Brooklyn, NY or remote" data-text="senior frontend engineer studio brooklyn, ny or remote full time build the website and tools our customers and stylists use every day.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-engineer-brooklyn-body">
+              <span class="cr-role__name">Senior frontend engineer<small>Studio</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Brooklyn, NY or remote</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$150,000–$175,000</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-engineer-brooklyn-body" hidden>
+            <p class="cr-role__summary">Build the website and tools our customers and stylists use every day.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Build accessible, fast pages and product tools</li><li>Work with design and our showroom teams</li><li>Improve our component library and testing</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>5+ years building for the web</li><li>Strong HTML, CSS and JavaScript, and care for accessibility</li><li>Enjoy explaining your work to non-engineers</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Senior frontend engineer, Brooklyn, NY or remote">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-engineer-brooklyn">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-planner-brooklyn" data-team="studio" data-loc="Brooklyn, NY" data-text="supply chain planner studio brooklyn, ny full time plan materials and stock across our workshop, mills and seven delivery hubs.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-planner-brooklyn-body">
+              <span class="cr-role__name">Supply chain planner<small>Studio</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Brooklyn, NY</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Full time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$85,000–$98,000</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-planner-brooklyn-body" hidden>
+            <p class="cr-role__summary">Plan materials and stock across our workshop, mills and seven delivery hubs.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Forecast demand for fabrics, frames and parts</li><li>Balance stock across our hubs</li><li>Work with suppliers in Portugal and Italy</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>3+ years in planning or supply chain</li><li>Confident with spreadsheets and data</li><li>Clear, calm communicator</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Supply chain planner, Brooklyn, NY">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-planner-brooklyn">Copy link</button>
+            </div>
+          </div>
+        </li>
+        <li class="cr-role" id="role-care-parttime" data-team="studio" data-loc="Remote, US" data-text="customer care specialist (part time) studio remote, us part time help customers on weekends by phone, chat and email. 20 hours a week.">
+          <h3 class="cr-role__title">
+            <button type="button" class="cr-role__toggle" aria-expanded="false" aria-controls="role-care-parttime-body">
+              <span class="cr-role__name">Customer care specialist (part time)<small>Studio</small></span>
+              <span class="cr-role__meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Remote, US</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Part time</span><span class="cr-role__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg>$25–$28 an hour</span></span>
+              <span class="cr-role__chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </button>
+          </h3>
+          <div class="cr-role__body" id="role-care-parttime-body" hidden>
+            <p class="cr-role__summary">Help customers on weekends by phone, chat and email. 20 hours a week.</p>
+            <div class="cr-role__cols">
+              <div><h4>What you’ll do</h4><ul><li>Answer customer questions on Saturdays and Sundays</li><li>Fix delivery and order problems end to end</li><li>Share what customers tell you with the team</li></ul></div>
+              <div><h4>What you’ll bring</h4><ul><li>Experience in customer service</li><li>Clear, kind writing</li><li>Weekend availability</li></ul></div>
+            </div>
+            <div class="cr-role__foot">
+              <button class="btn btn--primary" type="button" data-apply="Customer care specialist (part time), Remote, US">Apply for this role</button>
+              <button class="line__action" type="button" data-copy="role-care-parttime">Copy link</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="cr-empty" data-cr-empty hidden>
+        <p><strong>No roles match.</strong> Try another team or location, or send us a general application.</p>
+        <button class="btn btn--ghost" type="button" data-cr-reset>Show all roles</button>
+      </div>
+      <div class="cr-general">
+        <div>
+          <h3>Don’t see your role?</h3>
+          <p>We keep every application for a year and get in touch when something fits.</p>
+        </div>
+        <button class="btn btn--ghost" type="button" data-apply="General application">Send a general application</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container"><div class="cr-appr">
+      <div class="cr-appr__text">
+        <p class="su-eyebrow cr-appr__eyebrow">The Morrow apprenticeship</p>
+        <h2 class="section__title">From beginner to upholsterer in 18 months, paid from day one</h2>
+        <p>Upholstery is a skill that’s disappearing. Each year we train 8 apprentices in our Hickory workshop, with a mentor, three skills checks and a pay rise at each one. No experience needed.</p>
+        <a class="btn btn--light" href="#role-apprentice-hickory" data-open-role="apprentice-hickory">See the apprenticeship role</a>
+      </div>
+      <ol class="cr-appr__steps">
+        <li><strong>Months 1–6</strong><span>Frames, springs and webbing</span><em>$40,000</em></li>
+        <li><strong>Months 7–12</strong><span>Cutting, sewing and cushions</span><em>$43,000</em></li>
+        <li><strong>Months 13–18</strong><span>Full covers, pattern matching</span><em>$46,000</em></li>
+        <li><strong>Qualified</strong><span>Upholsterer on your own bench</span><em>$48,000+</em></li>
+      </ol>
+    </div></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title tsec-title">What you get</h2>
+      <ul class="cr-perks">
+        <li class="cr-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><h3>Health cover</h3><p>Medical, dental and vision. We pay 100% for you and 80% for your family.</p></li>
+        <li class="cr-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11a7 6 0 0 1 12-3h2v3l2 1v3h-2a7 6 0 0 1-3 2.5V20h-3v-2h-2v2H8v-2.8A6 6 0 0 1 5 11z"/><circle cx="15" cy="10.5" r=".5"/></svg><h3>401(k) with 4% match</h3><p>From your first day, with no waiting period.</p></li>
+        <li class="cr-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><path d="M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v4H2z"/><path d="M5 17v2M19 17v2"/></svg><h3>A home you love</h3><p>40% off everything we make, plus $1,500 a year to spend at Morrow.</p></li>
+        <li class="cr-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><h3>25 days off</h3><p>Plus public holidays, and the whole company closes between Christmas and New Year.</p></li>
+        <li class="cr-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg><h3>16 weeks paid parental leave</h3><p>For every parent, however your family grows.</p></li>
+        <li class="cr-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21a2 2 0 0 1 2-2h13v2"/></svg><h3>$1,000 a year to learn</h3><p>Courses, books or conferences, and paid time to do them.</p></li>
+        <li class="cr-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><h3>Profit share</h3><p>When Morrow has a good year, everyone shares 10% of the profit equally.</p></li>
+        <li class="cr-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="2"/><path d="M4 11h16M8 21v-3M16 21v-3"/><circle cx="8" cy="14.5" r=".5"/><circle cx="16" cy="14.5" r=".5"/></svg><h3>Commuter support</h3><p>Transit passes paid, and free parking at our workshop and hubs.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container how">
+      <h2 class="section__title">How we hire</h2>
+      <ol class="how__steps">
+        <li class="how__step"><span class="how__num" aria-hidden="true">1</span><h3>Apply</h3><p>A short form and your CV or portfolio. No cover letter needed.</p></li>
+        <li class="how__step"><span class="how__num" aria-hidden="true">2</span><h3>A 20-minute call</h3><p>With the person you’d work for, within a week of applying.</p></li>
+        <li class="how__step"><span class="how__num" aria-hidden="true">3</span><h3>Meet the team</h3><p>A paid trial day in the workshop or showroom, or a short paid task for studio roles.</p></li>
+        <li class="how__step"><span class="how__num" aria-hidden="true">4</span><h3>An offer</h3><p>Within two weeks of your first call, and a reply to everyone who applies.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title tsec-title">From the team</h2>
+      <div class="cr-voices">
+        <figure class="cr-voice">
+          <blockquote>“I started as an apprentice who had never held a staple gun. Now I train the new starters on my bench.”</blockquote>
+          <figcaption><span class="cr-voice__av" style="background:#A9B19C" aria-hidden="true">RM</span><span><strong>Rosa M.</strong>Upholsterer, Hickory · 4 years</span></figcaption>
+        </figure>
+        <figure class="cr-voice">
+          <blockquote>“People are always a bit nervous when the sofa arrives. Seeing their face when it’s in place never gets old.”</blockquote>
+          <figcaption><span class="cr-voice__av" style="background:#C28E2E" aria-hidden="true">DK</span><span><strong>Dev K.</strong>Delivery lead, Denver · 2 years</span></figcaption>
+        </figure>
+        <figure class="cr-voice">
+          <blockquote>“We’re not paid to push the most expensive sofa. Sometimes the best advice is a smaller one, or a rug.”</blockquote>
+          <figcaption><span class="cr-voice__av" style="background:#B7775A" aria-hidden="true">AL</span><span><strong>Ada L.</strong>Interior stylist, Brooklyn · 3 years</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container sv-faq">
+      <h2 class="section__title">Questions about working here</h2>
+      <div>
+        <details class="qa"><summary>Do you sponsor visas?</summary><p>For some studio roles, yes. The role description says if it’s possible. We can’t sponsor visas for workshop, showroom or delivery roles at the moment.</p></details>
+        <details class="qa"><summary>Can I apply for more than one role?</summary><p>Yes, but pick the two that fit you best. It helps us get you to the right person quickly.</p></details>
+        <details class="qa"><summary>Do you make adjustments for interviews?</summary><p>Always. Tell us what helps, like extra time, questions in advance, or a quiet room, when you apply or at any point after.</p></details>
+        <details class="qa"><summary>Will I hear back if I’m not successful?</summary><p>Yes. Everyone who applies gets a reply, and everyone we interview gets feedback if they want it.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="cr-dialog" data-cr-dialog aria-labelledby="apply-title">
+    <form class="cr-apply" data-cr-form novalidate>
+      <div class="cr-apply__head">
+        <div>
+          <p class="cr-apply__eyebrow">Apply</p>
+          <h2 id="apply-title" data-cr-role-name>Role</h2>
+        </div>
+        <button class="cr-dialog__close" type="button" data-cr-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
+      </div>
+      <div class="field-grid">
+        <div class="field">
+          <label for="ap-first">First name</label>
+          <input id="ap-first" autocomplete="given-name" aria-describedby="ap-first-err">
+          <p class="field__error" id="ap-first-err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="ap-last">Last name</label>
+          <input id="ap-last" autocomplete="family-name" aria-describedby="ap-last-err">
+          <p class="field__error" id="ap-last-err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="ap-email">Email</label>
+          <input id="ap-email" type="email" autocomplete="email" aria-describedby="ap-email-err">
+          <p class="field__error" id="ap-email-err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="ap-phone">Phone <span class="field__opt">(optional)</span></label>
+          <input id="ap-phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field field--full">
+          <label for="ap-link">Portfolio or LinkedIn <span class="field__opt">(optional)</span></label>
+          <input id="ap-link" type="url" inputmode="url" placeholder="https://">
+        </div>
+        <div class="field field--full cr-apply__file">
+          <label for="ap-cv">CV or résumé</label>
+          <label class="upload" for="ap-cv">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v4h16v-4"/></svg>
+            <span data-cr-file><strong>Choose a file</strong>. PDF or Word, up to 10 MB.</span>
+          </label>
+          <input class="visually-hidden" id="ap-cv" type="file" accept=".pdf,.doc,.docx" aria-describedby="ap-cv-err">
+          <p class="field__error" id="ap-cv-err" hidden></p>
+        </div>
+        <div class="field field--full">
+          <label for="ap-why">Why Morrow? <span class="field__opt">(a few lines is plenty)</span></label>
+          <textarea id="ap-why" rows="3" aria-describedby="ap-why-err"></textarea>
+          <p class="field__error" id="ap-why-err" hidden></p>
+        </div>
+      </div>
+      <label class="check cr-apply__agree"><input type="checkbox" id="ap-agree"><span class="check__box" aria-hidden="true"></span><span>Keep my application for 12 months so you can contact me about other roles. <a class="link" href="privacy.html">Privacy notice</a></span></label>
+      <div class="book__nav"><button class="btn btn--ghost" type="button" data-cr-close>Cancel</button><button class="btn btn--primary" type="submit">Send application</button></div>
+    </form>
+    <div class="rt-done cr-apply__done" data-cr-done hidden tabindex="-1">
+      <div class="confirm__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg></div>
+      <h3>Application sent</h3>
+      <p data-cr-done-text></p>
+      <button class="btn btn--primary" type="button" data-cr-close>Done</button>
+    </div>
+  </dialog>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html" aria-current="page">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/careers.js"></script>
+</body>
+</html>
