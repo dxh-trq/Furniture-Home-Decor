@@ -70,5 +70,8 @@ Planning docs:
 - `careers.html` — careers: headline facts, the four teams (with shortcuts to their roles), a job board with team chips, search and a location filter, expandable roles with pay shown on each and linkable addresses (`careers.html#role-upholsterer-hickory`), a general application, the apprenticeship with its pay steps, benefits, how we hire, quotes from the team, and FAQs. Applications open in a pop-up form with a CV upload. Logic in `assets/js/careers.js`.
   Roles are plain HTML in the page (`<li class="cr-role">` with `data-team`, `data-loc` and `data-text` for search); add or remove roles there and update the team counts. Front end only: send applications to your applicant tracking system in the submit handler. People, quotes and figures are placeholders.
 
+- `gift-cards.html` — gift cards: a builder with a live card preview that flips to show the message side (email or posted, four designs, preset or custom amounts from $25 to $2,000, names, message with a character count, and a send date for email cards), add to cart, a balance checker, other ways to give, and FAQs. Logic in `assets/js/gift-cards.js`.
+  Designs are the `gc-design` radio inputs (`data-bg`, `data-ink`, `data-sym`, `data-art`, `data-leg`). Front end only: pass the gift card details to your cart in the submit handler, and replace the demo balance with a lookup from your gift card provider.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
