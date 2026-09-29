@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Living room furniture — Morrow</title>
+  <meta name="description" content="Sofas, armchairs, tables, lighting and decor for the living room. Solid wood, natural fabrics, free delivery over $500.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html" aria-current="page">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="lookbook.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="plp-page">
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="room.html">Rooms</a></li>
+        <li><span aria-current="page">Living room</span></li>
+      </ol>
+    </nav>
+
+    <header class="plp-head">
+      <div>
+        <h1 class="plp-head__title">Living room</h1>
+        <p class="plp-head__lede">Sofas you can sink into, tables that take a knock, and lamps for long evenings. Everything here is made from solid wood, natural fabric, stone or metal.</p>
+      </div>
+      <p class="plp-head__count"><strong data-result-count>15</strong> pieces</p>
+    </header>
+
+    <ul class="subcats" aria-label="Shop by category">
+        <li><button class="subcat" data-subcat="sofas" aria-pressed="false">
+          <span class="subcat__art"><svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#DCD4C3"/></svg></span>
+          <span class="subcat__name">Sofas</span>
+        </button></li>
+        <li><button class="subcat" data-subcat="armchairs" aria-pressed="false">
+          <span class="subcat__art"><svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#9A6240"/></svg></span>
+          <span class="subcat__name">Armchairs</span>
+        </button></li>
+        <li><button class="subcat" data-subcat="tables" aria-pressed="false">
+          <span class="subcat__art"><svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable" style="color:#B08A5E"/></svg></span>
+          <span class="subcat__name">Coffee & side tables</span>
+        </button></li>
+        <li><button class="subcat" data-subcat="storage" aria-pressed="false">
+          <span class="subcat__art"><svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard" style="color:#7A5236"/></svg></span>
+          <span class="subcat__name">Storage</span>
+        </button></li>
+        <li><button class="subcat" data-subcat="lighting" aria-pressed="false">
+          <span class="subcat__art"><svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp" style="color:#EBD9AE"/></svg></span>
+          <span class="subcat__name">Lighting</span>
+        </button></li>
+        <li><button class="subcat" data-subcat="rugs" aria-pressed="false">
+          <span class="subcat__art"><svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug" style="color:#9AA488"/></svg></span>
+          <span class="subcat__name">Rugs</span>
+        </button></li>
+        <li><button class="subcat" data-subcat="decor" aria-pressed="false">
+          <span class="subcat__art"><svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase" style="color:#36402F"/></svg></span>
+          <span class="subcat__name">Decor</span>
+        </button></li>
+    </ul>
+  </div>
+
+  <div class="container plp">
+    <aside class="filters" id="filters" aria-label="Filters">
+      <div class="filters__head">
+        <h2>Filters</h2>
+        <button class="icon-btn filters__close" data-filters-close aria-label="Close filters">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+
+      <form class="filters__form" data-filters>
+        <details class="fgroup" open>
+          <summary>Category</summary>
+          <ul class="fgroup__list">
+              <li><label class="check"><input type="checkbox" name="category" value="sofas"><span class="check__box" aria-hidden="true"></span><span class="check__label">Sofas</span><span class="check__count">3</span></label></li>
+              <li><label class="check"><input type="checkbox" name="category" value="armchairs"><span class="check__box" aria-hidden="true"></span><span class="check__label">Armchairs</span><span class="check__count">3</span></label></li>
+              <li><label class="check"><input type="checkbox" name="category" value="tables"><span class="check__box" aria-hidden="true"></span><span class="check__label">Coffee & side tables</span><span class="check__count">2</span></label></li>
+              <li><label class="check"><input type="checkbox" name="category" value="storage"><span class="check__box" aria-hidden="true"></span><span class="check__label">Storage</span><span class="check__count">1</span></label></li>
+              <li><label class="check"><input type="checkbox" name="category" value="lighting"><span class="check__box" aria-hidden="true"></span><span class="check__label">Lighting</span><span class="check__count">2</span></label></li>
+              <li><label class="check"><input type="checkbox" name="category" value="rugs"><span class="check__box" aria-hidden="true"></span><span class="check__label">Rugs</span><span class="check__count">1</span></label></li>
+              <li><label class="check"><input type="checkbox" name="category" value="decor"><span class="check__box" aria-hidden="true"></span><span class="check__label">Decor</span><span class="check__count">3</span></label></li>
+          </ul>
+        </details>
+
+        <details class="fgroup" open>
+          <summary>Price</summary>
+          <div class="price-range" style="--a:0%;--b:100%">
+            <div class="price-range__track"></div>
+            <label class="visually-hidden" for="price-min">Minimum price</label>
+            <input id="price-min" type="range" name="min" min="0" max="3000" step="50" value="0">
+            <label class="visually-hidden" for="price-max">Maximum price</label>
+            <input id="price-max" type="range" name="max" min="0" max="3000" step="50" value="3000">
+          </div>
+          <p class="price-range__values"><output data-min-out>$0</output><span aria-hidden="true">to</span><output data-max-out>$3,000+</output></p>
+        </details>
+
+        <details class="fgroup" open>
+          <summary>Material</summary>
+          <ul class="fgroup__list">
+              <li><label class="check"><input type="checkbox" name="material" value="boucle"><span class="check__box" aria-hidden="true"></span><span class="check__label">Bouclé</span><span class="check__count">3</span></label></li>
+              <li><label class="check"><input type="checkbox" name="material" value="linen"><span class="check__box" aria-hidden="true"></span><span class="check__label">Linen</span><span class="check__count">3</span></label></li>
+              <li><label class="check"><input type="checkbox" name="material" value="leather"><span class="check__box" aria-hidden="true"></span><span class="check__label">Leather</span><span class="check__count">1</span></label></li>
+              <li><label class="check"><input type="checkbox" name="material" value="wood"><span class="check__box" aria-hidden="true"></span><span class="check__label">Solid wood</span><span class="check__count">3</span></label></li>
+              <li><label class="check"><input type="checkbox" name="material" value="stone"><span class="check__box" aria-hidden="true"></span><span class="check__label">Stone</span><span class="check__count">1</span></label></li>
+              <li><label class="check"><input type="checkbox" name="material" value="metal"><span class="check__box" aria-hidden="true"></span><span class="check__label">Metal</span><span class="check__count">1</span></label></li>
+              <li><label class="check"><input type="checkbox" name="material" value="wool"><span class="check__box" aria-hidden="true"></span><span class="check__label">Wool</span><span class="check__count">1</span></label></li>
+              <li><label class="check"><input type="checkbox" name="material" value="ceramic"><span class="check__box" aria-hidden="true"></span><span class="check__label">Ceramic</span><span class="check__count">2</span></label></li>
+          </ul>
+        </details>
+
+        <details class="fgroup" open>
+          <summary>Colour</summary>
+          <ul class="colour-list">
+              <li><label class="colour-opt"><input type="checkbox" name="colour" value="neutral"><span class="colour-opt__dot" style="--c:#DCD4C3" aria-hidden="true"></span><span>Neutral</span></label></li>
+              <li><label class="colour-opt"><input type="checkbox" name="colour" value="green"><span class="colour-opt__dot" style="--c:#8E9A7B" aria-hidden="true"></span><span>Green</span></label></li>
+              <li><label class="colour-opt"><input type="checkbox" name="colour" value="brown"><span class="colour-opt__dot" style="--c:#7A5236" aria-hidden="true"></span><span>Brown</span></label></li>
+              <li><label class="colour-opt"><input type="checkbox" name="colour" value="black"><span class="colour-opt__dot" style="--c:#2E2B28" aria-hidden="true"></span><span>Black</span></label></li>
+              <li><label class="colour-opt"><input type="checkbox" name="colour" value="ochre"><span class="colour-opt__dot" style="--c:#C28E2E" aria-hidden="true"></span><span>Ochre</span></label></li>
+          </ul>
+        </details>
+
+        <details class="fgroup" open>
+          <summary>Availability</summary>
+          <ul class="fgroup__list">
+              <li><label class="check"><input type="checkbox" name="stock" value="in"><span class="check__box" aria-hidden="true"></span><span class="check__label">In stock</span><span class="check__count">12</span></label></li>
+              <li><label class="check"><input type="checkbox" name="stock" value="order"><span class="check__box" aria-hidden="true"></span><span class="check__label">Made to order</span><span class="check__count">3</span></label></li>
+              <li><label class="check"><input type="checkbox" name="sale" value="1"><span class="check__box" aria-hidden="true"></span><span class="check__label">On sale</span><span class="check__count">4</span></label></li>
+          </ul>
+        </details>
+      </form>
+
+      <div class="filters__foot">
+        <button class="btn btn--ghost" type="button" data-clear-all>Clear all</button>
+        <button class="btn btn--primary" type="button" data-filters-close>Show <span data-result-count>15</span> results</button>
+      </div>
+    </aside>
+
+    <section class="plp-main" aria-labelledby="results-heading">
+      <h2 id="results-heading" class="visually-hidden">Products</h2>
+
+      <div class="toolbar">
+        <button class="btn btn--ghost toolbar__filters" data-filters-open aria-controls="filters" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+          Filters <span class="toolbar__badge" data-filter-count hidden></span>
+        </button>
+        <p class="toolbar__count" aria-live="polite"><span data-result-count>15</span> results</p>
+        <label class="sort">
+          <span>Sort by</span>
+          <select data-sort>
+            <option value="recommended">Recommended</option>
+            <option value="newest">Newest</option>
+            <option value="price-asc">Price, low to high</option>
+            <option value="price-desc">Price, high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </label>
+        <div class="density" role="group" aria-label="Grid size">
+          <button class="icon-btn" data-density="3" aria-pressed="true" aria-label="Show 3 per row">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="9.5" y="3" width="5" height="5" rx="1"/><rect x="16" y="3" width="5" height="5" rx="1"/><rect x="3" y="10" width="5" height="5" rx="1"/><rect x="9.5" y="10" width="5" height="5" rx="1"/><rect x="16" y="10" width="5" height="5" rx="1"/></svg>
+          </button>
+          <button class="icon-btn" data-density="2" aria-pressed="false" aria-label="Show 2 per row">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <ul class="active-filters" data-active-filters aria-label="Active filters" hidden></ul>
+
+      <ul class="plp-grid" data-grid>
+        <li class="card" data-category="sofas" data-price="1890" data-material="boucle" data-colour="neutral green brown" data-stock="in" data-rating="4.8" data-added="2026-09-12" data-popularity="1" style="--leg:#5C3E28">
+          <a class="card__media" href="product.html" style="color:#DCD4C3">
+            <span class="badge">New</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Alder 3-seat sofa"><use href="#s-sofa"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Alder 3-seat sofa to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Alder 3-seat sofa</a></h3>
+            <p class="card__meta">Bouclé, solid oak legs</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.8 <span>(312)</span><span class="visually-hidden"> Rated 4.8 out of 5 from 312 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Oat" style="--c:#DCD4C3"></button><button role="radio" aria-checked="false" aria-label="Sage" style="--c:#8E9A7B"></button><button role="radio" aria-checked="false" aria-label="Cognac" style="--c:#9A6240"></button></div>
+            <div class="card__foot">
+              <p class="price">$1,890</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="sofas" data-price="2640" data-material="boucle" data-colour="neutral green" data-stock="order" data-rating="4.7" data-added="2026-06-02" data-popularity="6" style="--leg:#5C3E28">
+          <a class="card__media" href="product.html" style="color:#DCD4C3">
+            
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Alder corner sofa"><use href="#s-sofa"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Alder corner sofa to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Alder corner sofa</a></h3>
+            <p class="card__meta">Bouclé, solid oak legs</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.7 <span>(88)</span><span class="visually-hidden"> Rated 4.7 out of 5 from 88 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Oat" style="--c:#DCD4C3"></button><button role="radio" aria-checked="false" aria-label="Sage" style="--c:#8E9A7B"></button></div>
+            <div class="card__foot">
+              <p class="price">$2,640</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--order"></span>Made to order, 6–8 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="sofas" data-price="1420" data-material="linen" data-colour="green neutral black" data-stock="in" data-rating="4.6" data-added="2025-11-20" data-popularity="4" data-sale style="--leg:#3B2A1E">
+          <a class="card__media" href="product.html" style="color:#8E9A7B">
+            <span class="badge badge--sale">Save 16%</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Hale 2-seat sofa"><use href="#s-sofa"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Hale 2-seat sofa to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Hale 2-seat sofa</a></h3>
+            <p class="card__meta">Washed linen, walnut legs</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.6 <span>(140)</span><span class="visually-hidden"> Rated 4.6 out of 5 from 140 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Sage" style="--c:#8E9A7B"></button><button role="radio" aria-checked="false" aria-label="Oat" style="--c:#DCD4C3"></button><button role="radio" aria-checked="false" aria-label="Charcoal" style="--c:#4A4D48"></button></div>
+            <div class="card__foot">
+              <p class="price"><span class="price__now">$1,420</span> <s>$1,690</s></p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="armchairs" data-price="760" data-material="leather" data-colour="brown neutral" data-stock="in" data-rating="4.9" data-added="2026-09-01" data-popularity="2" style="--leg:#3B2A1E">
+          <a class="card__media" href="product.html" style="color:#9A6240">
+            <span class="badge">New</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Ren lounge chair"><use href="#s-armchair"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Ren lounge chair to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Ren lounge chair</a></h3>
+            <p class="card__meta">Aniline leather, walnut</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.9 <span>(205)</span><span class="visually-hidden"> Rated 4.9 out of 5 from 205 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Cognac" style="--c:#9A6240"></button><button role="radio" aria-checked="false" aria-label="Espresso" style="--c:#4A3528"></button><button role="radio" aria-checked="false" aria-label="Sand" style="--c:#CDB592"></button></div>
+            <div class="card__foot">
+              <p class="price">$760</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="armchairs" data-price="590" data-material="linen" data-colour="neutral brown green" data-stock="in" data-rating="4.5" data-added="2026-03-14" data-popularity="9" style="--leg:#B08A5E">
+          <a class="card__media" href="product.html" style="color:#DCD4C3">
+            
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Otto armchair"><use href="#s-armchair"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Otto armchair to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Otto armchair</a></h3>
+            <p class="card__meta">Washed linen, oak legs</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.5 <span>(61)</span><span class="visually-hidden"> Rated 4.5 out of 5 from 61 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Oat" style="--c:#DCD4C3"></button><button role="radio" aria-checked="false" aria-label="Rust" style="--c:#A4583A"></button><button role="radio" aria-checked="false" aria-label="Moss" style="--c:#6F7A5E"></button></div>
+            <div class="card__foot">
+              <p class="price">$590</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="tables" data-price="690" data-material="wood" data-colour="brown black" data-stock="in" data-rating="4.7" data-added="2026-05-08" data-popularity="5" style="--leg:#5C3E28">
+          <a class="card__media" href="product.html" style="color:#B08A5E">
+            
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Drift coffee table"><use href="#s-coffeetable"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Drift coffee table to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Drift coffee table</a></h3>
+            <p class="card__meta">Solid oak, 120 cm</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.7 <span>(97)</span><span class="visually-hidden"> Rated 4.7 out of 5 from 97 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Natural oak" style="--c:#B08A5E"></button><button role="radio" aria-checked="false" aria-label="Smoked oak" style="--c:#6B4A33"></button><button role="radio" aria-checked="false" aria-label="Black oak" style="--c:#2E2B28"></button></div>
+            <div class="card__foot">
+              <p class="price">$690</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="tables" data-price="280" data-material="stone" data-colour="neutral brown black" data-stock="in" data-rating="4.8" data-added="2025-10-02" data-popularity="3" style="--leg:#5C3E28">
+          <a class="card__media" href="product.html" style="color:#D9CFBF">
+            
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Tove side table"><use href="#s-sidetable"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Tove side table to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Tove side table</a></h3>
+            <p class="card__meta">Honed travertine</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.8 <span>(176)</span><span class="visually-hidden"> Rated 4.8 out of 5 from 176 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Travertine" style="--c:#D9CFBF"></button><button role="radio" aria-checked="false" aria-label="Rosso marble" style="--c:#A8715F"></button><button role="radio" aria-checked="false" aria-label="Nero marble" style="--c:#3D3F3C"></button></div>
+            <div class="card__foot">
+              <p class="price">$280</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="storage" data-price="1054" data-material="wood" data-colour="brown" data-stock="order" data-rating="4.6" data-added="2025-08-18" data-popularity="8" data-sale style="--leg:#3B2A1E">
+          <a class="card__media" href="product.html" style="color:#7A5236">
+            <span class="badge badge--sale">Save 15%</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Stilla sideboard"><use href="#s-sideboard"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Stilla sideboard to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Stilla sideboard</a></h3>
+            <p class="card__meta">Walnut veneer, 180 cm</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.6 <span>(54)</span><span class="visually-hidden"> Rated 4.6 out of 5 from 54 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Walnut" style="--c:#7A5236"></button><button role="radio" aria-checked="false" aria-label="Natural oak" style="--c:#B08A5E"></button></div>
+            <div class="card__foot">
+              <p class="price"><span class="price__now">$1,054</span> <s>$1,240</s></p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--order"></span>Made to order, 6–8 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="lighting" data-price="320" data-material="linen" data-colour="neutral green" data-stock="in" data-rating="4.7" data-added="2026-08-21" data-popularity="7" style="--leg:#2B2F2A">
+          <a class="card__media" href="product.html" style="color:#EBD9AE">
+            <span class="badge">New</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Lumen floor lamp"><use href="#s-lamp"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Lumen floor lamp to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Lumen floor lamp</a></h3>
+            <p class="card__meta">Linen shade, blackened steel</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.7 <span>(133)</span><span class="visually-hidden"> Rated 4.7 out of 5 from 133 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Natural linen" style="--c:#EBD9AE"></button><button role="radio" aria-checked="false" aria-label="Moss linen" style="--c:#6F7A5E"></button></div>
+            <div class="card__foot">
+              <p class="price">$320</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="lighting" data-price="168" data-material="metal" data-colour="green neutral ochre" data-stock="in" data-rating="4.4" data-added="2025-12-05" data-popularity="10" data-sale style="--leg:#2B2F2A">
+          <a class="card__media" href="product.html" style="color:#6F7A5E">
+            <span class="badge badge--sale">Save 20%</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Halo pendant light"><use href="#s-pendant"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Halo pendant light to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Halo pendant light</a></h3>
+            <p class="card__meta">Powder-coated aluminium</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.4 <span>(89)</span><span class="visually-hidden"> Rated 4.4 out of 5 from 89 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Moss" style="--c:#6F7A5E"></button><button role="radio" aria-checked="false" aria-label="Chalk" style="--c:#E8E6DF"></button><button role="radio" aria-checked="false" aria-label="Ochre" style="--c:#C28E2E"></button></div>
+            <div class="card__foot">
+              <p class="price"><span class="price__now">$168</span> <s>$210</s></p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="rugs" data-price="540" data-material="wool" data-colour="neutral green brown" data-stock="in" data-rating="4.6" data-added="2026-07-10" data-popularity="11" style="--leg:#5C3E28">
+          <a class="card__media" href="product.html" style="color:#CFC4AF">
+            
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Mira wool rug"><use href="#s-rug"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Mira wool rug to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Mira wool rug</a></h3>
+            <p class="card__meta">Hand-tufted wool, 200 × 300 cm</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.6 <span>(72)</span><span class="visually-hidden"> Rated 4.6 out of 5 from 72 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Oat" style="--c:#CFC4AF"></button><button role="radio" aria-checked="false" aria-label="Sage" style="--c:#9AA488"></button><button role="radio" aria-checked="false" aria-label="Terracotta" style="--c:#B7775A"></button></div>
+            <div class="card__foot">
+              <p class="price">$540</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="decor" data-price="390" data-material="wood" data-colour="brown ochre" data-stock="in" data-rating="4.8" data-added="2026-01-22" data-popularity="12" data-sale style="--leg:#5C3E28">
+          <a class="card__media" href="product.html" style="color:#B08A5E">
+            <span class="badge badge--sale">Save 15%</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Arc wall mirror"><use href="#s-mirror"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Arc wall mirror to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Arc wall mirror</a></h3>
+            <p class="card__meta">Oak frame, 60 × 100 cm</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.8 <span>(118)</span><span class="visually-hidden"> Rated 4.8 out of 5 from 118 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Natural oak" style="--c:#B08A5E"></button><button role="radio" aria-checked="false" aria-label="Brass" style="--c:#C9A45A"></button></div>
+            <div class="card__foot">
+              <p class="price"><span class="price__now">$390</span> <s>$460</s></p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="decor" data-price="65" data-material="ceramic" data-colour="green ochre neutral" data-stock="in" data-rating="4.9" data-added="2026-08-30" data-popularity="13" style="--leg:#5C3E28">
+          <a class="card__media" href="product.html" style="color:#36402F">
+            <span class="badge">New</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Loma vase"><use href="#s-vase"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Loma vase to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Loma vase</a></h3>
+            <p class="card__meta">Glazed stoneware, 30 cm</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.9 <span>(241)</span><span class="visually-hidden"> Rated 4.9 out of 5 from 241 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Moss" style="--c:#36402F"></button><button role="radio" aria-checked="false" aria-label="Ochre" style="--c:#C28E2E"></button><button role="radio" aria-checked="false" aria-label="Chalk" style="--c:#E8E6DF"></button></div>
+            <div class="card__foot">
+              <p class="price">$65</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="decor" data-price="85" data-material="ceramic" data-colour="brown neutral" data-stock="in" data-rating="4.5" data-added="2026-04-04" data-popularity="15" style="--leg:#5C3E28">
+          <a class="card__media" href="product.html" style="color:#B7775A">
+            
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Terra planter"><use href="#s-plant"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Terra planter to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Terra planter</a></h3>
+            <p class="card__meta">Unglazed terracotta, 40 cm</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.5 <span>(39)</span><span class="visually-hidden"> Rated 4.5 out of 5 from 39 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Terracotta" style="--c:#B7775A"></button><button role="radio" aria-checked="false" aria-label="Chalk" style="--c:#EFEDE6"></button></div>
+            <div class="card__foot">
+              <p class="price">$85</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--in"></span>In stock, ships in 1–2 weeks</p>
+          </div>
+        </li>
+        <li class="card" data-category="armchairs" data-price="640" data-material="boucle" data-colour="neutral black" data-stock="order" data-rating="4.3" data-added="2026-09-20" data-popularity="14" style="--leg:#2B2F2A">
+          <a class="card__media" href="product.html" style="color:#DCD4C3">
+            <span class="badge">New</span>
+            <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Hale lounge chair"><use href="#s-armchair"/></svg>
+          </a>
+          <button class="wish" aria-pressed="false" aria-label="Save Hale lounge chair to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <div class="card__body">
+            <h3 class="card__name"><a href="product.html">Hale lounge chair</a></h3>
+            <p class="card__meta">Bouclé, blackened oak</p>
+            <p class="card__rating"><span class="stars" aria-hidden="true">★</span> 4.3 <span>(22)</span><span class="visually-hidden"> Rated 4.3 out of 5 from 22 reviews</span></p>
+            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Oat" style="--c:#DCD4C3"></button><button role="radio" aria-checked="false" aria-label="Charcoal" style="--c:#4A4D48"></button></div>
+            <div class="card__foot">
+              <p class="price">$640</p>
+              <button class="btn btn--small" data-add>Add to cart</button>
+            </div>
+            <p class="card__stock"><span class="dot dot--order"></span>Made to order, 6–8 weeks</p>
+          </div>
+        </li>
+        <li class="promo-tile" data-promo>
+          <svg class="promo-tile__art" viewBox="0 0 200 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="34" fill="#DCD4C3"/><circle cx="100" cy="60" r="34" fill="#8E9A7B"/><circle cx="140" cy="60" r="34" fill="#9A6240"/>
+          </svg>
+          <h3>Not sure about the colour?</h3>
+          <p>Order up to six fabric swatches, free. They usually arrive in two days.</p>
+          <a class="btn btn--light" href="services.html#swatches">Order free swatches</a>
+        </li>
+      </ul>
+
+      <div class="empty" data-empty hidden>
+        <h3>No pieces match these filters</h3>
+        <p>Remove a filter above, or clear them all to see the full living room range.</p>
+        <button class="btn btn--primary" type="button" data-clear-all>Clear all filters</button>
+      </div>
+
+      <div class="load-more" data-load-more>
+        <p>Showing <span data-shown>12</span> of <span data-result-count>15</span></p>
+        <div class="load-more__bar" aria-hidden="true"><span data-progress></span></div>
+        <button class="btn btn--ghost" type="button" data-load-more-btn>Load more</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="section plp-about">
+    <div class="container plp-about__inner">
+      <h2 class="section__title">Choosing living room furniture</h2>
+      <div class="plp-about__text">
+        <p>Start with the sofa. Measure the wall it will sit against, then your doorways and stairwell: every product page lists the smallest opening each piece fits through. Leave around 45 cm between the sofa and a coffee table, and at least 90 cm for walkways.</p>
+        <p>Pick fabric in person if you can. Our swatches are free, and bouclé, linen and leather all look different in morning and evening light. Everything is covered by a 30-day return window and a 10-year frame warranty.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/shop.js"></script>
+</body>
+</html>

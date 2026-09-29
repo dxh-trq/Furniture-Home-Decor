@@ -43,7 +43,7 @@
 
   /* ---------- Hero hotspots ---------- */
   const scene = $('.scene');
-  const hotspots = $$('.hotspot', scene);
+  const hotspots = scene ? $$('.hotspot', scene) : [];
 
   const closeHotspots = () => {
     hotspots.forEach((h) => {
@@ -93,35 +93,37 @@
   });
   window.addEventListener('resize', closeHotspots);
 
-  /* ---------- Product tabs + carousel ---------- */
+  /* ---------- Product tabs + carousel (homepage) ---------- */
   const carousel = $('[data-carousel]');
-  const prev = $('[data-carousel-prev]');
-  const next = $('[data-carousel-next]');
-  const cards = $$('.card', carousel);
+  if (carousel) {
+    const prev = $('[data-carousel-prev]');
+    const next = $('[data-carousel-next]');
+    const cards = $$('.card', carousel);
 
-  const updateArrows = () => {
-    const max = carousel.scrollWidth - carousel.clientWidth - 2;
-    prev.disabled = carousel.scrollLeft <= 2;
-    next.disabled = carousel.scrollLeft >= max;
-  };
-  const step = () => (cards.find((c) => !c.hidden)?.offsetWidth || 300) + 20;
-  prev.addEventListener('click', () => carousel.scrollBy({ left: -step() }));
-  next.addEventListener('click', () => carousel.scrollBy({ left: step() }));
-  carousel.addEventListener('scroll', updateArrows, { passive: true });
-  window.addEventListener('resize', updateArrows);
+    const updateArrows = () => {
+      const max = carousel.scrollWidth - carousel.clientWidth - 2;
+      prev.disabled = carousel.scrollLeft <= 2;
+      next.disabled = carousel.scrollLeft >= max;
+    };
+    const step = () => (cards.find((c) => !c.hidden)?.offsetWidth || 300) + 20;
+    prev.addEventListener('click', () => carousel.scrollBy({ left: -step() }));
+    next.addEventListener('click', () => carousel.scrollBy({ left: step() }));
+    carousel.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
 
-  const applyFilter = (filter) => {
-    cards.forEach((c) => { c.hidden = !c.dataset.tags.split(' ').includes(filter); });
-    carousel.scrollLeft = 0;
-    updateArrows();
-  };
-  $$('.tab').forEach((tab) => {
-    tab.addEventListener('click', () => {
-      $$('.tab').forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
-      applyFilter(tab.dataset.filter);
+    const applyFilter = (filter) => {
+      cards.forEach((c) => { c.hidden = !c.dataset.tags.split(' ').includes(filter); });
+      carousel.scrollLeft = 0;
+      updateArrows();
+    };
+    $$('.tab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        $$('.tab').forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
+        applyFilter(tab.dataset.filter);
+      });
     });
-  });
-  applyFilter($('.tab[aria-selected="true"]').dataset.filter);
+    applyFilter($('.tab[aria-selected="true"]').dataset.filter);
+  }
 
   /* ---------- Swatches recolour the product ---------- */
   $$('.swatches').forEach((group) => {
@@ -178,7 +180,7 @@
 
   /* ---------- Newsletter ---------- */
   const form = $('[data-newsletter]');
-  form.addEventListener('submit', (e) => {
+  if (form) form.addEventListener('submit', (e) => {
     e.preventDefault();
     const input = $('input', form);
     const msg = $('.newsletter__msg', form);
