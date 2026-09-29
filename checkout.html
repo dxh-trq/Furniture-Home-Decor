@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Morrow</title>
+  <meta name="description" content="Secure checkout.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="checkout-body">
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="co-header">
+  <div class="container co-header__inner">
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+    <p class="co-header__secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout</p>
+    <a class="co-header__back" href="cart.html">Back to cart</a>
+  </div>
+</header>
+
+<main id="main" class="checkout-page">
+  <div class="container">
+    <ol class="steps" aria-label="Checkout progress" data-steps>
+      <li class="is-done"><a href="cart.html"><span class="steps__num">1</span>Cart</a></li>
+      <li aria-current="step"><span class="steps__num">2</span>Delivery</li>
+      <li><span class="steps__num">3</span>Payment</li>
+      <li><span class="steps__num">4</span>Confirmation</li>
+    </ol>
+  </div>
+
+  <div class="container checkout" data-checkout>
+    <!-- Mobile summary toggle -->
+    <button class="osum-toggle" type="button" aria-expanded="false" aria-controls="order-summary" data-osum-toggle>
+      <span>Show order summary</span>
+      <strong data-total>$2,620</strong>
+    </button>
+
+    <div class="checkout__main" data-flow>
+      <!-- Express -->
+      <section class="express" aria-labelledby="express-title">
+        <h2 id="express-title" class="express__title">Express checkout</h2>
+        <div class="express__btns">
+          <button type="button" class="express__btn express__btn--dark" data-express="Apple Pay">Apple Pay</button>
+          <button type="button" class="express__btn express__btn--paypal" data-express="PayPal">PayPal</button>
+          <button type="button" class="express__btn express__btn--klarna" data-express="Klarna">Klarna</button>
+        </div>
+        <p class="express__or"><span>or fill in your details</span></p>
+      </section>
+
+      <!-- Step 1: contact + address -->
+      <section class="co-step is-active" data-step="1" aria-labelledby="step1-title">
+        <header class="co-step__head">
+          <span class="co-step__num" aria-hidden="true">1</span>
+          <h2 id="step1-title" class="co-step__title">Contact and address</h2>
+          <button type="button" class="co-step__edit" data-edit="1" hidden>Edit<span class="visually-hidden"> contact and address</span></button>
+        </header>
+        <div class="co-step__summary" data-summary="1" hidden></div>
+        <form class="co-step__body" data-form="1" novalidate>
+          <div class="field-grid">
+            <div class="field field--full">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err email-hint">
+              <p class="field__hint" id="email-hint">For your receipt and delivery updates.</p>
+              <p class="field__error" id="email-err" hidden></p>
+            </div>
+            <label class="check check--inline field--full"><input type="checkbox" name="news"><span class="check__box" aria-hidden="true"></span><span>Email me about new arrivals and offers</span></label>
+            <h3 class="field-grid__title field--full">Delivery address</h3>
+            <div class="field ">
+              <label for="first">First name</label>
+              <input id="first" name="first" type="text" autocomplete="given-name" required aria-describedby="first-err">
+              <p class="field__error" id="first-err" hidden></p>
+            </div>
+            <div class="field ">
+              <label for="last">Last name</label>
+              <input id="last" name="last" type="text" autocomplete="family-name" required aria-describedby="last-err">
+              <p class="field__error" id="last-err" hidden></p>
+            </div>
+            <div class="field field--full">
+              <label for="address1">Street address</label>
+              <input id="address1" name="address1" type="text" autocomplete="address-line1" required aria-describedby="address1-err">
+              <p class="field__error" id="address1-err" hidden></p>
+            </div>
+            <div class="field field--full">
+              <label for="address2">Apartment, suite or floor <span class="field__opt">(optional)</span></label>
+              <input id="address2" name="address2" type="text" autocomplete="address-line2" aria-describedby="address2-err">
+              <p class="field__error" id="address2-err" hidden></p>
+            </div>
+            <div class="field ">
+              <label for="city">City</label>
+              <input id="city" name="city" type="text" autocomplete="address-level2" required aria-describedby="city-err">
+              <p class="field__error" id="city-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="state">State</label>
+              <select id="state" name="state" autocomplete="address-level1" required aria-describedby="state-err">
+                <option value="">Select</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+              <p class="field__error" id="state-err" hidden></p>
+            </div>
+            <div class="field ">
+              <label for="zip">ZIP code</label>
+              <input id="zip" name="zip" type="text" autocomplete="postal-code" required inputmode="numeric" maxlength="5" aria-describedby="zip-err">
+              <p class="field__error" id="zip-err" hidden></p>
+            </div>
+            <div class="field ">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="phone-err phone-hint">
+              <p class="field__hint" id="phone-hint">The delivery team texts you on the day.</p>
+              <p class="field__error" id="phone-err" hidden></p>
+            </div>
+
+            <fieldset class="access field--full">
+              <legend>Getting it inside</legend>
+              <p class="access__lede">Large pieces need a clear route. This helps our team bring the right equipment.</p>
+              <div class="access__grid">
+                <div class="field">
+                  <label for="home">Home type</label>
+                  <select id="home" name="home">
+                    <option>House</option>
+                    <option>Apartment or condo</option>
+                    <option>Townhouse</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="floor">Floor</label>
+                  <select id="floor" name="floor">
+                    <option>Ground floor</option>
+                    <option>1st floor</option>
+                    <option>2nd floor</option>
+                    <option>3rd floor</option>
+                    <option>4th floor or higher</option>
+                  </select>
+                </div>
+              </div>
+              <label class="check check--inline"><input type="checkbox" name="elevator"><span class="check__box" aria-hidden="true"></span><span>There’s an elevator we can use</span></label>
+              <label class="check check--inline"><input type="checkbox" name="narrow"><span class="check__box" aria-hidden="true"></span><span>There are narrow doorways or tight turns (under 80 cm)</span></label>
+            </fieldset>
+          </div>
+          <button class="btn btn--primary co-step__next" type="submit">Continue to delivery</button>
+        </form>
+      </section>
+
+      <!-- Step 2: delivery -->
+      <section class="co-step is-locked" data-step="2" aria-labelledby="step2-title">
+        <header class="co-step__head">
+          <span class="co-step__num" aria-hidden="true">2</span>
+          <h2 id="step2-title" class="co-step__title">Delivery</h2>
+          <button type="button" class="co-step__edit" data-edit="2" hidden>Edit<span class="visually-hidden"> delivery</span></button>
+        </header>
+        <div class="co-step__summary" data-summary="2" hidden></div>
+        <form class="co-step__body" data-form="2" novalidate hidden>
+          <fieldset class="ship-opts">
+            <legend>Delivery service</legend>
+            <label class="ship-opt">
+              <input type="radio" name="service" value="standard" checked>
+              <span class="ship-opt__box">
+                <span class="ship-opt__row"><strong>Room of choice</strong><span>Free</span></span>
+                <span class="ship-opt__desc">Two people carry everything to the room you choose.</span>
+              </span>
+            </label>
+            <label class="ship-opt">
+              <input type="radio" name="service" value="whiteglove">
+              <span class="ship-opt__box">
+                <span class="ship-opt__row"><strong>White glove</strong><span>+$79</span></span>
+                <span class="ship-opt__desc">Assembled in place, and all packaging taken away.</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="shipment">
+            <div class="shipment__head">
+              <h3>Delivery 1 of 2</h3>
+              <p><span class="dot dot--in"></span>Lumen floor lamp, Tove side table, Loma vase × 2</p>
+            </div>
+            <fieldset class="dates">
+              <legend>Choose a day</legend>
+              <div class="dates__list" data-dates></div>
+              <p class="field__error" id="date-err" hidden></p>
+            </fieldset>
+            <fieldset class="slots">
+              <legend>Time window</legend>
+              <label class="slot"><input type="radio" name="slot" value="8am–12pm" checked><span>8am–12pm</span></label>
+              <label class="slot"><input type="radio" name="slot" value="12pm–5pm"><span>12pm–5pm</span></label>
+              <label class="slot"><input type="radio" name="slot" value="5pm–8pm"><span>5pm–8pm <small>+$25</small></span></label>
+            </fieldset>
+          </div>
+
+          <div class="shipment shipment--later">
+            <div class="shipment__head">
+              <h3>Delivery 2 of 2</h3>
+              <p><span class="dot dot--order"></span>Alder 3-seat sofa, made to order</p>
+            </div>
+            <p class="shipment__note">Estimated week of <strong data-later-week>…</strong>. We’ll call you to book a day once it leaves the workshop.</p>
+          </div>
+
+          <div class="field field--full">
+            <label for="notes">Notes for the delivery team <span class="field__opt">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Gate code, parking, which room it goes in"></textarea>
+          </div>
+
+          <button class="btn btn--primary co-step__next" type="submit">Continue to payment</button>
+        </form>
+      </section>
+
+      <!-- Step 3: payment -->
+      <section class="co-step is-locked" data-step="3" aria-labelledby="step3-title">
+        <header class="co-step__head">
+          <span class="co-step__num" aria-hidden="true">3</span>
+          <h2 id="step3-title" class="co-step__title">Payment</h2>
+        </header>
+        <form class="co-step__body" data-form="3" novalidate hidden>
+          <fieldset class="pay-opts">
+            <legend class="visually-hidden">Payment method</legend>
+            <label class="pay-opt">
+              <input type="radio" name="method" value="card" checked>
+              <span class="pay-opt__label">Card</span>
+              <span class="pay-opt__meta">Visa, Mastercard, Amex</span>
+            </label>
+            <div class="pay-panel" data-panel="card">
+              <div class="field-grid">
+                <div class="field field--full">
+                  <label for="ccnum">Card number</label>
+                  <div class="card-input">
+                    <input id="ccnum" name="ccnum" inputmode="numeric" autocomplete="cc-number" required aria-describedby="ccnum-err" placeholder="1234 1234 1234 1234" maxlength="23">
+                    <span class="card-input__brand" data-brand aria-live="polite"></span>
+                  </div>
+                  <p class="field__error" id="ccnum-err" hidden></p>
+                </div>
+            <div class="field ">
+              <label for="ccexp">Expiry (MM / YY)</label>
+              <input id="ccexp" name="ccexp" type="text" autocomplete="cc-exp" required inputmode="numeric" placeholder="MM / YY" maxlength="7" aria-describedby="ccexp-err">
+              <p class="field__error" id="ccexp-err" hidden></p>
+            </div>
+            <div class="field ">
+              <label for="cccvc">Security code</label>
+              <input id="cccvc" name="cccvc" type="text" autocomplete="cc-csc" required inputmode="numeric" placeholder="3 or 4 digits" maxlength="4" aria-describedby="cccvc-err">
+              <p class="field__error" id="cccvc-err" hidden></p>
+            </div>
+            <div class="field field--full">
+              <label for="ccname">Name on card</label>
+              <input id="ccname" name="ccname" type="text" autocomplete="cc-name" required aria-describedby="ccname-err">
+              <p class="field__error" id="ccname-err" hidden></p>
+            </div>
+              </div>
+            </div>
+            <label class="pay-opt">
+              <input type="radio" name="method" value="paypal">
+              <span class="pay-opt__label">PayPal</span>
+              <span class="pay-opt__meta">You’ll log in to PayPal after placing your order</span>
+            </label>
+            <label class="pay-opt">
+              <input type="radio" name="method" value="klarna">
+              <span class="pay-opt__label">Klarna</span>
+              <span class="pay-opt__meta">4 interest-free payments of <strong data-finance>$655</strong></span>
+            </label>
+          </fieldset>
+
+          <label class="check check--inline"><input type="checkbox" name="billing-same" checked data-billing-same><span class="check__box" aria-hidden="true"></span><span>Billing address is the same as delivery</span></label>
+          <div class="billing" data-billing hidden>
+            <div class="field-grid">
+            <div class="field field--full">
+              <label for="baddress">Billing street address</label>
+              <input id="baddress" name="baddress" type="text" autocomplete="billing address-line1" required aria-describedby="baddress-err">
+              <p class="field__error" id="baddress-err" hidden></p>
+            </div>
+            <div class="field ">
+              <label for="bzip">Billing ZIP code</label>
+              <input id="bzip" name="bzip" type="text" autocomplete="billing postal-code" required inputmode="numeric" maxlength="5" aria-describedby="bzip-err">
+              <p class="field__error" id="bzip-err" hidden></p>
+            </div>
+            </div>
+          </div>
+
+          <p class="co-terms">By placing your order you agree to our <a href="terms.html">terms of sale</a> and <a href="returns.html">30-day return policy</a>.</p>
+          <button class="btn btn--primary co-place" type="submit" data-place><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Place order <span class="btn__sep" aria-hidden="true"></span><span data-total>$2,620</span></button>
+          <p class="field__error co-place__error" data-place-error role="alert" hidden></p>
+        </form>
+      </section>
+    </div>
+
+    <!-- Confirmation (shown after placing the order) -->
+    <section class="confirm" data-confirm hidden tabindex="-1" aria-labelledby="confirm-title">
+      <div class="confirm__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg></div>
+      <h1 id="confirm-title" class="confirm__title">Thank you, <span data-confirm-name>Hannah</span></h1>
+      <p class="confirm__lede">Order <strong data-order-no>MR-00000</strong> is confirmed. We’ve sent a receipt to <strong data-confirm-email>you</strong>.</p>
+      <div class="confirm__grid">
+        <div class="confirm__card">
+          <h2>Delivery 1 of 2</h2>
+          <p data-confirm-when>…</p>
+          <p class="confirm__muted">Lumen floor lamp, Tove side table, Loma vase × 2</p>
+        </div>
+        <div class="confirm__card">
+          <h2>Delivery 2 of 2</h2>
+          <p>Week of <span data-later-week>…</span></p>
+          <p class="confirm__muted">Alder 3-seat sofa. We’ll call to book a day.</p>
+        </div>
+        <div class="confirm__card">
+          <h2>Delivering to</h2>
+          <p data-confirm-address>…</p>
+          <p class="confirm__muted" data-confirm-service>Room of choice</p>
+        </div>
+      </div>
+      <div class="confirm__actions">
+        <a class="btn btn--primary" href="index.html">Continue shopping</a>
+        <a class="btn btn--ghost" href="account.html">Create an account to track orders</a>
+      </div>
+    </section>
+
+    <!-- Order summary -->
+    <aside class="osum" id="order-summary" aria-labelledby="osum-title">
+      <div class="osum__inner">
+        <div class="osum__head">
+          <h2 id="osum-title" class="osum__title">Order summary</h2>
+          <a class="osum__edit" href="cart.html">Edit cart</a>
+        </div>
+        <ul class="osum__items">
+          <li class="osum__item">
+            <span class="osum__thumb" style="color:#EBD9AE;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp"/></svg></span>
+            <span class="osum__info"><strong>Lumen floor lamp</strong><span>Natural linen</span></span>
+            <span class="osum__price">$320</span>
+          </li>
+          <li class="osum__item">
+            <span class="osum__thumb" style="color:#D9CFBF;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sidetable"/></svg></span>
+            <span class="osum__info"><strong>Tove side table</strong><span>Travertine</span></span>
+            <span class="osum__price">$280</span>
+          </li>
+          <li class="osum__item">
+            <span class="osum__thumb" style="color:#36402F;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase"/></svg><span class="osum__qty" aria-hidden="true">2</span></span>
+            <span class="osum__info"><strong>Loma vase</strong><span>Moss, qty 2</span></span>
+            <span class="osum__price">$130</span>
+          </li>
+          <li class="osum__item">
+            <span class="osum__thumb" style="color:#9A6240;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></span>
+            <span class="osum__info"><strong>Alder 3-seat sofa</strong><span>Cognac bouclé, 3-seat</span></span>
+            <span class="osum__price">$1,890</span>
+          </li>
+        </ul>
+        <dl class="summary__rows">
+          <div><dt>Subtotal (5 items)</dt><dd>$2,620</dd></div>
+          <div><dt>Delivery</dt><dd data-co-shipping>Free</dd></div>
+          <div><dt>Tax</dt><dd data-co-tax class="summary__muted">Added after address</dd></div>
+        </dl>
+        <div class="summary__total">
+          <span>Total</span>
+          <strong data-total>$2,620</strong>
+        </div>
+        <p class="summary__finance">USD, including delivery</p>
+        <ul class="summary__perks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>30 days to decide, free collection</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 8.2 7.5 9.5 4.4-1.3 7.5-5.1 7.5-9.5V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>10-year frame warranty</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="co-footer">
+  <div class="container co-footer__inner">
+    <p>Questions about your order? Call <a href="tel:+18005550142">1-800-555-0142</a>, 9am–6pm ET, Monday to Saturday.</p>
+    <ul>
+      <li><a href="returns.html">Returns</a></li>
+      <li><a href="shipping.html">Delivery</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/checkout.js"></script>
+</body>
+</html>
