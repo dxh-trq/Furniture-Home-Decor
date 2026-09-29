@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Showrooms — Morrow</title>
+  <meta name="description" content="Find a Morrow showroom near you. Sit on every sofa, see the full fabric library and book a design appointment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="stores-page">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><span aria-current="page">Showrooms</span></li></ol>
+    </nav>
+    <header class="st-head">
+      <div>
+        <h1 class="st-head__title">Come and sit on it</h1>
+        <p class="st-head__lede">Every sofa, every fabric, and people who know them well. No appointment needed to browse; book one if you’d like a stylist to yourself.</p>
+      </div>
+      <form class="st-search" data-st-search novalidate>
+        <label for="st-q">Find a showroom near you</label>
+        <div class="st-search__row">
+          <input id="st-q" type="search" placeholder="City or ZIP code" autocomplete="postal-code" list="st-cities" aria-describedby="st-msg">
+          <button class="btn btn--primary" type="submit">Search</button>
+        </div>
+        <datalist id="st-cities" data-city-list></datalist>
+        <button class="st-locate" type="button" data-locate>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="8"/></svg>
+          Use my location
+        </button>
+        <p class="st-msg" id="st-msg" data-st-msg role="status" aria-live="polite"></p>
+      </form>
+    </header>
+
+    <div class="st-filters" role="group" aria-label="Filter showrooms">
+      <button class="chip-tab" type="button" data-filter="all" aria-pressed="true">All showrooms <span data-count-all>6</span></button>
+      <button class="chip-tab" type="button" data-filter="open" aria-pressed="false">Open now <span data-count-open>0</span></button>
+      <button class="chip-tab" type="button" data-filter="design" aria-pressed="false">Design appointments <span>4</span></button>
+    </div>
+
+    <div class="st-layout">
+      <ul class="store-list" data-store-list aria-label="Showrooms">
+          <li class="store-card" data-store="portland" data-lat="45.5049" data-lng="-122.6536" data-tz="America/Los_Angeles" data-hours='[[10, 18], null, [10, 18], [10, 18], [10, 18], [10, 18], [10, 18]]' data-services="Full fabric library|Design appointments|Free parking" tabindex="-1">
+            <div class="store-card__head">
+              <div>
+                <h3 class="store-card__city">Portland, OR</h3>
+                <p class="store-card__name">Division Street</p>
+              </div>
+              <p class="store-card__dist" data-dist hidden></p>
+            </div>
+            <p class="store-card__status" data-status>Checking hours…</p>
+            <p class="store-card__addr">1120 SE Division Street, Portland, OR 97202</p>
+            <p class="store-card__phone"><a href="tel:5035550110">(503) 555-0110</a></p>
+            <ul class="store-card__svc"><li>Full fabric library</li><li>Design appointments</li><li>Free parking</li></ul>
+            <details class="store-card__hours"><summary>Opening hours</summary><dl><div data-day="1"><dt>Mon</dt><dd>Closed</dd></div><div data-day="2"><dt>Tue</dt><dd>10am–6pm</dd></div><div data-day="3"><dt>Wed</dt><dd>10am–6pm</dd></div><div data-day="4"><dt>Thu</dt><dd>10am–6pm</dd></div><div data-day="5"><dt>Fri</dt><dd>10am–6pm</dd></div><div data-day="6"><dt>Sat</dt><dd>10am–6pm</dd></div><div data-day="0"><dt>Sun</dt><dd>10am–6pm</dd></div></dl></details>
+            <div class="store-card__actions">
+              <button class="btn btn--small" type="button" data-book aria-expanded="false" aria-controls="book-portland">Book a visit</button>
+              <a class="link" href="https://www.google.com/maps/search/?api=1&query=1120+SE+Division+Street%2C+Portland%2C+OR+97202" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <button class="line__action" type="button" data-show-on-map>Show on map</button>
+            </div>
+            <div class="booking" id="book-portland" data-booking hidden>
+              <p class="booking__title">Choose a time for a 45-minute design appointment</p>
+              <div class="booking__days" data-days></div>
+              <p class="booking__done" data-booked role="status" aria-live="polite" hidden></p>
+            </div>
+          </li>
+          <li class="store-card" data-store="brooklyn" data-lat="40.7197" data-lng="-73.9637" data-tz="America/New_York" data-hours='[[10, 19], [10, 19], [10, 19], [10, 19], [10, 19], [10, 19], [10, 19]]' data-services="Full fabric library|Design appointments|Same-day swatches" tabindex="-1">
+            <div class="store-card__head">
+              <div>
+                <h3 class="store-card__city">Brooklyn, NY</h3>
+                <p class="store-card__name">Williamsburg</p>
+              </div>
+              <p class="store-card__dist" data-dist hidden></p>
+            </div>
+            <p class="store-card__status" data-status>Checking hours…</p>
+            <p class="store-card__addr">210 Kent Avenue, Brooklyn, NY 11249</p>
+            <p class="store-card__phone"><a href="tel:7185550120">(718) 555-0120</a></p>
+            <ul class="store-card__svc"><li>Full fabric library</li><li>Design appointments</li><li>Same-day swatches</li></ul>
+            <details class="store-card__hours"><summary>Opening hours</summary><dl><div data-day="1"><dt>Mon</dt><dd>10am–7pm</dd></div><div data-day="2"><dt>Tue</dt><dd>10am–7pm</dd></div><div data-day="3"><dt>Wed</dt><dd>10am–7pm</dd></div><div data-day="4"><dt>Thu</dt><dd>10am–7pm</dd></div><div data-day="5"><dt>Fri</dt><dd>10am–7pm</dd></div><div data-day="6"><dt>Sat</dt><dd>10am–7pm</dd></div><div data-day="0"><dt>Sun</dt><dd>10am–7pm</dd></div></dl></details>
+            <div class="store-card__actions">
+              <button class="btn btn--small" type="button" data-book aria-expanded="false" aria-controls="book-brooklyn">Book a visit</button>
+              <a class="link" href="https://www.google.com/maps/search/?api=1&query=210+Kent+Avenue%2C+Brooklyn%2C+NY+11249" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <button class="line__action" type="button" data-show-on-map>Show on map</button>
+            </div>
+            <div class="booking" id="book-brooklyn" data-booking hidden>
+              <p class="booking__title">Choose a time for a 45-minute design appointment</p>
+              <div class="booking__days" data-days></div>
+              <p class="booking__done" data-booked role="status" aria-live="polite" hidden></p>
+            </div>
+          </li>
+          <li class="store-card" data-store="chicago" data-lat="41.9082" data-lng="-87.6761" data-tz="America/Chicago" data-hours='[[11, 19], null, [11, 19], [11, 19], [11, 19], [11, 19], [11, 19]]' data-services="Full fabric library|Design appointments" tabindex="-1">
+            <div class="store-card__head">
+              <div>
+                <h3 class="store-card__city">Chicago, IL</h3>
+                <p class="store-card__name">Wicker Park</p>
+              </div>
+              <p class="store-card__dist" data-dist hidden></p>
+            </div>
+            <p class="store-card__status" data-status>Checking hours…</p>
+            <p class="store-card__addr">1455 N Milwaukee Avenue, Chicago, IL 60622</p>
+            <p class="store-card__phone"><a href="tel:3125550130">(312) 555-0130</a></p>
+            <ul class="store-card__svc"><li>Full fabric library</li><li>Design appointments</li></ul>
+            <details class="store-card__hours"><summary>Opening hours</summary><dl><div data-day="1"><dt>Mon</dt><dd>Closed</dd></div><div data-day="2"><dt>Tue</dt><dd>11am–7pm</dd></div><div data-day="3"><dt>Wed</dt><dd>11am–7pm</dd></div><div data-day="4"><dt>Thu</dt><dd>11am–7pm</dd></div><div data-day="5"><dt>Fri</dt><dd>11am–7pm</dd></div><div data-day="6"><dt>Sat</dt><dd>11am–7pm</dd></div><div data-day="0"><dt>Sun</dt><dd>11am–7pm</dd></div></dl></details>
+            <div class="store-card__actions">
+              <button class="btn btn--small" type="button" data-book aria-expanded="false" aria-controls="book-chicago">Book a visit</button>
+              <a class="link" href="https://www.google.com/maps/search/?api=1&query=1455+N+Milwaukee+Avenue%2C+Chicago%2C+IL+60622" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <button class="line__action" type="button" data-show-on-map>Show on map</button>
+            </div>
+            <div class="booking" id="book-chicago" data-booking hidden>
+              <p class="booking__title">Choose a time for a 45-minute design appointment</p>
+              <div class="booking__days" data-days></div>
+              <p class="booking__done" data-booked role="status" aria-live="polite" hidden></p>
+            </div>
+          </li>
+          <li class="store-card" data-store="austin" data-lat="30.2491" data-lng="-97.7497" data-tz="America/Chicago" data-hours='[[11, 18], null, null, [10, 18], [10, 18], [10, 18], [10, 18]]' data-services="Design appointments|Free parking" tabindex="-1">
+            <div class="store-card__head">
+              <div>
+                <h3 class="store-card__city">Austin, TX</h3>
+                <p class="store-card__name">South Congress</p>
+              </div>
+              <p class="store-card__dist" data-dist hidden></p>
+            </div>
+            <p class="store-card__status" data-status>Checking hours…</p>
+            <p class="store-card__addr">1603 S Congress Avenue, Austin, TX 78704</p>
+            <p class="store-card__phone"><a href="tel:5125550140">(512) 555-0140</a></p>
+            <ul class="store-card__svc"><li>Design appointments</li><li>Free parking</li></ul>
+            <details class="store-card__hours"><summary>Opening hours</summary><dl><div data-day="1"><dt>Mon</dt><dd>Closed</dd></div><div data-day="2"><dt>Tue</dt><dd>Closed</dd></div><div data-day="3"><dt>Wed</dt><dd>10am–6pm</dd></div><div data-day="4"><dt>Thu</dt><dd>10am–6pm</dd></div><div data-day="5"><dt>Fri</dt><dd>10am–6pm</dd></div><div data-day="6"><dt>Sat</dt><dd>10am–6pm</dd></div><div data-day="0"><dt>Sun</dt><dd>11am–6pm</dd></div></dl></details>
+            <div class="store-card__actions">
+              <button class="btn btn--small" type="button" data-book aria-expanded="false" aria-controls="book-austin">Book a visit</button>
+              <a class="link" href="https://www.google.com/maps/search/?api=1&query=1603+S+Congress+Avenue%2C+Austin%2C+TX+78704" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <button class="line__action" type="button" data-show-on-map>Show on map</button>
+            </div>
+            <div class="booking" id="book-austin" data-booking hidden>
+              <p class="booking__title">Choose a time for a 45-minute design appointment</p>
+              <div class="booking__days" data-days></div>
+              <p class="booking__done" data-booked role="status" aria-live="polite" hidden></p>
+            </div>
+          </li>
+          <li class="store-card" data-store="denver" data-lat="39.7621" data-lng="-104.9814" data-tz="America/Denver" data-hours='[[11, 17], null, [10, 18], [10, 18], [10, 18], [10, 18], [10, 18]]' data-services="Full fabric library|Free parking" tabindex="-1">
+            <div class="store-card__head">
+              <div>
+                <h3 class="store-card__city">Denver, CO</h3>
+                <p class="store-card__name">RiNo</p>
+              </div>
+              <p class="store-card__dist" data-dist hidden></p>
+            </div>
+            <p class="store-card__status" data-status>Checking hours…</p>
+            <p class="store-card__addr">2901 Larimer Street, Denver, CO 80205</p>
+            <p class="store-card__phone"><a href="tel:7205550150">(720) 555-0150</a></p>
+            <ul class="store-card__svc"><li>Full fabric library</li><li>Free parking</li></ul>
+            <details class="store-card__hours"><summary>Opening hours</summary><dl><div data-day="1"><dt>Mon</dt><dd>Closed</dd></div><div data-day="2"><dt>Tue</dt><dd>10am–6pm</dd></div><div data-day="3"><dt>Wed</dt><dd>10am–6pm</dd></div><div data-day="4"><dt>Thu</dt><dd>10am–6pm</dd></div><div data-day="5"><dt>Fri</dt><dd>10am–6pm</dd></div><div data-day="6"><dt>Sat</dt><dd>10am–6pm</dd></div><div data-day="0"><dt>Sun</dt><dd>11am–5pm</dd></div></dl></details>
+            <div class="store-card__actions">
+              
+              <a class="link" href="https://www.google.com/maps/search/?api=1&query=2901+Larimer+Street%2C+Denver%2C+CO+80205" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <button class="line__action" type="button" data-show-on-map>Show on map</button>
+            </div>
+          </li>
+          <li class="store-card store-card--soon" data-store="la" data-lat="34.0469" data-lng="-118.2394" data-tz="America/Los_Angeles" data-hours='null' data-services="Full fabric library|Design appointments" tabindex="-1">
+            <div class="store-card__head">
+              <div>
+                <h3 class="store-card__city">Los Angeles, CA</h3>
+                <p class="store-card__name">Arts District</p>
+              </div>
+              <p class="store-card__dist" data-dist hidden></p>
+            </div>
+            <p class="store-card__status store-card__status--soon">Opening 14 November 2026</p>
+            <p class="store-card__addr">800 E 3rd Street, Los Angeles, CA 90013</p>
+            <p class="store-card__phone"><a href="tel:2135550160">(213) 555-0160</a></p>
+            <ul class="store-card__svc"><li>Full fabric library</li><li>Design appointments</li></ul>
+            
+            <div class="store-card__actions">
+              
+              <a class="link" href="https://www.google.com/maps/search/?api=1&query=800+E+3rd+Street%2C+Los+Angeles%2C+CA+90013" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <button class="line__action" type="button" data-show-on-map>Show on map</button>
+            </div>
+          </li>
+      </ul>
+      <div class="st-map" aria-label="Map of showrooms">
+        <svg viewBox="0 0 900 520" data-map role="img" aria-labelledby="map-desc">
+          <desc id="map-desc">Map of the United States with Morrow showrooms in Portland, Los Angeles, Denver, Austin, Chicago and Brooklyn.</desc>
+          <path d="M41.3 55.0 L52.6 94.2 L48.4 169.1 L54.0 208.3 L73.8 244.0 L99.2 301.0 L148.6 338.4 L182.5 334.9 L234.7 359.8 L274.2 359.8 L298.2 350.9 L326.5 390.2 L347.6 400.9 L370.2 386.6 L397.1 427.6 L426.7 456.1 L428.1 422.2 L464.8 393.7 L477.5 388.4 L528.4 399.1 L539.6 379.5 L559.4 370.5 L597.5 388.4 L615.9 381.2 L632.8 415.1 L634.2 427.6 L655.4 468.6 L670.9 457.9 L663.9 409.8 L652.6 370.5 L673.8 333.1 L702.0 311.7 L735.9 288.5 L724.6 258.2 L740.1 233.3 L757.1 195.8 L786.7 181.6 L813.5 172.6 L803.6 151.2 L855.9 119.1 L844.6 78.1 L824.8 72.8 L792.4 115.6 L744.4 115.6 L717.5 140.5 L683.6 144.1 L686.5 154.8 L638.5 174.4 L622.9 174.4 L637.1 151.2 L642.7 104.9 L607.4 99.5 L584.8 133.4 L562.2 161.9 L566.5 115.6 L604.6 88.8 L545.3 62.1 L457.8 44.3 L65.3 44.3 Z" class="st-map__land"/>
+          <g class="st-map__route" data-route display="none"><line data-route-line/></g>
+          <g class="pin pin--you" data-you display="none"><circle r="14" class="pin__halo"/><circle r="6" class="pin__dot"/><text y="26" text-anchor="middle" class="pin__label">You</text></g>
+          <g class="pin" data-pin="portland" transform="translate(70.2 106.6)"><circle r="16" class="pin__halo"/><circle r="8" class="pin__dot"/><text y="-22" text-anchor="middle" class="pin__label">Portland</text></g><g class="pin" data-pin="brooklyn" transform="translate(757.6 191.9)"><circle r="16" class="pin__halo"/><circle r="8" class="pin__dot"/><text y="-22" text-anchor="middle" class="pin__label">Brooklyn</text></g><g class="pin" data-pin="chicago" transform="translate(564.0 170.7)"><circle r="16" class="pin__halo"/><circle r="8" class="pin__dot"/><text y="-22" text-anchor="middle" class="pin__label">Chicago</text></g><g class="pin" data-pin="austin" transform="translate(421.8 378.6)"><circle r="16" class="pin__halo"/><circle r="8" class="pin__dot"/><text y="-22" text-anchor="middle" class="pin__label">Austin</text></g><g class="pin" data-pin="denver" transform="translate(319.7 209.0)"><circle r="16" class="pin__halo"/><circle r="8" class="pin__dot"/><text y="-22" text-anchor="middle" class="pin__label">Denver</text></g><g class="pin pin--soon" data-pin="la" transform="translate(132.5 310.9)"><circle r="16" class="pin__halo"/><circle r="8" class="pin__dot"/><text y="-22" text-anchor="middle" class="pin__label">Los Angeles</text></g>
+        </svg>
+        <p class="st-map__note">Pins show the nearest showroom once you search.</p>
+      </div>
+    </div>
+    <p class="acc-empty st-empty" data-st-empty hidden>No showrooms are open right now. <button class="line__action" type="button" data-show-all>Show all showrooms</button></p>
+
+    <section class="section st-cta">
+      <div class="still">
+        <div>
+          <h2 class="still__title">Not near a showroom?</h2>
+          <p>Order free swatches, or book a 45-minute video call with a stylist from home.</p>
+        </div>
+        <a class="btn btn--light" href="services.html">Book a video call</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html" aria-current="page">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/stores.js"></script>
+</body>
+</html>

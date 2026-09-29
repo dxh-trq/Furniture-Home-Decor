@@ -43,5 +43,8 @@ Planning docs:
 - `faq.html` — help centre with 29 answers in 7 topics: search with highlighted matches, most-asked shortcuts, a topic rail that follows the reader, expand / collapse all, "Was this helpful?" feedback, and linkable answers (`faq.html#faq-pets` opens that answer). Logic in `assets/js/faq.js`.
   Includes FAQPage structured data (JSON-LD) in the page head; update it when you edit the answers.
 
+- `stores.html` — showroom locator: search by city or ZIP, or use the browser's location, to sort showrooms by distance; an illustrated map with pins (select a pin or a card); live open / closed status in each showroom's time zone; filters; and design-appointment booking. Logic in `assets/js/stores.js`.
+  Each card has `data-lat`, `data-lng`, `data-tz` and `data-hours` (JSON, Sunday first). City and ZIP lookup uses a small built-in table; replace `locate()` with a geocoding API for full coverage.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
