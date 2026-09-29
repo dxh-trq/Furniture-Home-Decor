@@ -150,10 +150,13 @@
   const countEl = $('[data-cart-count]');
   const cartBtn = $('.cart-btn');
   let count = 0;
-  const addToCart = (qty = 1) => {
-    count += qty;
+  const setCartCount = (n) => {
+    count = n;
     countEl.textContent = count;
     cartBtn.setAttribute('aria-label', `Cart, ${count} item${count === 1 ? '' : 's'}`);
+  };
+  const addToCart = (qty = 1) => {
+    setCartCount(count + qty);
     countEl.classList.remove('bump');
     void countEl.offsetWidth;
     countEl.classList.add('bump');
@@ -181,8 +184,8 @@
     toastTimer = setTimeout(() => { toastEl.hidden = true; }, 2600);
   }
 
-  // shared helpers for page scripts (shop.js, product.js)
-  window.Morrow = { addToCart, toast };
+  // shared helpers for page scripts (shop.js, product.js, cart.js)
+  window.Morrow = { addToCart, setCartCount, toast };
 
   /* ---------- Newsletter ---------- */
   const form = $('[data-newsletter]');
