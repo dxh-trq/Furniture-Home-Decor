@@ -1232,6 +1232,65 @@ h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line
 .account-page ~ .footer { margin-top: var(--section); }
 
 /* ==========================================================================
+   Wishlist page
+   ========================================================================== */
+.wishlist-page ~ .footer { margin-top: var(--section); }
+.wl-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 20px; padding: 20px 0 24px; }
+.wl-head__title { font-size: var(--fs-hero); letter-spacing: -0.045em; line-height: .98; color: var(--moss); }
+.wl-head__lede { margin-top: 12px; font-size: var(--fs-md); color: var(--ink-2); }
+.wl-head__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.wl-head__actions svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+
+.wl-alert { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 14px 18px; border-radius: var(--radius-sm); background: #F3E7CF; color: #5C4410; font-size: .9375rem; }
+.wl-alert[hidden] { display: none; }
+.wl-alert svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; }
+.wl-alert span { flex: 1; min-width: 200px; }
+.wl-alert .line__action { color: #5C4410; text-decoration-color: currentColor; font-weight: 600; }
+.wl-guest { margin-top: 12px; font-size: var(--fs-sm); color: var(--ink-2); }
+.wl-guest a { font-weight: 600; color: var(--moss); text-decoration: underline; text-underline-offset: 3px; }
+
+.wl-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin: 28px 0 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+.chip-tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.chip-tab { flex: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; border: 1.5px solid var(--line); font-weight: 500; font-size: var(--fs-sm); }
+.chip-tab span { min-width: 20px; padding: 0 6px; border-radius: 999px; background: #E4E7DC; color: var(--moss); font-size: 12px; font-weight: 600; text-align: center; }
+.chip-tab:hover { border-color: var(--moss); }
+.chip-tab[aria-pressed="true"] { background: var(--moss); border-color: var(--moss); color: #fff; }
+.chip-tab[aria-pressed="true"] span { background: rgba(255, 255, 255, .2); color: #fff; }
+
+.wl-layout { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: clamp(24px, 3vw, 40px); align-items: start; }
+.wl-layout[hidden] { display: none; }
+.wl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 20px; }
+.wcard[hidden], .wl-removed[hidden] { display: none; }
+.wcard__remove {
+  position: absolute; top: 10px; right: 10px; z-index: 2; width: 36px; height: 36px;
+  display: grid; place-items: center; border-radius: 50%; background: rgba(255, 255, 255, .85);
+}
+.wcard__remove svg { width: 16px; height: 16px; fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; }
+.wcard__remove:hover { background: #fff; }
+.wcard__price { margin-top: 8px; }
+.wcard__drop { font-size: 13px; color: var(--walnut); font-weight: 500; }
+.wcard .card__stock { margin-top: 6px; }
+.wcard__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 14px; }
+.wcard__added { font-size: 12px; color: var(--ink-2); }
+.wl-removed { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; min-height: 160px; padding: 20px; border-radius: var(--radius); background: #E4E7DC; font-size: var(--fs-sm); }
+.wl-removed .line__action { color: var(--moss); font-weight: 600; text-decoration-color: currentColor; }
+
+/* room preview */
+.room { position: sticky; top: 96px; border-radius: var(--radius); overflow: hidden; background: var(--moss); color: #C9CFC0; }
+.room[hidden] { display: none; }
+.room__frame { background: #D8DDCD; border-radius: 50% 50% 0 0 / 34% 34% 0 0; margin: 20px 20px 0; overflow: hidden; }
+.room__art { display: block; width: 100%; height: auto; }
+.room__art [data-for] { transition: opacity .3s; }
+.room__body { padding: 20px 24px 24px; display: grid; gap: 8px; justify-items: start; }
+.room__title { font-size: var(--fs-lg); color: #fff; }
+.room__lede { font-size: var(--fs-md); color: #E7EADF; }
+.room__lede strong { color: #fff; }
+.room__hint { font-size: var(--fs-sm); }
+.room__cta { margin-top: 8px; }
+.wl-empty { margin-top: 8px; }
+.wl-empty svg { width: 160px; height: auto; margin: 0 auto 8px; }
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 1100px) {
@@ -1345,6 +1404,15 @@ h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line
   .acc-tiles { grid-template-columns: 1fr 1fr; }
   .trackcard__grid, .addr-list, .pay-list, .auth__grid { grid-template-columns: 1fr; }
   .acc-wish { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .wl-layout { grid-template-columns: minmax(0, 1fr); }
+  .room { position: static; order: -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+  .room__frame { margin: 16px 0 16px 16px; }
+  .wl-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .wl-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wl-layout { grid-template-columns: minmax(0, 1fr) 320px; }
 }
 
 @media (max-width: 560px) {
@@ -1413,6 +1481,15 @@ h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line
   .acc-wish { gap: 24px 12px; }
   .acc-wish .card__foot { flex-direction: column; align-items: stretch; }
   .paycard { flex-wrap: wrap; }
+  .wl-head__actions, .wl-head__actions .btn { width: 100%; }
+  .wl-bar { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .wl-bar .sort { justify-self: start; }
+  .chip-tabs { margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
+  .wl-grid { gap: 28px 12px; }
+  .wcard .card__meta, .wcard__added { display: none; }
+  .wcard__foot .btn { width: 100%; }
+  .room { grid-template-columns: 1fr; }
+  .room__frame { margin: 16px 16px 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
