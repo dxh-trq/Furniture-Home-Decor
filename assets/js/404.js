@@ -28,8 +28,8 @@
     { url: 'about.html', title: 'About us', keys: 'about story company team sustainability makers workshop' },
     { url: 'contact.html', title: 'Contact us', keys: 'contact help support email phone call customer service' },
     { url: 'faq.html', title: 'Help and FAQs', keys: 'faq faqs help questions support' },
-    { url: 'faq.html#faq-return-policy', title: 'Returns policy', keys: 'return returns refund refunds exchange policy' },
-    { url: 'faq.html#faq-delivery-time', title: 'Delivery times', keys: 'delivery deliveries shipping ship how long' },
+    { url: 'returns.html', title: 'Returns', keys: 'return returns refund refunds exchange policy' },
+    { url: 'shipping.html', title: 'Delivery', keys: 'delivery deliveries shipping ship how long white glove zip dates cost' },
     { url: 'faq.html#faq-warranty-cover', title: 'Warranty', keys: 'warranty guarantee repair repairs damaged broken' },
     { url: 'stores.html', title: 'Showrooms', keys: 'stores store showroom showrooms shop locations visit near me locator' },
   ];

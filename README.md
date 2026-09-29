@@ -58,5 +58,8 @@ Planning docs:
 - `returns.html` — returns: the 30-day policy, how it works, a 3-step "Start a return" tool (find order → choose items, reasons and refund type → home collection day or label / showroom drop-off → confirmation), a table of what can be returned, exchanges, damage and refund timing, and return FAQs. Logic in `assets/js/returns.js`.
   Front end only: `DEMO_ORDER` stands in for your order API (replace `lookup()` and the final submit). The return window and store-credit bonus are `WINDOW_DAYS` and `CREDIT_BONUS`. Items with `finalSale: true` can't be picked; items with `furniture: true` need a collection day.
 
+- `shipping.html` — delivery (kept at the address the footer already links to): a ZIP delivery checker (nearest of seven hubs on the map, earliest date or made-to-order window, days you could choose, evening availability, and the cost with white glove and the free-delivery threshold), a comparison of the two services, a delivery-day timeline, lead times for in-stock and made-to-order pieces, a "get ready" checklist remembered on the device, and delivery FAQs. Logic in `assets/js/delivery.js`.
+  Prices and lead times are constants at the top (`FREE_OVER`, `STANDARD`, `WHITE_GLOVE`, `DISPATCH_DAYS`, `MADE_WEEKS`); keep them in step with `cart.js` and `checkout.js`. Hubs are the `data-hub` pins in the map. ZIP lookup is a rough table by ZIP prefix; use your carrier's API in production.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
