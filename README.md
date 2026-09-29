@@ -55,5 +55,8 @@ Planning docs:
 
 - `trade.html` — trade program: benefits, a savings calculator (yearly spend → tier, discount, savings and unlocked perks, synced with the tier table), contract specifications, project case studies, an application form with resale-certificate upload, and trade FAQs. Logic in `assets/js/trade.js`; tier thresholds and discounts are in `TIERS`.
 
+- `returns.html` — returns: the 30-day policy, how it works, a 3-step "Start a return" tool (find order → choose items, reasons and refund type → home collection day or label / showroom drop-off → confirmation), a table of what can be returned, exchanges, damage and refund timing, and return FAQs. Logic in `assets/js/returns.js`.
+  Front end only: `DEMO_ORDER` stands in for your order API (replace `lookup()` and the final submit). The return window and store-credit bonus are `WINDOW_DAYS` and `CREDIT_BONUS`. Items with `finalSale: true` can't be picked; items with `furniture: true` need a collection day.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
