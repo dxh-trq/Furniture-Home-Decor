@@ -37,5 +37,8 @@ Planning docs:
 - `about.html` — brand story: opening, founding story and timeline, a "What goes into an Alder sofa" exploded diagram (pick a layer to see materials, origin, lifespan and replacement cost, in `assets/js/about.js`), principles, sustainability, makers, team, showrooms, and careers / design call.
   Founders, team, makers and figures are placeholder content to replace with your own.
 
+- `contact.html` — contact channels (with a live open/closed status for the phone line in New York time), a message form that adapts to the chosen topic (order number, damage photos, company name, phone), quick answers per topic, and showrooms. Logic in `assets/js/contact.js`.
+  Opening hours and time zone are constants at the top of `contact.js`. Front end only: post the form to your help desk in `send()`.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
