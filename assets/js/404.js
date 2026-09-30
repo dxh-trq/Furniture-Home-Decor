@@ -8,6 +8,8 @@
   const PAGES = [
     { url: 'index.html', title: 'Homepage', keys: 'home start morrow' },
     { url: 'shop.html', title: 'Living room furniture', keys: 'shop living room furniture all products catalogue collection' },
+    { url: 'collection.html', title: 'Nordic calm collection', keys: 'collection collections nordic calm scandinavian light oak boucle' },
+    { url: 'collection.html?c=warm-minimal', title: 'Warm minimal collection', keys: 'collection collections warm minimal walnut leather brass' },
     { url: 'room.html', title: 'Shop by room', keys: 'room rooms living bedroom dining office outdoor garden patio shop by room' },
     { url: 'shop.html?c=sofas', title: 'Sofas', keys: 'sofa sofas couch couches settee sectional loveseat alder' },
     { url: 'shop.html?c=chairs', title: 'Armchairs', keys: 'chair chairs armchair armchairs lounge ren otto' },

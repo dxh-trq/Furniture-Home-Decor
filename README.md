@@ -88,5 +88,8 @@ Planning docs:
 - `room.html` — shop by room: a room explorer with five tabs (living room, bedroom, dining room, home office, outdoor; linkable as `room.html#bedroom`), an illustrated scene for each room in three palettes that recolour the scene and update fabric names, hotspots linked to a "shop the room" list, tick boxes with a live total and "Add to cart", then a grid of every room, room guides and a stylist call-to-action. Logic in `assets/js/room.js`.
   Scenes are generated SVG using the sprite symbols; colours come from `--wall`, `--floor`, `--main` and `--accent` on `.rm-scene`, set by each palette button's `data-*` values. Pieces are `<li class="rm-item">` with `data-price` and `data-qty`.
 
+- `collection.html` — collection page, one template for every collection: `collection.html` shows Nordic calm and `collection.html?c=warm-minimal` shows Warm minimal (the homepage cards and the Shop menu feature link to each). Hero with the collection's scene and materials, the story with a designer quote and three principles, the pieces with type filters and sorting, "Buy the set" (tick the pieces; 10% off with three or more, with a live total and hints), and all collections with the current one marked. Logic in `assets/js/collection.js`.
+  Each collection is an `<article data-collection="…">` in the page; add a collection by adding another article. The set discount is `SET_OFF` and `SET_MIN` in the script; apply the same rule in your cart.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
