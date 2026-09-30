@@ -76,5 +76,8 @@ Planning docs:
 - `privacy.html` — privacy policy: a plain-English summary, "Your privacy choices" switches (saved on the device; the browser's Global Privacy Control signal turns advertising and sharing off), the full policy in 12 numbered sections with a contents list that follows the reader, tables of what we collect and who we share it with, a data request form (copy, correct, delete, opt out, with authorized agents), a change log, and a print-friendly layout. Logic in `assets/js/legal.js` (shared by all legal pages: contents and print) and `assets/js/privacy.js`.
   The policy text is a starting point written for a US furniture retailer, not legal advice: have it reviewed for your business and the laws that apply to you. Front end only: save choices to the customer's account and send requests to your privacy inbox or tool.
 
+- `terms.html` — terms of sale: key terms at a glance, 16 numbered sections each opening with an "In short" plain-English summary, a "Summaries only" switch, search with highlighted matches (Enter / Shift+Enter or the arrows to step through them), the shared contents list, a change log and print styles. Uses `assets/js/legal.js`, which adds search and the summaries switch to any legal page that has them.
+  Figures match the rest of the site (delivery, returns, warranty, gift cards, price protection). Like the privacy policy, the wording is a starting point, not legal advice.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
