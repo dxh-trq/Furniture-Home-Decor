@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wishlist — Morrow</title>
-  <meta name="description" content="Pieces you’ve saved, grouped by room.">
+  <meta name="description" content="Pieces you’ve saved at Morrow, grouped by room, with price-drop alerts and a total for the whole room.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -206,7 +206,7 @@
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -281,7 +281,7 @@
           </a>
           <button class="wcard__remove" type="button" data-remove aria-label="Remove Ren lounge chair from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
           <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Ren lounge chair</a></h3>
+            <h2 class="card__name"><a href="product.html">Ren lounge chair</a></h2>
             <p class="card__meta">Cognac leather, walnut legs</p>
             <p class="price wcard__price">$760</p>
             
@@ -299,7 +299,7 @@
           </a>
           <button class="wcard__remove" type="button" data-remove aria-label="Remove Arc wall mirror from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
           <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Arc wall mirror</a></h3>
+            <h2 class="card__name"><a href="product.html">Arc wall mirror</a></h2>
             <p class="card__meta">Natural oak, 60 × 100 cm</p>
             <p class="price wcard__price"><span class="price__now">$390</span></p>
             <p class="wcard__drop">Was $460 when you saved it</p>
@@ -317,7 +317,7 @@
           </a>
           <button class="wcard__remove" type="button" data-remove aria-label="Remove Mira wool rug from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
           <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Mira wool rug</a></h3>
+            <h2 class="card__name"><a href="product.html">Mira wool rug</a></h2>
             <p class="card__meta">Sage, 200 × 300 cm</p>
             <p class="price wcard__price">$540</p>
             
@@ -335,7 +335,7 @@
           </a>
           <button class="wcard__remove" type="button" data-remove aria-label="Remove Drift coffee table from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
           <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Drift coffee table</a></h3>
+            <h2 class="card__name"><a href="product.html">Drift coffee table</a></h2>
             <p class="card__meta">Smoked oak, 120 cm</p>
             <p class="price wcard__price">$690</p>
             
@@ -353,7 +353,7 @@
           </a>
           <button class="wcard__remove" type="button" data-remove aria-label="Remove Terra planter from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
           <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Terra planter</a></h3>
+            <h2 class="card__name"><a href="product.html">Terra planter</a></h2>
             <p class="card__meta">Unglazed terracotta, 40 cm</p>
             <p class="price wcard__price">$85</p>
             
@@ -371,7 +371,7 @@
           </a>
           <button class="wcard__remove" type="button" data-remove aria-label="Remove Halo pendant light from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
           <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Halo pendant light</a></h3>
+            <h2 class="card__name"><a href="product.html">Halo pendant light</a></h2>
             <p class="card__meta">Moss, powder-coated aluminium</p>
             <p class="price wcard__price"><span class="price__now">$168</span></p>
             <p class="wcard__drop">Was $210 when you saved it</p>
@@ -389,7 +389,7 @@
           </a>
           <button class="wcard__remove" type="button" data-remove aria-label="Remove Fold dining chair, set of 2 from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
           <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Fold dining chair, set of 2</a></h3>
+            <h2 class="card__name"><a href="product.html">Fold dining chair, set of 2</a></h2>
             <p class="card__meta">Natural oak</p>
             <p class="price wcard__price">$240</p>
             
@@ -407,7 +407,7 @@
           </a>
           <button class="wcard__remove" type="button" data-remove aria-label="Remove Linden bed from wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
           <div class="card__body">
-            <h3 class="card__name"><a href="product.html">Linden bed</a></h3>
+            <h2 class="card__name"><a href="product.html">Linden bed</a></h2>
             <p class="card__meta">Oat linen, queen</p>
             <p class="price wcard__price">$1,480</p>
             

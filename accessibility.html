@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -206,7 +206,7 @@
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -262,11 +262,11 @@
           </fieldset>
           <ul class="prefs">
             <li class="pref">
-              <div><label for="ax-contrast" class="pref__label">Stronger contrast</label><p class="pref__desc" id="ax-contrast-desc">Darker grey text and clearer borders.</p></div>
+              <div><label for="ax-contrast" class="pref__label">Stronger contrast</label><p class="pref__desc" id="ax-contrast-desc">Darker gray text and clearer borders.</p></div>
               <button class="switch" id="ax-contrast" type="button" role="switch" data-ax="contrast" aria-checked="false" aria-describedby="ax-contrast-desc"><span class="switch__knob"></span></button>
             </li>
             <li class="pref">
-              <div><label for="ax-links" class="pref__label">Underline all links</label><p class="pref__desc" id="ax-links-desc">So links stand out without relying on colour.</p></div>
+              <div><label for="ax-links" class="pref__label">Underline all links</label><p class="pref__desc" id="ax-links-desc">So links stand out without relying on color.</p></div>
               <button class="switch" id="ax-links" type="button" role="switch" data-ax="links" aria-checked="false" aria-describedby="ax-links-desc"><span class="switch__knob"></span></button>
             </li>
             <li class="pref">
@@ -314,7 +314,7 @@
           <li><strong>Readable</strong><span>Text meets contrast guidelines, resizes to 200% without breaking, and is written in plain English.</span></li>
           <li><strong>Forms that help</strong><span>Every field has a visible label, and errors say what’s wrong and how to fix it.</span></li>
           <li><strong>Motion with care</strong><span>We keep animation small, and turn it off if your device asks for reduced motion.</span></li>
-          <li><strong>Not just colour</strong><span>Stock, status and choices are shown with words and icons, not colour alone.</span></li>
+          <li><strong>Not just color</strong><span>Stock, status and choices are shown with words and icons, not color alone.</span></li>
         </ul>
         <p>Accessibility is part of how we design and build, not a check at the end. Every new page is tested with a keyboard and a screen reader before it goes live, and we run an independent audit every year.</p>
 
@@ -339,7 +339,7 @@
         <h2 id="known"><span class="legal__num">4</span>Known issues</h2>
         <p>These are the problems we know about, and when we plan to fix them:</p>
         <ul class="ax-issues">
-          <li class="ax-issue"><div><strong>Product images</strong><p>Our furniture is shown as simple illustrations while we reshoot our photography. Each one is described in the product text, but some colours are hard to tell apart.</p></div><span class="ax-issue__when">Spring 2027</span></li>
+          <li class="ax-issue"><div><strong>Product images</strong><p>Our furniture is shown as simple illustrations while we reshoot our photography. Each one is described in the product text, but some colors are hard to tell apart.</p></div><span class="ax-issue__when">Spring 2027</span></li>
           <li class="ax-issue"><div><strong>Wide tables on phones</strong><p>Some tables, like our cookie list, scroll sideways on small screens. All the information is still there.</p></div><span class="ax-issue__when">December 2026</span></li>
           <li class="ax-issue"><div><strong>Showroom map</strong><p>The map on our showrooms page is a picture. Every showroom’s address, hours and directions are listed as text beside it.</p></div><span class="ax-issue__when">No change planned</span></li>
           <li class="ax-issue"><div><strong>Impact report PDF</strong><p>Our 2026 impact report isn’t fully tagged for screen readers yet. Ask us and we’ll send an accessible version.</p></div><span class="ax-issue__when">November 2026</span></li>
@@ -347,7 +347,7 @@
 
         <h2 id="inperson"><span class="legal__num">5</span>In showrooms and at home</h2>
         <div class="ax-cards">
-          <article class="rt-card ax-card"><h3>Step-free showrooms</h3><p>All six showrooms have step-free entry, wide aisles and seating throughout. Brooklyn and Chicago have accessible restrooms.</p></article>
+          <article class="rt-card ax-card"><h3>Step-free showrooms</h3><p>All our showrooms have step-free entry, wide aisles and seating throughout. Brooklyn and Chicago have accessible restrooms.</p></article>
           <article class="rt-card ax-card"><h3>Design appointments your way</h3><p>By video call, phone, in a showroom or at home. We can arrange an ASL interpreter with a week’s notice, free.</p></article>
           <article class="rt-card ax-card"><h3>Delivery and assembly</h3><p>Tell us at checkout if you’d like the team to place, assemble or rearrange anything. It’s part of every delivery.</p></article>
           <article class="rt-card ax-card"><h3>Other formats</h3><p>Care guides, receipts and this statement in large print or plain text, free by post or email.</p></article>
@@ -387,7 +387,7 @@
             <button class="btn btn--ghost" type="button" data-ax-again>Send something else</button>
           </div>
         </div>
-        <p>You can also call 1-800-555-0199 (relay calls welcome), text 1-800-555-0198, or email <a href="mailto:access@morrowhome.com">access@morrowhome.com</a>.</p>
+        <p>You can also call or text 1-800-555-0142 (relay calls welcome), or email <a href="mailto:access@morrowhome.com">access@morrowhome.com</a>.</p>
 
         <h2 id="technical"><span class="legal__num">7</span>Technical details</h2>
         <p>The website is built with HTML, CSS and JavaScript, and works with current versions of Chrome, Safari, Firefox and Edge, and with screen readers and voice control on desktop and mobile.</p>

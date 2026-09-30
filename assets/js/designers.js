@@ -128,7 +128,7 @@
       b.textContent = on ? (idle === 'Remind me' ? 'Reminder set' : 'Place saved') : idle;
       window.Morrow?.toast(on
         ? `${idle === 'Remind me' ? 'We’ll email you a link before' : 'We’ve saved you a place at'} ${b.dataset.dnEvent}`
-        : `Cancelled: ${b.dataset.dnEvent}`);
+        : `Canceled: ${b.dataset.dnEvent}`);
     });
   });
 

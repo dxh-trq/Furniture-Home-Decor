@@ -175,8 +175,8 @@
           <p class="tk-live__eta">Arriving <strong data-tk-eta></strong></p>
           <p class="tk-live__crew">${l.crew} · ${l.van}</p>
           <div class="tk-live__actions">
-            <a class="btn btn--small" href="tel:+18005550199">${ICON.phone}Call the team</a>
-            <a class="btn btn--ghost btn--small-ghost" href="sms:+18005550199">${ICON.text}Text</a>
+            <a class="btn btn--small" href="tel:+18005550142">${ICON.phone}Call the team</a>
+            <a class="btn btn--ghost btn--small-ghost" href="sms:+18005550142">${ICON.text}Text</a>
           </div>
         </div>
       </div>`;
@@ -198,7 +198,7 @@
       </div>
       <div class="tk-panel" id="tk-change-${i}" hidden>
         <fieldset class="tk-slots">
-          <legend>Choose a new day. Free to change until 6pm the day before.</legend>
+          <legend>Choose a new day. Free to change up to 48 hours before.</legend>
           <div class="tk-slots__row">${s.slots.map(([d, w]) => `<button class="slot-btn" type="button" aria-pressed="${d === s.when ? 'true' : 'false'}" data-day="${d}" data-window="${w}"><strong>${d}</strong> <span>${w}</span></button>`).join('')}</div>
         </fieldset>
         <div class="tk-panel__foot"><button class="btn btn--small" type="button" data-tk-save-date>Confirm change</button><button class="line__action" type="button" data-tk-cancel>Cancel</button></div>

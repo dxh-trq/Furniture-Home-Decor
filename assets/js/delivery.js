@@ -14,7 +14,7 @@
 
   // must match the projection used for the SVG map (viewBox 0 0 900 520), same as the showrooms page
   const project = (lat, lng) => [(lng + 125.5) / 59.5 * 840 + 30, (49.8 - lat) / 25.8 * 460 + 30];
-  // first three digits of a ZIP code → a point in that area (state centres, plus big cities)
+  // first three digits of a ZIP code → a point in that area (state centers, plus big cities)
   const ZIP3 = [
     [10, 27, 42.3, -71.8], [28, 29, 41.7, -71.5], [30, 38, 43.6, -71.6], [39, 49, 45.2, -69.2], [50, 59, 44, -72.7], [60, 69, 41.6, -72.7],
     [70, 89, 40.2, -74.6], [100, 104, 40.71, -74.01], [105, 119, 40.8, -73.4], [120, 149, 42.9, -75.5], [150, 196, 40.9, -77.8],

@@ -205,7 +205,7 @@
         $('.line__opts', line).innerHTML = '';
         if (colour) {
           const div = document.createElement('div');
-          div.innerHTML = '<dt>Colour</dt><dd></dd>';
+          div.innerHTML = '<dt>Color</dt><dd></dd>';
           div.lastChild.textContent = colour;
           $('.line__opts', line).appendChild(div);
         }

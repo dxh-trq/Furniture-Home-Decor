@@ -43,9 +43,14 @@
       item.classList.toggle('is-open', open);
       trigger.setAttribute('aria-expanded', String(open));
     };
-    trigger.addEventListener('click', () => set(!item.classList.contains('is-open')));
-    item.addEventListener('mouseenter', () => desktop.matches && set(true));
-    item.addEventListener('mouseleave', () => desktop.matches && set(false));
+    // a mouse click right after hovering shouldn't close the menu the hover just opened
+    let hoverOpened = false;
+    trigger.addEventListener('click', (e) => {
+      if (hoverOpened && e.detail > 0) { hoverOpened = false; set(true); return; }
+      set(!item.classList.contains('is-open'));
+    });
+    item.addEventListener('mouseenter', () => { if (desktop.matches) { hoverOpened = !item.classList.contains('is-open'); set(true); } });
+    item.addEventListener('mouseleave', () => { hoverOpened = false; if (desktop.matches) set(false); });
     item.addEventListener('focusout', (e) => {
       if (desktop.matches && !item.contains(e.relatedTarget)) set(false);
     });
@@ -135,7 +140,7 @@
     applyFilter($('.tab[aria-selected="true"]').dataset.filter);
   }
 
-  /* ---------- Swatches recolour the product ---------- */
+  /* ---------- Swatches recolor the product ---------- */
   $$('.swatches').forEach((group) => {
     const media = $('.card__media', group.closest('.card'));
     $$('button', group).forEach((btn) => {

@@ -99,7 +99,7 @@
     }
     // Replace with a POST to your CRM or trade application inbox (include the certificate file).
     const ref = 'TR-' + Math.floor(1000 + Math.random() * 9000);
-    $('[data-apply-text]').textContent = `Thanks, ${val('tr-first')}. Your reference is ${ref}. We’ll email ${val('tr-email')} within two working days. If you need pricing sooner, call the trade team on 1-800-555-0199.`;
+    $('[data-apply-text]').textContent = `Thanks, ${val('tr-first')}. Your reference is ${ref}. We’ll email ${val('tr-email')} within two working days. If you need pricing sooner, call the trade team on 1-800-555-0142.`;
     form.hidden = true;
     const done = $('[data-apply-done]');
     done.hidden = false;

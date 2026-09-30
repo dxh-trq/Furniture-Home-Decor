@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -206,7 +206,7 @@
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -259,7 +259,7 @@
           <li class="store-card" data-store="portland" data-lat="45.5049" data-lng="-122.6536" data-tz="America/Los_Angeles" data-hours='[[10, 18], null, [10, 18], [10, 18], [10, 18], [10, 18], [10, 18]]' data-services="Full fabric library|Design appointments|Free parking" tabindex="-1">
             <div class="store-card__head">
               <div>
-                <h3 class="store-card__city">Portland, OR</h3>
+                <h2 class="store-card__city">Portland, OR</h2>
                 <p class="store-card__name">Division Street</p>
               </div>
               <p class="store-card__dist" data-dist hidden></p>
@@ -283,7 +283,7 @@
           <li class="store-card" data-store="brooklyn" data-lat="40.7197" data-lng="-73.9637" data-tz="America/New_York" data-hours='[[10, 19], [10, 19], [10, 19], [10, 19], [10, 19], [10, 19], [10, 19]]' data-services="Full fabric library|Design appointments|Same-day swatches" tabindex="-1">
             <div class="store-card__head">
               <div>
-                <h3 class="store-card__city">Brooklyn, NY</h3>
+                <h2 class="store-card__city">Brooklyn, NY</h2>
                 <p class="store-card__name">Williamsburg</p>
               </div>
               <p class="store-card__dist" data-dist hidden></p>
@@ -307,7 +307,7 @@
           <li class="store-card" data-store="chicago" data-lat="41.9082" data-lng="-87.6761" data-tz="America/Chicago" data-hours='[[11, 19], null, [11, 19], [11, 19], [11, 19], [11, 19], [11, 19]]' data-services="Full fabric library|Design appointments" tabindex="-1">
             <div class="store-card__head">
               <div>
-                <h3 class="store-card__city">Chicago, IL</h3>
+                <h2 class="store-card__city">Chicago, IL</h2>
                 <p class="store-card__name">Wicker Park</p>
               </div>
               <p class="store-card__dist" data-dist hidden></p>
@@ -331,7 +331,7 @@
           <li class="store-card" data-store="austin" data-lat="30.2491" data-lng="-97.7497" data-tz="America/Chicago" data-hours='[[11, 18], null, null, [10, 18], [10, 18], [10, 18], [10, 18]]' data-services="Design appointments|Free parking" tabindex="-1">
             <div class="store-card__head">
               <div>
-                <h3 class="store-card__city">Austin, TX</h3>
+                <h2 class="store-card__city">Austin, TX</h2>
                 <p class="store-card__name">South Congress</p>
               </div>
               <p class="store-card__dist" data-dist hidden></p>
@@ -355,7 +355,7 @@
           <li class="store-card" data-store="denver" data-lat="39.7621" data-lng="-104.9814" data-tz="America/Denver" data-hours='[[11, 17], null, [10, 18], [10, 18], [10, 18], [10, 18], [10, 18]]' data-services="Full fabric library|Free parking" tabindex="-1">
             <div class="store-card__head">
               <div>
-                <h3 class="store-card__city">Denver, CO</h3>
+                <h2 class="store-card__city">Denver, CO</h2>
                 <p class="store-card__name">RiNo</p>
               </div>
               <p class="store-card__dist" data-dist hidden></p>
@@ -374,7 +374,7 @@
           <li class="store-card store-card--soon" data-store="la" data-lat="34.0469" data-lng="-118.2394" data-tz="America/Los_Angeles" data-hours='null' data-services="Full fabric library|Design appointments" tabindex="-1">
             <div class="store-card__head">
               <div>
-                <h3 class="store-card__city">Los Angeles, CA</h3>
+                <h2 class="store-card__city">Los Angeles, CA</h2>
                 <p class="store-card__name">Arts District</p>
               </div>
               <p class="store-card__dist" data-dist hidden></p>

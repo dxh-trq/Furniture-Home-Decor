@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -206,7 +206,7 @@
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -376,7 +376,7 @@
         </li>
         <li>
           <h3>Covers that come off</h3>
-          <p>Every cushion cover unzips and washes at 30°C. Replacement covers are sold separately if you change your mind about the colour.</p>
+          <p>Every cushion cover unzips and washes at 30°C. Replacement covers are sold separately if you change your mind about the color.</p>
         </li>
         <li>
           <h3>Fits through the door</h3>
@@ -434,7 +434,7 @@
         <details class="acc">
           <summary>Delivery and returns</summary>
           <div class="acc__body">
-            <p>Free delivery to the room of your choice on orders over $500. In-stock colours arrive in 1–2 weeks; made-to-order colours take 6–8 weeks. We’ll text you a two-hour window the day before.</p>
+            <p>Free delivery to the room of your choice on orders over $500. In-stock colors arrive in 1–2 weeks; made-to-order colors take 6–8 weeks. We’ll text you a two-hour window the day before.</p>
             <p>Not right? You have 30 days from delivery to return it. We collect it for free.</p>
           </div>
         </details>
@@ -558,7 +558,7 @@
             <p class="rv__date">14 June 2026</p>
           </div>
           <h3 class="rv__title">Firmer than expected</h3>
-          <p class="rv__body">The seat is on the firm side at first and softens after a few weeks. Great back support. I would have liked one more colour in linen.</p>
+          <p class="rv__body">The seat is on the firm side at first and softens after a few weeks. Great back support. I would have liked one more color in linen.</p>
           <div class="rv__foot">
             <p class="rv__who"><strong>Chris P.</strong><span>Seattle, WA</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span></p>
             <p class="rv__bought">Bought: 3-seat in charcoal linen</p>
@@ -584,14 +584,14 @@
           <a class="card__media" href="product.html" style="color:#D9CFBF">
             <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Tove side table"><use href="#s-sidetable"/></svg>
           </a>
-          <button class="wish" aria-pressed="false" aria-label="Save Tove side table to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <button type="button" class="wish" aria-pressed="false" aria-label="Save Tove side table to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
           <div class="card__body">
             <h3 class="card__name"><a href="product.html">Tove side table</a></h3>
             <p class="card__meta">Honed travertine</p>
-            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Travertine" style="--c:#D9CFBF"></button><button role="radio" aria-checked="false" aria-label="Nero marble" style="--c:#3D3F3C"></button></div>
+            <div class="swatches" role="radiogroup" aria-label="Color"><button type="button" role="radio" aria-checked="true" aria-label="Travertine" style="--c:#D9CFBF"></button><button type="button" role="radio" aria-checked="false" aria-label="Nero marble" style="--c:#3D3F3C"></button></div>
             <div class="card__foot">
               <p class="price">$280</p>
-              <button class="btn btn--small" data-add>Add to cart</button>
+              <button type="button" class="btn btn--small" data-add>Add to cart</button>
             </div>
           </div>
         </li>
@@ -599,14 +599,14 @@
           <a class="card__media" href="product.html" style="color:#EBD9AE">
             <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Lumen floor lamp"><use href="#s-lamp"/></svg>
           </a>
-          <button class="wish" aria-pressed="false" aria-label="Save Lumen floor lamp to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <button type="button" class="wish" aria-pressed="false" aria-label="Save Lumen floor lamp to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
           <div class="card__body">
             <h3 class="card__name"><a href="product.html">Lumen floor lamp</a></h3>
             <p class="card__meta">Linen shade, blackened steel</p>
-            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Natural linen" style="--c:#EBD9AE"></button><button role="radio" aria-checked="false" aria-label="Moss linen" style="--c:#6F7A5E"></button></div>
+            <div class="swatches" role="radiogroup" aria-label="Color"><button type="button" role="radio" aria-checked="true" aria-label="Natural linen" style="--c:#EBD9AE"></button><button type="button" role="radio" aria-checked="false" aria-label="Moss linen" style="--c:#6F7A5E"></button></div>
             <div class="card__foot">
               <p class="price">$320</p>
-              <button class="btn btn--small" data-add>Add to cart</button>
+              <button type="button" class="btn btn--small" data-add>Add to cart</button>
             </div>
           </div>
         </li>
@@ -614,14 +614,14 @@
           <a class="card__media" href="product.html" style="color:#CFC4AF">
             <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Mira wool rug"><use href="#s-rug"/></svg>
           </a>
-          <button class="wish" aria-pressed="false" aria-label="Save Mira wool rug to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <button type="button" class="wish" aria-pressed="false" aria-label="Save Mira wool rug to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
           <div class="card__body">
             <h3 class="card__name"><a href="product.html">Mira wool rug</a></h3>
             <p class="card__meta">Hand-tufted wool, 200 × 300 cm</p>
-            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Oat" style="--c:#CFC4AF"></button><button role="radio" aria-checked="false" aria-label="Sage" style="--c:#9AA488"></button></div>
+            <div class="swatches" role="radiogroup" aria-label="Color"><button type="button" role="radio" aria-checked="true" aria-label="Oat" style="--c:#CFC4AF"></button><button type="button" role="radio" aria-checked="false" aria-label="Sage" style="--c:#9AA488"></button></div>
             <div class="card__foot">
               <p class="price">$540</p>
-              <button class="btn btn--small" data-add>Add to cart</button>
+              <button type="button" class="btn btn--small" data-add>Add to cart</button>
             </div>
           </div>
         </li>
@@ -629,14 +629,14 @@
           <a class="card__media" href="product.html" style="color:#B08A5E">
             <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Drift coffee table"><use href="#s-coffeetable"/></svg>
           </a>
-          <button class="wish" aria-pressed="false" aria-label="Save Drift coffee table to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+          <button type="button" class="wish" aria-pressed="false" aria-label="Save Drift coffee table to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
           <div class="card__body">
             <h3 class="card__name"><a href="product.html">Drift coffee table</a></h3>
             <p class="card__meta">Solid oak, 120 cm</p>
-            <div class="swatches" role="radiogroup" aria-label="Colour"><button role="radio" aria-checked="true" aria-label="Natural oak" style="--c:#B08A5E"></button><button role="radio" aria-checked="false" aria-label="Smoked oak" style="--c:#6B4A33"></button></div>
+            <div class="swatches" role="radiogroup" aria-label="Color"><button type="button" role="radio" aria-checked="true" aria-label="Natural oak" style="--c:#B08A5E"></button><button type="button" role="radio" aria-checked="false" aria-label="Smoked oak" style="--c:#6B4A33"></button></div>
             <div class="card__foot">
               <p class="price">$690</p>
-              <button class="btn btn--small" data-add>Add to cart</button>
+              <button type="button" class="btn btn--small" data-add>Add to cart</button>
             </div>
           </div>
         </li>

@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -199,14 +199,14 @@
           </div>
         </li>
         <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
-        <li class="nav__item"><a class="nav__link" href="blog.html" aria-current="page">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html" aria-current="true">Inspiration</a></li>
         <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
         <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
       </ul>
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -269,7 +269,7 @@
       </aside>
 
       <div class="prose">
-        <p class="prose__lead">Before you look at a single colour, spend ten minutes with a tape measure. You need four numbers: the wall, the walkway, the narrowest doorway and the tightest turn on the way in.</p>
+        <p class="prose__lead">Before you look at a single color, spend ten minutes with a tape measure. You need four numbers: the wall, the walkway, the narrowest doorway and the tightest turn on the way in.</p>
 
         <h2 id="measure-room"><span class="prose__step">1</span>Measure the room</h2>
         <p>Measure the wall the sofa will sit against, then take off at least 30 cm so it doesn’t look squeezed in. A 3-seat sofa at 220 cm needs a wall of around 250 cm. Next, measure out from the wall: a sofa, a coffee table and a walkway need about 95 + 45 + 90 cm of floor.</p>
@@ -339,7 +339,7 @@
             <p class="card__meta">Seat depth 58 cm, height 45 cm. Legs unscrew for tight doorways.</p>
             <div class="story-product__foot">
               <p class="price">$1,890</p>
-              <button class="btn btn--small" data-add>Add to cart</button>
+              <button type="button" class="btn btn--small" data-add>Add to cart</button>
               <a class="link" href="product.html">View details</a>
             </div>
           </div>

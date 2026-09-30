@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -206,7 +206,7 @@
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -298,9 +298,9 @@
         </div>
         <div class="tk-side__card tk-side__help">
           <h2>Need a hand?</h2>
-          <p>Our team is here 8am to 8pm ET, every day.</p>
+          <p>Our team is here Monday to Saturday, 9am–6pm ET.</p>
           <a class="btn btn--small" href="contact.html">Contact us</a>
-          <a class="link" href="tel:+18005550199">1-800-555-0199</a>
+          <a class="link" href="tel:+18005550142">1-800-555-0142</a>
         </div>
       </aside>
     </div>
@@ -317,7 +317,7 @@
       </div>
       <ol class="tk-statuses">
         <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></span><h3>Ordered</h3><p>We’ve got your order and emailed a confirmation. Most orders can still be changed for an hour.</p></li>
-        <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l4 4-9 9H5v-4l9-9Z"/><path d="M12 8l4 4"/></svg></span><h3>Being made</h3><p>Made-to-order pieces are built for you in our workshops. This usually takes 4 to 8 weeks.</p></li>
+        <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l4 4-9 9H5v-4l9-9Z"/><path d="M12 8l4 4"/></svg></span><h3>Being made</h3><p>Made-to-order pieces are built for you in our workshops. This usually takes 6 to 8 weeks.</p></li>
         <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3V10Z"/><path d="M9 20v-6h6v6"/></svg></span><h3>At our hub</h3><p>Your delivery is at the hub nearest you, checked for damage and ready for the day you booked.</p></li>
         <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span><h3>Out for delivery</h3><p>The team is on the road. You’ll get a 30-minute window by text and can follow the van here.</p></li>
         <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span><h3>Delivered</h3><p>Carried to your room, unwrapped and placed. Returns are free for 30 days from today.</p></li>
@@ -329,15 +329,15 @@
     <div class="container tk-faq">
       <div>
         <h2 class="section__title">Delivery questions</h2>
-        <p class="tk-sub">Can’t see your answer? Our <a class="link" href="faq.html">help centre</a> has more.</p>
+        <p class="tk-sub">Can’t see your answer? Our <a class="link" href="faq.html">help center</a> has more.</p>
       </div>
       <div class="tk-faq__list">
           <details class="qa"><summary>Where do I find my order number?</summary><p>It starts with MR- and is at the top of your confirmation email and on your receipt. If you have an account, it’s also under <a class="link" href="account.html#orders">Orders</a>.</p></details>
           <details class="qa"><summary>Why is my order in more than one delivery?</summary><p>Pieces that are in stock ship straight away. Made-to-order pieces follow when they’re ready, so you’re not kept waiting for everything. Every delivery is free once your order is over $500.</p></details>
-          <details class="qa"><summary>Can I change my delivery day?</summary><p>Yes, for free, until 6pm the day before. Look up your order above and choose “Change date”. After that, call us and we’ll do what we can.</p></details>
+          <details class="qa"><summary>Can I change my delivery day?</summary><p>Yes, for free, up to 48 hours before. Look up your order above and choose “Change date”. After that, call us and we’ll do what we can.</p></details>
           <details class="qa"><summary>Does someone need to be home?</summary><p>Yes, someone over 18 needs to be there to let the team in and check the pieces. They don’t need to be the person who ordered.</p></details>
           <details class="qa"><summary>My order hasn’t moved in a while</summary><p>Made-to-order pieces can sit at “Being made” for a few weeks while they’re built. If your estimated week has passed, <a class="link" href="contact.html">contact us</a> and we’ll find out where it is.</p></details>
-          <details class="qa"><summary>Something arrived damaged</summary><p>Don’t worry, and don’t throw the packaging away yet. Take a photo and <a class="link" href="contact.html">tell us</a> within 48 hours; we’ll send a replacement part or piece at no cost.</p></details>
+          <details class="qa"><summary>Something arrived damaged</summary><p>Don’t worry, and don’t throw the packaging away yet. Take a photo and <a class="link" href="contact.html">tell us</a> within 7 days of delivery; we’ll send a replacement part or piece at no cost.</p></details>
       </div>
     </div>
   </section>

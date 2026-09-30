@@ -7,7 +7,7 @@
   // Every page in the template, with words people are likely to type or have in an old link.
   const PAGES = [
     { url: 'index.html', title: 'Homepage', keys: 'home start morrow' },
-    { url: 'shop.html', title: 'Living room furniture', keys: 'shop living room furniture all products catalogue collection' },
+    { url: 'shop.html', title: 'Living room furniture', keys: 'shop living room furniture all products catalog collection' },
     { url: 'collection.html', title: 'Nordic calm collection', keys: 'collection collections nordic calm scandinavian light oak boucle' },
     { url: 'collection.html?c=warm-minimal', title: 'Warm minimal collection', keys: 'collection collections warm minimal walnut leather brass' },
     { url: 'reviews.html', title: 'Customer reviews', keys: 'reviews review ratings rating stars customers feedback testimonials write a review verified' },

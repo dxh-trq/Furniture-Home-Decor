@@ -8,7 +8,7 @@
 
   const WINDOW_DAYS = 30;
   const CREDIT_BONUS = 0.1;
-  const REASONS = ['Doesn’t fit the space', 'Colour or fabric isn’t right', 'Not as comfortable as expected', 'Changed my mind', 'Arrived damaged', 'Other'];
+  const REASONS = ['Doesn’t fit the space', 'Color or fabric isn’t right', 'Not as comfortable as expected', 'Changed my mind', 'Arrived damaged', 'Other'];
 
   // demo order, delivered 14 days ago so it's inside the window
   const delivered = new Date();

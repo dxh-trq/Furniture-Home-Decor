@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -199,14 +199,14 @@
           </div>
         </li>
         <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
-        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html" aria-current="true">Inspiration</a></li>
         <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
         <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
       </ul>
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -226,7 +226,7 @@
 <main id="main" class="lookbook-page">
   <section class="container lb-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol><li><a href="index.html">Home</a></li><li><a href="blog.html">Inspiration</a></li><li><span aria-current="page">Lookbook</span></li></ol>
+      <ol><li><a href="index.html">Home</a></li><li><a href="blog.html">Journal</a></li><li><span aria-current="page">Lookbook</span></li></ol>
     </nav>
     <div class="lb-hero__grid">
       <div class="lb-hero__copy">
@@ -429,8 +429,8 @@
   </article>
   <section class="container lb-palette" aria-labelledby="pal-title">
     <div>
-      <h2 class="section__title" id="pal-title">The colours of the season</h2>
-      <p class="lb-sub">Seven colours run through every look. Choose one to copy its code for paint matching.</p>
+      <h2 class="section__title" id="pal-title">The colors of the season</h2>
+      <p class="lb-sub">Seven colors run through every look. Choose one to copy its code for paint matching.</p>
     </div>
     <ul class="lb-swatches"><li><button type="button" class="lb-swatch" data-hex="#36402F" data-name="Moss" style="--c:#36402F"><span class="lb-swatch__chip"></span><strong>Moss</strong><span>#36402F</span></button></li><li><button type="button" class="lb-swatch" data-hex="#A9B19C" data-name="Sage" style="--c:#A9B19C"><span class="lb-swatch__chip"></span><strong>Sage</strong><span>#A9B19C</span></button></li><li><button type="button" class="lb-swatch" data-hex="#EEEBE3" data-name="Chalk" style="--c:#EEEBE3"><span class="lb-swatch__chip"></span><strong>Chalk</strong><span>#EEEBE3</span></button></li><li><button type="button" class="lb-swatch" data-hex="#DCD4C3" data-name="Oat" style="--c:#DCD4C3"><span class="lb-swatch__chip"></span><strong>Oat</strong><span>#DCD4C3</span></button></li><li><button type="button" class="lb-swatch" data-hex="#C28E2E" data-name="Ochre" style="--c:#C28E2E"><span class="lb-swatch__chip"></span><strong>Ochre</strong><span>#C28E2E</span></button></li><li><button type="button" class="lb-swatch" data-hex="#B7775A" data-name="Clay" style="--c:#B7775A"><span class="lb-swatch__chip"></span><strong>Clay</strong><span>#B7775A</span></button></li><li><button type="button" class="lb-swatch" data-hex="#6B4A33" data-name="Walnut" style="--c:#6B4A33"><span class="lb-swatch__chip"></span><strong>Walnut</strong><span>#6B4A33</span></button></li></ul>
   </section>
@@ -552,7 +552,7 @@
         <p class="lb-copy__eyebrow"><span class="lb-copy__n">06</span> Look 06 · <a href="collection.html?c=warm-minimal">Warm minimal</a></p>
         <h2 class="lb-copy__title" id="low-light-title">Low light</h2>
         <p class="lb-copy__caption">Dark walls, warm pools of light and walnut that glows. The room you’ll want to be in every evening from now until March.</p>
-        <p class="lb-copy__note"><strong>Stylist’s note</strong>Paint the ceiling the wall colour. It makes a dark room feel wrapped, not small.</p>
+        <p class="lb-copy__note"><strong>Stylist’s note</strong>Paint the ceiling the wall color. It makes a dark room feel wrapped, not small.</p>
         <ul class="lb-items">
               <li class="lb-item" data-piece="sideboard" data-price="1054" data-qty="1">
                 <span class="lb-item__n" aria-hidden="true">1</span>

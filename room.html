@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -206,7 +206,7 @@
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -230,7 +230,7 @@
     </nav>
     <div class="rm-hero__row">
       <h1 class="rm-hero__title">Shop by room</h1>
-      <p class="rm-hero__lede">Start with the room, not the catalogue. Explore each one in three palettes, tap anything you like, and take home the whole look or just one piece.</p>
+      <p class="rm-hero__lede">Start with the room, not the catalog. Explore each one in three palettes, tap anything you like, and take home the whole look or just one piece.</p>
     </div>
   </section>
 
@@ -441,7 +441,7 @@
             </svg>
             <button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:42%;top:55%" data-piece="desk" aria-label="Rowe desk, $890"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:48%;top:80%" data-piece="chair" aria-label="Oslo desk chair, $260"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:74%;top:45%" data-piece="lamp" aria-label="Lumen floor lamp, $320"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:88%;top:70%" data-piece="planter" aria-label="Terra planter, $85"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:70%;top:94%" data-piece="rug" aria-label="Mira wool rug, $390"><span aria-hidden="true">+</span></button>
           </div>
-          <div class="rm-pals" role="group" aria-label="Palette"><button type="button" class="rm-pal" data-pal="light" data-wall="#ECE8DE" data-floor="#C9B89C" data-main="#C8A477" data-accent="#6F7A5E" data-main-name="Light oak" aria-pressed="true"><span class="rm-pal__sw" style="--a:#ECE8DE;--b:#C8A477;--c:#6F7A5E"></span>Light oak</button><button type="button" class="rm-pal" data-pal="green" data-wall="#CFD6C5" data-floor="#B8A283" data-main="#7A5236" data-accent="#C28E2E" data-main-name="Walnut" aria-pressed="false"><span class="rm-pal__sw" style="--a:#CFD6C5;--b:#7A5236;--c:#C28E2E"></span>Study green</button><button type="button" class="rm-pal" data-pal="mono" data-wall="#E3E3DF" data-floor="#BFB7A8" data-main="#3A3C38" data-accent="#A9B19C" data-main-name="Black oak" aria-pressed="false"><span class="rm-pal__sw" style="--a:#E3E3DF;--b:#3A3C38;--c:#A9B19C"></span>Quiet grey</button></div>
+          <div class="rm-pals" role="group" aria-label="Palette"><button type="button" class="rm-pal" data-pal="light" data-wall="#ECE8DE" data-floor="#C9B89C" data-main="#C8A477" data-accent="#6F7A5E" data-main-name="Light oak" aria-pressed="true"><span class="rm-pal__sw" style="--a:#ECE8DE;--b:#C8A477;--c:#6F7A5E"></span>Light oak</button><button type="button" class="rm-pal" data-pal="green" data-wall="#CFD6C5" data-floor="#B8A283" data-main="#7A5236" data-accent="#C28E2E" data-main-name="Walnut" aria-pressed="false"><span class="rm-pal__sw" style="--a:#CFD6C5;--b:#7A5236;--c:#C28E2E"></span>Study green</button><button type="button" class="rm-pal" data-pal="mono" data-wall="#E3E3DF" data-floor="#BFB7A8" data-main="#3A3C38" data-accent="#A9B19C" data-main-name="Black oak" aria-pressed="false"><span class="rm-pal__sw" style="--a:#E3E3DF;--b:#3A3C38;--c:#A9B19C"></span>Quiet gray</button></div>
         </div>
         <div class="rm-side">
           <p class="rm-side__eyebrow">64 pieces for the home office</p>

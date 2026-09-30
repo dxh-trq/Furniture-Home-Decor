@@ -86,13 +86,13 @@ Planning docs:
   Preferences are saved as `morrow-display` and applied on every page by `main.js` (and by `checkout.js`, as checkout doesn't load `main.js`), using `pref-*` classes on `<html>`. The statement's claims (testing, audits, showroom access) are placeholders: only publish what's true for your business.
 
 - `room.html` — shop by room: a room explorer with five tabs (living room, bedroom, dining room, home office, outdoor; linkable as `room.html#bedroom`), an illustrated scene for each room in three palettes that recolour the scene and update fabric names, hotspots linked to a "shop the room" list, tick boxes with a live total and "Add to cart", then a grid of every room, room guides and a stylist call-to-action. Logic in `assets/js/room.js`.
-  Scenes are generated SVG using the sprite symbols; colours come from `--wall`, `--floor`, `--main` and `--accent` on `.rm-scene`, set by each palette button's `data-*` values. Pieces are `<li class="rm-item">` with `data-price` and `data-qty`.
+  Scenes are generated SVG using the sprite symbols; colors come from `--wall`, `--floor`, `--main` and `--accent` on `.rm-scene`, set by each palette button's `data-*` values. Pieces are `<li class="rm-item">` with `data-price` and `data-qty`.
 
 - `collection.html` — collection page, one template for every collection: `collection.html` shows Nordic calm and `collection.html?c=warm-minimal` shows Warm minimal (the homepage cards and the Shop menu feature link to each). Hero with the collection's scene and materials, the story with a designer quote and three principles, the pieces with type filters and sorting, "Buy the set" (tick the pieces; 10% off with three or more, with a live total and hints), and all collections with the current one marked. Logic in `assets/js/collection.js`.
   Each collection is an `<article data-collection="…">` in the page; add a collection by adding another article. The set discount is `SET_OFF` and `SET_MIN` in the script; apply the same rule in your cart.
 
 - `designers.html` — designers & makers: a directory of 5 designers and 6 workshops with filters (everyone, designers, workshops) and search. Each card opens a profile dialog with a bio, quote, facts, their pieces and a link, plus previous/next buttons and arrow keys for moving between profiles. Profiles can be linked as `designers.html#p-signe-holm`. Also on the page: "Trace a piece", which shows each step for 4 products from sketch to delivery; the workshop standards with a visits and pay table; events with "Save a place"; and a "Design or make with us" pitch form. Logic in `assets/js/designers.js`.
-  Each profile's full content is a `<template data-dn-profile>` inside its card.
+  Each profile's full content is a `<template data-dn-profile>` inside its card. Names, workshops, audit figures, events and the 5% royalty are placeholders; send pitches to your inbox in the form's submit handler.
 
 - **Cookie banner** (`assets/js/consent.js`, loaded on every page):
   - **First visit:** a card at the bottom left, or a bottom sheet on phones, appears on every page except the cookie policy. "Accept all" and "Essential only" look the same and are equally easy.
@@ -123,7 +123,7 @@ Planning docs:
   - Each look has an illustrated scene with numbered hotspots. Clicking one opens a card with the piece and "Add to cart", and highlights that piece in the list beside it.
   - Each look also has a caption, a stylist's note, pieces you can add one at a time, "Shop the look" with the total, and "Save".
   - A sticky bar filters looks by collection and highlights the look you're scrolled to.
-  - Between looks: two pull quotes, and the season's seven colours (click one to copy its hex code).
+  - Between looks: two pull quotes, and the season's seven colors (click one to copy its hex code).
   - After the looks: behind-the-shoot credits, past lookbooks, and a stylist call-to-action.
   - A slideshow shows the looks currently filtered, with arrow keys and swipe.
   - Each look can be linked by its id, for example `lookbook.html#low-light`. Saved looks are kept on the device as `morrow-saved-looks`.
@@ -141,7 +141,19 @@ Planning docs:
   - Below the tracker, whether or not an order is shown: what each status means and delivery questions.
   - Logic in `assets/js/track.js`.
   - `ORDERS` in the script stands in for your order API: replace `lookup()` with a fetch. The moving van is a demo timer; connect it to your routing system.
-  - Links like `track.html?order=MR-48213&zip=10002` open an order directly, for use in shipping emails. Names, workshops, audit figures, events and the 5% royalty are placeholders; send pitches to your inbox in the form's submit handler.
+  - Links like `track.html?order=MR-48213&zip=10002` open an order directly, for use in shipping emails.
+
+## Site-wide facts
+
+These appear on many pages. If one changes, search the whole site for the old value.
+
+- **Customer service:** 1-800-555-0142 (call or text), Monday to Saturday, 9am–6pm ET. Emails: hello@, privacy@, access@ and press@morrowhome.com.
+- **Delivery:** free on orders over $500; in-stock pieces in 1–2 weeks, made-to-order in 6–8 weeks (10–12 for custom sizes). Change the day free up to 48 hours before.
+- **Returns and damage:** 30 days to decide, free returns and collection; report damage within 7 days of delivery.
+- **Warranty:** 10-year frame warranty.
+- **Showrooms:** Portland, Brooklyn, Chicago, Austin and Denver; Los Angeles opens 14 November 2026.
+- **Company:** 214 people, 6 partner workshops, 4.8 out of 5 from 12,400 reviews.
+- **Spelling:** American English in all visible text (color, center, gray). Internal names such as `data-colour` and `.colour-opt` are left as they are.
 
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.

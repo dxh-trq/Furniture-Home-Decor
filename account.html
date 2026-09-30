@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Your account — Morrow</title>
-  <meta name="description" content="Track deliveries, manage orders, addresses and preferences.">
+  <meta name="description" content="Your Morrow account: track deliveries, manage orders and returns, saved pieces, swatches, addresses and preferences.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
@@ -146,7 +146,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -158,11 +158,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -172,7 +172,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -182,7 +182,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -207,7 +207,7 @@
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account" aria-current="page">
@@ -348,7 +348,7 @@
         <li class="order" data-order="MR-48213">
           <div class="order__head">
             <div class="order__meta">
-              <h3 class="order__no">Order MR-48213</h3>
+              <h2 class="order__no">Order MR-48213</h2>
               <p>Placed 29 September 2026</p>
             </div>
             <p class="pill pill--progress">In progress</p>
@@ -374,7 +374,7 @@
         <li class="order" data-order="MR-45502">
           <div class="order__head">
             <div class="order__meta">
-              <h3 class="order__no">Order MR-45502</h3>
+              <h2 class="order__no">Order MR-45502</h2>
               <p>Placed 8 September 2026</p>
             </div>
             <p class="pill pill--done">Delivered 15 September</p>
@@ -398,7 +398,7 @@
         <li class="order" data-order="MR-39120">
           <div class="order__head">
             <div class="order__meta">
-              <h3 class="order__no">Order MR-39120</h3>
+              <h2 class="order__no">Order MR-39120</h2>
               <p>Placed 2 June 2026</p>
             </div>
             <p class="pill pill--done">Delivered 14 June</p>
@@ -431,13 +431,13 @@
               
               <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Ren lounge chair"><use href="#s-armchair"/></svg>
             </a>
-            <button class="wish" aria-pressed="true" aria-label="Remove Ren lounge chair from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+            <button type="button" class="wish" aria-pressed="true" aria-label="Remove Ren lounge chair from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
             <div class="card__body">
-              <h3 class="card__name"><a href="product.html">Ren lounge chair</a></h3>
+              <h2 class="card__name"><a href="product.html">Ren lounge chair</a></h2>
               <p class="card__meta">Aniline leather, walnut</p>
               <div class="card__foot">
                 <p class="price">$760</p>
-                <button class="btn btn--small" data-add>Add to cart</button>
+                <button type="button" class="btn btn--small" data-add>Add to cart</button>
               </div>
             </div>
           </li>
@@ -446,13 +446,13 @@
               <span class="badge badge--sale">Price dropped</span>
               <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Arc wall mirror"><use href="#s-mirror"/></svg>
             </a>
-            <button class="wish" aria-pressed="true" aria-label="Remove Arc wall mirror from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+            <button type="button" class="wish" aria-pressed="true" aria-label="Remove Arc wall mirror from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
             <div class="card__body">
-              <h3 class="card__name"><a href="product.html">Arc wall mirror</a></h3>
+              <h2 class="card__name"><a href="product.html">Arc wall mirror</a></h2>
               <p class="card__meta">Oak frame, 60 × 100 cm</p>
               <div class="card__foot">
                 <p class="price"><span class="price__now">$390</span> <s>$460</s></p>
-                <button class="btn btn--small" data-add>Add to cart</button>
+                <button type="button" class="btn btn--small" data-add>Add to cart</button>
               </div>
             </div>
           </li>
@@ -461,13 +461,13 @@
               
               <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Mira wool rug"><use href="#s-rug"/></svg>
             </a>
-            <button class="wish" aria-pressed="true" aria-label="Remove Mira wool rug from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+            <button type="button" class="wish" aria-pressed="true" aria-label="Remove Mira wool rug from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
             <div class="card__body">
-              <h3 class="card__name"><a href="product.html">Mira wool rug</a></h3>
+              <h2 class="card__name"><a href="product.html">Mira wool rug</a></h2>
               <p class="card__meta">Hand-tufted wool, 200 × 300 cm</p>
               <div class="card__foot">
                 <p class="price">$540</p>
-                <button class="btn btn--small" data-add>Add to cart</button>
+                <button type="button" class="btn btn--small" data-add>Add to cart</button>
               </div>
             </div>
           </li>
@@ -476,13 +476,13 @@
               <span class="badge">Only 3 left</span>
               <svg class="art" viewBox="0 0 200 160" role="img" aria-label="Drift coffee table"><use href="#s-coffeetable"/></svg>
             </a>
-            <button class="wish" aria-pressed="true" aria-label="Remove Drift coffee table from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
+            <button type="button" class="wish" aria-pressed="true" aria-label="Remove Drift coffee table from wishlist" data-wish-remove><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button>
             <div class="card__body">
-              <h3 class="card__name"><a href="product.html">Drift coffee table</a></h3>
+              <h2 class="card__name"><a href="product.html">Drift coffee table</a></h2>
               <p class="card__meta">Solid oak, 120 cm</p>
               <div class="card__foot">
                 <p class="price">$690</p>
-                <button class="btn btn--small" data-add>Add to cart</button>
+                <button type="button" class="btn btn--small" data-add>Add to cart</button>
               </div>
             </div>
           </li>

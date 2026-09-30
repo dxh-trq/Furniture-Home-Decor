@@ -55,7 +55,7 @@
     const size = selected('size');
     const legs = selected('legs');
 
-    // colours drive every illustration on the page
+    // colors drive every illustration on the page
     root.style.setProperty('--fabric', fabric.dataset.hex);
     root.style.setProperty('--leg', legs.dataset.hex);
     $$('.texture').forEach((t) => { t.dataset.type = fabric.dataset.type; });

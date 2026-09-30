@@ -57,6 +57,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 ul { list-style: none; margin: 0; padding: 0; }
 h1, h2, h3, p, blockquote { margin: 0; }
 h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+:where(section[id], article[id], aside[id]) { scroll-margin-top: 90px; } /* clear the sticky header when linked */
 
 :focus-visible { outline: 2px solid var(--ochre); outline-offset: 3px; border-radius: 4px; }
 
@@ -424,7 +425,7 @@ h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line
 /* ==========================================================================
    Product listing page
    ========================================================================== */
-.nav__link[aria-current="page"] { color: var(--walnut); }
+.nav__link[aria-current] { color: var(--walnut); }
 
 .breadcrumb { padding-top: 24px; font-size: var(--fs-sm); color: var(--ink-2); }
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
@@ -1334,7 +1335,7 @@ h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line
 .post-art { display: block; width: 100%; height: auto; }
 
 .jhead { padding: 40px 0 32px; max-width: 760px; }
-.jhead__title { font-size: clamp(3rem, 1.8rem + 5vw, 6rem); letter-spacing: -0.05em; line-height: .92; color: var(--moss); }
+.jhead__title { font-size: var(--fs-hero); letter-spacing: -0.05em; line-height: .92; color: var(--moss); }
 .jhead__lede { margin-top: 16px; font-family: var(--serif); font-size: 1.375rem; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
 
 .jfeature { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; padding-bottom: 48px; border-bottom: 1px solid var(--line); }
@@ -1448,7 +1449,7 @@ h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line
 .about-page ~ .footer { margin-top: var(--section); }
 .footer a[aria-current="page"] { color: #fff; }
 
-.ab-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: end; padding-top: 8px; }
+.ab-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: end; }
 .ab-hero__copy { padding-bottom: clamp(16px, 4vw, 56px); }
 .ab-hero__title { margin-top: 24px; font-size: var(--fs-hero); letter-spacing: -0.045em; line-height: .98; color: var(--moss); max-width: 14ch; }
 .ab-hero__lede { margin-top: 24px; font-family: var(--serif); font-size: 1.375rem; line-height: 1.55; color: var(--ink-2); max-width: 44ch; }
@@ -1828,7 +1829,8 @@ a.channel__big:hover { color: var(--walnut); }
    Design services page
    ========================================================================== */
 .services-page ~ .footer { margin-top: var(--section); }
-.sv-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; padding-top: 8px; }
+.sv-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.sv-hero > .breadcrumb { grid-column: 1 / -1; align-self: start; margin-bottom: calc(-1 * clamp(32px, 5vw, 72px) + 8px); }
 .sv-hero__title { margin-top: 24px; font-size: var(--fs-hero); letter-spacing: -0.045em; line-height: .98; color: var(--moss); max-width: 11ch; }
 .sv-hero__lede { margin-top: 20px; font-family: var(--serif); font-size: 1.3125rem; line-height: 1.55; color: var(--ink-2); max-width: 46ch; }
 .sv-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
@@ -1959,7 +1961,7 @@ a.channel__big:hover { color: var(--walnut); }
    Trade program page
    ========================================================================== */
 .trade-page ~ .footer { margin-top: var(--section); }
-.trade-hero { background: var(--walnut); color: #EAD9C7; padding: 8px 0 clamp(48px, 7vw, 88px); }
+.trade-hero { background: var(--walnut); color: #EAD9C7; padding: 0 0 clamp(48px, 7vw, 88px); }
 .trade-hero .breadcrumb { color: #D9C3AC; }
 .trade-hero .breadcrumb [aria-current], .trade-hero .breadcrumb a:hover { color: #fff; }
 .trade-hero .breadcrumb li + li::before { color: #B99576; }
@@ -2067,7 +2069,7 @@ a.channel__big:hover { color: var(--walnut); }
    Returns page
    ========================================================================== */
 .returns-page ~ .footer { margin-top: var(--section); }
-.rt-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: end; padding-top: 8px; }
+.rt-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: end; }
 .rt-hero__title { margin-top: 24px; font-size: var(--fs-hero); letter-spacing: -0.045em; line-height: .98; color: var(--moss); }
 .rt-hero__lede { margin: 18px 0 28px; font-family: var(--serif); font-size: 1.3125rem; line-height: 1.55; color: var(--ink-2); max-width: 44ch; }
 .rt-facts { display: grid; gap: 10px; }

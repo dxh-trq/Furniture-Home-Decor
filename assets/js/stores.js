@@ -39,7 +39,7 @@
     '606': 'chicago', '631': 'st louis', '752': 'dallas', '770': 'houston', '787': 'austin', '802': 'denver', '841': 'salt lake city',
     '850': 'phoenix', '891': 'las vegas', '900': 'los angeles', '921': 'san diego', '941': 'san francisco', '972': 'portland', '981': 'seattle',
   };
-  // rough centre of each ZIP region (first digit), used when the prefix isn't in the table
+  // rough center of each ZIP region (first digit), used when the prefix isn't in the table
   const ZIP1 = [[42.4, -71.8], [40.9, -75], [37.5, -78.5], [32.5, -84], [40.2, -84.5], [44.5, -93], [39, -93], [31.5, -97], [40, -108], [38, -120.5]];
 
   $('[data-city-list]').innerHTML = Object.keys(CITIES).map((c) => `<option value="${c.replace(/\b\w/g, (m) => m.toUpperCase())}">`).join('');

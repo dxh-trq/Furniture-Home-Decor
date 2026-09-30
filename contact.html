@@ -145,7 +145,7 @@
 <!-- Header -->
 <header class="header" id="top">
   <div class="container header__inner">
-    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
 
@@ -157,11 +157,11 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="nav__item has-mega">
-          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <button type="button" class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
           <div class="mega" id="mega-shop">
             <div class="container mega__inner">
               <div>
-                <h3 class="mega__title">By room</h3>
+                <p class="mega__title">By room</p>
                 <ul>
                   <li><a href="shop.html?room=living">Living room</a></li>
                   <li><a href="shop.html?room=bedroom">Bedroom</a></li>
@@ -171,7 +171,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Furniture</h3>
+                <p class="mega__title">Furniture</p>
                 <ul>
                   <li><a href="shop.html?c=sofas">Sofas</a></li>
                   <li><a href="shop.html?c=chairs">Chairs</a></li>
@@ -181,7 +181,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <p class="mega__title">Lighting &amp; decor</p>
                 <ul>
                   <li><a href="shop.html?c=lighting">Lighting</a></li>
                   <li><a href="shop.html?c=mirrors">Mirrors</a></li>
@@ -206,7 +206,7 @@
     </nav>
 
     <div class="header__actions">
-      <button class="icon-btn" aria-label="Search">
+      <button type="button" class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
@@ -249,8 +249,8 @@
       <li class="channel">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
         <h2>Visit</h2>
-        <p class="channel__big">3 showrooms</p>
-        <p class="channel__note"><a class="link" href="#showrooms">Portland, Brooklyn, Chicago</a></p>
+        <p class="channel__big">5 showrooms</p>
+        <p class="channel__note"><a class="link" href="#showrooms">Portland, Brooklyn, Chicago, Austin, Denver</a></p>
       </li>
       <li class="channel channel--dark">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
@@ -380,6 +380,9 @@
         <li class="store"><h3>Portland</h3><p>1120 SE Division Street</p><p class="store__hours">Tue–Sun, 10am–6pm</p><a class="link" href="stores.html">Directions</a></li>
         <li class="store"><h3>Brooklyn</h3><p>210 Kent Avenue</p><p class="store__hours">Daily, 10am–7pm</p><a class="link" href="stores.html">Directions</a></li>
         <li class="store"><h3>Chicago</h3><p>1455 N Milwaukee Avenue</p><p class="store__hours">Tue–Sun, 11am–7pm</p><a class="link" href="stores.html">Directions</a></li>
+        <li class="store"><h3>Austin</h3><p>1603 S Congress Avenue</p><p class="store__hours">Wed–Sat, 10am–6pm; Sun, 11am–6pm</p><a class="link" href="stores.html">Directions</a></li>
+        <li class="store"><h3>Denver</h3><p>2901 Larimer Street</p><p class="store__hours">Tue–Sat, 10am–6pm; Sun, 11am–5pm</p><a class="link" href="stores.html">Directions</a></li>
+        <li class="store store--soon"><h3>Los Angeles</h3><p>800 E 3rd Street</p><p class="store__hours">Opening 14 November 2026</p><a class="link" href="stores.html">Details</a></li>
       </ul>
     </section>
   </div>
