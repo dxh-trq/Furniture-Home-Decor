@@ -200,7 +200,24 @@
   }
 
   // shared helpers for page scripts (shop.js, product.js, cart.js)
-  window.Morrow = { addToCart, setCartCount, toast, applyDisplay, DISPLAY_KEY };
+  /* ---------- Product photos (Pexels, free to use; see README > Photos) ---------- */
+  const PHOTOS = {
+    'Alder 3-seat sofa': 20337842, 'Alder corner sofa': 19650953, 'Hale 2-seat sofa': 16825059, 'Hale lounge chair': 29508373,
+    'Ren lounge chair': 20794782, 'Otto armchair': 20337873, 'Fold dining chair': 39854852, 'Oslo dining chair': 39854852,
+    'Fold dining table': 39854857, 'Drift coffee table': 27059629, 'Tove side table': 8670505, 'Arc wall mirror': 5644681,
+    'Stilla sideboard': 12277013, 'Haven bed': 12277123, 'Linden bed': 12277123, 'Rowe desk': 12202411,
+    'Lumen floor lamp': 34992772, 'Halo pendant light': 38278700, 'Loma vase': 7674547, 'Mira wool rug': 18266462, 'Terra planter': 7912988,
+  };
+  const photoUrl = (id, w = 400) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+  // <img> for a product by name, or '' if there's no photo for it
+  const productImg = (name, { w = 200, alt = '' } = {}) => {
+    const id = PHOTOS[name];
+    if (!id) return '';
+    const esc = (t) => t.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    return `<img class="ph" src="${photoUrl(id, w)}" srcset="${photoUrl(id, w)} ${w}w, ${photoUrl(id, w * 2)} ${w * 2}w" sizes="96px" alt="${esc(alt)}" loading="lazy" decoding="async">`;
+  };
+
+  window.Morrow = { addToCart, setCartCount, toast, applyDisplay, DISPLAY_KEY, productImg, photoUrl };
 
   /* ---------- Newsletter ---------- */
   const form = $('[data-newsletter]');

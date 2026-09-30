@@ -77,7 +77,7 @@
         <label class="rt-item__pick">
           <input type="checkbox" value="${it.id}"${it.finalSale ? ' disabled' : ''}>
           <span class="check__box" aria-hidden="true"></span>
-          <span class="osum__thumb" style="color:${it.color};--leg:${it.leg}"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-${it.sym}"/></svg></span>
+          <span class="osum__thumb" style="color:${it.color};--leg:${it.leg}">${window.Morrow?.productImg(it.name) || `<svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-${it.sym}"/></svg>`}</span>
           <span class="rt-item__info"><strong>${it.name}</strong><span>${it.meta}${it.qty > 1 ? `, ${it.qty} × ${money(it.price)}` : ''}</span>${it.finalSale ? '<span class="rt-item__final">Final sale, can’t be returned</span>' : ''}</span>
           <span class="rt-item__price">${money(it.price * it.qty)}</span>
         </label>

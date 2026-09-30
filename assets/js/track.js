@@ -136,7 +136,7 @@
   }));
 
   /* ---------- Render ---------- */
-  const thumb = (it) => `<span class="osum__thumb" style="color:${it.color};--leg:${it.leg}"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-${it.sym}"/></svg>${it.qty > 1 ? `<span class="osum__qty" aria-hidden="true">${it.qty}</span>` : ''}</span>`;
+  const thumb = (it) => `<span class="osum__thumb" style="color:${it.color};--leg:${it.leg}">${window.Morrow?.productImg(it.name) || `<svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-${it.sym}"/></svg>`}${it.qty > 1 ? `<span class="osum__qty" aria-hidden="true">${it.qty}</span>` : ''}</span>`;
   const PILL = { booked: ['pill--progress', 'Delivery booked'], making: ['pill--order', 'Being made'], out: ['tk-pill--live', 'Out for delivery'], delivered: ['pill--done', 'Delivered'] };
   const ICON = {
     change: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',

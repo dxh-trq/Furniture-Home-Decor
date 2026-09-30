@@ -3945,6 +3945,22 @@ kbd { display: inline-block; min-width: 1.8em; padding: 2px 8px; border: 1px sol
   .dl-day__step h3, .dl-day__step p { padding-left: 0; }
 }
 
+/* ==========================================================================
+   Photography (Pexels photos; see README > Photos)
+   ========================================================================== */
+img.ph { display: block; width: 100%; height: 100%; object-fit: cover; background: var(--plaster); }
+.card__media img.ph { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform .5s ease; }
+.card:hover .card__media img.ph { transform: scale(1.04); }
+.card__media .badge { z-index: 1; }
+.osum__thumb, .line__media, .co-set__thumb, .rw__thumb, .buybar__thumb, .subcat__art, .rw-gal, .rw-photo { overflow: hidden; }
+.osum__thumb img.ph, .line__media img.ph, .co-set__thumb img.ph, .rw__thumb img.ph, .buybar__thumb img.ph, .gallery__thumb img.ph, .subcat__art img.ph, .rw-gal img.ph, .rw-photo img.ph { width: 100%; height: 100%; border-radius: inherit; }
+.osum__thumb { overflow: visible; }
+.osum__thumb img.ph { border-radius: var(--radius-sm); }
+.subcat:hover .subcat__art img.ph, .rw-gal:hover img.ph { transform: scale(1.05); }
+.subcat__art img.ph, .rw-gal img.ph { transition: transform .4s ease; }
+.gallery__view img.gallery__art { width: 100%; height: 100%; }
+.dn-trace__piece > img.ph { width: 100%; height: auto; aspect-ratio: 4 / 3; border-radius: var(--radius-sm); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
