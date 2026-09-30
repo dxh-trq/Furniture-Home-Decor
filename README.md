@@ -85,5 +85,8 @@ Planning docs:
 - `accessibility.html` — accessibility statement: the WCAG 2.2 AA target, display preferences that apply across the whole site (text size, stronger contrast, underlined links, more text spacing, stop animations, with a live preview), how we build for accessibility, keyboard controls, known issues with fix dates, help in showrooms and on delivery, a feedback form (pre-filled with the page you came from), and technical details. Logic in `assets/js/accessibility.js` plus the shared `legal.js`.
   Preferences are saved as `morrow-display` and applied on every page by `main.js` (and by `checkout.js`, as checkout doesn't load `main.js`), using `pref-*` classes on `<html>`. The statement's claims (testing, audits, showroom access) are placeholders: only publish what's true for your business.
 
+- `room.html` — shop by room: a room explorer with five tabs (living room, bedroom, dining room, home office, outdoor; linkable as `room.html#bedroom`), an illustrated scene for each room in three palettes that recolour the scene and update fabric names, hotspots linked to a "shop the room" list, tick boxes with a live total and "Add to cart", then a grid of every room, room guides and a stylist call-to-action. Logic in `assets/js/room.js`.
+  Scenes are generated SVG using the sprite symbols; colours come from `--wall`, `--floor`, `--main` and `--accent` on `.rm-scene`, set by each palette button's `data-*` values. Pieces are `<li class="rm-item">` with `data-price` and `data-qty`.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.

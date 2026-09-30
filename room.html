@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop by room — Morrow</title>
+  <meta name="description" content="Shop complete rooms: living room, bedroom, dining, home office and outdoor. See each room in three palettes and buy the pieces together.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html" aria-current="page">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="room-page">
+  <section class="container rm-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Shop by room</span></li></ol>
+    </nav>
+    <div class="rm-hero__row">
+      <h1 class="rm-hero__title">Shop by room</h1>
+      <p class="rm-hero__lede">Start with the room, not the catalogue. Explore each one in three palettes, tap anything you like, and take home the whole look or just one piece.</p>
+    </div>
+  </section>
+
+  <section class="section rm-explorer" aria-label="Room explorer">
+    <div class="container">
+      <div class="rm-tabs" role="tablist" aria-label="Rooms">
+        <button class="rm-tab" type="button" role="tab" id="tab-living" aria-controls="panel-living" aria-selected="true" tabindex="0" data-room="living">Living room</button>
+        <button class="rm-tab" type="button" role="tab" id="tab-bedroom" aria-controls="panel-bedroom" aria-selected="false" tabindex="-1" data-room="bedroom">Bedroom</button>
+        <button class="rm-tab" type="button" role="tab" id="tab-dining" aria-controls="panel-dining" aria-selected="false" tabindex="-1" data-room="dining">Dining room</button>
+        <button class="rm-tab" type="button" role="tab" id="tab-office" aria-controls="panel-office" aria-selected="false" tabindex="-1" data-room="office">Home office</button>
+        <button class="rm-tab" type="button" role="tab" id="tab-outdoor" aria-controls="panel-outdoor" aria-selected="false" tabindex="-1" data-room="outdoor">Outdoor</button>
+      </div>
+      <section class="rm-panel" role="tabpanel" id="panel-living" aria-labelledby="tab-living" data-panel="living">
+        <div class="rm-stage">
+          <div class="rm-scene" style="--wall:#E4E1D6;--floor:#C8B596;--main:#E4DDCF;--accent:#B29C79">
+            <svg class="rm-scene__art" viewBox="0 0 800 560" role="img" aria-label="Living room with Alder 3-seat sofa, Drift coffee table, Lumen floor lamp, Tove side table, Mira wool rug">
+              <rect width="800" height="560" style="fill:var(--wall)"/>
+              <rect y="440" width="800" height="120" style="fill:var(--floor)"/><rect y="436" width="800" height="7" fill="#000" opacity=".06"/>
+            <rect x="296" y="110" width="208" height="140" style="fill:#F5F4EE" stroke="#7A5236" stroke-width="7"/>
+            <circle cx="366" cy="180" r="36" fill="#C28E2E"/><rect x="396" y="150" width="70" height="70" fill="#36402F" opacity=".85"/>
+            <ellipse cx="400" cy="508" rx="340" ry="42" style="fill:var(--accent)"/>
+            <use href="#s-sidetable" x="20" y="322" width="160" height="128" style="color:#D9CFBF;--leg:#7A5236"/><use href="#s-vase" x="60" y="318" width="80" height="64" style="color:#36402F"/>
+            <use href="#s-sofa" x="120" y="190" width="362" height="290" style="color:var(--main);--leg:#5C3E28"/>
+            <use href="#s-coffeetable" x="262" y="360" width="238" height="190" style="color:#D8CDB8;--leg:#B8A98C"/>
+            <use href="#s-lamp" x="480" y="196" width="312" height="250" style="color:#EBD9AE;--leg:#2B2F2A"/>
+            </svg>
+            <button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:48%;top:55%" data-piece="sofa" aria-label="Alder 3-seat sofa, $1,890"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:50%;top:84%" data-piece="coffee" aria-label="Drift coffee table, $690"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:80%;top:45%" data-piece="lamp" aria-label="Lumen floor lamp, $320"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:11%;top:69%" data-piece="side" aria-label="Tove side table, $280"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:86%;top:92%" data-piece="rug" aria-label="Mira wool rug, $540"><span aria-hidden="true">+</span></button>
+          </div>
+          <div class="rm-pals" role="group" aria-label="Palette"><button type="button" class="rm-pal" data-pal="oat" data-wall="#E4E1D6" data-floor="#C8B596" data-main="#E4DDCF" data-accent="#B29C79" data-main-name="Oat bouclé" aria-pressed="true"><span class="rm-pal__sw" style="--a:#E4E1D6;--b:#E4DDCF;--c:#B29C79"></span>Warm oat</button><button type="button" class="rm-pal" data-pal="sage" data-wall="#DCE0D2" data-floor="#CDBFA5" data-main="#8E9A7B" data-accent="#D9CBB0" data-main-name="Sage linen" aria-pressed="false"><span class="rm-pal__sw" style="--a:#DCE0D2;--b:#8E9A7B;--c:#D9CBB0"></span>Sage calm</button><button type="button" class="rm-pal" data-pal="clay" data-wall="#EFE7DC" data-floor="#B79E7F" data-main="#B7775A" data-accent="#E6DCCB" data-main-name="Clay linen" aria-pressed="false"><span class="rm-pal__sw" style="--a:#EFE7DC;--b:#B7775A;--c:#E6DCCB"></span>Clay and cream</button></div>
+        </div>
+        <div class="rm-side">
+          <p class="rm-side__eyebrow">214 pieces for the living room</p>
+          <h2 class="rm-side__title">Living room</h2>
+          <p class="rm-side__lede">A sofa you sink into, light in three places, and a rug big enough for the front legs.</p>
+          <ul class="rm-items">
+              <li class="rm-item" data-piece="sofa" data-price="1890" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Alder 3-seat sofa</strong><span data-meta="{main}, oak legs">Oat bouclé, oak legs</span></span>
+                  <span class="rm-item__price">$1,890</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="coffee" data-price="690" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Drift coffee table</strong><span data-meta="Honed travertine">Honed travertine</span></span>
+                  <span class="rm-item__price">$690</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="lamp" data-price="320" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Lumen floor lamp</strong><span data-meta="Linen shade, blackened steel">Linen shade, blackened steel</span></span>
+                  <span class="rm-item__price">$320</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="side" data-price="280" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Tove side table</strong><span data-meta="Honed travertine">Honed travertine</span></span>
+                  <span class="rm-item__price">$280</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="rug" data-price="540" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Mira wool rug</strong><span data-meta="200 × 300 cm">200 × 300 cm</span></span>
+                  <span class="rm-item__price">$540</span>
+                </label>
+              </li>
+          </ul>
+          <div class="rm-total">
+            <p><span data-rm-count>5 pieces</span><strong data-rm-total>$3,720</strong></p>
+            <button class="btn btn--primary" type="button" data-rm-add>Add to cart</button>
+          </div>
+          <a class="link rm-side__all" href="shop.html?room=living">Shop all 214 living room pieces</a>
+        </div>
+      </section>
+      <section class="rm-panel" role="tabpanel" id="panel-bedroom" aria-labelledby="tab-bedroom" data-panel="bedroom" hidden>
+        <div class="rm-stage">
+          <div class="rm-scene" style="--wall:#E8E4DA;--floor:#C9B89C;--main:#CFC4B2;--accent:#B7775A">
+            <svg class="rm-scene__art" viewBox="0 0 800 560" role="img" aria-label="Bedroom with Haven bed, Tove side table, Halo pendant light, Arc wall mirror, Loma vase">
+              <rect width="800" height="560" style="fill:var(--wall)"/>
+              <rect y="440" width="800" height="120" style="fill:var(--floor)"/><rect y="436" width="800" height="7" fill="#000" opacity=".06"/>
+            <use href="#s-pendant" x="30" y="0" width="212" height="170" style="color:#EBD9AE;--leg:#2B2F2A"/><use href="#s-pendant" x="610" y="0" width="212" height="170" style="color:#EBD9AE;--leg:#2B2F2A"/>
+            <use href="#s-mirror" x="336" y="60" width="188" height="150" style="color:#F5F4EE;--leg:#7A5236"/>
+            <ellipse cx="400" cy="512" rx="320" ry="36" style="fill:var(--accent)" opacity=".9"/>
+            <use href="#s-bed" x="150" y="180" width="400" height="320" style="color:var(--main);--leg:#5C3E28"/>
+            <use href="#s-sidetable" x="20" y="340" width="150" height="120" style="color:#B08A5E;--leg:#5C3E28"/><use href="#s-vase" x="52" y="330" width="80" height="64" style="color:#C28E2E"/>
+            <use href="#s-sidetable" x="630" y="340" width="150" height="120" style="color:#B08A5E;--leg:#5C3E28"/>
+            </svg>
+            <button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:50%;top:62%" data-piece="bed" aria-label="Haven bed, $1,650"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:88%;top:76%" data-piece="night" aria-label="Tove side table, $280 each"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:11%;top:22%" data-piece="pendant" aria-label="Halo pendant light, $168 each"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:50%;top:22%" data-piece="mirror" aria-label="Arc wall mirror, $390"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:11%;top:63%" data-piece="vase" aria-label="Loma vase, $65"><span aria-hidden="true">+</span></button>
+          </div>
+          <div class="rm-pals" role="group" aria-label="Palette"><button type="button" class="rm-pal" data-pal="linen" data-wall="#E8E4DA" data-floor="#C9B89C" data-main="#CFC4B2" data-accent="#B7775A" data-main-name="Stone linen" aria-pressed="true"><span class="rm-pal__sw" style="--a:#E8E4DA;--b:#CFC4B2;--c:#B7775A"></span>Stone linen</button><button type="button" class="rm-pal" data-pal="night" data-wall="#D5DACB" data-floor="#BCA888" data-main="#6F7A5E" data-accent="#E4DDCF" data-main-name="Moss velvet" aria-pressed="false"><span class="rm-pal__sw" style="--a:#D5DACB;--b:#6F7A5E;--c:#E4DDCF"></span>Deep moss</button><button type="button" class="rm-pal" data-pal="rose" data-wall="#F0E6DE" data-floor="#C7AE90" data-main="#C9937A" data-accent="#DCD4C3" data-main-name="Clay bouclé" aria-pressed="false"><span class="rm-pal__sw" style="--a:#F0E6DE;--b:#C9937A;--c:#DCD4C3"></span>Soft clay</button></div>
+        </div>
+        <div class="rm-side">
+          <p class="rm-side__eyebrow">136 pieces for the bedroom</p>
+          <h2 class="rm-side__title">Bedroom</h2>
+          <p class="rm-side__lede">A low bed, two places to put a book down, and soft light on both sides.</p>
+          <ul class="rm-items">
+              <li class="rm-item" data-piece="bed" data-price="1650" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Haven bed</strong><span data-meta="Queen, {main}">Queen, Stone linen</span></span>
+                  <span class="rm-item__price">$1,650</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="night" data-price="280" data-qty="2">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Tove side table</strong><span data-meta="Oak, pair">Oak, pair</span></span>
+                  <span class="rm-item__price">2 × $280</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="pendant" data-price="168" data-qty="2">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Halo pendant light</strong><span data-meta="Pair, warm white">Pair, warm white</span></span>
+                  <span class="rm-item__price">2 × $168</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="mirror" data-price="390" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Arc wall mirror</strong><span data-meta="Walnut frame">Walnut frame</span></span>
+                  <span class="rm-item__price">$390</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="vase" data-price="65" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Loma vase</strong><span data-meta="Ochre, 30 cm">Ochre, 30 cm</span></span>
+                  <span class="rm-item__price">$65</span>
+                </label>
+              </li>
+          </ul>
+          <div class="rm-total">
+            <p><span data-rm-count>7 pieces</span><strong data-rm-total>$3,001</strong></p>
+            <button class="btn btn--primary" type="button" data-rm-add>Add to cart</button>
+          </div>
+          <a class="link rm-side__all" href="shop.html?room=bedroom">Shop all 136 bedroom pieces</a>
+        </div>
+      </section>
+      <section class="rm-panel" role="tabpanel" id="panel-dining" aria-labelledby="tab-dining" data-panel="dining" hidden>
+        <div class="rm-stage">
+          <div class="rm-scene" style="--wall:#E5E3DA;--floor:#C5B08E;--main:#B08A5E;--accent:#36402F">
+            <svg class="rm-scene__art" viewBox="0 0 800 560" role="img" aria-label="Dining room with Fold dining table, Oslo dining chair, Stilla sideboard, Halo pendant light, Loma vase">
+              <rect width="800" height="560" style="fill:var(--wall)"/>
+              <rect y="440" width="800" height="120" style="fill:var(--floor)"/><rect y="436" width="800" height="7" fill="#000" opacity=".06"/>
+            <use href="#s-pendant" x="250" y="0" width="225" height="180" style="color:#EBD9AE;--leg:#2B2F2A"/><use href="#s-pendant" x="400" y="0" width="225" height="180" style="color:#EBD9AE;--leg:#2B2F2A"/>
+            <use href="#s-sideboard" x="520" y="250" width="250" height="200" style="color:#7A5236;--leg:#5C3E28"/><use href="#s-vase" x="610" y="238" width="88" height="70" style="color:#36402F"/>
+            <ellipse cx="360" cy="510" rx="300" ry="34" fill="#000" opacity=".06"/>
+            <use href="#s-chair" x="70" y="300" width="250" height="200" style="color:var(--main)"/>
+            <rect x="170" y="352" width="400" height="18" rx="4" style="fill:var(--main)"/>
+            <rect x="196" y="370" width="14" height="140" style="fill:var(--main)"/><rect x="530" y="370" width="14" height="140" style="fill:var(--main)"/>
+            <rect x="200" y="340" width="120" height="12" rx="6" fill="#F5F4EE" opacity=".9"/>
+            <use href="#s-chair" x="360" y="300" width="250" height="200" style="color:var(--main)" transform="translate(1080 0) scale(-1 1)"/>
+            </svg>
+            <button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:45%;top:66%" data-piece="table" aria-label="Fold dining table, $1,290"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:16%;top:72%" data-piece="chair" aria-label="Oslo dining chair, $240 each"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:78%;top:60%" data-piece="sideboard" aria-label="Stilla sideboard, $1,054"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:42%;top:22%" data-piece="pendant" aria-label="Halo pendant light, $168 each"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:82%;top:44%" data-piece="vase" aria-label="Loma vase, $65"><span aria-hidden="true">+</span></button>
+          </div>
+          <div class="rm-pals" role="group" aria-label="Palette"><button type="button" class="rm-pal" data-pal="oak" data-wall="#E5E3DA" data-floor="#C5B08E" data-main="#B08A5E" data-accent="#36402F" data-main-name="Natural oak" aria-pressed="true"><span class="rm-pal__sw" style="--a:#E5E3DA;--b:#B08A5E;--c:#36402F"></span>Natural oak</button><button type="button" class="rm-pal" data-pal="walnut" data-wall="#DCD6CC" data-floor="#B29A7A" data-main="#7A5236" data-accent="#C28E2E" data-main-name="Walnut" aria-pressed="false"><span class="rm-pal__sw" style="--a:#DCD6CC;--b:#7A5236;--c:#C28E2E"></span>Walnut dusk</button><button type="button" class="rm-pal" data-pal="black" data-wall="#E9E7E1" data-floor="#CFC6B6" data-main="#3A3C38" data-accent="#B7775A" data-main-name="Black oak" aria-pressed="false"><span class="rm-pal__sw" style="--a:#E9E7E1;--b:#3A3C38;--c:#B7775A"></span>Black and stone</button></div>
+        </div>
+        <div class="rm-side">
+          <p class="rm-side__eyebrow">98 pieces for the dining room</p>
+          <h2 class="rm-side__title">Dining room</h2>
+          <p class="rm-side__lede">A table that seats six, chairs you can sit in for a long dinner, and a sideboard for everything else.</p>
+          <ul class="rm-items">
+              <li class="rm-item" data-piece="table" data-price="1290" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Fold dining table</strong><span data-meta="{main}, seats 6">Natural oak, seats 6</span></span>
+                  <span class="rm-item__price">$1,290</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="chair" data-price="240" data-qty="4">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Oslo dining chair</strong><span data-meta="{main}">Natural oak</span></span>
+                  <span class="rm-item__price">4 × $240</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="sideboard" data-price="1054" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Stilla sideboard</strong><span data-meta="Walnut, 180 cm">Walnut, 180 cm</span></span>
+                  <span class="rm-item__price">$1,054</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="pendant" data-price="168" data-qty="2">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Halo pendant light</strong><span data-meta="Pair, warm white">Pair, warm white</span></span>
+                  <span class="rm-item__price">2 × $168</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="vase" data-price="65" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Loma vase</strong><span data-meta="Moss, 30 cm">Moss, 30 cm</span></span>
+                  <span class="rm-item__price">$65</span>
+                </label>
+              </li>
+          </ul>
+          <div class="rm-total">
+            <p><span data-rm-count>9 pieces</span><strong data-rm-total>$3,705</strong></p>
+            <button class="btn btn--primary" type="button" data-rm-add>Add to cart</button>
+          </div>
+          <a class="link rm-side__all" href="shop.html?room=dining">Shop all 98 dining room pieces</a>
+        </div>
+      </section>
+      <section class="rm-panel" role="tabpanel" id="panel-office" aria-labelledby="tab-office" data-panel="office" hidden>
+        <div class="rm-stage">
+          <div class="rm-scene" style="--wall:#ECE8DE;--floor:#C9B89C;--main:#C8A477;--accent:#6F7A5E">
+            <svg class="rm-scene__art" viewBox="0 0 800 560" role="img" aria-label="Home office with Rowe desk, Oslo desk chair, Lumen floor lamp, Terra planter, Mira wool rug">
+              <rect width="800" height="560" style="fill:var(--wall)"/>
+              <rect y="440" width="800" height="120" style="fill:var(--floor)"/><rect y="436" width="800" height="7" fill="#000" opacity=".06"/>
+            <rect x="120" y="100" width="150" height="110" style="fill:#F5F4EE" stroke="#36402F" stroke-width="5"/><path d="M140 190 l35-45 25 30 20-18 30 33z" fill="#A9B19C"/>
+            <use href="#s-plant" x="630" y="290" width="188" height="150" style="color:#EFEDE6"/>
+            <ellipse cx="380" cy="512" rx="300" ry="34" style="fill:var(--accent)" opacity=".6"/>
+            <use href="#s-desk" x="150" y="190" width="375" height="300" style="color:var(--main);--leg:#2B2F2A"/>
+            <use href="#s-chair" x="250" y="300" width="262" height="210" style="color:#36402F"/>
+            <use href="#s-lamp" x="440" y="196" width="312" height="250" style="color:#EBD9AE;--leg:#2B2F2A"/>
+            </svg>
+            <button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:42%;top:55%" data-piece="desk" aria-label="Rowe desk, $890"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:48%;top:80%" data-piece="chair" aria-label="Oslo desk chair, $260"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:74%;top:45%" data-piece="lamp" aria-label="Lumen floor lamp, $320"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:88%;top:70%" data-piece="planter" aria-label="Terra planter, $85"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:70%;top:94%" data-piece="rug" aria-label="Mira wool rug, $390"><span aria-hidden="true">+</span></button>
+          </div>
+          <div class="rm-pals" role="group" aria-label="Palette"><button type="button" class="rm-pal" data-pal="light" data-wall="#ECE8DE" data-floor="#C9B89C" data-main="#C8A477" data-accent="#6F7A5E" data-main-name="Light oak" aria-pressed="true"><span class="rm-pal__sw" style="--a:#ECE8DE;--b:#C8A477;--c:#6F7A5E"></span>Light oak</button><button type="button" class="rm-pal" data-pal="green" data-wall="#CFD6C5" data-floor="#B8A283" data-main="#7A5236" data-accent="#C28E2E" data-main-name="Walnut" aria-pressed="false"><span class="rm-pal__sw" style="--a:#CFD6C5;--b:#7A5236;--c:#C28E2E"></span>Study green</button><button type="button" class="rm-pal" data-pal="mono" data-wall="#E3E3DF" data-floor="#BFB7A8" data-main="#3A3C38" data-accent="#A9B19C" data-main-name="Black oak" aria-pressed="false"><span class="rm-pal__sw" style="--a:#E3E3DF;--b:#3A3C38;--c:#A9B19C"></span>Quiet grey</button></div>
+        </div>
+        <div class="rm-side">
+          <p class="rm-side__eyebrow">64 pieces for the home office</p>
+          <h2 class="rm-side__title">Home office</h2>
+          <p class="rm-side__lede">A desk deep enough for real work, a chair that’s good for hours, and somewhere to put the paperwork.</p>
+          <ul class="rm-items">
+              <li class="rm-item" data-piece="desk" data-price="890" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Rowe desk</strong><span data-meta="{main}, 140 cm">Light oak, 140 cm</span></span>
+                  <span class="rm-item__price">$890</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="chair" data-price="260" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Oslo desk chair</strong><span data-meta="Moss wool seat">Moss wool seat</span></span>
+                  <span class="rm-item__price">$260</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="lamp" data-price="320" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Lumen floor lamp</strong><span data-meta="Linen shade, blackened steel">Linen shade, blackened steel</span></span>
+                  <span class="rm-item__price">$320</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="planter" data-price="85" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Terra planter</strong><span data-meta="Large, terracotta">Large, terracotta</span></span>
+                  <span class="rm-item__price">$85</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="rug" data-price="390" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Mira wool rug</strong><span data-meta="160 × 230 cm">160 × 230 cm</span></span>
+                  <span class="rm-item__price">$390</span>
+                </label>
+              </li>
+          </ul>
+          <div class="rm-total">
+            <p><span data-rm-count>5 pieces</span><strong data-rm-total>$1,945</strong></p>
+            <button class="btn btn--primary" type="button" data-rm-add>Add to cart</button>
+          </div>
+          <a class="link rm-side__all" href="shop.html?room=office">Shop all 64 home office pieces</a>
+        </div>
+      </section>
+      <section class="rm-panel" role="tabpanel" id="panel-outdoor" aria-labelledby="tab-outdoor" data-panel="outdoor" hidden>
+        <div class="rm-stage">
+          <div class="rm-scene" style="--wall:#E9E0CC;--floor:#CDB795;--main:#C28E2E;--accent:#6F7A5E">
+            <svg class="rm-scene__art" viewBox="0 0 800 560" role="img" aria-label="Outdoor with Porto outdoor chair, Cove outdoor side table, Terra planter, Outdoor rug">
+              <rect width="800" height="560" style="fill:var(--wall)"/>
+              <rect y="440" width="800" height="120" style="fill:var(--floor)"/><rect y="436" width="800" height="7" fill="#000" opacity=".06"/>
+            <rect x="0" y="0" width="800" height="70" fill="#F5F4EE" opacity=".5"/><path d="M0 70h800" stroke="#B08A5E" stroke-width="6"/>
+            <use href="#s-plant" x="0" y="250" width="262" height="210" style="color:#B7775A"/><use href="#s-plant" x="630" y="230" width="288" height="230" style="color:#B7775A"/>
+            <ellipse cx="400" cy="510" rx="320" ry="36" style="fill:var(--accent)" opacity=".5"/>
+            <use href="#s-armchair" x="120" y="270" width="288" height="230" style="color:var(--main);--leg:#B08A5E"/>
+            <use href="#s-armchair" x="420" y="270" width="288" height="230" style="color:var(--main);--leg:#B08A5E"/>
+            <use href="#s-sidetable" x="330" y="380" width="150" height="120" style="color:#D9CFBF;--leg:#7A5236"/>
+            </svg>
+            <button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:30%;top:62%" data-piece="chair" aria-label="Porto outdoor chair, $520 each"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:49%;top:76%" data-piece="table" aria-label="Cove outdoor side table, $190"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:91%;top:58%" data-piece="planter" aria-label="Terra planter, $85 each"><span aria-hidden="true">+</span></button><button class="hotspot rm-spot" type="button" aria-expanded="false" style="left:50%;top:94%" data-piece="rug" aria-label="Outdoor rug, $260"><span aria-hidden="true">+</span></button>
+          </div>
+          <div class="rm-pals" role="group" aria-label="Palette"><button type="button" class="rm-pal" data-pal="sun" data-wall="#E9E0CC" data-floor="#CDB795" data-main="#C28E2E" data-accent="#6F7A5E" data-main-name="Ochre canvas" aria-pressed="true"><span class="rm-pal__sw" style="--a:#E9E0CC;--b:#C28E2E;--c:#6F7A5E"></span>Sunny terrace</button><button type="button" class="rm-pal" data-pal="shade" data-wall="#D5DCCB" data-floor="#BFAE8E" data-main="#6F7A5E" data-accent="#B7775A" data-main-name="Olive canvas" aria-pressed="false"><span class="rm-pal__sw" style="--a:#D5DCCB;--b:#6F7A5E;--c:#B7775A"></span>Garden shade</button><button type="button" class="rm-pal" data-pal="coast" data-wall="#E4E6E2" data-floor="#D7CCB6" data-main="#DCD4C3" data-accent="#36402F" data-main-name="Sand canvas" aria-pressed="false"><span class="rm-pal__sw" style="--a:#E4E6E2;--b:#DCD4C3;--c:#36402F"></span>Coastal</button></div>
+        </div>
+        <div class="rm-side">
+          <p class="rm-side__eyebrow">52 pieces for the outdoor</p>
+          <h2 class="rm-side__title">Outdoor</h2>
+          <p class="rm-side__lede">Chairs that stay out all summer, a table for drinks, and plants in pots that won’t crack.</p>
+          <ul class="rm-items">
+              <li class="rm-item" data-piece="chair" data-price="520" data-qty="2">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Porto outdoor chair</strong><span data-meta="{main}, teak">Ochre canvas, teak</span></span>
+                  <span class="rm-item__price">2 × $520</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="table" data-price="190" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Cove outdoor side table</strong><span data-meta="Terrazzo">Terrazzo</span></span>
+                  <span class="rm-item__price">$190</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="planter" data-price="85" data-qty="2">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Terra planter</strong><span data-meta="Large, terracotta">Large, terracotta</span></span>
+                  <span class="rm-item__price">2 × $85</span>
+                </label>
+              </li>
+              <li class="rm-item" data-piece="rug" data-price="260" data-qty="1">
+                <label class="rm-item__pick"><input type="checkbox" checked><span class="check__box" aria-hidden="true"></span>
+                  <span class="rm-item__info"><strong>Outdoor rug</strong><span data-meta="Recycled PET, 200 × 300 cm">Recycled PET, 200 × 300 cm</span></span>
+                  <span class="rm-item__price">$260</span>
+                </label>
+              </li>
+          </ul>
+          <div class="rm-total">
+            <p><span data-rm-count>6 pieces</span><strong data-rm-total>$1,660</strong></p>
+            <button class="btn btn--primary" type="button" data-rm-add>Add to cart</button>
+          </div>
+          <a class="link rm-side__all" href="shop.html?room=outdoor">Shop all 52 outdoor pieces</a>
+        </div>
+      </section>
+      <div class="rm-pop" data-rm-pop hidden role="dialog" aria-label="Piece details">
+        <p class="hotspot-card__name" data-pop-name></p>
+        <p class="hotspot-card__meta" data-pop-meta></p>
+        <p class="hotspot-card__price" data-pop-price></p>
+        <a href="product.html">View product</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rooms">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Browse every room</h2>
+        <a class="link" href="shop.html">Shop all furniture</a>
+      </div>
+      <div class="rooms__grid">
+        <a class="room room--lg" href="shop.html?room=living" style="--tint:#DCE0D2">
+          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#6F7A5E;--leg:#5C3E28"/></svg>
+          <span class="room__name">Living room</span>
+          <span class="room__count">214 pieces</span>
+        </a>
+        <a class="room" href="shop.html?room=bedroom" style="--tint:#E6DDD0">
+          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-bed" style="color:#A48A6A;--leg:#5C3E28"/></svg>
+          <span class="room__name">Bedroom</span>
+          <span class="room__count">136 pieces</span>
+        </a>
+        <a class="room" href="shop.html?room=dining" style="--tint:#E2E4E4">
+          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-chair" style="color:#7A5236"/></svg>
+          <span class="room__name">Dining room</span>
+          <span class="room__count">98 pieces</span>
+        </a>
+        <a class="room" href="shop.html?room=office" style="--tint:#E9E3D3">
+          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk" style="color:#B08A5E;--leg:#2B2F2A"/></svg>
+          <span class="room__name">Home office</span>
+          <span class="room__count">64 pieces</span>
+        </a>
+        <a class="room" href="shop.html?room=outdoor" style="--tint:#D5DCCB">
+          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-plant" style="color:#B7775A"/></svg>
+          <span class="room__name">Outdoor</span>
+          <span class="room__count">52 pieces</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Room guides</h2>
+        <a class="link" href="blog.html">All guides</a>
+      </div>
+      <div class="rm-guides">
+        <a class="rm-guide" href="blog-post.html">
+          <span class="rm-guide__art" style="color:#B29C79"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug"/></svg></span>
+          <span class="rm-guide__tag">Living room</span>
+          <strong>How to size a rug (and the mistake almost everyone makes)</strong>
+        </a>
+        <a class="rm-guide" href="blog-post.html">
+          <span class="rm-guide__art" style="color:#EBD9AE;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-pendant"/></svg></span>
+          <span class="rm-guide__tag">Lighting</span>
+          <strong>Layered lighting: three sources every living room needs</strong>
+        </a>
+        <a class="rm-guide" href="blog-post.html">
+          <span class="rm-guide__art" style="color:#7A5236"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-chair"/></svg></span>
+          <span class="rm-guide__tag">Dining room</span>
+          <strong>The five measurements to take before buying a dining table</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rm-cta">
+        <div>
+          <h2 class="section__title">Not sure where to start?</h2>
+          <p>Send us a photo and your measurements, and a stylist will put a room together for you, free.</p>
+        </div>
+        <a class="btn btn--light" href="services.html">Book a free design call</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/room.js"></script>
+</body>
+</html>

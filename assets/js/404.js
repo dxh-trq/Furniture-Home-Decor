@@ -8,6 +8,7 @@
   const PAGES = [
     { url: 'index.html', title: 'Homepage', keys: 'home start morrow' },
     { url: 'shop.html', title: 'Living room furniture', keys: 'shop living room furniture all products catalogue collection' },
+    { url: 'room.html', title: 'Shop by room', keys: 'room rooms living bedroom dining office outdoor garden patio shop by room' },
     { url: 'shop.html?c=sofas', title: 'Sofas', keys: 'sofa sofas couch couches settee sectional loveseat alder' },
     { url: 'shop.html?c=chairs', title: 'Armchairs', keys: 'chair chairs armchair armchairs lounge ren otto' },
     { url: 'shop.html?c=tables', title: 'Coffee and side tables', keys: 'table tables coffee side travertine drift tove' },
