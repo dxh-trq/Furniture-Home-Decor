@@ -91,5 +91,8 @@ Planning docs:
 - `collection.html` — collection page, one template for every collection: `collection.html` shows Nordic calm and `collection.html?c=warm-minimal` shows Warm minimal (the homepage cards and the Shop menu feature link to each). Hero with the collection's scene and materials, the story with a designer quote and three principles, the pieces with type filters and sorting, "Buy the set" (tick the pieces; 10% off with three or more, with a live total and hints), and all collections with the current one marked. Logic in `assets/js/collection.js`.
   Each collection is an `<article data-collection="…">` in the page; add a collection by adding another article. The set discount is `SET_OFF` and `SET_MIN` in the script; apply the same rule in your cart.
 
+- `designers.html` — designers & makers: a directory of 5 designers and 6 workshops with filters (everyone, designers, workshops) and search. Each card opens a profile dialog with a bio, quote, facts, their pieces and a link, plus previous/next buttons and arrow keys for moving between profiles. Profiles can be linked as `designers.html#p-signe-holm`. Also on the page: "Trace a piece", which shows each step for 4 products from sketch to delivery; the workshop standards with a visits and pay table; events with "Save a place"; and a "Design or make with us" pitch form. Logic in `assets/js/designers.js`.
+  Each profile's full content is a `<template data-dn-profile>` inside its card. Names, workshops, audit figures, events and the 5% royalty are placeholders; send pitches to your inbox in the form's submit handler.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.

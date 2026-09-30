@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Designers &amp; makers — Morrow</title>
+  <meta name="description" content="Meet the designers who draw Morrow furniture and the workshops that make it, and trace where every part of a piece comes from.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html?c=warm-minimal">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="designers-page">
+  <section class="container dn-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><span aria-current="page">Designers &amp; makers</span></li></ol>
+    </nav>
+    <div class="dn-hero__grid">
+      <div>
+        <h1 class="dn-hero__title">Every piece has a name behind it.</h1>
+        <p class="dn-hero__lede">We work with 4 independent designers, our own studio and 6 workshops we visit in person. Here’s who they are, where they work, and what they make for your home.</p>
+        <div class="dn-hero__actions">
+          <a class="btn btn--primary" href="#people">Meet them</a>
+          <a class="btn btn--ghost" href="#trace">Trace a piece</a>
+        </div>
+      </div>
+      <ul class="dn-hero__faces" aria-hidden="true">
+        <li style="--tint:#DCE0D2;--ink:#36402F"><span>SH</span></li>
+        <li style="--tint:#E6DCCB;--ink:#6B4A33"><span>TM</span></li>
+        <li style="--tint:#E4E7DC;--ink:#5E6B4E"><span>AR</span></li>
+        <li style="--tint:#F3E7CF;--ink:#8A6212"><span>KO</span></li>
+        <li class="dn-hero__count"><strong>11</strong><span>teams in 6 countries</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section dn-people" id="people">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Designers and workshops</h2>
+          <p class="dn-sub">Choose anyone to read their story and see what they make.</p>
+        </div>
+      </div>
+      <div class="dn-filters">
+        <div class="chip-tabs" role="group" aria-label="Show">
+          <button class="chip-tab" type="button" data-dn-kind="all" aria-pressed="true">Everyone <span>11</span></button>
+          <button class="chip-tab" type="button" data-dn-kind="designer" aria-pressed="false">Designers <span>5</span></button>
+          <button class="chip-tab" type="button" data-dn-kind="maker" aria-pressed="false">Workshops <span>6</span></button>
+        </div>
+        <label class="jsearch">
+          <span class="visually-hidden">Search designers and workshops</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" placeholder="Search by name, place or piece" data-dn-search>
+        </label>
+      </div>
+      <p class="jcount" data-dn-count aria-live="polite">11 designers and workshops</p>
+      <ul class="dn-grid" data-dn-grid>
+        <li class="dn-card" id="p-signe-holm" data-kind="designer" data-text="signe holm furniture designer copenhagen denmark seating and soft forms alder 3-seat sofa hale lounge chair tove side table arc wall mirror">
+          <button class="dn-card__open" type="button" data-dn-open="signe-holm" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--designer" style="--tint:#DCE0D2"><span class="dn-card__initials" style="color:#36402F">SH</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#EEEBE3;--leg:#B08A5E"/></svg></span>
+            <span class="dn-card__kind">Furniture designer</span>
+            <span class="dn-card__name">Signe Holm</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Copenhagen, Denmark</span>
+            <span class="dn-card__spec">Seating and soft forms</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#DCE0D2">
+              <div class="dn-profile__art"><span class="dn-card__initials" style="color:#36402F">SH</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#EEEBE3;--leg:#B08A5E"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Furniture designer · with Morrow since 2020</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Signe Holm</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Copenhagen, Denmark</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">Signe trained as a cabinetmaker before studying design in Copenhagen. She draws every piece full size on paper first, then sits in the prototype for a week before changing a line.</p>
+            <blockquote class="dn-profile__quote"><p>“If it doesn’t make the room lighter, it doesn’t make the cut.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Collection</dt><dd>Nordic calm</dd></div><div><dt>Pieces with us</dt><dd>14</dd></div><div><dt>Studio</dt><dd>Two people, Nørrebro</dd></div></dl>
+            <h3 class="dn-profile__sub">Their pieces</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Alder 3-seat sofa</a><span>$1,890</span></li><li><a href="product.html">Hale lounge chair</a><span>$640</span></li><li><a href="product.html">Tove side table</a><span>$280</span></li><li><a href="product.html">Arc wall mirror</a><span>$390</span></li></ul>
+            <a class="btn btn--primary" href="collection.html?c=nordic-calm">Shop Nordic calm</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-theo-marsh" data-kind="designer" data-text="theo marsh furniture designer brooklyn, new york usa walnut, leather and case pieces ren lounge chair stilla sideboard otto armchair">
+          <button class="dn-card__open" type="button" data-dn-open="theo-marsh" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--designer" style="--tint:#E6DCCB"><span class="dn-card__initials" style="color:#6B4A33">TM</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#9A6240;--leg:#3B2A1E"/></svg></span>
+            <span class="dn-card__kind">Furniture designer</span>
+            <span class="dn-card__name">Theo Marsh</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Brooklyn, New York, USA</span>
+            <span class="dn-card__spec">Walnut, leather and case pieces</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#E6DCCB">
+              <div class="dn-profile__art"><span class="dn-card__initials" style="color:#6B4A33">TM</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#9A6240;--leg:#3B2A1E"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Furniture designer · with Morrow since 2021</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Theo Marsh</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Brooklyn, New York, USA</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">Theo spent ten years restoring mid-century furniture before designing his own. He cares about how a drawer closes and how leather looks in its twentieth year.</p>
+            <blockquote class="dn-profile__quote"><p>“Minimal doesn’t have to mean cold. Dark wood, leather and a warm light do most of the work.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Collection</dt><dd>Warm minimal</dd></div><div><dt>Pieces with us</dt><dd>11</dd></div><div><dt>Studio</dt><dd>Solo, Red Hook</dd></div></dl>
+            <h3 class="dn-profile__sub">Their pieces</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Ren lounge chair</a><span>$760</span></li><li><a href="product.html">Stilla sideboard</a><span>$1,054</span></li><li><a href="product.html">Otto armchair</a><span>$590</span></li></ul>
+            <a class="btn btn--primary" href="collection.html?c=warm-minimal">Shop Warm minimal</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-ana-ribeiro" data-kind="designer" data-text="ana ribeiro textile designer porto portugal rugs, throws and upholstery fabric mira wool rug bouclé fabric sample linen throw">
+          <button class="dn-card__open" type="button" data-dn-open="ana-ribeiro" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--designer" style="--tint:#E4E7DC"><span class="dn-card__initials" style="color:#5E6B4E">AR</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug" style="color:#A9B19C"/></svg></span>
+            <span class="dn-card__kind">Textile designer</span>
+            <span class="dn-card__name">Ana Ribeiro</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Porto, Portugal</span>
+            <span class="dn-card__spec">Rugs, throws and upholstery fabric</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#E4E7DC">
+              <div class="dn-profile__art"><span class="dn-card__initials" style="color:#5E6B4E">AR</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug" style="color:#A9B19C"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Textile designer · with Morrow since 2019</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Ana Ribeiro</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Porto, Portugal</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">Ana designs every fabric we cover furniture in. She works a short drive from the mill that weaves them, and tests each one against 100,000 rubs before it goes on a sofa.</p>
+            <blockquote class="dn-profile__quote"><p>“A fabric should look better with a dog on it, not worse.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Works on</dt><dd>All upholstery</dd></div><div><dt>Fabrics with us</dt><dd>26</dd></div><div><dt>Studio</dt><dd>Three people, Bonfim</dd></div></dl>
+            <h3 class="dn-profile__sub">Their pieces</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Mira wool rug</a><span>$540</span></li><li><a href="product.html">Bouclé fabric sample</a><span>Fabric</span></li><li><a href="product.html">Linen throw</a><span>$120</span></li></ul>
+            <a class="btn btn--primary" href="product.html">See her fabrics</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-kenji-okada" data-kind="designer" data-text="kenji okada lighting designer portland, oregon usa floor, table and pendant lights lumen floor lamp halo pendant light orb table lamp">
+          <button class="dn-card__open" type="button" data-dn-open="kenji-okada" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--designer" style="--tint:#F3E7CF"><span class="dn-card__initials" style="color:#8A6212">KO</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp" style="color:#F1EAD8;--leg:#9EA39B"/></svg></span>
+            <span class="dn-card__kind">Lighting designer</span>
+            <span class="dn-card__name">Kenji Okada</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Portland, Oregon, USA</span>
+            <span class="dn-card__spec">Floor, table and pendant lights</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#F3E7CF">
+              <div class="dn-profile__art"><span class="dn-card__initials" style="color:#8A6212">KO</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp" style="color:#F1EAD8;--leg:#9EA39B"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Lighting designer · with Morrow since 2022</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Kenji Okada</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Portland, Oregon, USA</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">Kenji came to lighting from theatre, where he lit stages for fifteen years. His lamps use warm bulbs and fabric shades so a room glows rather than glares.</p>
+            <blockquote class="dn-profile__quote"><p>“Light the corners and the room looks bigger. Light the ceiling and it looks tired.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Works on</dt><dd>All lighting</dd></div><div><dt>Lights with us</dt><dd>9</dd></div><div><dt>Studio</dt><dd>Solo, Southeast Portland</dd></div></dl>
+            <h3 class="dn-profile__sub">Their pieces</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Lumen floor lamp</a><span>$320</span></li><li><a href="product.html">Halo pendant light</a><span>$168</span></li><li><a href="product.html">Orb table lamp</a><span>$140</span></li></ul>
+            <a class="btn btn--primary" href="shop.html">Shop lighting</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-morrow-studio" data-kind="designer" data-text="morrow studio in-house design team hickory, north carolina usa tables, storage and the parts between drift coffee table loma vase bed frame, oak">
+          <button class="dn-card__open" type="button" data-dn-open="morrow-studio" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--designer" style="--tint:#E4DFD3"><span class="dn-card__initials" style="color:#36402F">M</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable" style="color:#E6DDCB;--leg:#C8A477"/></svg></span>
+            <span class="dn-card__kind">In-house design team</span>
+            <span class="dn-card__name">Morrow studio</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hickory, North Carolina, USA</span>
+            <span class="dn-card__spec">Tables, storage and the parts between</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#E4DFD3">
+              <div class="dn-profile__art"><span class="dn-card__initials" style="color:#36402F">M</span><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable" style="color:#E6DDCB;--leg:#C8A477"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">In-house design team · with Morrow since 2018</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Morrow studio</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hickory, North Carolina, USA</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">Our own team of five designs the pieces between collections, and works out how every design can be taken apart, repaired and shipped flat.</p>
+            <blockquote class="dn-profile__quote"><p>“We design the screws as carefully as the silhouette.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Team</dt><dd>Five designers</dd></div><div><dt>Pieces</dt><dd>31</dd></div><div><dt>Based at</dt><dd>Our Hickory workshop</dd></div></dl>
+            <h3 class="dn-profile__sub">Their pieces</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Drift coffee table</a><span>$690</span></li><li><a href="product.html">Loma vase</a><span>$65</span></li><li><a href="product.html">Bed frame, oak</a><span>$1,290</span></li></ul>
+            <a class="btn btn--primary" href="shop.html">Shop the studio</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-hickory" data-kind="maker" data-text="hickory workshop frames and upholstery hickory, north carolina usa our own workshop alder 3-seat sofa hale lounge chair ren lounge chair">
+          <button class="dn-card__open" type="button" data-dn-open="hickory" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--maker" style="--tint:#E4E2DA"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#E4E2DA;--leg:#5C3E28"/></svg></span>
+            <span class="dn-card__kind">Frames and upholstery</span>
+            <span class="dn-card__name">Hickory workshop</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hickory, North Carolina, USA</span>
+            <span class="dn-card__spec">Our own workshop</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#E4E2DA">
+              <div class="dn-profile__art"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#E4E2DA;--leg:#5C3E28"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Frames and upholstery · with Morrow since 2021</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Hickory workshop</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hickory, North Carolina, USA</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">Every sofa and armchair we sell is framed, sprung and covered here, by a team of 38 led by Ruth Adeyemi. Hickory has made furniture for over a century; most of our upholsterers learned from a parent.</p>
+            <blockquote class="dn-profile__quote"><p>“You can tell a hand-tied sofa the first time you sit down, and every time for thirty years.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Team</dt><dd>38 people</dd></div><div><dt>Makes</dt><dd>Sofas, chairs, beds</dd></div><div><dt>Hand work</dt><dd>9 hours per sofa</dd></div></dl>
+            <h3 class="dn-profile__sub">What they make for us</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Alder 3-seat sofa</a><span>$1,890</span></li><li><a href="product.html">Hale lounge chair</a><span>$640</span></li><li><a href="product.html">Ren lounge chair</a><span>$760</span></li></ul>
+            <a class="btn btn--primary" href="about.html">Our story</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-castro-mill" data-kind="maker" data-text="tecelagem castro bouclé and linen mill guimarães portugal third-generation weavers white bouclé sage linen oat linen">
+          <button class="dn-card__open" type="button" data-dn-open="castro-mill" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--maker" style="--tint:#DDE2D6"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug" style="color:#9AA488;--leg:#5C3E28"/></svg></span>
+            <span class="dn-card__kind">Bouclé and linen mill</span>
+            <span class="dn-card__name">Tecelagem Castro</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Guimarães, Portugal</span>
+            <span class="dn-card__spec">Third-generation weavers</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#DDE2D6">
+              <div class="dn-profile__art"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug" style="color:#9AA488;--leg:#5C3E28"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Bouclé and linen mill · with Morrow since 2019</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Tecelagem Castro</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Guimarães, Portugal</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">A family mill that weaves our upholstery fabric from recycled wool and European flax. They run on 60% solar power and send offcuts back into new yarn.</p>
+            <blockquote class="dn-profile__quote"><p>“My grandfather wove for the neighbours. We still weave for people, just further away.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Team</dt><dd>64 people</dd></div><div><dt>Makes</dt><dd>All our fabric</dd></div><div><dt>Power</dt><dd>60% solar</dd></div></dl>
+            <h3 class="dn-profile__sub">What they make for us</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">White bouclé</a><span>Fabric</span></li><li><a href="product.html">Sage linen</a><span>Fabric</span></li><li><a href="product.html">Oat linen</a><span>Fabric</span></li></ul>
+            <a class="btn btn--primary" href="sustainability.html">How it’s made</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-nordtra" data-kind="maker" data-text="nordträ joinery oak and ash joinery växjö sweden solid wood case pieces stilla sideboard tove side table drift coffee table">
+          <button class="dn-card__open" type="button" data-dn-open="nordtra" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--maker" style="--tint:#EFE4D0"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard" style="color:#D9C2A0;--leg:#B08A5E"/></svg></span>
+            <span class="dn-card__kind">Oak and ash joinery</span>
+            <span class="dn-card__name">Nordträ joinery</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Växjö, Sweden</span>
+            <span class="dn-card__spec">Solid wood case pieces</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#EFE4D0">
+              <div class="dn-profile__art"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard" style="color:#D9C2A0;--leg:#B08A5E"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Oak and ash joinery · with Morrow since 2020</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Nordträ joinery</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Växjö, Sweden</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">A joinery of twelve in the forests of Småland. They make our sideboards, tables and legs from FSC-certified oak and ash felled within 200 km.</p>
+            <blockquote class="dn-profile__quote"><p>“Oil, not lacquer. You should be able to sand it back in twenty years.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Team</dt><dd>12 people</dd></div><div><dt>Makes</dt><dd>Sideboards, tables, legs</dd></div><div><dt>Wood</dt><dd>100% FSC</dd></div></dl>
+            <h3 class="dn-profile__sub">What they make for us</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Stilla sideboard</a><span>$1,054</span></li><li><a href="product.html">Tove side table</a><span>$280</span></li><li><a href="product.html">Drift coffee table</a><span>$690</span></li></ul>
+            <a class="btn btn--primary" href="shop.html">Shop solid wood</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-pietra" data-kind="maker" data-text="pietra rossi stone yard tivoli italy travertine and marble drift coffee table travertine side table">
+          <button class="dn-card__open" type="button" data-dn-open="pietra" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--maker" style="--tint:#E9E3D7"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sidetable" style="color:#D9CFBF;--leg:#5C3E28"/></svg></span>
+            <span class="dn-card__kind">Stone yard</span>
+            <span class="dn-card__name">Pietra Rossi</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Tivoli, Italy</span>
+            <span class="dn-card__spec">Travertine and marble</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#E9E3D7">
+              <div class="dn-profile__art"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sidetable" style="color:#D9CFBF;--leg:#5C3E28"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Stone yard · with Morrow since 2022</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Pietra Rossi</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Tivoli, Italy</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">A family quarry and stone yard outside Rome. They cut our table tops from offcuts too small for building work, so no stone is quarried just for us.</p>
+            <blockquote class="dn-profile__quote"><p>“Every top has its own holes and veins. That’s travertine telling the truth.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Team</dt><dd>9 people</dd></div><div><dt>Makes</dt><dd>Table tops</dd></div><div><dt>Stone</dt><dd>Offcuts only</dd></div></dl>
+            <h3 class="dn-profile__sub">What they make for us</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Drift coffee table</a><span>$690</span></li><li><a href="product.html">Travertine side table</a><span>$360</span></li></ul>
+            <a class="btn btn--primary" href="shop.html">Shop stone</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-carrow" data-kind="maker" data-text="carrow ceramics pottery stoke-on-trent uk vases and lamp bases loma vase orb table lamp">
+          <button class="dn-card__open" type="button" data-dn-open="carrow" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--maker" style="--tint:#EEEBE3"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase" style="color:#EEEBE3"/></svg></span>
+            <span class="dn-card__kind">Pottery</span>
+            <span class="dn-card__name">Carrow ceramics</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Stoke-on-Trent, UK</span>
+            <span class="dn-card__spec">Vases and lamp bases</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#EEEBE3">
+              <div class="dn-profile__art"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase" style="color:#EEEBE3"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Pottery · with Morrow since 2021</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Carrow ceramics</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Stoke-on-Trent, UK</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">A pottery of seven in the city that has made ceramics for 300 years. Every vase is slip-cast, then glazed and finished by hand, so no two are quite the same.</p>
+            <blockquote class="dn-profile__quote"><p>“The kiln decides the last ten percent. We’ve learned to like its choices.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Team</dt><dd>7 people</dd></div><div><dt>Makes</dt><dd>Vases, lamp bases</dd></div><div><dt>Kiln</dt><dd>Electric, renewable tariff</dd></div></dl>
+            <h3 class="dn-profile__sub">What they make for us</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Loma vase</a><span>$65</span></li><li><a href="product.html">Orb table lamp</a><span>$140</span></li></ul>
+            <a class="btn btn--primary" href="shop.html">Shop decor</a>
+          </template>
+        </li>
+        <li class="dn-card" id="p-ridgeline" data-kind="maker" data-text="ridgeline metalworks metal and lighting grand rapids, michigan usa brass and steel halo pendant light lumen floor lamp">
+          <button class="dn-card__open" type="button" data-dn-open="ridgeline" aria-haspopup="dialog">
+            <span class="dn-card__art dn-card__art--maker" style="--tint:#E7E3D4"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-pendant" style="color:#C28E2E;--leg:#2B2F2A"/></svg></span>
+            <span class="dn-card__kind">Metal and lighting</span>
+            <span class="dn-card__name">Ridgeline metalworks</span>
+            <span class="dn-card__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Grand Rapids, Michigan, USA</span>
+            <span class="dn-card__spec">Brass and steel</span>
+            <span class="dn-card__more">View profile</span>
+          </button>
+          <template data-dn-profile>
+            <div class="dn-profile__top" style="--tint:#E7E3D4">
+              <div class="dn-profile__art"><svg class="dn-card__art-svg" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-pendant" style="color:#C28E2E;--leg:#2B2F2A"/></svg></div>
+              <div>
+                <p class="dn-profile__kind">Metal and lighting · with Morrow since 2022</p>
+                <h2 class="dn-profile__name" id="dn-profile-title">Ridgeline metalworks</h2>
+                <p class="dn-profile__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Grand Rapids, Michigan, USA</p>
+              </div>
+            </div>
+            <p class="dn-profile__bio">A small metal shop that spins, bends and finishes our lamp frames and hardware, and wires every light by hand before it ships.</p>
+            <blockquote class="dn-profile__quote"><p>“We solder every joint like it’s going in our own kitchen.”</p></blockquote>
+            <dl class="dn-profile__facts"><div><dt>Team</dt><dd>15 people</dd></div><div><dt>Makes</dt><dd>Lights, hardware</dd></div><div><dt>Brass</dt><dd>85% recycled</dd></div></dl>
+            <h3 class="dn-profile__sub">What they make for us</h3>
+            <ul class="dn-profile__pieces"><li><a href="product.html">Halo pendant light</a><span>$168</span></li><li><a href="product.html">Lumen floor lamp</a><span>$320</span></li></ul>
+            <a class="btn btn--primary" href="shop.html">Shop lighting</a>
+          </template>
+        </li>
+      </ul>
+      <div class="dn-empty" data-dn-empty hidden>
+        <p>No one matches that search.</p>
+        <button class="btn btn--small" type="button" data-dn-reset>Show everyone</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dn-trace" id="trace">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Trace a piece</h2>
+          <p class="dn-sub">Pick a piece to see who had a hand in it, from the first sketch to your door.</p>
+        </div>
+      </div>
+      <div class="chip-tabs dn-trace__tabs" role="tablist" aria-label="Piece"><button class="chip-tab" type="button" role="tab" id="trace-tab-alder" aria-controls="trace-alder" aria-selected="true" tabindex="0" data-trace="alder">Alder 3-seat sofa</button><button class="chip-tab" type="button" role="tab" id="trace-tab-ren" aria-controls="trace-ren" aria-selected="false" tabindex="-1" data-trace="ren">Ren lounge chair</button><button class="chip-tab" type="button" role="tab" id="trace-tab-drift" aria-controls="trace-drift" aria-selected="false" tabindex="-1" data-trace="drift">Drift coffee table</button><button class="chip-tab" type="button" role="tab" id="trace-tab-lumen" aria-controls="trace-lumen" aria-selected="false" tabindex="-1" data-trace="lumen">Lumen floor lamp</button></div>
+      <div class="dn-trace__wrap">
+        <div class="dn-trace__panel" data-trace-panel="alder" role="tabpanel" id="trace-alder" aria-labelledby="trace-tab-alder">
+          <div class="dn-trace__piece" style="--tint:#F2F0EA">
+            <svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#EEEBE3;--leg:#B08A5E"/></svg>
+            <div>
+              <h3>Alder 3-seat sofa</h3>
+              <p class="dn-trace__price">$1,890</p>
+            </div>
+            <ul class="dn-trace__sum">
+              <li><strong>5</strong><span>teams you can name</span></li>
+              <li><strong>4</strong><span>countries: Denmark, Sweden, Portugal, USA</span></li>
+              <li><strong>14 hrs</strong><span>of hand work</span></li>
+            </ul>
+            <a class="link" href="product.html">View the Alder</a>
+          </div>
+          <ol class="dn-steps">
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">1</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Designed <span>· Copenhagen, Denmark</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="signe-holm" aria-haspopup="dialog">Signe Holm</button></p>
+                <p class="dn-step__what">Drawn full size, then tested in prototype for 6 months</p>
+              </div>
+              
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">2</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Legs turned <span>· Växjö, Sweden</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="nordtra" aria-haspopup="dialog">Nordträ joinery</button></p>
+                <p class="dn-step__what">Solid oak legs, turned and oiled by hand</p>
+              </div>
+              <span class="dn-step__hours">2 hrs of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">3</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Fabric woven <span>· Guimarães, Portugal</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="castro-mill" aria-haspopup="dialog">Tecelagem Castro</button></p>
+                <p class="dn-step__what">White bouclé from recycled wool</p>
+              </div>
+              <span class="dn-step__hours">3 hrs of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">4</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Fabric tested <span>· Porto, Portugal</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="ana-ribeiro" aria-haspopup="dialog">Ana Ribeiro</button></p>
+                <p class="dn-step__what">100,000 rubs and a pet-claw test</p>
+              </div>
+              
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">5</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Framed and covered <span>· Hickory, North Carolina, USA</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="hickory" aria-haspopup="dialog">Hickory workshop</button></p>
+                <p class="dn-step__what">Kiln-dried hardwood frame, springs tied by hand in 8 places</p>
+              </div>
+              <span class="dn-step__hours">9 hrs of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">6</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Delivered <span>· To your door</span></p>
+                <p class="dn-step__who-row"><span class="dn-step__who is-plain">Morrow delivery team</span></p>
+                <p class="dn-step__what">Two-person team carries it to your room and takes the packaging</p>
+              </div>
+              
+            </li>
+          </ol>
+        </div>
+        <div class="dn-trace__panel" data-trace-panel="ren" role="tabpanel" id="trace-ren" aria-labelledby="trace-tab-ren" hidden>
+          <div class="dn-trace__piece" style="--tint:#F2F0EA">
+            <svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#9A6240;--leg:#3B2A1E"/></svg>
+            <div>
+              <h3>Ren lounge chair</h3>
+              <p class="dn-trace__price">$760</p>
+            </div>
+            <ul class="dn-trace__sum">
+              <li><strong>3</strong><span>teams you can name</span></li>
+              <li><strong>2</strong><span>countries: USA, Sweden</span></li>
+              <li><strong>11 hrs</strong><span>of hand work</span></li>
+            </ul>
+            <a class="link" href="product.html">View the Ren</a>
+          </div>
+          <ol class="dn-steps">
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">1</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Designed <span>· Brooklyn, New York, USA</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="theo-marsh" aria-haspopup="dialog">Theo Marsh</button></p>
+                <p class="dn-step__what">Shaped around a 1960s chair he restored</p>
+              </div>
+              
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">2</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Frame made <span>· Växjö, Sweden</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="nordtra" aria-haspopup="dialog">Nordträ joinery</button></p>
+                <p class="dn-step__what">Walnut frame, joined with mortise and tenon</p>
+              </div>
+              <span class="dn-step__hours">5 hrs of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">3</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Leather fitted <span>· Hickory, North Carolina, USA</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="hickory" aria-haspopup="dialog">Hickory workshop</button></p>
+                <p class="dn-step__what">Vegetable-tanned leather, cut and stitched by hand</p>
+              </div>
+              <span class="dn-step__hours">6 hrs of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">4</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Delivered <span>· To your door</span></p>
+                <p class="dn-step__who-row"><span class="dn-step__who is-plain">Morrow delivery team</span></p>
+                <p class="dn-step__what">Unwrapped and placed where you want it</p>
+              </div>
+              
+            </li>
+          </ol>
+        </div>
+        <div class="dn-trace__panel" data-trace-panel="drift" role="tabpanel" id="trace-drift" aria-labelledby="trace-tab-drift" hidden>
+          <div class="dn-trace__piece" style="--tint:#F2F0EA">
+            <svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable" style="color:#E6DDCB;--leg:#C8A477"/></svg>
+            <div>
+              <h3>Drift coffee table</h3>
+              <p class="dn-trace__price">$690</p>
+            </div>
+            <ul class="dn-trace__sum">
+              <li><strong>3</strong><span>teams you can name</span></li>
+              <li><strong>3</strong><span>countries: USA, Italy, Sweden</span></li>
+              <li><strong>6 hrs</strong><span>of hand work</span></li>
+            </ul>
+            <a class="link" href="product.html">View the Drift</a>
+          </div>
+          <ol class="dn-steps">
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">1</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Designed <span>· Hickory, North Carolina, USA</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="morrow-studio" aria-haspopup="dialog">Morrow studio</button></p>
+                <p class="dn-step__what">Designed to be taken apart with one tool</p>
+              </div>
+              
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">2</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Top cut <span>· Tivoli, Italy</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="pietra" aria-haspopup="dialog">Pietra Rossi</button></p>
+                <p class="dn-step__what">Travertine offcut, cut, filled and honed</p>
+              </div>
+              <span class="dn-step__hours">3 hrs of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">3</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Base made <span>· Växjö, Sweden</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="nordtra" aria-haspopup="dialog">Nordträ joinery</button></p>
+                <p class="dn-step__what">Pale oak base, oiled three times</p>
+              </div>
+              <span class="dn-step__hours">3 hrs of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">4</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Delivered <span>· To your door</span></p>
+                <p class="dn-step__who-row"><span class="dn-step__who is-plain">Morrow delivery team</span></p>
+                <p class="dn-step__what">Top and base packed separately and put together in your room</p>
+              </div>
+              
+            </li>
+          </ol>
+        </div>
+        <div class="dn-trace__panel" data-trace-panel="lumen" role="tabpanel" id="trace-lumen" aria-labelledby="trace-tab-lumen" hidden>
+          <div class="dn-trace__piece" style="--tint:#F2F0EA">
+            <svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp" style="color:#F1EAD8;--leg:#9EA39B"/></svg>
+            <div>
+              <h3>Lumen floor lamp</h3>
+              <p class="dn-trace__price">$320</p>
+            </div>
+            <ul class="dn-trace__sum">
+              <li><strong>3</strong><span>teams you can name</span></li>
+              <li><strong>2</strong><span>countries: USA, Portugal</span></li>
+              <li><strong>3 hrs</strong><span>of hand work</span></li>
+            </ul>
+            <a class="link" href="product.html">View the Lumen</a>
+          </div>
+          <ol class="dn-steps">
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">1</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Designed <span>· Portland, Oregon, USA</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="kenji-okada" aria-haspopup="dialog">Kenji Okada</button></p>
+                <p class="dn-step__what">Shade height set so the bulb never shows from a sofa</p>
+              </div>
+              
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">2</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Frame made <span>· Grand Rapids, Michigan, USA</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="ridgeline" aria-haspopup="dialog">Ridgeline metalworks</button></p>
+                <p class="dn-step__what">Brushed steel stem, spun and wired by hand</p>
+              </div>
+              <span class="dn-step__hours">2 hrs of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">3</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Shade woven <span>· Guimarães, Portugal</span></p>
+                <p class="dn-step__who-row"><button class="dn-step__who" type="button" data-dn-open="castro-mill" aria-haspopup="dialog">Tecelagem Castro</button></p>
+                <p class="dn-step__what">Undyed linen, stretched over a recycled steel ring</p>
+              </div>
+              <span class="dn-step__hours">1 hr of hand work</span>
+            </li>
+            <li class="dn-step">
+              <span class="dn-step__num" aria-hidden="true">4</span>
+              <div class="dn-step__body">
+                <p class="dn-step__verb">Delivered <span>· To your door</span></p>
+                <p class="dn-step__who-row"><span class="dn-step__who is-plain">Morrow delivery team</span></p>
+                <p class="dn-step__what">Arrives in plastic-free packaging, bulb included</p>
+              </div>
+              
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dn-standards">
+    <div class="container">
+      <div class="dn-standards__grid">
+        <div>
+          <h2 class="section__title">What we ask of every workshop</h2>
+          <p class="dn-sub">We only work with places we’ve been to. These are the rules, and we check them in person.</p>
+          <ul class="dn-rules">
+            <li><strong>Paid above a living wage</strong><span>Measured against the local living wage, not the minimum wage.</span></li>
+            <li><strong>Visited at least twice a year</strong><span>By our own team, unannounced at least once.</span></li>
+            <li><strong>Materials we can trace</strong><span>Certified wood, recycled metals and fibres, named quarries.</span></li>
+            <li><strong>Fair terms</strong><span>We pay in 30 days and agree prices a year ahead.</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="ttable-wrap">
+            <table class="ttable dn-table">
+              <caption class="visually-hidden">Our workshops, last visit, pay and material standards</caption>
+              <thead><tr><th scope="col">Workshop</th><th scope="col">Last visit</th><th scope="col">Pay above living wage</th><th scope="col">Materials</th></tr></thead>
+              <tbody>
+            <tr><th scope="row"><button class="dn-link" type="button" data-dn-open="hickory" aria-haspopup="dialog">Hickory workshop</button><span>Hickory, North Carolina, USA</span></th><td>Every week</td><td class="dn-up">+34%</td><td>FSC hardwood, CertiPUR foam</td></tr>
+            <tr><th scope="row"><button class="dn-link" type="button" data-dn-open="castro-mill" aria-haspopup="dialog">Tecelagem Castro</button><span>Guimarães, Portugal</span></th><td>May 2026</td><td class="dn-up">+22%</td><td>GRS recycled wool, European flax</td></tr>
+            <tr><th scope="row"><button class="dn-link" type="button" data-dn-open="nordtra" aria-haspopup="dialog">Nordträ joinery</button><span>Växjö, Sweden</span></th><td>June 2026</td><td class="dn-up">+18%</td><td>100% FSC oak and ash</td></tr>
+            <tr><th scope="row"><button class="dn-link" type="button" data-dn-open="pietra" aria-haspopup="dialog">Pietra Rossi</button><span>Tivoli, Italy</span></th><td>March 2026</td><td class="dn-up">+15%</td><td>Offcut stone only</td></tr>
+            <tr><th scope="row"><button class="dn-link" type="button" data-dn-open="carrow" aria-haspopup="dialog">Carrow ceramics</button><span>Stoke-on-Trent, UK</span></th><td>April 2026</td><td class="dn-up">+12%</td><td>Lead-free glazes</td></tr>
+            <tr><th scope="row"><button class="dn-link" type="button" data-dn-open="ridgeline" aria-haspopup="dialog">Ridgeline metalworks</button><span>Grand Rapids, Michigan, USA</span></th><td>August 2026</td><td class="dn-up">+20%</td><td>85% recycled brass</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ttable__note">Visits and pay checked by our sourcing team, and reviewed each year in our <a class="link" href="sustainability.html">impact report</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dn-events">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Meet them in person</h2>
+          <p class="dn-sub">Open days, talks and live tours with the people who make our furniture.</p>
+        </div>
+      </div>
+      <ul class="dn-events__list">
+        <li class="dn-event">
+          <p class="dn-event__date"><strong>18</strong><span>Oct</span></p>
+          <div class="dn-event__body">
+            <h3>Hickory workshop open day</h3>
+            <p class="dn-event__meta">Sat, 10am – 3pm · Hickory, North Carolina</p>
+            <p>Watch a sofa being sprung and tied, try re-covering a cushion, and meet the team.</p>
+          </div>
+          <div class="dn-event__side">
+            <p class="dn-event__type">In person, free<span>40 places</span></p>
+            <button class="btn btn--small" type="button" aria-pressed="false" data-dn-event="Hickory workshop open day">Save a place</button>
+          </div>
+        </li>
+        <li class="dn-event">
+          <p class="dn-event__date"><strong>6</strong><span>Nov</span></p>
+          <div class="dn-event__body">
+            <h3>Inside the mill, with Ana Ribeiro</h3>
+            <p class="dn-event__meta">Thu, 6pm ET · Online</p>
+            <p>A live video walk round Tecelagem Castro, from raw wool to bouclé, with questions at the end.</p>
+          </div>
+          <div class="dn-event__side">
+            <p class="dn-event__type">Online, free<span>Open to all</span></p>
+            <button class="btn btn--small" type="button" aria-pressed="false" data-dn-event="Inside the mill, with Ana Ribeiro">Remind me</button>
+          </div>
+        </li>
+        <li class="dn-event">
+          <p class="dn-event__date"><strong>22</strong><span>Nov</span></p>
+          <div class="dn-event__body">
+            <h3>Lighting a room, with Kenji Okada</h3>
+            <p class="dn-event__meta">Sat, 11am – 1pm · Portland showroom</p>
+            <p>Kenji shows how to layer three light sources, using your own floor plan if you bring one.</p>
+          </div>
+          <div class="dn-event__side">
+            <p class="dn-event__type">In person, free<span>24 places</span></p>
+            <button class="btn btn--small" type="button" aria-pressed="false" data-dn-event="Lighting a room, with Kenji Okada">Save a place</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section dn-pitch" id="design-with-us">
+    <div class="container">
+      <div class="dn-pitch__grid">
+        <div class="dn-pitch__intro">
+          <h2 class="section__title">Design or make with us</h2>
+          <p>We add one or two new designers and workshops a year. If you have an idea for a piece, or run a workshop that could make ours, tell us about it.</p>
+          <ol class="dn-pitch__how">
+            <li><strong>We reply to everyone</strong><span>Within three weeks, even if it’s a no.</span></li>
+            <li><strong>Your name stays on it</strong><span>Every piece is credited to the person who designed it.</span></li>
+            <li><strong>A share of every sale</strong><span>Designers earn a 5% royalty for as long as we sell the piece.</span></li>
+          </ol>
+        </div>
+        <div class="dn-pitch__card">
+          <form class="dn-form" data-dn-form novalidate>
+            <fieldset class="dn-kinds">
+              <legend>What do you do?</legend>
+              <div class="dn-kinds__row"><label class="dn-kind"><input type="radio" name="dn-kind" value="furniture" checked><span>Furniture</span></label><label class="dn-kind"><input type="radio" name="dn-kind" value="lighting"><span>Lighting</span></label><label class="dn-kind"><input type="radio" name="dn-kind" value="textiles"><span>Textiles</span></label><label class="dn-kind"><input type="radio" name="dn-kind" value="ceramics"><span>Ceramics and decor</span></label><label class="dn-kind"><input type="radio" name="dn-kind" value="workshop"><span>I run a workshop</span></label></div>
+            </fieldset>
+            <div class="field-grid">
+              <div class="field">
+                <label for="dn-name">Your name or studio</label>
+                <input id="dn-name" autocomplete="name" aria-describedby="dn-name-err">
+                <p class="field__error" id="dn-name-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="dn-email">Email</label>
+                <input id="dn-email" type="email" autocomplete="email" aria-describedby="dn-email-err">
+                <p class="field__error" id="dn-email-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="dn-where">Where you work</label>
+                <input id="dn-where" autocomplete="address-level2" placeholder="City, country" aria-describedby="dn-where-err">
+                <p class="field__error" id="dn-where-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="dn-link">Portfolio or website</label>
+                <input id="dn-link" type="url" inputmode="url" placeholder="https://" aria-describedby="dn-link-err">
+                <p class="field__error" id="dn-link-err" hidden></p>
+              </div>
+              <div class="field field--full">
+                <label for="dn-idea" data-dn-idea-label>What would you design for Morrow?</label>
+                <textarea id="dn-idea" rows="5" maxlength="1200" aria-describedby="dn-idea-hint dn-idea-err"></textarea>
+                <p class="dn-form__hint" id="dn-idea-hint"><span data-dn-idea-count>0</span> of 1,200 characters. A few sentences is plenty.</p>
+                <p class="field__error" id="dn-idea-err" hidden></p>
+              </div>
+            </div>
+            <button class="btn btn--primary" type="submit">Send</button>
+          </form>
+          <div class="rt-done dn-done" data-dn-done hidden tabindex="-1">
+            <div class="confirm__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg></div>
+            <h3>Thanks, we’ve got it</h3>
+            <p data-dn-done-text></p>
+            <button class="btn btn--small" type="button" data-dn-again>Send another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rm-cta">
+        <div>
+          <h2 class="section__title">See their work together</h2>
+          <p>Signe’s Nordic calm and Theo’s Warm minimal collections, styled in real rooms.</p>
+        </div>
+        <div class="dn-cta__btns">
+          <a class="btn btn--light" href="collection.html?c=nordic-calm">Nordic calm</a>
+          <a class="btn btn--light" href="collection.html?c=warm-minimal">Warm minimal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="cr-dialog dn-dialog" data-dn-dialog aria-labelledby="dn-profile-title">
+    <div class="dn-dialog__bar">
+      <p class="dn-dialog__pos" data-dn-pos></p>
+      <div class="dn-dialog__nav">
+        <button class="cr-dialog__close" type="button" data-dn-step="-1" aria-label="Previous profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+        <button class="cr-dialog__close" type="button" data-dn-step="1" aria-label="Next profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+        <button class="cr-dialog__close" type="button" data-dn-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
+      </div>
+    </div>
+    <div class="dn-profile" data-dn-body></div>
+  </dialog>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html" aria-current="page">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/designers.js"></script>
+</body>
+</html>
