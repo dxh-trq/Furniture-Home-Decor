@@ -22,6 +22,11 @@
     get('ads').disabled = true;
     $('[data-pv-gpc]').hidden = false;
   }
+  // the cookie banner (consent.js) saves to the same store: show its choices here straight away
+  window.addEventListener('morrow:consent', (e) => {
+    ['personal', 'analytics', 'ads'].forEach((k) => { if (get(k) && !get(k).disabled) set(get(k), !!e.detail[k]); });
+    saved.textContent = 'Saved from the cookie banner.';
+  });
   if (stored?.savedAt) saved.textContent = `Last saved ${new Date(stored.savedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.`;
 
   switches.forEach((sw) => sw.addEventListener('click', () => {

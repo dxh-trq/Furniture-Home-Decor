@@ -94,6 +94,15 @@ Planning docs:
 - `designers.html` — designers & makers: a directory of 5 designers and 6 workshops with filters (everyone, designers, workshops) and search. Each card opens a profile dialog with a bio, quote, facts, their pieces and a link, plus previous/next buttons and arrow keys for moving between profiles. Profiles can be linked as `designers.html#p-signe-holm`. Also on the page: "Trace a piece", which shows each step for 4 products from sketch to delivery; the workshop standards with a visits and pay table; events with "Save a place"; and a "Design or make with us" pitch form. Logic in `assets/js/designers.js`.
   Each profile's full content is a `<template data-dn-profile>` inside its card.
 
+- **Cookie banner** (`assets/js/consent.js`, loaded on every page):
+  - **First visit:** a card at the bottom left, or a bottom sheet on phones, appears on every page except the cookie policy. "Accept all" and "Essential only" look the same and are equally easy.
+  - **Choices:** "Choose" opens a switch for Functional, Analytics and Advertising, all off to start, with Essential always on.
+  - **Global Privacy Control:** if the browser sends it, advertising stays off.
+  - **Where it saves:** choices go to `morrow-privacy-choices`, the same place the privacy and cookie pages use, so each shows what the others saved. If you save on the privacy page while the banner is open, its switches update straight away.
+  - **Reopening:** a "Cookie settings" button in every footer (including checkout) reopens the banner. On the cookie policy page it jumps to that page's settings instead.
+  - **Accessibility:** it doesn't take focus when it first appears. Escape closes it only after a choice has been made. When it closes, focus returns to where you were.
+  - **Loading your tags:** load analytics and advertising scripts only after consent. Listen for the `morrow:consent` event, or read `window.Morrow.consent.get()`; it returns `null` until someone chooses. `window.Morrow.consent.open()` reopens the settings.
+
 - `reviews.html`: all customer reviews (the homepage's "Read all 12,400 reviews" link). Logic in `assets/js/reviews.js`, which reuses the product page's `.rv` review styles.
   - **Top of the page:** a rating summary. Click a star row to filter by that rating (you can pick several).
   - **Topics:** eight topics with mentions and the percentage positive. Click one to filter.
