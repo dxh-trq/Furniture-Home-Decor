@@ -92,7 +92,20 @@ Planning docs:
   Each collection is an `<article data-collection="…">` in the page; add a collection by adding another article. The set discount is `SET_OFF` and `SET_MIN` in the script; apply the same rule in your cart.
 
 - `designers.html` — designers & makers: a directory of 5 designers and 6 workshops with filters (everyone, designers, workshops) and search. Each card opens a profile dialog with a bio, quote, facts, their pieces and a link, plus previous/next buttons and arrow keys for moving between profiles. Profiles can be linked as `designers.html#p-signe-holm`. Also on the page: "Trace a piece", which shows each step for 4 products from sketch to delivery; the workshop standards with a visits and pay table; events with "Save a place"; and a "Design or make with us" pitch form. Logic in `assets/js/designers.js`.
-  Each profile's full content is a `<template data-dn-profile>` inside its card. Names, workshops, audit figures, events and the 5% royalty are placeholders; send pitches to your inbox in the form's submit handler.
+  Each profile's full content is a `<template data-dn-profile>` inside its card.
+
+- `track.html`: track your order. Look up an order by its number plus the email or delivery ZIP code, with clear errors if an order can't be found or the details don't match, and three demo orders.
+  - The results show each delivery with a five-step progress bar, the day and time window, items, and every update.
+  - What else appears depends on the delivery:
+    - Booked: change the date and add notes for the team.
+    - Being made: the workshop steps, linked to the Hickory profile.
+    - Out for delivery: a live route map, the number of stops before you and an ETA, plus call or text the team.
+    - Delivered: where it was placed, rate your delivery, start a return.
+  - Also on the results: share tracking, print, the delivery address, and switches for text and email updates.
+  - Below the tracker, whether or not an order is shown: what each status means and delivery questions.
+  - Logic in `assets/js/track.js`.
+  - `ORDERS` in the script stands in for your order API: replace `lookup()` with a fetch. The moving van is a demo timer; connect it to your routing system.
+  - Links like `track.html?order=MR-48213&zip=10002` open an order directly, for use in shipping emails. Names, workshops, audit figures, events and the 5% royalty are placeholders; send pitches to your inbox in the form's submit handler.
 
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
