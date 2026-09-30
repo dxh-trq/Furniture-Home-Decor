@@ -94,6 +94,17 @@ Planning docs:
 - `designers.html` — designers & makers: a directory of 5 designers and 6 workshops with filters (everyone, designers, workshops) and search. Each card opens a profile dialog with a bio, quote, facts, their pieces and a link, plus previous/next buttons and arrow keys for moving between profiles. Profiles can be linked as `designers.html#p-signe-holm`. Also on the page: "Trace a piece", which shows each step for 4 products from sketch to delivery; the workshop standards with a visits and pay table; events with "Save a place"; and a "Design or make with us" pitch form. Logic in `assets/js/designers.js`.
   Each profile's full content is a `<template data-dn-profile>` inside its card.
 
+- `lookbook.html`: the Autumn/Winter 2026 lookbook, "The slow season", with six styled rooms from Nordic calm and Warm minimal. Logic in `assets/js/lookbook.js`.
+  - Each look has an illustrated scene with numbered hotspots. Clicking one opens a card with the piece and "Add to cart", and highlights that piece in the list beside it.
+  - Each look also has a caption, a stylist's note, pieces you can add one at a time, "Shop the look" with the total, and "Save".
+  - A sticky bar filters looks by collection and highlights the look you're scrolled to.
+  - Between looks: two pull quotes, and the season's seven colours (click one to copy its hex code).
+  - After the looks: behind-the-shoot credits, past lookbooks, and a stylist call-to-action.
+  - A slideshow shows the looks currently filtered, with arrow keys and swipe.
+  - Each look can be linked by its id, for example `lookbook.html#low-light`. Saved looks are kept on the device as `morrow-saved-looks`.
+  - Add a look by copying an `<article data-look>`.
+  - Credits, quotes, homes and past lookbooks are placeholders. Past lookbooks link to the blog.
+
 - `track.html`: track your order. Look up an order by its number plus the email or delivery ZIP code, with clear errors if an order can't be found or the details don't match, and three demo orders.
   - The results show each delivery with a five-step progress bar, the day and time window, items, and every update.
   - What else appears depends on the delivery:
