@@ -30,6 +30,7 @@
     { url: 'gift-cards.html', title: 'Gift cards', keys: 'gift gifts card cards voucher vouchers present balance egift' },
     { url: 'privacy.html', title: 'Privacy policy', keys: 'privacy policy data personal information gdpr ccpa delete my data opt out do not sell' },
     { url: 'terms.html', title: 'Terms of sale', keys: 'terms conditions sale legal agreement cancel cancellation contract' },
+    { url: 'cookies.html', title: 'Cookie policy', keys: 'cookie cookies tracking consent settings preferences' },
     { url: 'careers.html', title: 'Careers', keys: 'careers career jobs job work hiring vacancies apprenticeship roles' },
     { url: 'contact.html', title: 'Contact us', keys: 'contact help support email phone call customer service' },
     { url: 'faq.html', title: 'Help and FAQs', keys: 'faq faqs help questions support' },

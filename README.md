@@ -79,5 +79,8 @@ Planning docs:
 - `terms.html` — terms of sale: key terms at a glance, 16 numbered sections each opening with an "In short" plain-English summary, a "Summaries only" switch, search with highlighted matches (Enter / Shift+Enter or the arrows to step through them), the shared contents list, a change log and print styles. Uses `assets/js/legal.js`, which adds search and the summaries switch to any legal page that has them.
   Figures match the rest of the site (delivery, returns, warranty, gift cards, price protection). Like the privacy policy, the wording is a starting point, not legal advice.
 
+- `cookies.html` — cookie policy: cookie settings by type (essential, functional, analytics, advertising) with counts, Allow all / Essential only / Save, and Global Privacy Control support; the full list of 16 cookies, filterable by type; a live "Stored on this device" list of what the site has saved in this browser, with delete buttons; browser controls, a change log and print styles. Logic in `assets/js/cookies.js` plus the shared `legal.js`.
+  Settings use the same saved choices as the privacy page (`morrow-privacy-choices`), so the two pages always agree. Replace the cookie list with your real cookies, and have your tags read these choices before they load.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
