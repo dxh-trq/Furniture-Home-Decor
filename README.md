@@ -94,6 +94,22 @@ Planning docs:
 - `designers.html` — designers & makers: a directory of 5 designers and 6 workshops with filters (everyone, designers, workshops) and search. Each card opens a profile dialog with a bio, quote, facts, their pieces and a link, plus previous/next buttons and arrow keys for moving between profiles. Profiles can be linked as `designers.html#p-signe-holm`. Also on the page: "Trace a piece", which shows each step for 4 products from sketch to delivery; the workshop standards with a visits and pay table; events with "Save a place"; and a "Design or make with us" pitch form. Logic in `assets/js/designers.js`.
   Each profile's full content is a `<template data-dn-profile>` inside its card.
 
+- `reviews.html`: all customer reviews (the homepage's "Read all 12,400 reviews" link). Logic in `assets/js/reviews.js`, which reuses the product page's `.rv` review styles.
+  - **Top of the page:** a rating summary. Click a star row to filter by that rating (you can pick several).
+  - **Topics:** eight topics with mentions and the percentage positive. Click one to filter.
+  - **"From your homes":** a gallery of customer photos. Each photo jumps to its review.
+  - **All reviews:**
+    - filter by product type, with photos, or by searching
+    - sort by most helpful, newest, highest or lowest rating
+    - removable filter pills, with "Show more" 8 at a time
+    - each review shows the product, verified buyer, how long they've owned it, photos (click to enlarge), "Morrow replied" answers on low ratings, "Helpful" and "Report"
+    - "Read more" appears only when a review is cut off
+  - **"Review your order":** find the order (demo `MR-48213`), pick a piece, then add a star rating (arrow keys work), title, review, name and up to 4 photos with previews, and whether you'd recommend it.
+  - **Review rules**, then a returns call-to-action.
+  - Any review can be linked, for example `reviews.html#review-12`.
+  - Reviews are plain `<li class="rw">` items with `data-cat`, `data-rating`, `data-date`, `data-helpful`, `data-topics` and `data-photos`. Load them from your reviews service, and send new reviews and reports to it.
+  - The 24 reviews, the totals, the topic figures and the reply time are placeholders.
+
 - `lookbook.html`: the Autumn/Winter 2026 lookbook, "The slow season", with six styled rooms from Nordic calm and Warm minimal. Logic in `assets/js/lookbook.js`.
   - Each look has an illustrated scene with numbered hotspots. Clicking one opens a card with the piece and "Add to cart", and highlights that piece in the list beside it.
   - Each look also has a caption, a stylist's note, pieces you can add one at a time, "Shop the look" with the total, and "Save".

@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer reviews — Morrow</title>
+  <meta name="description" content="12,400 reviews from verified Morrow customers, good and bad. Filter by product, rating and topic, see photos from real homes, and review your own order.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SVG sprite: placeholder product illustrations.
+     Replace any <svg class="art"> with an <img> when you add photos.
+     fill="currentColor" = main material, var(--leg) = wood/metal parts.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-sofa" viewBox="0 0 200 160">
+      <rect x="20" y="58" width="160" height="52" rx="16" fill="currentColor"/>
+      <rect x="34" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="104" y="66" width="62" height="36" rx="12" fill="#000" opacity=".06"/>
+      <rect x="14" y="94" width="172" height="30" rx="10" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="currentColor"/>
+      <rect x="6" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="166" y="78" width="28" height="50" rx="13" fill="#000" opacity=".05"/>
+      <rect x="22" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="172" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-armchair" viewBox="0 0 200 160">
+      <rect x="56" y="30" width="88" height="80" rx="34" fill="currentColor"/>
+      <rect x="46" y="92" width="108" height="30" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="currentColor"/>
+      <rect x="40" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <rect x="136" y="74" width="24" height="52" rx="12" fill="#000" opacity=".06"/>
+      <path d="M58 126 L50 142 H57 L65 126Z" style="fill:var(--leg)"/>
+      <path d="M142 126 L150 142 H143 L135 126Z" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-lamp" viewBox="0 0 200 160">
+      <rect x="98" y="54" width="4" height="82" style="fill:var(--leg)"/>
+      <ellipse cx="100" cy="138" rx="24" ry="5" style="fill:var(--leg)"/>
+      <path d="M82 14 H118 L136 58 H64 Z" fill="currentColor"/>
+      <ellipse cx="100" cy="58" rx="36" ry="4" fill="#000" opacity=".1"/>
+    </symbol>
+    <symbol id="s-sidetable" viewBox="0 0 200 160">
+      <path d="M86 76 H114 L120 132 H80 Z" fill="currentColor"/>
+      <path d="M86 76 H114 L120 132 H80 Z" fill="#000" opacity=".08"/>
+      <rect x="44" y="66" width="112" height="12" rx="6" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="currentColor"/>
+      <ellipse cx="100" cy="66" rx="56" ry="10" fill="#fff" opacity=".18"/>
+      <ellipse cx="100" cy="134" rx="36" ry="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-pendant" viewBox="0 0 200 160">
+      <rect x="99" y="0" width="2" height="52" style="fill:var(--leg)"/>
+      <path d="M46 106 A54 54 0 0 1 154 106 Z" fill="currentColor"/>
+      <path d="M46 106 A54 54 0 0 1 100 52 V106 Z" fill="#fff" opacity=".12"/>
+      <ellipse cx="100" cy="108" rx="16" ry="6" fill="#F6E7B8"/>
+    </symbol>
+    <symbol id="s-chair" viewBox="0 0 200 160">
+      <rect x="66" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="127" y="26" width="7" height="114" rx="2" fill="currentColor"/>
+      <rect x="66" y="32" width="68" height="24" rx="5" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="10" rx="3" fill="currentColor"/>
+      <rect x="60" y="86" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+      <rect x="70" y="118" width="60" height="4" fill="currentColor" opacity=".8"/>
+    </symbol>
+    <symbol id="s-sideboard" viewBox="0 0 200 160">
+      <rect x="16" y="52" width="168" height="72" rx="4" fill="currentColor"/>
+      <rect x="23" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="76" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="129" y="59" width="48" height="58" rx="2" fill="#000" opacity=".08"/>
+      <rect x="45" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="98" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="151" y="84" width="4" height="10" rx="2" fill="#fff" opacity=".5"/>
+      <rect x="26" y="124" width="6" height="16" style="fill:var(--leg)"/>
+      <rect x="168" y="124" width="6" height="16" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-mirror" viewBox="0 0 200 160">
+      <path d="M58 142 V64 A42 42 0 0 1 142 64 V142 Z" fill="currentColor"/>
+      <path d="M66 136 V64 A34 34 0 0 1 134 64 V136 Z" fill="#E4EAEA"/>
+      <path d="M84 60 L110 34 M84 80 L120 44" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="s-bed" viewBox="0 0 200 160">
+      <rect x="14" y="46" width="16" height="94" rx="5" fill="currentColor"/>
+      <rect x="26" y="90" width="160" height="26" rx="8" fill="#F3F2EC"/>
+      <rect x="34" y="78" width="40" height="18" rx="9" fill="#FFFFFF"/>
+      <rect x="84" y="84" width="102" height="34" rx="10" fill="currentColor" opacity=".55"/>
+      <rect x="26" y="114" width="162" height="14" rx="3" fill="currentColor"/>
+      <rect x="30" y="128" width="6" height="12" style="fill:var(--leg)"/>
+      <rect x="178" y="128" width="6" height="12" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-desk" viewBox="0 0 200 160">
+      <rect x="20" y="70" width="160" height="8" rx="2" fill="currentColor"/>
+      <rect x="120" y="78" width="54" height="30" rx="2" fill="currentColor" opacity=".85"/>
+      <rect x="143" y="90" width="10" height="3" rx="1.5" fill="#fff" opacity=".6"/>
+      <rect x="26" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="168" y="78" width="6" height="62" style="fill:var(--leg)"/>
+      <rect x="40" y="36" width="44" height="30" rx="3" style="fill:var(--leg)"/>
+      <rect x="58" y="66" width="8" height="4" style="fill:var(--leg)"/>
+    </symbol>
+    <symbol id="s-plant" viewBox="0 0 200 160">
+      <ellipse cx="86" cy="62" rx="12" ry="34" transform="rotate(-28 86 62)" fill="#5E6E4B"/>
+      <ellipse cx="116" cy="58" rx="12" ry="36" transform="rotate(24 116 58)" fill="#6F805A"/>
+      <ellipse cx="100" cy="48" rx="11" ry="40" fill="#4F5E3F"/>
+      <ellipse cx="72" cy="88" rx="10" ry="24" transform="rotate(-58 72 88)" fill="#6F805A"/>
+      <ellipse cx="130" cy="86" rx="10" ry="24" transform="rotate(56 130 86)" fill="#5E6E4B"/>
+      <path d="M76 98 H124 L117 140 H83 Z" fill="currentColor"/>
+      <rect x="74" y="96" width="52" height="7" rx="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="s-vase" viewBox="0 0 200 160">
+      <path d="M100 58 C96 40 90 28 84 18 M100 58 C104 36 112 24 120 16 M100 58 V12" stroke="#6F805A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="84" cy="18" r="6" fill="#D6B25E"/><circle cx="120" cy="16" r="6" fill="#D6B25E"/><circle cx="100" cy="11" r="6" fill="#E3C58A"/>
+      <path d="M90 58 H110 C110 72 128 86 124 112 C122 128 112 140 100 140 C88 140 78 128 76 112 C72 86 90 72 90 58 Z" fill="currentColor"/>
+      <path d="M90 58 H96 C96 72 84 90 86 112 C87 124 90 134 96 139 C86 136 79 126 77 112 C73 86 90 72 90 58 Z" fill="#fff" opacity=".18"/>
+    </symbol>
+    <symbol id="s-coffeetable" viewBox="0 0 200 160">
+      <rect x="32" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="158" y="94" width="10" height="44" rx="2" fill="currentColor"/>
+      <rect x="36" y="118" width="128" height="6" rx="2" fill="currentColor" opacity=".8"/>
+      <rect x="18" y="82" width="164" height="14" rx="4" fill="currentColor"/>
+      <rect x="18" y="82" width="164" height="5" rx="2.5" fill="#fff" opacity=".2"/>
+    </symbol>
+    <symbol id="s-rug" viewBox="0 0 200 160">
+      <path d="M26 34 V126 M20 34 V126 M174 34 V126 M180 34 V126" stroke="currentColor" stroke-width="3" stroke-dasharray="2 4" opacity=".7"/>
+      <rect x="30" y="30" width="140" height="100" rx="2" fill="currentColor"/>
+      <rect x="42" y="42" width="116" height="76" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <path d="M100 56 L124 80 L100 104 L76 80 Z" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+      <circle cx="100" cy="80" r="5" fill="#fff" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Free delivery on orders over $500. Not sure? You have 30 days to decide.</p>
+</div>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+
+    <a class="logo" href="index.html" aria-label="Morrow home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+      <span>morrow</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item has-mega">
+          <button class="nav__link" aria-expanded="false" aria-controls="mega-shop">Shop</button>
+          <div class="mega" id="mega-shop">
+            <div class="container mega__inner">
+              <div>
+                <h3 class="mega__title">By room</h3>
+                <ul>
+                  <li><a href="shop.html?room=living">Living room</a></li>
+                  <li><a href="shop.html?room=bedroom">Bedroom</a></li>
+                  <li><a href="shop.html?room=dining">Dining room</a></li>
+                  <li><a href="shop.html?room=office">Home office</a></li>
+                  <li><a href="shop.html?room=outdoor">Outdoor</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Furniture</h3>
+                <ul>
+                  <li><a href="shop.html?c=sofas">Sofas</a></li>
+                  <li><a href="shop.html?c=chairs">Chairs</a></li>
+                  <li><a href="shop.html?c=tables">Tables</a></li>
+                  <li><a href="shop.html?c=beds">Beds</a></li>
+                  <li><a href="shop.html?c=storage">Storage</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="mega__title">Lighting &amp; decor</h3>
+                <ul>
+                  <li><a href="shop.html?c=lighting">Lighting</a></li>
+                  <li><a href="shop.html?c=mirrors">Mirrors</a></li>
+                  <li><a href="shop.html?c=rugs">Rugs</a></li>
+                  <li><a href="shop.html?c=textiles">Cushions &amp; throws</a></li>
+                  <li><a href="shop.html?c=vases">Vases &amp; objects</a></li>
+                </ul>
+              </div>
+              <a class="mega__feature" href="collection.html?c=warm-minimal">
+                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <span class="mega__feature-title">The Ren lounge chair</span>
+                <span>New in cognac leather</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="room.html">Rooms</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Inspiration</a></li>
+        <li class="nav__item"><a class="nav__link" href="services.html">Design services</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--sale" href="shop.html?sale=1">Sale</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn hide-sm" href="account.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn hide-sm" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      </a>
+      <a class="icon-btn cart-btn" href="cart.html" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="reviews-page">
+  <section class="container rw-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><span aria-current="page">Reviews</span></li></ol>
+    </nav>
+    <div class="rw-hero__grid">
+      <div>
+        <h1 class="rw-hero__title">What 12,400 homes say about us</h1>
+        <p class="rw-hero__lede">Every review comes from a real order, and we publish them all, including the ones that sting. Here’s the good, the bad and what we did about it.</p>
+        <div class="rw-hero__actions">
+          <a class="btn btn--primary" href="#write">Review your order</a>
+          <a class="btn btn--ghost" href="#policy">How reviews work</a>
+        </div>
+      </div>
+      <div class="rw-score">
+        <div class="rw-score__top">
+          <p class="rw-score__num">4.8</p>
+          <div>
+            <p class="stars" aria-hidden="true">★★★★★</p>
+            <p class="rw-score__based">From 12,400 verified reviews</p>
+          </div>
+        </div>
+        <ul class="rw-hist" aria-label="Rating breakdown. Choose a rating to filter reviews"><li><button type="button" class="rw-hist__row" data-rw-star="5" aria-pressed="false"><span>5 star</span><span class="bar" aria-hidden="true"><span style="width:82.5%"></span></span><span>10,230</span></button></li><li><button type="button" class="rw-hist__row" data-rw-star="4" aria-pressed="false"><span>4 star</span><span class="bar" aria-hidden="true"><span style="width:11.2%"></span></span><span>1,390</span></button></li><li><button type="button" class="rw-hist__row" data-rw-star="3" aria-pressed="false"><span>3 star</span><span class="bar" aria-hidden="true"><span style="width:3.5%"></span></span><span>440</span></button></li><li><button type="button" class="rw-hist__row" data-rw-star="2" aria-pressed="false"><span>2 star</span><span class="bar" aria-hidden="true"><span style="width:1.5%"></span></span><span>190</span></button></li><li><button type="button" class="rw-hist__row" data-rw-star="1" aria-pressed="false"><span>1 star</span><span class="bar" aria-hidden="true"><span style="width:1.2%"></span></span><span>150</span></button></li></ul>
+        <ul class="rw-score__facts">
+          <li><strong>96%</strong><span>would recommend us to a friend</span></li>
+          <li><strong>1 day</strong><span>average time for us to reply to a low rating</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rw-topics-sec">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">What people talk about</h2>
+          <p class="rw-sub">Topics mentioned most in reviews. Choose one to read what people said.</p>
+        </div>
+      </div>
+      <ul class="rw-topics">
+        <li><button type="button" class="rw-topic" data-rw-topic="comfort" aria-pressed="false">
+            <span class="rw-topic__head"><strong>Comfort</strong><span>1,820 mentions</span></span>
+            <span class="rw-topic__bar" aria-hidden="true"><span style="width:97%"></span></span>
+            <span class="rw-topic__pos">97% positive</span>
+          </button></li><li><button type="button" class="rw-topic" data-rw-topic="quality" aria-pressed="false">
+            <span class="rw-topic__head"><strong>Build quality</strong><span>2,140 mentions</span></span>
+            <span class="rw-topic__bar" aria-hidden="true"><span style="width:95%"></span></span>
+            <span class="rw-topic__pos">95% positive</span>
+          </button></li><li><button type="button" class="rw-topic" data-rw-topic="delivery" aria-pressed="false">
+            <span class="rw-topic__head"><strong>Delivery</strong><span>2,610 mentions</span></span>
+            <span class="rw-topic__bar" aria-hidden="true"><span style="width:91%"></span></span>
+            <span class="rw-topic__pos">91% positive</span>
+          </button></li><li><button type="button" class="rw-topic" data-rw-topic="fabric" aria-pressed="false">
+            <span class="rw-topic__head"><strong>Fabric</strong><span>1,330 mentions</span></span>
+            <span class="rw-topic__bar" aria-hidden="true"><span style="width:93%"></span></span>
+            <span class="rw-topic__pos">93% positive</span>
+          </button></li><li><button type="button" class="rw-topic" data-rw-topic="colour" aria-pressed="false">
+            <span class="rw-topic__head"><strong>Colour</strong><span>980 mentions</span></span>
+            <span class="rw-topic__bar" aria-hidden="true"><span style="width:88%"></span></span>
+            <span class="rw-topic__pos">88% positive</span>
+          </button></li><li><button type="button" class="rw-topic" data-rw-topic="assembly" aria-pressed="false">
+            <span class="rw-topic__head"><strong>Assembly</strong><span>740 mentions</span></span>
+            <span class="rw-topic__bar" aria-hidden="true"><span style="width:84%"></span></span>
+            <span class="rw-topic__pos">84% positive</span>
+          </button></li><li><button type="button" class="rw-topic" data-rw-topic="value" aria-pressed="false">
+            <span class="rw-topic__head"><strong>Value</strong><span>1,190 mentions</span></span>
+            <span class="rw-topic__bar" aria-hidden="true"><span style="width:90%"></span></span>
+            <span class="rw-topic__pos">90% positive</span>
+          </button></li><li><button type="button" class="rw-topic" data-rw-topic="service" aria-pressed="false">
+            <span class="rw-topic__head"><strong>Customer service</strong><span>1,460 mentions</span></span>
+            <span class="rw-topic__bar" aria-hidden="true"><span style="width:94%"></span></span>
+            <span class="rw-topic__pos">94% positive</span>
+          </button></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section rw-gallery-sec">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">From your homes</h2>
+          <p class="rw-sub">Photos customers added to their reviews. Choose one to read the review.</p>
+        </div>
+        <button class="link" type="button" data-rw-photos-only>Show reviews with photos</button>
+      </div>
+      <ul class="rw-gallery"><li><button class="rw-gal" type="button" data-rw-goto="review-1" style="--tint:#E4E7DC" aria-label="Photo from Hannah R., Alder 3-seat sofa. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#A9B19C"/></svg><span class="rw-gal__cap">★★★★★<span>Hannah R.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-2" style="--tint:#E6DCCB" aria-label="Photo from Marcus T., Ren lounge chair. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#9A6240"/></svg><span class="rw-gal__cap">★★★★★<span>Marcus T.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-4" style="--tint:#EFE4D0" aria-label="Photo from Ellen W., Drift coffee table. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable" style="color:#E6DDCB"/></svg><span class="rw-gal__cap">★★★★<span>Ellen W.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-5" style="--tint:#E8E4DA" aria-label="Photo from Tom & Aisha, Haven bed. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-bed" style="color:#CFC4B2"/></svg><span class="rw-gal__cap">★★★★★<span>Tom & Aisha</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-6" style="--tint:#ECE8DE" aria-label="Photo from Jonah P., Lumen floor lamp. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp" style="color:#F1EAD8"/></svg><span class="rw-gal__cap">★★★★★<span>Jonah P.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-7" style="--tint:#E6DCCB" aria-label="Photo from Grace L., Stilla sideboard. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard" style="color:#6B4A33"/></svg><span class="rw-gal__cap">★★★★★<span>Grace L.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-9" style="--tint:#EEEBE3" aria-label="Photo from Nina K., Mira wool rug. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug" style="color:#E4DDCF"/></svg><span class="rw-gal__cap">★★★★<span>Nina K.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-10" style="--tint:#E4DFD3" aria-label="Photo from Carlos M., Fold dining table. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk" style="color:#6B4A33"/></svg><span class="rw-gal__cap">★★★★★<span>Carlos M.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-11" style="--tint:#F3E7CF" aria-label="Photo from Fiona B., Halo pendant light. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-pendant" style="color:#C28E2E"/></svg><span class="rw-gal__cap">★★★★★<span>Fiona B.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-15" style="--tint:#DCE0D2" aria-label="Photo from Mei C., Hale lounge chair. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#A9B19C"/></svg><span class="rw-gal__cap">★★★★<span>Mei C.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-16" style="--tint:#EFE4D0" aria-label="Photo from Owen J., Arc wall mirror. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-mirror" style="color:#D8C3A0"/></svg><span class="rw-gal__cap">★★★★★<span>Owen J.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-17" style="--tint:#ECE8DE" aria-label="Photo from Dev R., Rowe desk. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk" style="color:#D9C2A0"/></svg><span class="rw-gal__cap">★★★★★<span>Dev R.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-18" style="--tint:#E4E7DC" aria-label="Photo from Ivy N., Loma vase. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase" style="color:#36402F"/></svg><span class="rw-gal__cap">★★★★★<span>Ivy N.</span></span></button></li><li><button class="rw-gal" type="button" data-rw-goto="review-19" style="--tint:#F2F0EA" aria-label="Photo from Kate F., Alder 3-seat sofa. Go to the review"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#EEEBE3"/></svg><span class="rw-gal__cap">★★★★★<span>Kate F.</span></span></button></li></ul>
+    </div>
+  </section>
+
+  <section class="section rw-list-sec" id="all-reviews">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">All reviews</h2>
+      </div>
+      <div class="rw-filters">
+        <div class="chip-tabs rw-cats" role="group" aria-label="Product type"><button class="chip-tab" type="button" data-rw-cat="all" aria-pressed="true">All <span>24</span></button><button class="chip-tab" type="button" data-rw-cat="seating" aria-pressed="false">Sofas and chairs <span>7</span></button><button class="chip-tab" type="button" data-rw-cat="tables" aria-pressed="false">Tables <span>4</span></button><button class="chip-tab" type="button" data-rw-cat="storage" aria-pressed="false">Storage <span>3</span></button><button class="chip-tab" type="button" data-rw-cat="beds" aria-pressed="false">Beds <span>2</span></button><button class="chip-tab" type="button" data-rw-cat="lighting" aria-pressed="false">Lighting <span>3</span></button><button class="chip-tab" type="button" data-rw-cat="decor" aria-pressed="false">Decor and rugs <span>3</span></button><button class="chip-tab" type="button" data-rw-cat="service" aria-pressed="false">Delivery and service <span>2</span></button></div>
+        <div class="rw-filters__row">
+          <label class="jsearch">
+            <span class="visually-hidden">Search reviews</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" placeholder="Search reviews, like “dog”" data-rw-search>
+          </label>
+          <label class="check rw-toggle"><input type="checkbox" data-rw-with-photos><span class="check__box" aria-hidden="true"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>With photos</label>
+          <label class="rw-sort"><span>Sort by</span>
+            <select data-rw-sort>
+              <option value="helpful">Most helpful</option>
+              <option value="newest">Newest</option>
+              <option value="high">Highest rated</option>
+              <option value="low">Lowest rated</option>
+            </select>
+          </label>
+        </div>
+        <div class="rw-active" data-rw-active hidden></div>
+      </div>
+      <p class="jcount" data-rw-count aria-live="polite"></p>
+      <ul class="rw-list" data-rw-list>
+        <li class="rw" id="review-1" data-cat="seating" data-rating="5" data-date="2026-09-12" data-helpful="24" data-topics="comfort fabric delivery colour" data-photos="1" data-text="worth waiting for the swatches we ordered swatches first, which saved us from the wrong green. the sofa arrived in three weeks and the delivery team took all the packaging away. deep enough to nap on, firm enough to sit up straight. hannah r. new york, ny alder 3-seat sofa 3-seat in sage bouclé">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#A9B19C;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></span>
+            <span><a href="product.html#reviews">Alder 3-seat sofa</a><span>3-seat in sage bouclé</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-09-12">12 September 2026</time></p>
+          </div>
+          <h3 class="rv__title">Worth waiting for the swatches</h3>
+          <p class="rv__body is-clamped" data-rw-body>We ordered swatches first, which saved us from the wrong green. The sofa arrived in three weeks and the delivery team took all the packaging away. Deep enough to nap on, firm enough to sit up straight.</p>
+          <button class="rw__more" type="button" aria-expanded="false" data-rw-more>Read more</button>
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#E4E7DC" aria-label="Photo 1 of 1 from Hannah R."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#A9B19C"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Hannah R.</strong><span>New York, NY</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 3 weeks</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="24">Helpful (<span>24</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-2" data-cat="seating" data-rating="5" data-date="2026-09-08" data-helpful="31" data-topics="comfort quality" data-photos="2" data-text="the chair everyone sits in first the leather was stiff for a week and now it is perfect. visitors always head for it. the walnut frame is beautifully finished, with no visible screws anywhere. marcus t. chicago, il ren lounge chair cognac leather">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#9A6240;--leg:#3B2A1E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg></span>
+            <span><a href="product.html#reviews">Ren lounge chair</a><span>Cognac leather</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-09-08">8 September 2026</time></p>
+          </div>
+          <h3 class="rv__title">The chair everyone sits in first</h3>
+          <p class="rv__body" data-rw-body>The leather was stiff for a week and now it is perfect. Visitors always head for it. The walnut frame is beautifully finished, with no visible screws anywhere.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#E6DCCB" aria-label="Photo 1 of 2 from Marcus T."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#9A6240"/></svg></button><button class="rw-photo" type="button" data-rw-photo style="--tint:#DCD4C3" aria-label="Photo 2 of 2 from Marcus T."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#9A6240"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Marcus T.</strong><span>Chicago, IL</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 2 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="31">Helpful (<span>31</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-3" data-cat="service" data-rating="5" data-date="2026-09-05" data-helpful="45" data-topics="delivery service" data-photos="0" data-text="took the sofa up four floors, no fuss two people, a narrow staircase and a sofa i was sure would not fit. they took the legs off, turned it twice and had it in place in twenty minutes. they even asked where i wanted it before unwrapping. priya s. brooklyn, ny white glove delivery white glove delivery">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#DCD4C3;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></span>
+            <span><a href="shipping.html">White glove delivery</a><span>White glove delivery</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-09-05">5 September 2026</time></p>
+          </div>
+          <h3 class="rv__title">Took the sofa up four floors, no fuss</h3>
+          <p class="rv__body is-clamped" data-rw-body>Two people, a narrow staircase and a sofa I was sure would not fit. They took the legs off, turned it twice and had it in place in twenty minutes. They even asked where I wanted it before unwrapping.</p>
+          <button class="rw__more" type="button" aria-expanded="false" data-rw-more>Read more</button>
+          
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Priya S.</strong><span>Brooklyn, NY</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 1 month</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="45">Helpful (<span>45</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-4" data-cat="tables" data-rating="4" data-date="2026-09-01" data-helpful="19" data-topics="quality service" data-photos="1" data-text="beautiful stone, one small chip the travertine is gorgeous and every top is different. ours had a small chip on one corner. customer service sent a filler kit within two days, and you honestly cannot see it now. four stars only for the chip. ellen w. denver, co drift coffee table pale oak and travertine">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#E6DDCB;--leg:#C8A477"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable"/></svg></span>
+            <span><a href="product.html#reviews">Drift coffee table</a><span>Pale oak and travertine</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="4 out of 5 stars">★★★★<span class="stars__off">★</span></p>
+            <p class="rv__date"><time datetime="2026-09-01">1 September 2026</time></p>
+          </div>
+          <h3 class="rv__title">Beautiful stone, one small chip</h3>
+          <p class="rv__body is-clamped" data-rw-body>The travertine is gorgeous and every top is different. Ours had a small chip on one corner. Customer service sent a filler kit within two days, and you honestly cannot see it now. Four stars only for the chip.</p>
+          <button class="rw__more" type="button" aria-expanded="false" data-rw-more>Read more</button>
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#EFE4D0" aria-label="Photo 1 of 1 from Ellen W."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable" style="color:#E6DDCB"/></svg></button></div>
+          <div class="rw__reply"><p class="rw__reply-who"><span class="rw__reply-logo" aria-hidden="true">M</span>Morrow replied</p><p>Thanks Ellen, and sorry about the chip. Travertine is natural stone and our yard in Tivoli checks every top, but one got past us. We’ve shared your photo with them.</p></div>
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Ellen W.</strong><span>Denver, CO</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 6 weeks</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="19">Helpful (<span>19</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-5" data-cat="beds" data-rating="5" data-date="2026-08-29" data-helpful="22" data-topics="quality assembly comfort" data-photos="1" data-text="best sleep in years low, solid and completely silent. no creaks at all, even after a few months. assembly took us 40 minutes with the one tool in the box. tom &amp; aisha portland, or haven bed queen, stone linen">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#CFC4B2;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-bed"/></svg></span>
+            <span><a href="product.html#reviews">Haven bed</a><span>Queen, stone linen</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-08-29">29 August 2026</time></p>
+          </div>
+          <h3 class="rv__title">Best sleep in years</h3>
+          <p class="rv__body" data-rw-body>Low, solid and completely silent. No creaks at all, even after a few months. Assembly took us 40 minutes with the one tool in the box.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#E8E4DA" aria-label="Photo 1 of 1 from Tom & Aisha"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-bed" style="color:#CFC4B2"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Tom & Aisha</strong><span>Portland, OR</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 4 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="22">Helpful (<span>22</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-6" data-cat="lighting" data-rating="5" data-date="2026-08-26" data-helpful="14" data-topics="quality colour" data-photos="1" data-text="finally, warm light that isn’t yellow we have tried four floor lamps in this corner. this is the one. the linen shade softens everything and you never see the bulb from the sofa. jonah p. austin, tx lumen floor lamp white linen, brushed steel">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#EBD9AE;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp"/></svg></span>
+            <span><a href="product.html#reviews">Lumen floor lamp</a><span>White linen, brushed steel</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-08-26">26 August 2026</time></p>
+          </div>
+          <h3 class="rv__title">Finally, warm light that isn’t yellow</h3>
+          <p class="rv__body" data-rw-body>We have tried four floor lamps in this corner. This is the one. The linen shade softens everything and you never see the bulb from the sofa.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#ECE8DE" aria-label="Photo 1 of 1 from Jonah P."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp" style="color:#F1EAD8"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Jonah P.</strong><span>Austin, TX</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 3 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="14">Helpful (<span>14</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-7" data-cat="storage" data-rating="5" data-date="2026-08-20" data-helpful="28" data-topics="quality value" data-photos="1" data-text="solid walnut, and it shows heavy, beautifully made, and the doors close with a soft click. the inside is as well finished as the outside. it is the nicest thing we own. grace l. seattle, wa stilla sideboard walnut, 180 cm">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#6B4A33;--leg:#3B2A1E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard"/></svg></span>
+            <span><a href="product.html#reviews">Stilla sideboard</a><span>Walnut, 180 cm</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-08-20">20 August 2026</time></p>
+          </div>
+          <h3 class="rv__title">Solid walnut, and it shows</h3>
+          <p class="rv__body" data-rw-body>Heavy, beautifully made, and the doors close with a soft click. The inside is as well finished as the outside. It is the nicest thing we own.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#E6DCCB" aria-label="Photo 1 of 1 from Grace L."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard" style="color:#6B4A33"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Grace L.</strong><span>Seattle, WA</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 1 year</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="28">Helpful (<span>28</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-8" data-cat="seating" data-rating="3" data-date="2026-08-17" data-helpful="36" data-topics="delivery comfort" data-photos="0" data-text="lovely sofa, delivery was pushed back twice the sofa itself is great, comfortable and well made. but our delivery date moved twice, which meant taking two extra days off work. the texts were clear, but i wish we had been warned earlier. rob h. atlanta, ga alder 3-seat sofa 3-seat in oat bouclé">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#A9B19C;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></span>
+            <span><a href="product.html#reviews">Alder 3-seat sofa</a><span>3-seat in oat bouclé</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="3 out of 5 stars">★★★<span class="stars__off">★★</span></p>
+            <p class="rv__date"><time datetime="2026-08-17">17 August 2026</time></p>
+          </div>
+          <h3 class="rv__title">Lovely sofa, delivery was pushed back twice</h3>
+          <p class="rv__body is-clamped" data-rw-body>The sofa itself is great, comfortable and well made. But our delivery date moved twice, which meant taking two extra days off work. The texts were clear, but I wish we had been warned earlier.</p>
+          <button class="rw__more" type="button" aria-expanded="false" data-rw-more>Read more</button>
+          
+          <div class="rw__reply"><p class="rw__reply-who"><span class="rw__reply-logo" aria-hidden="true">M</span>Morrow replied</p><p>Rob, we’re sorry. A late fabric shipment held up a batch of sofas in July and we didn’t tell customers soon enough. We’ve refunded your delivery fee and now call as soon as a date is at risk.</p></div>
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Rob H.</strong><span>Atlanta, GA</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 2 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="36">Helpful (<span>36</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-9" data-cat="decor" data-rating="4" data-date="2026-08-12" data-helpful="12" data-topics="quality colour" data-photos="1" data-text="soft, but it sheds at first really lovely under bare feet and the undyed colour goes with everything. it shed a lot for the first three weeks, so vacuum often. now it is fine. nina k. minneapolis, mn mira wool rug 200 × 300 cm">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#E4DDCF"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug"/></svg></span>
+            <span><a href="product.html#reviews">Mira wool rug</a><span>200 × 300 cm</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="4 out of 5 stars">★★★★<span class="stars__off">★</span></p>
+            <p class="rv__date"><time datetime="2026-08-12">12 August 2026</time></p>
+          </div>
+          <h3 class="rv__title">Soft, but it sheds at first</h3>
+          <p class="rv__body" data-rw-body>Really lovely under bare feet and the undyed colour goes with everything. It shed a lot for the first three weeks, so vacuum often. Now it is fine.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#EEEBE3" aria-label="Photo 1 of 1 from Nina K."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-rug" style="color:#E4DDCF"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Nina K.</strong><span>Minneapolis, MN</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 3 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="12">Helpful (<span>12</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-10" data-cat="tables" data-rating="5" data-date="2026-08-09" data-helpful="17" data-topics="quality value" data-photos="1" data-text="seats eight when it needs to we host a lot, and the leaf makes this go from six to eight in seconds. oiled walnut means marks come out with a light sand. we have already done it once. carlos m. san diego, ca fold dining table solid walnut">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#6B4A33;--leg:#3B2A1E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk"/></svg></span>
+            <span><a href="product.html#reviews">Fold dining table</a><span>Solid walnut</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-08-09">9 August 2026</time></p>
+          </div>
+          <h3 class="rv__title">Seats eight when it needs to</h3>
+          <p class="rv__body" data-rw-body>We host a lot, and the leaf makes this go from six to eight in seconds. Oiled walnut means marks come out with a light sand. We have already done it once.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#E4DFD3" aria-label="Photo 1 of 1 from Carlos M."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk" style="color:#6B4A33"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Carlos M.</strong><span>San Diego, CA</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 5 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="17">Helpful (<span>17</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-11" data-cat="lighting" data-rating="5" data-date="2026-08-04" data-helpful="9" data-topics="quality assembly" data-photos="1" data-text="two over the kitchen island brass has warmed up nicely. the wiring was straightforward for our electrician, and the fabric cord length was just right for our 2.6 m ceiling. fiona b. boston, ma halo pendant light brass, pair">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#C28E2E;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-pendant"/></svg></span>
+            <span><a href="product.html#reviews">Halo pendant light</a><span>Brass, pair</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-08-04">4 August 2026</time></p>
+          </div>
+          <h3 class="rv__title">Two over the kitchen island</h3>
+          <p class="rv__body" data-rw-body>Brass has warmed up nicely. The wiring was straightforward for our electrician, and the fabric cord length was just right for our 2.6 m ceiling.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#F3E7CF" aria-label="Photo 1 of 1 from Fiona B."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-pendant" style="color:#C28E2E"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Fiona B.</strong><span>Boston, MA</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 4 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="9">Helpful (<span>9</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-12" data-cat="seating" data-rating="2" data-date="2026-07-30" data-helpful="27" data-topics="colour service" data-photos="0" data-text="colour was darker than the photos the rust linen is much browner in person than on my screen. the chair is comfortable and well made, but it did not work in our room. the return was easy and free, and they collected it in a week. leah d. philadelphia, pa otto armchair rust linen">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#A4583A;--leg:#3B2A1E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg></span>
+            <span><a href="product.html#reviews">Otto armchair</a><span>Rust linen</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="2 out of 5 stars">★★<span class="stars__off">★★★</span></p>
+            <p class="rv__date"><time datetime="2026-07-30">30 July 2026</time></p>
+          </div>
+          <h3 class="rv__title">Colour was darker than the photos</h3>
+          <p class="rv__body is-clamped" data-rw-body>The rust linen is much browner in person than on my screen. The chair is comfortable and well made, but it did not work in our room. The return was easy and free, and they collected it in a week.</p>
+          <button class="rw__more" type="button" aria-expanded="false" data-rw-more>Read more</button>
+          
+          <div class="rw__reply"><p class="rw__reply-who"><span class="rw__reply-logo" aria-hidden="true">M</span>Morrow replied</p><p>Thank you, Leah. You’re right: our rust photos were too warm and we’ve reshot them. We’d always suggest a free swatch first for colours like this.</p></div>
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Leah D.</strong><span>Philadelphia, PA</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 2 weeks</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="27">Helpful (<span>27</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-13" data-cat="tables" data-rating="5" data-date="2026-07-26" data-helpful="8" data-topics="quality value" data-photos="0" data-text="small table, big difference just the right height next to the sofa arm. the pale oak matches our floors. it feels far more solid than its size suggests. sam o. brooklyn, ny tove side table pale oak">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#D9CFBF;--leg:#5C3E28"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sidetable"/></svg></span>
+            <span><a href="product.html#reviews">Tove side table</a><span>Pale oak</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-07-26">26 July 2026</time></p>
+          </div>
+          <h3 class="rv__title">Small table, big difference</h3>
+          <p class="rv__body" data-rw-body>Just the right height next to the sofa arm. The pale oak matches our floors. It feels far more solid than its size suggests.</p>
+          
+          
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Sam O.</strong><span>Brooklyn, NY</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 6 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="8">Helpful (<span>8</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-14" data-cat="service" data-rating="5" data-date="2026-07-22" data-helpful="21" data-topics="service delivery" data-photos="0" data-text="they came back to fix a wobble our sideboard had a slight wobble on an uneven floor. i mentioned it on the phone and the same team came back three days later with shims and levelled it perfectly. no charge. ruth a. charlotte, nc white glove delivery room of choice delivery">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#DCD4C3;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></span>
+            <span><a href="shipping.html">White glove delivery</a><span>Room of choice delivery</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-07-22">22 July 2026</time></p>
+          </div>
+          <h3 class="rv__title">They came back to fix a wobble</h3>
+          <p class="rv__body" data-rw-body>Our sideboard had a slight wobble on an uneven floor. I mentioned it on the phone and the same team came back three days later with shims and levelled it perfectly. No charge.</p>
+          
+          
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Ruth A.</strong><span>Charlotte, NC</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 2 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="21">Helpful (<span>21</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-15" data-cat="seating" data-rating="4" data-date="2026-07-18" data-helpful="15" data-topics="comfort fabric" data-photos="1" data-text="comfy, a little low for us beautiful chair and the sage linen is just right. the seat is quite low, which is great for lounging but harder for my dad to get out of. otherwise perfect. mei c. los angeles, ca hale lounge chair sage linen">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#A9B19C;--leg:#C8A477"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg></span>
+            <span><a href="product.html#reviews">Hale lounge chair</a><span>Sage linen</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="4 out of 5 stars">★★★★<span class="stars__off">★</span></p>
+            <p class="rv__date"><time datetime="2026-07-18">18 July 2026</time></p>
+          </div>
+          <h3 class="rv__title">Comfy, a little low for us</h3>
+          <p class="rv__body" data-rw-body>Beautiful chair and the sage linen is just right. The seat is quite low, which is great for lounging but harder for my dad to get out of. Otherwise perfect.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#DCE0D2" aria-label="Photo 1 of 1 from Mei C."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair" style="color:#A9B19C"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Mei C.</strong><span>Los Angeles, CA</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 3 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="15">Helpful (<span>15</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-16" data-cat="decor" data-rating="5" data-date="2026-07-12" data-helpful="7" data-topics="quality assembly" data-photos="1" data-text="makes the hallway twice the size the oak frame is thin and elegant, and the glass has no distortion at all. it came with a french cleat, which made hanging it simple. owen j. madison, wi arc wall mirror pale oak, 60 × 90 cm">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#D8C3A0"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-mirror"/></svg></span>
+            <span><a href="product.html#reviews">Arc wall mirror</a><span>Pale oak, 60 × 90 cm</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-07-12">12 July 2026</time></p>
+          </div>
+          <h3 class="rv__title">Makes the hallway twice the size</h3>
+          <p class="rv__body" data-rw-body>The oak frame is thin and elegant, and the glass has no distortion at all. It came with a French cleat, which made hanging it simple.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#EFE4D0" aria-label="Photo 1 of 1 from Owen J."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-mirror" style="color:#D8C3A0"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Owen J.</strong><span>Madison, WI</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 4 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="7">Helpful (<span>7</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-17" data-cat="storage" data-rating="5" data-date="2026-07-08" data-helpful="13" data-topics="assembly quality" data-photos="1" data-text="a proper desk for proper work deep enough for two monitors and a notebook. the cable tray underneath keeps everything hidden. took 30 minutes to put together. dev r. raleigh, nc rowe desk pale oak, 140 cm">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#D9C2A0;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk"/></svg></span>
+            <span><a href="product.html#reviews">Rowe desk</a><span>Pale oak, 140 cm</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-07-08">8 July 2026</time></p>
+          </div>
+          <h3 class="rv__title">A proper desk for proper work</h3>
+          <p class="rv__body" data-rw-body>Deep enough for two monitors and a notebook. The cable tray underneath keeps everything hidden. Took 30 minutes to put together.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#ECE8DE" aria-label="Photo 1 of 1 from Dev R."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk" style="color:#D9C2A0"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Dev R.</strong><span>Raleigh, NC</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 5 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="13">Helpful (<span>13</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-18" data-cat="decor" data-rating="5" data-date="2026-07-02" data-helpful="6" data-topics="quality colour" data-photos="1" data-text="each one is slightly different i bought two and the glaze is different on each, which i love. heavy base, so it does not tip with tall branches. ivy n. nashville, tn loma vase moss, pair">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#36402F"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase"/></svg></span>
+            <span><a href="product.html#reviews">Loma vase</a><span>Moss, pair</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-07-02">2 July 2026</time></p>
+          </div>
+          <h3 class="rv__title">Each one is slightly different</h3>
+          <p class="rv__body" data-rw-body>I bought two and the glaze is different on each, which I love. Heavy base, so it does not tip with tall branches.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#E4E7DC" aria-label="Photo 1 of 1 from Ivy N."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-vase" style="color:#36402F"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Ivy N.</strong><span>Nashville, TN</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 2 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="6">Helpful (<span>6</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-19" data-cat="seating" data-rating="5" data-date="2026-06-28" data-helpful="52" data-topics="fabric quality comfort" data-photos="1" data-text="survived two kids and a dog six months in, with a toddler, a nine-year-old and a golden retriever. the performance bouclé wipes clean and the cushion covers go in the wash. still looks new. kate f. columbus, oh alder 3-seat sofa 3-seat in white bouclé">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#A9B19C;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa"/></svg></span>
+            <span><a href="product.html#reviews">Alder 3-seat sofa</a><span>3-seat in white bouclé</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-06-28">28 June 2026</time></p>
+          </div>
+          <h3 class="rv__title">Survived two kids and a dog</h3>
+          <p class="rv__body" data-rw-body>Six months in, with a toddler, a nine-year-old and a golden retriever. The performance bouclé wipes clean and the cushion covers go in the wash. Still looks new.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#F2F0EA" aria-label="Photo 1 of 1 from Kate F."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#EEEBE3"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Kate F.</strong><span>Columbus, OH</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 6 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="52">Helpful (<span>52</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-20" data-cat="seating" data-rating="4" data-date="2026-06-21" data-helpful="11" data-topics="comfort delivery" data-photos="0" data-text="good chairs, slow to arrive comfortable for long dinners and very sturdy. they took seven weeks rather than the five quoted. worth it, but plan ahead. ben a. pittsburgh, pa oslo dining chair walnut, set of 4">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#6B4A33"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-chair"/></svg></span>
+            <span><a href="product.html#reviews">Oslo dining chair</a><span>Walnut, set of 4</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="4 out of 5 stars">★★★★<span class="stars__off">★</span></p>
+            <p class="rv__date"><time datetime="2026-06-21">21 June 2026</time></p>
+          </div>
+          <h3 class="rv__title">Good chairs, slow to arrive</h3>
+          <p class="rv__body" data-rw-body>Comfortable for long dinners and very sturdy. They took seven weeks rather than the five quoted. Worth it, but plan ahead.</p>
+          
+          
+          <div class="rw__reply"><p class="rw__reply-who"><span class="rw__reply-logo" aria-hidden="true">M</span>Morrow replied</p><p>Thanks, Ben. Our chair workshop had a backlog in May. Lead times on the site now update daily, so the date you see is the date we expect.</p></div>
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Ben A.</strong><span>Pittsburgh, PA</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 2 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="11">Helpful (<span>11</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-21" data-cat="tables" data-rating="5" data-date="2026-06-15" data-helpful="18" data-topics="assembly quality value" data-photos="0" data-text="comes apart for moving day we have moved twice since buying it. the top lifts off and the base unscrews with one tool, and both fit in the back of a car. zoe g. salt lake city, ut drift coffee table walnut and travertine">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#E6DDCB;--leg:#C8A477"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-coffeetable"/></svg></span>
+            <span><a href="product.html#reviews">Drift coffee table</a><span>Walnut and travertine</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-06-15">15 June 2026</time></p>
+          </div>
+          <h3 class="rv__title">Comes apart for moving day</h3>
+          <p class="rv__body" data-rw-body>We have moved twice since buying it. The top lifts off and the base unscrews with one tool, and both fit in the back of a car.</p>
+          
+          
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Zoe G.</strong><span>Salt Lake City, UT</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 2 years</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="18">Helpful (<span>18</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-22" data-cat="beds" data-rating="4" data-date="2026-06-09" data-helpful="5" data-topics="value comfort" data-photos="0" data-text="great bed, headboard is optional for a reason we skipped the headboard to save money and regret it a little for reading in bed. the bed itself is excellent. adding the headboard later was easy. luis v. phoenix, az haven bed king, oat linen">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#CFC4B2;--leg:#B08A5E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-bed"/></svg></span>
+            <span><a href="product.html#reviews">Haven bed</a><span>King, oat linen</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="4 out of 5 stars">★★★★<span class="stars__off">★</span></p>
+            <p class="rv__date"><time datetime="2026-06-09">9 June 2026</time></p>
+          </div>
+          <h3 class="rv__title">Great bed, headboard is optional for a reason</h3>
+          <p class="rv__body" data-rw-body>We skipped the headboard to save money and regret it a little for reading in bed. The bed itself is excellent. Adding the headboard later was easy.</p>
+          
+          
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Luis V.</strong><span>Phoenix, AZ</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 8 months</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="5">Helpful (<span>5</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-23" data-cat="lighting" data-rating="1" data-date="2026-06-02" data-helpful="9" data-topics="delivery quality" data-photos="0" data-text="arrived with a bent stem the lamp stem was bent in the box. very disappointing for the price. chris p. dallas, tx lumen floor lamp oat linen, brass">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#EBD9AE;--leg:#2B2F2A"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-lamp"/></svg></span>
+            <span><a href="product.html#reviews">Lumen floor lamp</a><span>Oat linen, brass</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="1 out of 5 stars">★<span class="stars__off">★★★★</span></p>
+            <p class="rv__date"><time datetime="2026-06-02">2 June 2026</time></p>
+          </div>
+          <h3 class="rv__title">Arrived with a bent stem</h3>
+          <p class="rv__body" data-rw-body>The lamp stem was bent in the box. Very disappointing for the price.</p>
+          
+          
+          <div class="rw__reply"><p class="rw__reply-who"><span class="rw__reply-logo" aria-hidden="true">M</span>Morrow replied</p><p>Chris, we’re sorry. A replacement was sent the next day and the carrier’s packaging has since been changed to a rigid tube. Please get in touch if anything else isn’t right.</p></div>
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Chris P.</strong><span>Dallas, TX</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 1 week</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="9">Helpful (<span>9</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+        <li class="rw" id="review-24" data-cat="storage" data-rating="5" data-date="2026-05-27" data-helpful="10" data-topics="quality value" data-photos="1" data-text="holds everything, looks like nothing all our board games, the good plates and the record player, hidden behind four doors. the adjustable shelves were a pleasant surprise. anna s. denver, co stilla sideboard pale oak, 180 cm">
+          <div class="rw__product">
+            <span class="rw__thumb" style="color:#6B4A33;--leg:#3B2A1E"><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard"/></svg></span>
+            <span><a href="product.html#reviews">Stilla sideboard</a><span>Pale oak, 180 cm</span></span>
+          </div>
+          <div class="rv__head">
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★<span class="stars__off"></span></p>
+            <p class="rv__date"><time datetime="2026-05-27">27 May 2026</time></p>
+          </div>
+          <h3 class="rv__title">Holds everything, looks like nothing</h3>
+          <p class="rv__body" data-rw-body>All our board games, the good plates and the record player, hidden behind four doors. The adjustable shelves were a pleasant surprise.</p>
+          
+          <div class="rw__photos"><button class="rw-photo" type="button" data-rw-photo style="--tint:#EFE4D0" aria-label="Photo 1 of 1 from Anna S."><svg viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sideboard" style="color:#D9C2A0"/></svg></button></div>
+          
+          <div class="rv__foot">
+            <p class="rv__who"><strong>Anna S.</strong><span>Denver, CO</span><span class="rv__verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Verified buyer</span><span>Owned 1 year</span></p>
+            <button class="rv__helpful" type="button" aria-pressed="false" data-count="10">Helpful (<span>10</span>)</button>
+            <button class="rw__report" type="button" data-rw-report>Report</button>
+          </div>
+        </li>
+      </ul>
+      <div class="rw-empty" data-rw-empty hidden>
+        <p>No reviews match those filters.</p>
+        <button class="btn btn--small" type="button" data-rw-clear>Clear filters</button>
+      </div>
+      <div class="rw-more">
+        <button class="btn btn--ghost" type="button" data-rw-more-btn>Show more reviews</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rw-write-sec" id="write">
+    <div class="container rw-write">
+      <div class="rw-write__intro">
+        <h2 class="section__title">Review your order</h2>
+        <p>Tell other people what it’s really like to live with. Reviews go live within 48 hours, after a quick check that they’re from a real order.</p>
+        <ol class="rw-write__steps">
+          <li><strong>Find your order</strong><span>With the number from your confirmation email</span></li>
+          <li><strong>Pick a piece and rate it</strong><span>Stars, a title and a few sentences</span></li>
+          <li><strong>Add photos if you like</strong><span>Other customers love seeing real rooms</span></li>
+        </ol>
+      </div>
+      <div class="rw-write__card">
+        <form class="rw-find" data-rw-find novalidate>
+          <div class="field">
+            <label for="rw-order">Order number</label>
+            <div class="rw-find__row">
+              <input id="rw-order" placeholder="MR-48213" autocapitalize="characters" autocomplete="off" aria-describedby="rw-order-hint rw-order-err">
+              <button class="btn btn--primary" type="submit">Find order</button>
+            </div>
+            <p class="rw-form__hint" id="rw-order-hint">Try the demo order MR-48213.</p>
+            <p class="field__error" id="rw-order-err" hidden></p>
+          </div>
+        </form>
+        <form class="rw-form" data-rw-form novalidate hidden>
+          <fieldset class="rw-pick">
+            <legend>Which piece are you reviewing?</legend>
+            <div class="rw-pick__row"><label class="rw-pick__opt"><input type="radio" name="rw-piece" value="Lumen floor lamp" checked><span><strong>Lumen floor lamp</strong><small>Natural linen</small></span></label><label class="rw-pick__opt"><input type="radio" name="rw-piece" value="Tove side table"><span><strong>Tove side table</strong><small>Travertine</small></span></label><label class="rw-pick__opt"><input type="radio" name="rw-piece" value="Loma vase"><span><strong>Loma vase</strong><small>Moss</small></span></label><label class="rw-pick__opt"><input type="radio" name="rw-piece" value="Alder 3-seat sofa"><span><strong>Alder 3-seat sofa</strong><small>Cognac bouclé</small></span></label></div>
+          </fieldset>
+          <fieldset class="rw-rate">
+            <legend>Your rating</legend>
+            <div class="rw-rate__stars" role="radiogroup" aria-label="Your rating" aria-describedby="rw-rate-err"><button type="button" role="radio" aria-checked="false" tabindex="0" aria-label="1 star" data-rw-rate="1">★</button><button type="button" role="radio" aria-checked="false" tabindex="-1" aria-label="2 stars" data-rw-rate="2">★</button><button type="button" role="radio" aria-checked="false" tabindex="-1" aria-label="3 stars" data-rw-rate="3">★</button><button type="button" role="radio" aria-checked="false" tabindex="-1" aria-label="4 stars" data-rw-rate="4">★</button><button type="button" role="radio" aria-checked="false" tabindex="-1" aria-label="5 stars" data-rw-rate="5">★</button><span class="rw-rate__word" data-rw-rate-word></span></div>
+            <p class="field__error" id="rw-rate-err" hidden></p>
+          </fieldset>
+          <div class="field-grid">
+            <div class="field field--full">
+              <label for="rw-title">Title</label>
+              <input id="rw-title" maxlength="80" placeholder="Sum it up in a few words" aria-describedby="rw-title-err">
+              <p class="field__error" id="rw-title-err" hidden></p>
+            </div>
+            <div class="field field--full">
+              <label for="rw-body">Your review</label>
+              <textarea id="rw-body" rows="5" maxlength="2000" placeholder="How does it feel, look and wear? What would you tell a friend?" aria-describedby="rw-body-hint rw-body-err"></textarea>
+              <p class="rw-form__hint" id="rw-body-hint"><span data-rw-body-count>0</span> characters. At least 40, please.</p>
+              <p class="field__error" id="rw-body-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="rw-owned">How long have you had it?</label>
+              <select id="rw-owned"><option>Less than a month</option><option selected>1 to 6 months</option><option>6 to 12 months</option><option>Over a year</option></select>
+            </div>
+            <div class="field">
+              <label for="rw-name">Name to show</label>
+              <input id="rw-name" autocomplete="given-name" placeholder="e.g. Hannah R." aria-describedby="rw-name-err">
+              <p class="field__error" id="rw-name-err" hidden></p>
+            </div>
+            <div class="field field--full rw-upload-field">
+              <span class="rw-upload-label" id="rw-photos-label">Photos <span class="field__opt">(optional, up to 4)</span></span>
+              <label class="upload" for="rw-photos">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+                <span data-rw-file-text><strong>Add photos</strong>. JPG or PNG, up to 10 MB each.</span>
+              </label>
+              <input class="visually-hidden" id="rw-photos" type="file" accept="image/jpeg,image/png" multiple aria-labelledby="rw-photos-label">
+              <ul class="rw-thumbs" data-rw-thumbs></ul>
+            </div>
+          </div>
+          <fieldset class="rw-rec">
+            <legend>Would you recommend it to a friend?</legend>
+            <label class="rw-rec__opt"><input type="radio" name="rw-rec" value="yes" checked><span>Yes</span></label>
+            <label class="rw-rec__opt"><input type="radio" name="rw-rec" value="no"><span>No</span></label>
+          </fieldset>
+          <div class="rw-form__foot">
+            <button class="btn btn--primary" type="submit">Post review</button>
+            <button class="line__action" type="button" data-rw-restart>Use a different order</button>
+          </div>
+        </form>
+        <div class="rt-done rw-done" data-rw-done hidden tabindex="-1">
+          <div class="confirm__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg></div>
+          <h3>Thanks for your review</h3>
+          <p data-rw-done-text></p>
+          <button class="btn btn--small" type="button" data-rw-another>Review another piece</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rw-policy" id="policy">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">How reviews work</h2>
+          <p class="rw-sub">Reviews only help if you can trust them. These are our rules.</p>
+        </div>
+      </div>
+      <ul class="rw-rules">
+        <li><strong>Only from real orders</strong><span>You can only review a piece you bought from us, and every review is marked verified.</span></li>
+        <li><strong>We publish the bad ones</strong><span>We never hide or delay a review because of its rating. About 6% of our reviews are 3 stars or lower.</span></li>
+        <li><strong>No paid or gifted reviews</strong><span>We don’t offer discounts or prizes for reviews, and staff can’t review our products.</span></li>
+        <li><strong>We reply to problems</strong><span>Our team replies to every review of 3 stars or lower, usually within a day, and says what we did.</span></li>
+        <li><strong>What we remove</strong><span>Only personal details, offensive language, or reviews about something other than the product or service.</span></li>
+        <li><strong>Edit any time</strong><span>You can update your review from your <a class="link" href="account.html#orders">account</a>, for example after a year of use.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rm-cta">
+        <div>
+          <h2 class="section__title">Not sure yet? Try it at home</h2>
+          <p>Order free swatches, or live with any piece for 30 days. Returns are free and we collect.</p>
+        </div>
+        <a class="btn btn--light" href="returns.html">How returns work</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Morrow home">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 26V14a9 9 0 0 1 18 0v12"/></svg>
+        <span>morrow</span>
+      </a>
+      <p>Furniture and home decor made from solid wood, natural fabrics and stone. Designed to be lived with for a long time.</p>
+    </div>
+    <div>
+      <h3 class="footer__title">Shop</h3>
+      <ul>
+        <li><a href="shop.html">All furniture</a></li>
+        <li><a href="shop.html?c=lighting">Lighting</a></li>
+        <li><a href="shop.html?c=decor">Decor</a></li>
+        <li><a href="shop.html?new=1">New in</a></li>
+        <li><a href="shop.html?sale=1">Sale</a></li>
+        <li><a href="gift-cards.html">Gift cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">Help</h3>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__title">About</h3>
+      <ul>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="designers.html">Designers &amp; makers</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="stores.html">Showrooms</a></li>
+        <li><a href="trade.html">Trade program</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Morrow Home. All rights reserved.</p>
+    <ul class="footer__legal">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
+    <ul class="social" aria-label="Follow us">
+      <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.5 2 1.6 2 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.9.8 2.4l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.7-2.4 6.8-5.6 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2Z" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></li>
+      <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z" fill="currentColor" stroke="none"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/reviews.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@
     { url: 'shop.html', title: 'Living room furniture', keys: 'shop living room furniture all products catalogue collection' },
     { url: 'collection.html', title: 'Nordic calm collection', keys: 'collection collections nordic calm scandinavian light oak boucle' },
     { url: 'collection.html?c=warm-minimal', title: 'Warm minimal collection', keys: 'collection collections warm minimal walnut leather brass' },
+    { url: 'reviews.html', title: 'Customer reviews', keys: 'reviews review ratings rating stars customers feedback testimonials write a review verified' },
     { url: 'lookbook.html', title: 'Lookbook: The slow season', keys: 'lookbook look book looks inspiration styled rooms autumn winter season ideas slideshow' },
     { url: 'track.html', title: 'Track your order', keys: 'track tracking order orders where is my delivery status van eta change date reschedule' },
     { url: 'designers.html', title: 'Designers & makers', keys: 'designers designer makers maker workshops workshop craft made who signe theo artisans pitch' },
