@@ -191,7 +191,7 @@
                 </ul>
               </div>
               <a class="mega__feature" href="collection.html?c=warm-minimal">
-                <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-armchair"/></svg>
+                <img class="ph mega__img" src="https://images.pexels.com/photos/20794782/pexels-photo-20794782.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=480" srcset="https://images.pexels.com/photos/20794782/pexels-photo-20794782.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=240 240w, https://images.pexels.com/photos/20794782/pexels-photo-20794782.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=480 480w" sizes="240px" alt="" loading="lazy" decoding="async">
                 <span class="mega__feature-title">The Ren lounge chair</span>
                 <span>New in cognac leather</span>
               </a>
@@ -242,41 +242,19 @@
       </div>
 
       <div class="hero__scene">
-        <div class="scene">
-          <svg class="scene__art" viewBox="0 0 800 640" role="img" aria-label="A living room with a bouclé sofa, a floor lamp, a travertine side table and a framed print">
-            <rect width="800" height="640" fill="#D8DDCD"/>
-            <rect y="498" width="800" height="142" fill="#C8B596"/>
-            <rect y="494" width="800" height="8" fill="#BBA682"/>
-            <!-- print -->
-            <rect x="296" y="160" width="208" height="150" fill="#F5F4EE" stroke="#7A5236" stroke-width="7"/>
-            <circle cx="366" cy="236" r="38" fill="#C28E2E"/>
-            <rect x="398" y="206" width="72" height="72" fill="#36402F" opacity=".85"/>
-            <!-- rug -->
-            <ellipse cx="400" cy="574" rx="340" ry="44" fill="#B29C79"/>
-            <ellipse cx="400" cy="574" rx="300" ry="34" fill="none" stroke="#EEE6D6" stroke-width="3" stroke-dasharray="2 10"/>
-            <!-- side table + vase -->
-            <use href="#s-sidetable" x="20" y="382" width="160" height="128" style="color:#D9CFBF;--leg:#7A5236"/>
-            <use href="#s-vase" x="60" y="380" width="80" height="64" style="color:#36402F"/>
-            <!-- sofa -->
-            <use href="#s-sofa" x="120" y="250" width="460" height="290" style="color:#E4DDCF;--leg:#5C3E28"/>
-            <rect x="236" y="380" width="76" height="62" rx="15" fill="#C28E2E" transform="rotate(-8 274 411)"/>
-            <!-- floor lamp -->
-            <use href="#s-lamp" x="560" y="200" width="180" height="340" style="color:#EBD9AE;--leg:#2B2F2A"/>
-            <ellipse cx="650" cy="330" rx="70" ry="24" fill="#FFF3CF" opacity=".35"/>
-            <!-- plant -->
-            <use href="#s-plant" x="660" y="370" width="170" height="160" style="color:#EFEDE6"/>
-          </svg>
+        <div class="scene" data-photo-spots>
+          <img class="ph scene__art" src="https://images.pexels.com/photos/20337842/pexels-photo-20337842.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/20337842/pexels-photo-20337842.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w, https://images.pexels.com/photos/20337842/pexels-photo-20337842.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w, https://images.pexels.com/photos/20337842/pexels-photo-20337842.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w" sizes="(max-width: 900px) 100vw, 640px" alt="A living room with a cream bouclé sofa, a travertine coffee table, a cane lounge chair and a chunky wool rug" width="1800" height="1200" fetchpriority="high" decoding="async">
 
-          <button type="button" class="hotspot" style="left:44%;top:66%" aria-expanded="false" aria-controls="hs-sofa" aria-label="Alder 3-seat sofa">
+          <button type="button" class="hotspot" data-x="53" data-y="48" style="left:53%;top:48%" aria-expanded="false" aria-controls="hs-sofa" aria-label="Alder 3-seat sofa">
             <span aria-hidden="true">+</span>
           </button>
-          <button type="button" class="hotspot" style="left:81%;top:40%" aria-expanded="false" aria-controls="hs-lamp" aria-label="Lumen floor lamp">
+          <button type="button" class="hotspot" data-x="48" data-y="73" style="left:48%;top:73%" aria-expanded="false" aria-controls="hs-table" aria-label="Drift coffee table">
             <span aria-hidden="true">+</span>
           </button>
-          <button type="button" class="hotspot" style="left:12.5%;top:72%" aria-expanded="false" aria-controls="hs-table" aria-label="Tove side table">
+          <button type="button" class="hotspot" data-x="84" data-y="60" style="left:84%;top:60%" aria-expanded="false" aria-controls="hs-chair" aria-label="Hale lounge chair">
             <span aria-hidden="true">+</span>
           </button>
-          <button type="button" class="hotspot" style="left:58%;top:36%" aria-expanded="false" aria-controls="hs-print" aria-label="Solstice print">
+          <button type="button" class="hotspot" data-x="22" data-y="90" style="left:22%;top:90%" aria-expanded="false" aria-controls="hs-rug" aria-label="Mira wool rug">
             <span aria-hidden="true">+</span>
           </button>
 
@@ -286,22 +264,22 @@
             <p class="hotspot-card__price">$1,890</p>
             <a href="product.html">View product</a>
           </div>
-          <div class="hotspot-card" id="hs-lamp" hidden>
-            <p class="hotspot-card__name">Lumen floor lamp</p>
-            <p class="hotspot-card__meta">Linen shade, blackened steel</p>
-            <p class="hotspot-card__price">$320</p>
-            <a href="product.html">View product</a>
-          </div>
           <div class="hotspot-card" id="hs-table" hidden>
-            <p class="hotspot-card__name">Tove side table</p>
+            <p class="hotspot-card__name">Drift coffee table</p>
             <p class="hotspot-card__meta">Honed travertine</p>
-            <p class="hotspot-card__price">$280</p>
+            <p class="hotspot-card__price">$690</p>
             <a href="product.html">View product</a>
           </div>
-          <div class="hotspot-card" id="hs-print" hidden>
-            <p class="hotspot-card__name">Solstice print</p>
-            <p class="hotspot-card__meta">Framed in walnut, 50 × 70 cm</p>
-            <p class="hotspot-card__price">$145</p>
+          <div class="hotspot-card" id="hs-chair" hidden>
+            <p class="hotspot-card__name">Hale lounge chair</p>
+            <p class="hotspot-card__meta">Cane and solid ash</p>
+            <p class="hotspot-card__price">$640</p>
+            <a href="product.html">View product</a>
+          </div>
+          <div class="hotspot-card" id="hs-rug" hidden>
+            <p class="hotspot-card__name">Mira wool rug</p>
+            <p class="hotspot-card__meta">Undyed wool, 200 × 300 cm</p>
+            <p class="hotspot-card__price">$540</p>
             <a href="product.html">View product</a>
           </div>
         </div>
@@ -349,27 +327,27 @@
       </div>
       <div class="rooms__grid">
         <a class="room room--lg" href="shop.html?room=living" style="--tint:#DCE0D2">
-          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-sofa" style="color:#6F7A5E;--leg:#5C3E28"/></svg>
+          <img class="ph art" src="https://images.pexels.com/photos/28744513/pexels-photo-28744513.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/28744513/pexels-photo-28744513.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/28744513/pexels-photo-28744513.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/28744513/pexels-photo-28744513.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 900px) 50vw, 33vw" alt="" loading="lazy" decoding="async">
           <span class="room__name">Living room</span>
           <span class="room__count">214 pieces</span>
         </a>
         <a class="room" href="shop.html?room=bedroom" style="--tint:#E6DDD0">
-          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-bed" style="color:#A48A6A;--leg:#5C3E28"/></svg>
+          <img class="ph art" src="https://images.pexels.com/photos/3705536/pexels-photo-3705536.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/3705536/pexels-photo-3705536.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/3705536/pexels-photo-3705536.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/3705536/pexels-photo-3705536.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 900px) 50vw, 33vw" alt="" loading="lazy" decoding="async">
           <span class="room__name">Bedroom</span>
           <span class="room__count">136 pieces</span>
         </a>
         <a class="room" href="shop.html?room=dining" style="--tint:#E2E4E4">
-          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-chair" style="color:#7A5236"/></svg>
+          <img class="ph art" src="https://images.pexels.com/photos/29559675/pexels-photo-29559675.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/29559675/pexels-photo-29559675.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/29559675/pexels-photo-29559675.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/29559675/pexels-photo-29559675.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 900px) 50vw, 33vw" alt="" loading="lazy" decoding="async">
           <span class="room__name">Dining room</span>
           <span class="room__count">98 pieces</span>
         </a>
         <a class="room" href="shop.html?room=office" style="--tint:#E9E3D3">
-          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-desk" style="color:#B08A5E;--leg:#2B2F2A"/></svg>
+          <img class="ph art" src="https://images.pexels.com/photos/12202411/pexels-photo-12202411.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/12202411/pexels-photo-12202411.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/12202411/pexels-photo-12202411.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/12202411/pexels-photo-12202411.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 900px) 50vw, 33vw" alt="" loading="lazy" decoding="async">
           <span class="room__name">Home office</span>
           <span class="room__count">64 pieces</span>
         </a>
         <a class="room" href="shop.html?room=outdoor" style="--tint:#D5DCCB">
-          <svg class="art" viewBox="0 0 200 160" aria-hidden="true"><use href="#s-plant" style="color:#B7775A"/></svg>
+          <img class="ph art" src="https://images.pexels.com/photos/29929810/pexels-photo-29929810.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/29929810/pexels-photo-29929810.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/29929810/pexels-photo-29929810.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/29929810/pexels-photo-29929810.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 900px) 50vw, 33vw" alt="" loading="lazy" decoding="async">
           <span class="room__name">Outdoor</span>
           <span class="room__count">52 pieces</span>
         </a>
@@ -609,12 +587,7 @@
       </div>
       <div class="collections__grid">
         <a class="collection" href="collection.html?c=nordic-calm" style="--tint:#DCE0D2">
-          <svg class="collection__art" viewBox="0 0 600 360" aria-hidden="true">
-            <rect y="280" width="600" height="80" fill="#C9CDBC"/>
-            <use href="#s-mirror" x="210" y="40" width="180" height="150" style="color:#D8C3A0"/>
-            <use href="#s-sofa" x="120" y="150" width="360" height="200" style="color:#EEEBE3;--leg:#B08A5E"/>
-            <use href="#s-plant" x="440" y="170" width="160" height="150" style="color:#F2F0EA"/>
-          </svg>
+          <img class="ph collection__art" src="https://images.pexels.com/photos/15585982/pexels-photo-15585982.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/15585982/pexels-photo-15585982.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w, https://images.pexels.com/photos/15585982/pexels-photo-15585982.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w, https://images.pexels.com/photos/15585982/pexels-photo-15585982.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w" sizes="(max-width: 900px) 100vw, 50vw" alt="A sage bouclé sofa and a linen floor lamp in a pale room" loading="lazy" decoding="async">
           <div class="collection__body">
             <h3>Nordic calm</h3>
             <p>Pale oak, white bouclé and soft sage. Light pieces for small spaces.</p>
@@ -622,12 +595,7 @@
           </div>
         </a>
         <a class="collection" href="collection.html?c=warm-minimal" style="--tint:#E6DCCB">
-          <svg class="collection__art" viewBox="0 0 600 360" aria-hidden="true">
-            <rect y="280" width="600" height="80" fill="#CDBB9E"/>
-            <use href="#s-pendant" x="230" y="0" width="140" height="112" style="color:#7A5236;--leg:#2B2F2A"/>
-            <use href="#s-sideboard" x="110" y="150" width="380" height="200" style="color:#6B4A33;--leg:#3B2A1E"/>
-            <use href="#s-vase" x="140" y="96" width="90" height="80" style="color:#C28E2E"/>
-          </svg>
+          <img class="ph collection__art" src="https://images.pexels.com/photos/5824527/pexels-photo-5824527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/5824527/pexels-photo-5824527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w, https://images.pexels.com/photos/5824527/pexels-photo-5824527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w, https://images.pexels.com/photos/5824527/pexels-photo-5824527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w" sizes="(max-width: 900px) 100vw, 50vw" alt="A walnut sideboard with warm table lamps in a sunlit room" loading="lazy" decoding="async">
           <div class="collection__body">
             <h3>Warm minimal</h3>
             <p>Walnut, cognac leather and brass. Fewer pieces, richer materials.</p>
@@ -675,30 +643,21 @@
       <div class="journal__grid">
         <article class="post">
           <a href="blog-post.html" class="post__media" tabindex="-1" aria-hidden="true" style="--tint:#E4DFD3">
-            <svg viewBox="0 0 400 260" aria-hidden="true">
-              <use href="#s-sofa" x="60" y="70" width="280" height="190" style="color:#8E9A7B;--leg:#5C3E28"/>
-            </svg>
+            <img class="ph" src="https://images.pexels.com/photos/19650953/pexels-photo-19650953.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/19650953/pexels-photo-19650953.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/19650953/pexels-photo-19650953.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/19650953/pexels-photo-19650953.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 900px) 100vw, 33vw" alt="" loading="lazy" decoding="async">
           </a>
           <p class="post__meta"><span>Buying guide</span><span>8 min read</span></p>
           <h3 class="post__title"><a href="blog-post.html">How to choose a sofa that fits your room and your doorway</a></h3>
         </article>
         <article class="post">
           <a href="blog-post.html" class="post__media" tabindex="-1" aria-hidden="true" style="--tint:#DCE0D2">
-            <svg viewBox="0 0 400 260" aria-hidden="true">
-              <use href="#s-lamp" x="40" y="40" width="140" height="220" style="color:#EBD9AE;--leg:#2B2F2A"/>
-              <use href="#s-pendant" x="200" y="0" width="160" height="128" style="color:#C28E2E;--leg:#2B2F2A"/>
-            </svg>
+            <img class="ph" src="https://images.pexels.com/photos/13806238/pexels-photo-13806238.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/13806238/pexels-photo-13806238.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/13806238/pexels-photo-13806238.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/13806238/pexels-photo-13806238.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 900px) 100vw, 33vw" alt="" loading="lazy" decoding="async">
           </a>
           <p class="post__meta"><span>Styling</span><span>5 min read</span></p>
           <h3 class="post__title"><a href="blog-post.html">Layered lighting: three sources every living room needs</a></h3>
         </article>
         <article class="post">
           <a href="blog-post.html" class="post__media" tabindex="-1" aria-hidden="true" style="--tint:#E8E2D6">
-            <svg viewBox="0 0 400 260" aria-hidden="true">
-              <use href="#s-sidetable" x="40" y="90" width="200" height="160" style="color:#D9CFBF"/>
-              <use href="#s-vase" x="90" y="10" width="100" height="100" style="color:#7A5236"/>
-              <use href="#s-chair" x="220" y="80" width="170" height="170" style="color:#6B4A33"/>
-            </svg>
+            <img class="ph" src="https://images.pexels.com/photos/27059629/pexels-photo-27059629.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/27059629/pexels-photo-27059629.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/27059629/pexels-photo-27059629.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/27059629/pexels-photo-27059629.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 900px) 100vw, 33vw" alt="" loading="lazy" decoding="async">
           </a>
           <p class="post__meta"><span>Care</span><span>4 min read</span></p>
           <h3 class="post__title"><a href="blog-post.html">Caring for solid wood and natural stone through the seasons</a></h3>

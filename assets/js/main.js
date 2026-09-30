@@ -56,6 +56,37 @@
     });
   });
 
+  /* ---------- Hotspots on photos ----------
+     Hotspots with data-x / data-y (percent of the photo itself) stay on their object however the
+     photo is cropped by object-fit: cover. Used by the home hero, shop-by-room and the lookbook. */
+  const fitSpots = (box) => {
+    const photo = $('img.ph', box);
+    const bw = box.clientWidth, bh = box.clientHeight;
+    if (!photo || !photo.naturalWidth || !bw) return;
+    const scale = Math.max(bw / photo.naturalWidth, bh / photo.naturalHeight);
+    const w = photo.naturalWidth * scale, h = photo.naturalHeight * scale;
+    const [px, py] = (getComputedStyle(photo).objectPosition || '50% 50%').split(' ').map((v) => parseFloat(v) / 100);
+    const ox = (bw - w) * (Number.isNaN(px) ? 0.5 : px), oy = (bh - h) * (Number.isNaN(py) ? 0.5 : py);
+    $$('[data-x][data-y]', box).forEach((s) => {
+      const x = ox + (Number(s.dataset.x) / 100) * w, y = oy + (Number(s.dataset.y) / 100) * h;
+      s.style.left = `${Math.min(Math.max(x, 18), bw - 18) / bw * 100}%`;
+      s.style.top = `${Math.min(Math.max(y, 18), bh - 18) / bh * 100}%`;
+    });
+  };
+  // a ResizeObserver also catches boxes that start hidden (e.g. room tabs)
+  const spotBoxes = $$('[data-photo-spots]');
+  const spotObserver = 'ResizeObserver' in window ? new ResizeObserver((es) => es.forEach((e) => fitSpots(e.target))) : null;
+  spotBoxes.forEach((box) => {
+    const photo = $('img.ph', box);
+    if (photo && !photo.complete) photo.addEventListener('load', () => fitSpots(box), { once: true });
+    fitSpots(box);
+    spotObserver?.observe(box);
+  });
+  if (spotBoxes.length && !spotObserver) {
+    let t;
+    window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => spotBoxes.forEach(fitSpots), 100); });
+  }
+
   /* ---------- Hero hotspots ---------- */
   const scene = $('.scene');
   const hotspots = scene ? $$('.hotspot', scene) : [];
