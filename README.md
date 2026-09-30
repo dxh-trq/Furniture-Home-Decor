@@ -73,5 +73,8 @@ Planning docs:
 - `gift-cards.html` — gift cards: a builder with a live card preview that flips to show the message side (email or posted, four designs, preset or custom amounts from $25 to $2,000, names, message with a character count, and a send date for email cards), add to cart, a balance checker, other ways to give, and FAQs. Logic in `assets/js/gift-cards.js`.
   Designs are the `gc-design` radio inputs (`data-bg`, `data-ink`, `data-sym`, `data-art`, `data-leg`). Front end only: pass the gift card details to your cart in the submit handler, and replace the demo balance with a lookup from your gift card provider.
 
+- `privacy.html` — privacy policy: a plain-English summary, "Your privacy choices" switches (saved on the device; the browser's Global Privacy Control signal turns advertising and sharing off), the full policy in 12 numbered sections with a contents list that follows the reader, tables of what we collect and who we share it with, a data request form (copy, correct, delete, opt out, with authorized agents), a change log, and a print-friendly layout. Logic in `assets/js/legal.js` (shared by all legal pages: contents and print) and `assets/js/privacy.js`.
+  The policy text is a starting point written for a US furniture retailer, not legal advice: have it reviewed for your business and the laws that apply to you. Front end only: save choices to the customer's account and send requests to your privacy inbox or tool.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
