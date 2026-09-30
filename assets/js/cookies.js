@@ -75,6 +75,7 @@
   const KNOWN = {
     'morrow-privacy-choices': ['Your privacy and cookie choices', 'Saved when you change the settings on this page or the privacy page.'],
     'morrow-delivery-prep': ['Delivery day checklist', 'The boxes you ticked on the delivery page.'],
+    'morrow-display': ['Display preferences', 'Text size, contrast and other settings from the accessibility page.'],
   };
   const list = $('[data-ck-device-list]');
   const clearAll = $('[data-ck-clear-all]');

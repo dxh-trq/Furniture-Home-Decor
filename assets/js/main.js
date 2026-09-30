@@ -3,6 +3,16 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
+  /* ---------- Display preferences (chosen on the accessibility page), on every page ---------- */
+  const DISPLAY_KEY = 'morrow-display';
+  const applyDisplay = (d = {}) => {
+    const root = document.documentElement;
+    root.classList.toggle('pref-text-112', d.size === '112');
+    root.classList.toggle('pref-text-125', d.size === '125');
+    ['contrast', 'links', 'spacing', 'motion'].forEach((k) => root.classList.toggle(`pref-${k}`, !!d[k]));
+  };
+  try { applyDisplay(JSON.parse(localStorage.getItem(DISPLAY_KEY)) || {}); } catch (err) { /* storage unavailable */ }
+
   /* ---------- Mobile nav ---------- */
   const nav = $('#primary-nav');
   const navToggle = $('.nav-toggle');
@@ -185,7 +195,7 @@
   }
 
   // shared helpers for page scripts (shop.js, product.js, cart.js)
-  window.Morrow = { addToCart, setCartCount, toast };
+  window.Morrow = { addToCart, setCartCount, toast, applyDisplay, DISPLAY_KEY };
 
   /* ---------- Newsletter ---------- */
   const form = $('[data-newsletter]');

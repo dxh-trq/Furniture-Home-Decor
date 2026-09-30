@@ -3,6 +3,16 @@
 (() => {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+
+  // display preferences from the accessibility page (checkout doesn't load main.js)
+  try {
+    const d = JSON.parse(localStorage.getItem('morrow-display')) || {};
+    const root = document.documentElement;
+    root.classList.toggle('pref-text-112', d.size === '112');
+    root.classList.toggle('pref-text-125', d.size === '125');
+    ['contrast', 'links', 'spacing', 'motion'].forEach((k) => root.classList.toggle(`pref-${k}`, !!d[k]));
+  } catch (err) { /* storage unavailable */ }
+
   const flow = $('[data-flow]');
   if (!flow) return;
 

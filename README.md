@@ -82,5 +82,8 @@ Planning docs:
 - `cookies.html` — cookie policy: cookie settings by type (essential, functional, analytics, advertising) with counts, Allow all / Essential only / Save, and Global Privacy Control support; the full list of 16 cookies, filterable by type; a live "Stored on this device" list of what the site has saved in this browser, with delete buttons; browser controls, a change log and print styles. Logic in `assets/js/cookies.js` plus the shared `legal.js`.
   Settings use the same saved choices as the privacy page (`morrow-privacy-choices`), so the two pages always agree. Replace the cookie list with your real cookies, and have your tags read these choices before they load.
 
+- `accessibility.html` — accessibility statement: the WCAG 2.2 AA target, display preferences that apply across the whole site (text size, stronger contrast, underlined links, more text spacing, stop animations, with a live preview), how we build for accessibility, keyboard controls, known issues with fix dates, help in showrooms and on delivery, a feedback form (pre-filled with the page you came from), and technical details. Logic in `assets/js/accessibility.js` plus the shared `legal.js`.
+  Preferences are saved as `morrow-display` and applied on every page by `main.js` (and by `checkout.js`, as checkout doesn't load `main.js`), using `pref-*` classes on `<html>`. The statement's claims (testing, audits, showroom access) are placeholders: only publish what's true for your business.
+
 Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
 Replace any `<svg class="art">` with an `<img>` when you add photography.
