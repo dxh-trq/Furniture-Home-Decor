@@ -3960,6 +3960,11 @@ img.ph { display: block; width: 100%; height: 100%; object-fit: cover; backgroun
 .subcat:hover .subcat__art img.ph, .rw-gal:hover img.ph { transform: scale(1.05); }
 .subcat__art img.ph, .rw-gal img.ph { transition: transform .4s ease; }
 .gallery__view img.gallery__art { width: 100%; height: 100%; }
+.gallery__view img.gallery__art--front, .gallery__thumb img.gallery__thumb-front { object-position: 45% 55%; transform: scale(1.45); transform-origin: 45% 58%; }
+#view-leg img.gallery__art { width: 100%; }
+.gallery__view img.gallery__art--leg, .gallery__thumb img.gallery__thumb-leg { transform: scale(2.6); transform-origin: 16% 64%; }
+#view-leg .gallery__note { z-index: 1; width: fit-content; margin-inline: auto; padding: 6px 14px; border-radius: 999px; background: rgba(250, 249, 245, .9); }
+.gallery__thumb { overflow: hidden; }
 .dn-trace__piece > img.ph { width: 100%; height: auto; aspect-ratio: 4 / 3; border-radius: var(--radius-sm); }
 .room img.ph { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform .6s ease; }
 .room:hover img.ph { transform: scale(1.04); }
@@ -3974,6 +3979,12 @@ img.ph { display: block; width: 100%; height: 100%; object-fit: cover; backgroun
 .scene img.scene__art { height: auto; aspect-ratio: 5 / 4; }
 .rm-scene img.rm-scene__art { height: auto; aspect-ratio: 10 / 7; }
 .rm-guide__art { overflow: hidden; }
+.ab-hero__art img.ph { height: auto; aspect-ratio: 520 / 440; }
+.sv-hero__art img.ph { height: auto; aspect-ratio: 520 / 440; }
+.maker__art img.ph { height: auto; aspect-ratio: 5 / 4; }
+.tproject__art img.ph { height: auto; aspect-ratio: 400 / 260; }
+.cr-team__art, .su-mat__art, .wr-part__art { overflow: hidden; }
+.dn-card__art--maker img.ph, .dn-profile__art img.ph { position: absolute; inset: 0; }
 .lb-hero__cover img.lb-hero__art, .lb-scene img.lb-scene__art { height: auto; aspect-ratio: 1 / 1; }
 img.ph.lb-show__art { width: min(100%, 62dvh); height: auto; aspect-ratio: 1 / 1; margin-inline: auto; }
 .lb-past__art { overflow: hidden; }

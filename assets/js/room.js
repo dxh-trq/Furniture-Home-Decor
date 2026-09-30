@@ -1,4 +1,4 @@
-/* Morrow — shop by room: room tabs (linkable, e.g. room.html#bedroom), palettes that recolor the scene,
+/* Morrow — shop by room: room tabs (linkable, e.g. room.html#bedroom), finishes that update the piece list,
    hotspots linked to the piece list, and "add the room" with a live total. */
 (() => {
   const $ = (sel, root = document) => root.querySelector(sel);

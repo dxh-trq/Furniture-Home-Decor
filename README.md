@@ -13,7 +13,7 @@ Planning docs:
   Filters can be preset from the URL, e.g. `shop.html?c=sofas`, `shop.html?sale=1`, `shop.html?new=1`.
 
 - `product.html` — product detail page (Alder sofa). Gallery, options, delivery check, sticky add-to-cart bar and reviews in `assets/js/product.js`.
-  Fabric, size and leg options are radio inputs with `data-*` values (`data-hex`, `data-price`, `data-w`/`data-d`/`data-h`, `data-stock`); the page updates price, title, dimensions, stock and illustration colours from them.
+  Fabric, size and leg options are radio inputs with `data-*` values (`data-hex`, `data-price`, `data-w`/`data-d`/`data-h`, `data-stock`); the page updates price, title, dimensions, stock and the fabric close-up from them.
 
 - `cart.html` — cart page with demo items. Quantities, remove with undo, save for later, delivery choice, promo codes and totals in `assets/js/cart.js`.
   Each line is an `<li class="line">` with `data-price` and `data-stock` (`in` or `order`, which decides its delivery group).
@@ -85,8 +85,8 @@ Planning docs:
 - `accessibility.html` — accessibility statement: the WCAG 2.2 AA target, display preferences that apply across the whole site (text size, stronger contrast, underlined links, more text spacing, stop animations, with a live preview), how we build for accessibility, keyboard controls, known issues with fix dates, help in showrooms and on delivery, a feedback form (pre-filled with the page you came from), and technical details. Logic in `assets/js/accessibility.js` plus the shared `legal.js`.
   Preferences are saved as `morrow-display` and applied on every page by `main.js` (and by `checkout.js`, as checkout doesn't load `main.js`), using `pref-*` classes on `<html>`. The statement's claims (testing, audits, showroom access) are placeholders: only publish what's true for your business.
 
-- `room.html` — shop by room: a room explorer with five tabs (living room, bedroom, dining room, home office, outdoor; linkable as `room.html#bedroom`), an illustrated scene for each room in three palettes that recolour the scene and update fabric names, hotspots linked to a "shop the room" list, tick boxes with a live total and "Add to cart", then a grid of every room, room guides and a stylist call-to-action. Logic in `assets/js/room.js`.
-  Scenes are generated SVG using the sprite symbols; colors come from `--wall`, `--floor`, `--main` and `--accent` on `.rm-scene`, set by each palette button's `data-*` values. Pieces are `<li class="rm-item">` with `data-price` and `data-qty`.
+- `room.html` — shop by room: a room explorer with five tabs (living room, bedroom, dining room, home office, outdoor; linkable as `room.html#bedroom`), a photo of each room with three finishes that update the fabric names in the list, hotspots linked to a "shop the room" list, tick boxes with a live total and "Add to cart", then a grid of every room, room guides and a stylist call-to-action. Logic in `assets/js/room.js`.
+  Hotspots sit on the photo (see Photos below). Pieces are `<li class="rm-item">` with `data-price` and `data-qty`.
 
 - `collection.html` — collection page, one template for every collection: `collection.html` shows Nordic calm and `collection.html?c=warm-minimal` shows Warm minimal (the homepage cards and the Shop menu feature link to each). Hero with the collection's scene and materials, the story with a designer quote and three principles, the pieces with type filters and sorting, "Buy the set" (tick the pieces; 10% off with three or more, with a live total and hints), and all collections with the current one marked. Logic in `assets/js/collection.js`.
   Each collection is an `<article data-collection="…">` in the page; add a collection by adding another article. The set discount is `SET_OFF` and `SET_MIN` in the script; apply the same rule in your cart.
@@ -120,7 +120,7 @@ Planning docs:
   - The 24 reviews, the totals, the topic figures and the reply time are placeholders.
 
 - `lookbook.html`: the Autumn/Winter 2026 lookbook, "The slow season", with six styled rooms from Nordic calm and Warm minimal. Logic in `assets/js/lookbook.js`.
-  - Each look has an illustrated scene with numbered hotspots. Clicking one opens a card with the piece and "Add to cart", and highlights that piece in the list beside it.
+  - Each look has a photo with numbered hotspots. Clicking one opens a card with the piece and "Add to cart", and highlights that piece in the list beside it.
   - Each look also has a caption, a stylist's note, pieces you can add one at a time, "Shop the look" with the total, and "Save".
   - A sticky bar filters looks by collection and highlights the look you're scrolled to.
   - Between looks: two pull quotes, and the season's seven colors (click one to copy its hex code).
@@ -155,5 +155,20 @@ These appear on many pages. If one changes, search the whole site for the old va
 - **Company:** 214 people, 6 partner workshops, 4.8 out of 5 from 12,400 reviews.
 - **Spelling:** American English in all visible text (color, center, gray). Internal names such as `data-colour` and `.colour-opt` are left as they are.
 
-Product images are inline SVG placeholders (see the sprite at the top of `index.html`).
-Replace any `<svg class="art">` with an `<img>` when you add photography.
+## Photos
+
+Photos are free stock photos from [Pexels](https://www.pexels.com/license/) (free for commercial use, no credit needed), linked straight from `images.pexels.com`. Replace them with your own product photography before launch; stock photos show similar pieces, not Morrow's.
+
+- **Markup:** each photo is an `<img class="ph">` with `srcset`/`sizes`, `loading="lazy"` (hero images use `fetchpriority="high"` instead) and `decoding="async"`. `img.ph` fills its box with `object-fit: cover`; the box sets the aspect ratio.
+- **URL format:** `https://images.pexels.com/photos/{id}/pexels-photo-{id}.jpeg?auto=compress&cs=tinysrgb&w={width}`. To self-host, download each ID at 1800px, save it under `assets/img/`, and point `src`/`srcset` at your files.
+- **Product photos in scripts:** `main.js` has a `PHOTOS` map (product name → Pexels ID) used by `Morrow.productImg(name)` for thumbnails built in JavaScript (cart drawer, order tracking, returns). Add your products there.
+- **Hotspots on photos:** a box with `data-photo-spots` (home hero, room scenes, lookbook looks) holds an `img.ph` and hotspots with `data-x`/`data-y`, given as a percentage of the photo. `main.js` places them through the crop, so they stay on the piece at any width. If you change a photo, update its hotspots' `data-x`/`data-y`.
+- **Still illustrated:** dimension drawings, the "What goes into an Alder sofa" diagram, fabric swatches, maps, the gift card, empty states, the 404 scene, the wishlist room board and designer monograms are drawn in SVG or CSS on purpose (see the sprite at the top of `index.html`).
+
+| Used for | Pexels IDs |
+| --- | --- |
+| Products | Alder 3-seat sofa 20337842, Alder corner sofa 19650953, Hale 2-seat sofa 16825059, Hale lounge chair 29508373, Ren lounge chair 20794782, Otto armchair 20337873, Fold/Oslo dining chair 39854852, Fold dining table 39854857, Drift coffee table 27059629, Tove side table 8670505, Arc wall mirror 5644681, Stilla sideboard 12277013, Haven/Linden bed 12277123, Rowe desk 12202411, Lumen floor lamp 34992772, Halo pendant light 38278700, Loma vase 7674547, Mira wool rug 18266462, Terra planter 7912988 |
+| Rooms and looks | living 20337842, 15585982, 28744513; bedroom 3705536; dining 38083081, 29559675; office 12202411; outdoor 29929810; warm minimal 5824527, 5824530, 27383302 |
+| Journal | 19650953, 13806238, 27059629, 6580549, 15016524, 18266462, 5824530, 11507947, 8670505, 29559675, 5644681, 39854857 |
+| Makers, teams and materials | upholstery workshop 15016524, loom 33703935, joinery 7484804, stone 7718461, ceramics 8063872, metal lathe 15603045, stylists 6580568, fabric swatches 6580549, studio 6580014, delivery 7464266, care 9462164 |
+| Trade projects | hotel 30075355, office 7688078, restaurant 18859064 |

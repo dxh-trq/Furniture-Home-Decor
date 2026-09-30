@@ -13,8 +13,8 @@
 <body>
 
 <!-- ============================================================
-     SVG sprite: placeholder product illustrations.
-     Replace any <svg class="art"> with an <img> when you add photos.
+     SVG sprite: illustrations for diagrams, swatches and empty states.
+     Photos are <img class="ph"> elements (see README > Photos).
      fill="currentColor" = main material, var(--leg) = wood/metal parts.
      ============================================================ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -232,18 +232,8 @@
       <h1 class="ab-hero__title">We make furniture to be lived with for a long time.</h1>
       <p class="ab-hero__lede">Morrow started with one sofa and a simple rule: if we wouldn’t keep it for twenty years, we don’t sell it. Everything we make can be repaired, recovered or passed on.</p>
     </div>
-    <div class="ab-hero__art" aria-hidden="true">
-      <svg viewBox="0 0 520 440">
-        <rect width="520" height="440" fill="#D8DDCD"/>
-        <rect y="350" width="520" height="90" fill="#C8B596"/>
-        <rect x="40" y="330" width="440" height="16" rx="4" fill="#7A5236"/>
-        <rect x="60" y="346" width="14" height="80" fill="#6B4A33"/><rect x="446" y="346" width="14" height="80" fill="#6B4A33"/>
-        <use href="#s-sofa" x="110" y="150" width="300" height="220" style="color:#E8E4DA;--leg:#B08A5E"/>
-        <rect x="70" y="60" width="120" height="8" rx="2" fill="#7A5236"/>
-        <rect x="80" y="30" width="12" height="30" rx="2" fill="#B08A5E"/><rect x="98" y="38" width="10" height="22" rx="2" fill="#9C774D"/><rect x="114" y="26" width="14" height="34" rx="2" fill="#6B4A33"/>
-        <circle cx="160" cy="46" r="12" fill="none" stroke="#6B706A" stroke-width="4"/>
-        <use href="#s-pendant" x="330" y="0" width="140" height="112" style="color:#C28E2E;--leg:#2B2F2A"/>
-      </svg>
+    <div class="ab-hero__art">
+      <img class="ph" src="https://images.pexels.com/photos/5824530/pexels-photo-5824530.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/5824530/pexels-photo-5824530.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w, https://images.pexels.com/photos/5824530/pexels-photo-5824530.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w, https://images.pexels.com/photos/5824530/pexels-photo-5824530.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w" sizes="(max-width: 900px) 100vw, 50vw" alt="A walnut sideboard styled with lamps, books and ceramics" fetchpriority="high" decoding="async">
     </div>
   </section>
 
@@ -445,21 +435,21 @@
       </div>
       <ul class="makers">
         <li class="maker">
-          <div class="maker__art" aria-hidden="true"><svg viewBox="0 0 200 160"><use href="#s-sofa" x="20" y="10" width="160" height="140" style="color:#E4E2DA;--leg:#5C3E28"/></svg></div>
+          <div class="maker__art" aria-hidden="true"><img class="ph" src="https://images.pexels.com/photos/15016524/pexels-photo-15016524.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/15016524/pexels-photo-15016524.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/15016524/pexels-photo-15016524.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/15016524/pexels-photo-15016524.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 700px) 100vw, 33vw" alt="" loading="lazy" decoding="async"></div>
           <p class="maker__place">Hickory, North Carolina</p>
           <h3 class="maker__title">Frames and upholstery</h3>
           <p class="maker__text">Our own workshop. Every sofa and armchair is framed, sprung and covered here by a team of 38.</p>
           <p class="maker__since">Since 2021</p>
         </li>
         <li class="maker">
-          <div class="maker__art" aria-hidden="true"><svg viewBox="0 0 200 160"><use href="#s-rug" x="20" y="10" width="160" height="140" style="color:#9AA488;--leg:#5C3E28"/></svg></div>
+          <div class="maker__art" aria-hidden="true"><img class="ph" src="https://images.pexels.com/photos/33703935/pexels-photo-33703935.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/33703935/pexels-photo-33703935.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/33703935/pexels-photo-33703935.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/33703935/pexels-photo-33703935.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 700px) 100vw, 33vw" alt="" loading="lazy" decoding="async"></div>
           <p class="maker__place">Guimarães, Portugal</p>
           <h3 class="maker__title">Bouclé and linen</h3>
           <p class="maker__text">A third-generation mill that weaves our fabrics from recycled fibre and European flax.</p>
           <p class="maker__since">Since 2019</p>
         </li>
         <li class="maker">
-          <div class="maker__art" aria-hidden="true"><svg viewBox="0 0 200 160"><use href="#s-sidetable" x="20" y="10" width="160" height="140" style="color:#D9CFBF;--leg:#5C3E28"/></svg></div>
+          <div class="maker__art" aria-hidden="true"><img class="ph" src="https://images.pexels.com/photos/7718461/pexels-photo-7718461.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/7718461/pexels-photo-7718461.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/7718461/pexels-photo-7718461.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/7718461/pexels-photo-7718461.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 700px) 100vw, 33vw" alt="" loading="lazy" decoding="async"></div>
           <p class="maker__place">Tivoli, Italy</p>
           <h3 class="maker__title">Travertine and marble</h3>
           <p class="maker__text">A family quarry and stone yard cutting offcuts of travertine into our side and coffee tables.</p>
