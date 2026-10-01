@@ -90,25 +90,17 @@
   /* ---------- Site search ---------- */
   const input = $('#nf-q');
   const results = $('[data-nf-results]');
-  const show = (submit) => {
+  const show = () => {
     const q = input.value.trim();
     results.innerHTML = '';
-    if (!q) return [];
-    const found = rank(words(q)).slice(0, 5);
-    if (found.length) found.forEach((p) => results.appendChild(item(p)));
-    else if (submit) {
-      const li = document.createElement('li');
-      li.className = 'nf-results__none';
-      li.innerHTML = 'Nothing matches that. Try one word, like sofa or delivery, or <a href="contact.html">ask us</a>.';
-      results.appendChild(li);
-    }
-    return found;
+    if (q) rank(words(q)).slice(0, 5).forEach((p) => results.appendChild(item(p)));
   };
   let t;
-  input.addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => show(false), 120); });
+  input.addEventListener('input', () => { clearTimeout(t); t = setTimeout(show, 120); });
+  // Enter searches the whole site
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const found = show(true);
-    if (found.length) $('a', results).focus();
+    const q = input.value.trim();
+    if (q) location.href = `search.html?q=${encodeURIComponent(q)}`;
   });
 })();

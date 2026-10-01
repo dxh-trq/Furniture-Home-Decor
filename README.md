@@ -15,6 +15,16 @@ Planning docs:
 - `product.html` — product detail page (Alder sofa). Gallery, options, delivery check, sticky add-to-cart bar and reviews in `assets/js/product.js`.
   Fabric, size and leg options are radio inputs with `data-*` values (`data-hex`, `data-price`, `data-w`/`data-d`/`data-h`, `data-stock`); the page updates price, title, dimensions, stock and the fabric close-up from them.
 
+- `search.html` — search results (`search.html?q=sofa`). Logic in `assets/js/search.js`; the index and ranking are in `assets/js/search-index.js`.
+  - **Results:** tabs for All, Products, Ideas & guides and Help, with counts (empty tabs are hidden). "Jump to" links for matching categories, rooms and collections. Matched words are highlighted.
+  - **Products tab:** filters (category, price, material, color, availability) with live counts, sort, active-filter chips, "Show more", and a filter drawer on small screens.
+  - **Help tab:** FAQ answers that open in place (with a link to the help center), plus service pages.
+  - **Understands:** plurals, synonyms (couch → sofa, nightstand → side table, carpet → rug), price limits ("rug under 600"), and typos ("sfoa" searches for "sofa", with a note). If nothing matches every word, it shows what matches some of them.
+  - **Empty and no-results states:** recent searches (saved in this browser), popular searches, category and room tiles, a stylist call-to-action, and popular products.
+  - Everything is in the URL (`q`, `tab`, `cat`, `price`, `mat`, `col`, `avail`, `sort`), so results can be shared and Back works.
+  - **Header search, on every page:** the search icon (or the `/` key) opens a panel. Before typing it shows recent and popular searches and popular products; as you type it suggests products, categories and rooms, help answers and guides. Arrow keys move through suggestions, Enter opens one (or the full results), Esc clears and then closes. The index loads the first time the panel opens. The 404 page's search also goes to the results page.
+  - The catalogue in `search-index.js` mirrors the product cards in the HTML. In production, return the same shape from your search service (Algolia, Typesense, Shopify search…) and keep the rendering. Ratings for products not on the shop page are placeholders.
+
 - `cart.html` — cart page with demo items. Quantities, remove with undo, save for later, delivery choice, promo codes and totals in `assets/js/cart.js`.
   Each line is an `<li class="line">` with `data-price` and `data-stock` (`in` or `order`, which decides its delivery group).
   Delivery rules and promo codes are constants at the top of `cart.js` (demo code: `WELCOME10`, 10% off). Validate codes on your server in production.

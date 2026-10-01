@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Track your order — Morrow</title>
-  <meta name="description" content="Track your Morrow order: see where each delivery is, follow the van on the day, change your delivery date and add notes for the team.">
+  <title>Search — Morrow</title>
+  <meta name="description" content="Search Morrow furniture, room ideas, care guides and help: sofas, tables, lighting, delivery, returns and more.">
+  <meta name="robots" content="noindex, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
@@ -223,124 +224,46 @@
   </div>
 </header>
 
-<main id="main" class="track-page">
-  <section class="container tk-hero" data-tk-lookup>
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol><li><a href="index.html">Home</a></li><li><a href="faq.html">Help</a></li><li><span aria-current="page">Track your order</span></li></ol>
-    </nav>
-    <div class="tk-hero__grid">
-      <div>
-        <h1 class="tk-hero__title">Where’s my order?</h1>
-        <p class="tk-hero__lede">Enter your order number to see where each delivery is, change your day, or follow the van when it’s on its way.</p>
-        <p class="tk-hero__account">Have an account? <a class="link" href="account.html#orders">See all your orders</a></p>
-      </div>
-      <div class="tk-card">
-        <form class="tk-form" data-tk-form novalidate>
-          <div class="field">
-            <label for="tk-order">Order number</label>
-            <input id="tk-order" placeholder="MR-48213" autocapitalize="characters" autocomplete="off" spellcheck="false" aria-describedby="tk-order-hint tk-order-err">
-            <p class="tk-form__hint" id="tk-order-hint">In your confirmation email, starting with MR-</p>
-            <p class="field__error" id="tk-order-err" hidden></p>
-          </div>
-          <div class="field">
-            <label for="tk-key">Email or delivery ZIP code</label>
-            <input id="tk-key" autocomplete="email" aria-describedby="tk-key-err">
-            <p class="field__error" id="tk-key-err" hidden></p>
-          </div>
-          <div class="tk-alert" data-tk-alert role="alert" tabindex="-1" hidden>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg>
-            <p data-tk-alert-text></p>
-          </div>
-          <button class="btn btn--primary" type="submit">Track order</button>
-        </form>
-        <div class="tk-demo">
-          <p>Try a demo order</p>
-          <div class="tk-demo__row">
-            <button class="slot-btn" type="button" data-tk-demo="MR-48213">Two deliveries</button>
-            <button class="slot-btn" type="button" data-tk-demo="MR-51077">Out for delivery</button>
-            <button class="slot-btn" type="button" data-tk-demo="MR-45502">Delivered</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<main id="main" class="search-page">
 
-  <section class="container tk-result" data-tk-result hidden>
+  <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol><li><a href="index.html">Home</a></li><li><a href="track.html">Track your order</a></li><li><span aria-current="page">Your order</span></li></ol>
-    </nav>
-    <div class="tk-result__head">
-      <div>
-        <p class="tk-result__greet" data-tk-greet></p>
-        <h1 class="tk-result__title" data-tk-title tabindex="-1">Order</h1>
-        <p class="tk-result__placed" data-tk-placed></p>
-      </div>
-      <div class="tk-result__actions">
-        <button class="btn btn--ghost btn--small-ghost" type="button" data-tk-share><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/></svg>Share tracking</button>
-        <button class="btn btn--ghost btn--small-ghost" type="button" data-tk-print><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 18H4v-7h16v7h-3"/><path d="M7 14h10v7H7z"/></svg>Print</button>
-        <button class="btn btn--ghost btn--small-ghost" type="button" data-tk-again>Track another order</button>
-      </div>
-    </div>
-    <div class="tk-result__grid">
-      <div class="tk-ships" data-tk-ships></div>
-      <aside class="tk-side">
-        <div class="tk-side__card">
-          <h2>Delivering to</h2>
-          <p data-tk-address></p>
-          <p class="tk-side__muted">Updates by text to <span data-tk-phone></span></p>
-          <a class="link" href="contact.html">Change the address</a>
-        </div>
-        <div class="tk-side__card" data-tk-alerts>
-          <h2>Get updates</h2>
-          <div class="tk-switch"><span id="tk-sms">Text messages</span><button class="switch" type="button" role="switch" aria-checked="true" data-default="true" aria-labelledby="tk-sms"><span class="switch__knob"></span></button></div>
-          <div class="tk-switch"><span id="tk-mail">Email updates</span><button class="switch" type="button" role="switch" aria-checked="true" data-default="true" aria-labelledby="tk-mail"><span class="switch__knob"></span></button></div>
-          <div class="tk-switch"><span id="tk-day">Morning-of reminder</span><button class="switch" type="button" role="switch" aria-checked="false" data-default="false" aria-labelledby="tk-day"><span class="switch__knob"></span></button></div>
-        </div>
-        <div class="tk-side__card tk-side__help">
-          <h2>Need a hand?</h2>
-          <p>Our team is here Monday to Saturday, 9am–6pm ET.</p>
-          <a class="btn btn--small" href="contact.html">Contact us</a>
-          <a class="link" href="tel:+18005550142">1-800-555-0142</a>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section tk-help">
-    <div class="container">
-      <div class="section__head">
-        <div>
-          <h2 class="section__title">What each status means</h2>
-          <p class="tk-sub">Every delivery moves through the same five steps. Pieces in stock skip straight from ordered to packed.</p>
-        </div>
-        <a class="link" href="shipping.html">How delivery works</a>
-      </div>
-      <ol class="tk-statuses">
-        <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></span><h3>Ordered</h3><p>We’ve got your order and emailed a confirmation. Most orders can still be changed for an hour.</p></li>
-        <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l4 4-9 9H5v-4l9-9Z"/><path d="M12 8l4 4"/></svg></span><h3>Being made</h3><p>Made-to-order pieces are built for you in our workshops. This usually takes 6 to 8 weeks.</p></li>
-        <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3V10Z"/><path d="M9 20v-6h6v6"/></svg></span><h3>At our hub</h3><p>Your delivery is at the hub nearest you, checked for damage and ready for the day you booked.</p></li>
-        <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span><h3>Out for delivery</h3><p>The team is on the road. You’ll get a 30-minute window by text and can follow the van here.</p></li>
-        <li class="tk-status"><span class="tk-status__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span><h3>Delivered</h3><p>Carried to your room, unwrapped and placed. Returns are free for 30 days from today.</p></li>
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><span aria-current="page">Search</span></li>
       </ol>
-    </div>
-  </section>
+    </nav>
 
-  <section class="section">
-    <div class="container tk-faq">
-      <div>
-        <h2 class="section__title">Delivery questions</h2>
-        <p class="tk-sub">Can’t see your answer? Our <a class="link" href="faq.html">help center</a> has more.</p>
+    <form class="sr-form" role="search" action="search.html" data-sr-form>
+      <label class="sr-form__label" for="sr-q">Search furniture, ideas and help</label>
+      <div class="sr-field">
+        <svg class="sr-field__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="sr-q" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Try “oak table” or “delivery”">
+        <button class="sr-field__clear" type="button" data-sr-clear aria-label="Clear search" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        <button class="btn btn--primary sr-field__go" type="submit">Search</button>
       </div>
-      <div class="tk-faq__list">
-          <details class="qa"><summary>Where do I find my order number?</summary><p>It starts with MR- and is at the top of your confirmation email and on your receipt. If you have an account, it’s also under <a class="link" href="account.html#orders">Orders</a>.</p></details>
-          <details class="qa"><summary>Why is my order in more than one delivery?</summary><p>Pieces that are in stock ship straight away. Made-to-order pieces follow when they’re ready, so you’re not kept waiting for everything. Every delivery is free once your order is over $500.</p></details>
-          <details class="qa"><summary>Can I change my delivery day?</summary><p>Yes, for free, up to 48 hours before. Look up your order above and choose “Change date”. After that, call us and we’ll do what we can.</p></details>
-          <details class="qa"><summary>Does someone need to be home?</summary><p>Yes, someone over 18 needs to be there to let the team in and check the pieces. They don’t need to be the person who ordered.</p></details>
-          <details class="qa"><summary>My order hasn’t moved in a while</summary><p>Made-to-order pieces can sit at “Being made” for a few weeks while they’re built. If your estimated week has passed, <a class="link" href="contact.html">contact us</a> and we’ll find out where it is.</p></details>
-          <details class="qa"><summary>Something arrived damaged</summary><p>Don’t worry, and don’t throw the packaging away yet. Take a photo and <a class="link" href="contact.html">tell us</a> within 7 days of delivery; we’ll send a replacement part or piece at no cost.</p></details>
-      </div>
+    </form>
+
+    <div class="sr-head">
+      <h1 class="sr-title" data-sr-title>What are you looking for?</h1>
+      <p class="sr-count" data-sr-count aria-live="polite"></p>
     </div>
-  </section>
+    <p class="sr-note" data-sr-note hidden></p>
+
+    <nav class="sr-jump" aria-label="Jump to" data-sr-jump hidden></nav>
+
+    <div class="sr-tabs" role="tablist" aria-label="Result types" data-sr-tabs hidden>
+      <button type="button" class="sr-tab" role="tab" id="sr-tab-all" aria-controls="sr-panel" aria-selected="true" data-tab="all">All <span data-n="all"></span></button>
+      <button type="button" class="sr-tab" role="tab" id="sr-tab-products" aria-controls="sr-panel" aria-selected="false" tabindex="-1" data-tab="products">Products <span data-n="products"></span></button>
+      <button type="button" class="sr-tab" role="tab" id="sr-tab-ideas" aria-controls="sr-panel" aria-selected="false" tabindex="-1" data-tab="ideas">Ideas &amp; guides <span data-n="ideas"></span></button>
+      <button type="button" class="sr-tab" role="tab" id="sr-tab-help" aria-controls="sr-panel" aria-selected="false" tabindex="-1" data-tab="help">Help <span data-n="help"></span></button>
+    </div>
+  </div>
+
+  <div class="container sr-panel" id="sr-panel" data-sr-panel>
+    <noscript><p class="sr-noscript">Search needs JavaScript. Browse <a class="link" href="shop.html">all furniture</a> or the <a class="link" href="faq.html">help center</a> instead.</p></noscript>
+  </div>
+
 </main>
 
 <!-- Footer -->
@@ -371,7 +294,7 @@
         <li><a href="shipping.html">Delivery</a></li>
         <li><a href="returns.html">Returns</a></li>
         <li><a href="warranty.html">Warranty</a></li>
-        <li><a href="track.html" aria-current="page">Track your order</a></li>
+        <li><a href="track.html">Track your order</a></li>
         <li><a href="contact.html">Contact us</a></li>
       </ul>
     </div>
@@ -409,6 +332,7 @@
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/consent.js"></script>
-<script src="assets/js/track.js"></script>
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/search.js"></script>
 </body>
 </html>
