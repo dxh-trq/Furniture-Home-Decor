@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Returns — Morrow</title>
-  <meta name="description" content="30 days to decide. Free collection, no packaging needed, and your refund within 5 working days.">
+  <title>New in — Morrow</title>
+  <meta name="description" content="New furniture, lighting and decor from Morrow, added most weeks, plus pieces coming soon from our workshops.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
@@ -223,160 +223,111 @@
   </div>
 </header>
 
-<main id="main" class="returns-page">
-  <section class="container rt-hero">
-    <div>
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol><li><a href="index.html">Home</a></li><li><a href="faq.html">Help</a></li><li><span aria-current="page">Returns</span></li></ol>
-      </nav>
-      <h1 class="rt-hero__title">30 days to decide</h1>
-      <p class="rt-hero__lede">Live with it first. If it isn’t right, we’ll collect it for free and refund you. No restocking fees, no packaging hunt.</p>
-      <a class="btn btn--primary" href="#start">Start a return</a>
+<main id="main" class="new-page">
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><span aria-current="page">New in</span></li>
+      </ol>
+    </nav>
+    <header class="nw-head">
+      <p class="nw-head__eyebrow">New in · Autumn 2026</p>
+      <h1 class="nw-head__title">Just landed</h1>
+      <p class="nw-head__lede">New pieces from our workshops, added most weeks. Everything here ships with the same free delivery over $500 and 30 days to decide.</p>
+    </header>
+  </div>
+
+  <section class="container nw-feature" aria-labelledby="nw-feature-title">
+    <div class="nw-feature__art"><img class="ph" src="https://images.pexels.com/photos/29508373/pexels-photo-29508373.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/29508373/pexels-photo-29508373.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w, https://images.pexels.com/photos/29508373/pexels-photo-29508373.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w, https://images.pexels.com/photos/29508373/pexels-photo-29508373.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="The Hale lounge chair in oat bouclé with a blackened oak frame" fetchpriority="high" decoding="async"></div>
+    <div class="nw-feature__text">
+      <p class="nw-feature__eyebrow">New this month</p>
+      <h2 class="nw-feature__title" id="nw-feature-title">The Hale lounge chair</h2>
+      <p>Oat bouclé on a blackened oak frame, light enough to carry with one hand. We made it for corners that need a second seat but not a second armchair.</p>
+      <ul class="nw-feature__facts">
+        <li><strong>70 × 78 cm</strong> footprint</li>
+        <li><strong>14 kg</strong> to move</li>
+        <li><strong>10 years</strong> on the frame</li>
+      </ul>
+      <div class="nw-feature__foot">
+        <p class="price">$640</p>
+        <a class="btn btn--primary" href="product.html">See the Hale</a>
+      </div>
     </div>
-    <ul class="rt-facts">
-      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 18V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1"/><path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-1"/><path d="M9 18h6"/><circle cx="7" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg><strong>Free collection</strong><span>From the room it’s in, anywhere we deliver</span></li>
-      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg><strong>No packaging needed</strong><span>Our team wraps it on the day</span></li>
-      <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v12"/></svg><strong>Refund in 5 working days</strong><span>Or take store credit with 10% extra</span></li>
+  </section>
+
+  <section class="container nw-list" aria-labelledby="nw-list-title">
+    <div class="nw-list__head">
+      <h2 class="section__title" id="nw-list-title">New arrivals</h2>
+      <div class="chip-tabs" role="group" aria-label="Show" data-nw-filter>
+        <button type="button" class="chip-tab" aria-pressed="true" data-kind="all">All</button>
+        <button type="button" class="chip-tab" aria-pressed="false" data-kind="furniture">Furniture</button>
+        <button type="button" class="chip-tab" aria-pressed="false" data-kind="lighting">Lighting</button>
+        <button type="button" class="chip-tab" aria-pressed="false" data-kind="decor">Rugs &amp; decor</button>
+      </div>
+    </div>
+    <div data-nw-months aria-live="polite"></div>
+  </section>
+
+  <section class="container nw-soon" aria-labelledby="nw-soon-title">
+    <div class="nw-soon__head">
+      <h2 class="section__title" id="nw-soon-title">Coming soon</h2>
+      <p>On the workshop bench now. Leave your email and we’ll tell you the day each one lands.</p>
+    </div>
+    <ul class="nw-soon__grid">
+        <li class="nw-soon__item">
+          <div class="nw-soon__art"><img class="ph" src="https://images.pexels.com/photos/5824530/pexels-photo-5824530.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/5824530/pexels-photo-5824530.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/5824530/pexels-photo-5824530.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/5824530/pexels-photo-5824530.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 700px) 100vw, 33vw" alt="" loading="lazy" decoding="async"><span class="badge">Arriving November</span></div>
+          <h3 class="nw-soon__name">Stilla tall cabinet</h3>
+          <p class="nw-soon__meta">Walnut veneer, 90 × 190 cm</p>
+          <p class="nw-soon__text">A taller Stilla for books, records and the things that don’t fit anywhere else.</p>
+          <form class="nw-notify" data-nw-notify novalidate>
+            <label class="visually-hidden" for="nw-n0">Email for Stilla tall cabinet</label>
+            <input id="nw-n0" type="email" placeholder="Your email address" autocomplete="email" required>
+            <button class="btn btn--ghost btn--small" type="submit">Notify me</button>
+            <p class="nw-notify__msg" role="status" aria-live="polite"></p>
+          </form>
+        </li>
+        <li class="nw-soon__item">
+          <div class="nw-soon__art"><img class="ph" src="https://images.pexels.com/photos/13806238/pexels-photo-13806238.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/13806238/pexels-photo-13806238.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/13806238/pexels-photo-13806238.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/13806238/pexels-photo-13806238.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 700px) 100vw, 33vw" alt="" loading="lazy" decoding="async"><span class="badge">Arriving November</span></div>
+          <h3 class="nw-soon__name">Lumen table lamp</h3>
+          <p class="nw-soon__meta">Linen shade, blackened steel</p>
+          <p class="nw-soon__text">The floor lamp’s little sibling, for bedside tables and deep windowsills.</p>
+          <form class="nw-notify" data-nw-notify novalidate>
+            <label class="visually-hidden" for="nw-n1">Email for Lumen table lamp</label>
+            <input id="nw-n1" type="email" placeholder="Your email address" autocomplete="email" required>
+            <button class="btn btn--ghost btn--small" type="submit">Notify me</button>
+            <p class="nw-notify__msg" role="status" aria-live="polite"></p>
+          </form>
+        </li>
+        <li class="nw-soon__item">
+          <div class="nw-soon__art"><img class="ph" src="https://images.pexels.com/photos/11507947/pexels-photo-11507947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/11507947/pexels-photo-11507947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/11507947/pexels-photo-11507947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/11507947/pexels-photo-11507947.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 700px) 100vw, 33vw" alt="" loading="lazy" decoding="async"><span class="badge">Arriving December</span></div>
+          <h3 class="nw-soon__name">Fold bench</h3>
+          <p class="nw-soon__meta">Solid oak, 160 cm</p>
+          <p class="nw-soon__text">Seats three at the Fold dining table, or sits at the end of a bed.</p>
+          <form class="nw-notify" data-nw-notify novalidate>
+            <label class="visually-hidden" for="nw-n2">Email for Fold bench</label>
+            <input id="nw-n2" type="email" placeholder="Your email address" autocomplete="email" required>
+            <button class="btn btn--ghost btn--small" type="submit">Notify me</button>
+            <p class="nw-notify__msg" role="status" aria-live="polite"></p>
+          </form>
+        </li>
     </ul>
   </section>
 
-  <section class="section">
-    <div class="container how">
-      <h2 class="section__title">How returns work</h2>
-      <ol class="how__steps">
-        <li class="how__step"><span class="how__num" aria-hidden="true">1</span><h3>Start online</h3><p>Enter your order number below. It takes about two minutes.</p></li>
-        <li class="how__step"><span class="how__num" aria-hidden="true">2</span><h3>Pick a day</h3><p>Choose a collection day, or print a free label for small items.</p></li>
-        <li class="how__step"><span class="how__num" aria-hidden="true">3</span><h3>We collect it</h3><p>Our team wraps and carries it out. You don’t need the original box.</p></li>
-        <li class="how__step"><span class="how__num" aria-hidden="true">4</span><h3>Get your refund</h3><p>Within 5 working days of collection, to your card or as store credit.</p></li>
-      </ol>
-    </div>
+  <section class="container">
+    <a class="nw-coll" href="collection.html?c=warm-minimal">
+      <span class="nw-coll__art"><img class="ph" src="https://images.pexels.com/photos/5824527/pexels-photo-5824527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/5824527/pexels-photo-5824527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w, https://images.pexels.com/photos/5824527/pexels-photo-5824527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w, https://images.pexels.com/photos/5824527/pexels-photo-5824527.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w" sizes="(max-width: 900px) 100vw, 50vw" alt="" loading="lazy" decoding="async"></span>
+      <span class="nw-coll__text">
+        <span class="nw-coll__eyebrow">New collection</span>
+        <span class="nw-coll__title">Warm minimal</span>
+        <span class="nw-coll__lede">Walnut, cognac leather and brass. Fewer pieces, richer materials, and a room that glows at night.</span>
+        <span class="link">Explore the collection</span>
+      </span>
+    </a>
   </section>
+</main>
 
-  <section class="section rt-start-sec" id="start" aria-labelledby="start-title">
-    <div class="container">
-      <div class="rt-tool">
-        <div class="rt-tool__head">
-          <h2 id="start-title" class="book__title">Start a return</h2>
-          <ol class="book__steps" data-rt-steps>
-            <li aria-current="step"><span>1</span>Find your order</li>
-            <li><span>2</span>Choose items</li>
-            <li><span>3</span>Return method</li>
-          </ol>
-        </div>
-
-        <!-- 1: find order -->
-        <form class="rt-panel" data-rt-panel="1" novalidate>
-          <p class="rt-panel__lede">Your order number is in your confirmation email and in <a class="link" href="account.html#orders">your account</a>.</p>
-          <div class="field-grid rt-find">
-            <div class="field">
-              <label for="rt-order">Order number</label>
-              <input id="rt-order" placeholder="e.g. MR-45502" autocapitalize="characters" aria-describedby="rt-order-err">
-              <p class="field__error" id="rt-order-err" hidden></p>
-            </div>
-            <div class="field">
-              <label for="rt-email">Email used for the order</label>
-              <input id="rt-email" type="email" autocomplete="email" aria-describedby="rt-email-err">
-              <p class="field__error" id="rt-email-err" hidden></p>
-            </div>
-          </div>
-          <div class="book__nav"><button class="btn btn--primary" type="submit">Find my order</button></div>
-        </form>
-
-        <!-- 2: items -->
-        <form class="rt-panel" data-rt-panel="2" novalidate hidden>
-          <p class="rt-panel__lede">Order <strong data-rt-order></strong>, delivered <span data-rt-delivered></span>. <span class="rt-window" data-rt-window></span></p>
-          <ul class="rt-items" data-rt-items></ul>
-          <p class="field__error" id="rt-items-err" hidden></p>
-          <fieldset class="rt-refund">
-            <legend>How would you like your refund?</legend>
-            <label class="svc-opt"><input type="radio" name="refund" value="card" checked><span class="svc-opt__box"><span class="svc-opt__row"><strong>Original payment method</strong><span data-rt-card>$0</span></span><span class="svc-opt__desc">Within 5 working days of collection</span></span></label>
-            <label class="svc-opt"><input type="radio" name="refund" value="credit"><span class="svc-opt__box"><span class="svc-opt__row"><strong>Store credit, plus 10%</strong><span data-rt-credit>$0</span></span><span class="svc-opt__desc">Straight away, never expires</span></span></label>
-          </fieldset>
-          <div class="book__nav">
-            <button class="btn btn--ghost" type="button" data-rt-back>Back</button>
-            <button class="btn btn--primary" type="submit">Continue</button>
-          </div>
-        </form>
-
-        <!-- 3: method -->
-        <form class="rt-panel" data-rt-panel="3" novalidate hidden>
-          <div data-rt-collect>
-            <p class="rt-panel__lede"><strong>Home collection.</strong> Two people will collect <span data-rt-furniture></span> from the room it’s in. Choose a day:</p>
-            <div class="days" data-rt-days role="radiogroup" aria-label="Collection day"></div>
-            <p class="field__error" id="rt-day-err" hidden></p>
-          </div>
-          <fieldset class="rt-drop" data-rt-drop>
-            <legend>How will you send back <span data-rt-small></span>?</legend>
-            <label class="svc-opt"><input type="radio" name="drop" value="label" checked><span class="svc-opt__box"><span class="svc-opt__row"><strong>Free prepaid label</strong><span>Free</span></span><span class="svc-opt__desc">We’ll email a UPS label. Drop off at any UPS location.</span></span></label>
-            <label class="svc-opt"><input type="radio" name="drop" value="showroom"><span class="svc-opt__box"><span class="svc-opt__row"><strong>Showroom drop-off</strong><span>Free</span></span><span class="svc-opt__desc">Portland, Brooklyn, Chicago, Austin or Denver</span></span></label>
-          </fieldset>
-          <div class="book__nav">
-            <button class="btn btn--ghost" type="button" data-rt-back>Back</button>
-            <button class="btn btn--primary" type="submit">Confirm return</button>
-          </div>
-        </form>
-
-        <!-- done -->
-        <div class="rt-done" data-rt-done hidden tabindex="-1">
-          <div class="confirm__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg></div>
-          <h3>Return <span data-rt-ref></span> is booked</h3>
-          <ul class="rt-done__list" data-rt-done-list></ul>
-          <p data-rt-done-text></p>
-          <button class="btn btn--ghost" type="button" data-rt-again>Start another return</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section__title tsec-title">What can be returned</h2>
-      <div class="ttable-wrap">
-        <table class="ttable rt-table">
-          <caption class="visually-hidden">Return windows and methods by type of item</caption>
-          <thead><tr><th scope="col">Item</th><th scope="col">Return window</th><th scope="col">How</th></tr></thead>
-          <tbody>
-          <tr><th scope="row">Furniture</th><td class="is-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>30 days</td><td>Free home collection</td></tr>
-          <tr><th scope="row">Lighting, mirrors and decor</th><td class="is-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>30 days</td><td>Free label or showroom drop-off</td></tr>
-          <tr><th scope="row">Rugs</th><td class="is-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>30 days</td><td>Free label, rolled not folded</td></tr>
-          <tr><th scope="row">Made-to-order colors</th><td class="is-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>30 days</td><td>Free home collection</td></tr>
-          <tr><th scope="row">Custom sizes and client’s own material (COM)</th><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>Not returnable</td><td>Made specially for you</td></tr>
-          <tr><th scope="row">Final sale items</th><td class="is-no"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>Not returnable</td><td>Marked clearly on the product page</td></tr>
-          <tr><th scope="row">Fabric swatches</th><td class="is-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>Keep them</td><td>No need to send them back</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container rt-more">
-      <article class="rt-card">
-        <h2>Exchanges</h2>
-        <p>Want a different color or size? Choose exchange when you start a return. We deliver the new piece and collect the old one on the same visit, so you’re never without a sofa.</p>
-      </article>
-      <article class="rt-card">
-        <h2>Damaged or faulty</h2>
-        <p>Send photos within 7 days of delivery and we’ll send a replacement part, a technician or a new piece, free. This doesn’t use up your 30 days. <a class="link" href="contact.html">Report damage</a></p>
-      </article>
-      <article class="rt-card">
-        <h2>When the money arrives</h2>
-        <p>We refund within 5 working days of collection. Card refunds can take a further 3–5 days to show, depending on your bank. Store credit is instant.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container sv-faq">
-      <h2 class="section__title">Return questions</h2>
-      <div>
-        <details class="qa"><summary>Do I need the original packaging?</summary><p>No. Our collection team brings blankets and wrap. For small items sent by label, any sturdy box works.</p></details>
-        <details class="qa"><summary>Is delivery refunded?</summary><p>Yes. If you return everything in an order, we refund the delivery charge too, including white glove.</p></details>
-        <details class="qa"><summary>Can I return something I’ve used?</summary><p>Yes. Living with it is the point of the 30 days. We only ask that it’s not damaged beyond normal use.</p></details>
-        <details class="qa"><summary>I missed the 30 days. Can I still return it?</summary><p>Talk to us. We can’t always take it back, but we can often help with a fabric change, a swap of legs, or our refurbishment program. <a class="link" href="contact.html">Contact us</a></p></details>
-      </div>
-    </div>
-  </section>
 </main>
 
 <!-- Footer -->
@@ -405,7 +356,7 @@
       <ul>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="shipping.html">Delivery</a></li>
-        <li><a href="returns.html" aria-current="page">Returns</a></li>
+        <li><a href="returns.html">Returns</a></li>
         <li><a href="warranty.html">Warranty</a></li>
         <li><a href="track.html">Track your order</a></li>
         <li><a href="contact.html">Contact us</a></li>
@@ -446,6 +397,9 @@
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/consent.js"></script>
-<script src="assets/js/returns.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/consent.js"></script>
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/new.js"></script>
 </body>
 </html>

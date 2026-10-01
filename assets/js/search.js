@@ -10,7 +10,7 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
-  const { esc, money, photo, highlight } = S;
+  const { esc, highlight } = S;
   const input = $('#sr-q');
   const clearBtn = $('[data-sr-clear]');
   const titleEl = $('[data-sr-title]');
@@ -63,35 +63,11 @@
   const save = (push) => history[push ? 'pushState' : 'replaceState'](null, '', url());
 
   /* ---------- Markup helpers ---------- */
-  const img = (id, sizes, w = [400, 800], alt = '') => (id
-    ? `<img class="ph" src="${photo(id, w[0])}" srcset="${w.map((x) => `${photo(id, x)} ${x}w`).join(', ')}" sizes="${sizes}" alt="${esc(alt)}" loading="lazy" decoding="async">`
-    : '');
-  const heart = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>';
+  const { img } = S;
   const arrow = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   const x = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
 
-  const card = (p, q) => {
-    const sale = p.was ? `Save ${Math.round((1 - p.price / p.was) * 100)}%` : '';
-    const badge = sale ? `<span class="badge badge--sale">${sale}</span>` : p.badge ? `<span class="badge">${esc(p.badge)}</span>` : '';
-    const price = p.was ? `<span class="price__now">${money(p.price)}</span> <s>${money(p.was)}</s>` : money(p.price);
-    const stock = p.stock === 'in' ? '<span class="dot dot--in"></span>In stock, ships in 1–2 weeks' : '<span class="dot dot--order"></span>Made to order, 6–8 weeks';
-    const sw = p.swatches.map(([n, c], i) => `<button type="button" role="radio" aria-checked="${i === 0}" aria-label="${esc(n)}" style="--c:${c}"></button>`).join('');
-    return `<li class="card" data-name="${esc(p.name)}">
-      <a class="card__media" href="product.html" tabindex="-1" aria-hidden="true">${badge}${img(p.photo, '(max-width: 560px) 50vw, (max-width: 1100px) 33vw, 320px', [400, 800, 1200])}</a>
-      <button type="button" class="wish" aria-pressed="false" aria-label="Save ${esc(p.name)} to wishlist" data-sr-wish>${heart}</button>
-      <div class="card__body">
-        <h3 class="card__name"><a href="product.html">${highlight(p.name, q)}</a></h3>
-        <p class="card__meta">${highlight(p.meta, q)}</p>
-        <p class="card__rating"><span class="stars" aria-hidden="true">★</span> ${p.rating} <span>(${p.reviews})</span><span class="visually-hidden"> Rated ${p.rating} out of 5 from ${p.reviews} reviews</span></p>
-        <div class="swatches" role="radiogroup" aria-label="Color">${sw}</div>
-        <div class="card__foot">
-          <p class="price">${price}</p>
-          <button type="button" class="btn btn--small" data-sr-add>Add to cart</button>
-        </div>
-        <p class="card__stock">${stock}</p>
-      </div>
-    </li>`;
-  };
+  const { card } = S;
 
   const article = (a, q) => `<li class="jcard">
       <a class="jcard__media" href="${a.href}" tabindex="-1" aria-hidden="true">${img(a.photo, '(max-width: 700px) 100vw, 33vw', [400, 800]).replace('class="ph"', 'class="ph post-art"')}</a>
@@ -499,30 +475,8 @@
     }
     const pop = t.closest('[data-sr-q]');
     if (pop) { e.preventDefault(); run(pop.dataset.srQ); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
-
-    // product cards
-    const add = t.closest('[data-sr-add]');
-    if (add) {
-      const c = add.closest('.card');
-      const colour = $('.swatches [aria-checked="true"]', c)?.getAttribute('aria-label');
-      window.Morrow?.addToCart(1);
-      toast(`Added ${c.dataset.name}${colour ? ` in ${colour.toLowerCase()}` : ''} to your cart`);
-      add.textContent = 'Added';
-      add.classList.add('is-added');
-      setTimeout(() => { add.textContent = 'Add to cart'; add.classList.remove('is-added'); }, 1600);
-      return;
-    }
-    const wish = t.closest('[data-sr-wish]');
-    if (wish) {
-      const on = wish.getAttribute('aria-pressed') !== 'true';
-      wish.setAttribute('aria-pressed', String(on));
-      const name = wish.closest('.card').dataset.name;
-      toast(on ? `Saved ${name} to your wishlist` : `Removed ${name} from your wishlist`);
-      return;
-    }
-    const sw = t.closest('.swatches button');
-    if (sw) $$('button', sw.parentElement).forEach((b) => b.setAttribute('aria-checked', String(b === sw)));
   });
+  S.bindCards(panel);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && $('#filters')?.classList.contains('is-open')) { setDrawer(false); $('[data-filters-open]')?.focus(); }

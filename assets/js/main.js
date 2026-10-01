@@ -439,6 +439,7 @@
     'Fold dining table': 39854857, 'Drift coffee table': 27059629, 'Tove side table': 8670505, 'Arc wall mirror': 5644681,
     'Stilla sideboard': 12277013, 'Haven bed': 12277123, 'Linden bed': 12277123, 'Rowe desk': 12202411,
     'Lumen floor lamp': 34992772, 'Halo pendant light': 38278700, 'Loma vase': 7674547, 'Mira wool rug': 18266462, 'Terra planter': 7912988,
+    'Porto outdoor chair': 29929810,
   };
   const photoUrl = (id, w = 400) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
   // <img> for a product by name, or '' if there's no photo for it
@@ -449,7 +450,76 @@
     return `<img class="ph" src="${photoUrl(id, w)}" srcset="${photoUrl(id, w)} ${w}w, ${photoUrl(id, w * 2)} ${w * 2}w" sizes="96px" alt="${esc(alt)}" loading="lazy" decoding="async">`;
   };
 
-  window.Morrow = { addToCart, setCartCount, toast, applyDisplay, DISPLAY_KEY, productImg, photoUrl };
+  /* ---------- Compare: up to 4 pieces, picked from product cards ----------
+     Cards inside [data-compare] get a "Compare" tick box (cards rendered by search-index.js have one
+     already). The picks are kept in this browser and shown in a tray; compare.html shows them side by side. */
+  const CMP_KEY = 'morrow-compare';
+  const CMP_MAX = 4;
+  const escH = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const slugOf = (name) => name.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const compare = {
+    list() { try { return JSON.parse(localStorage.getItem(CMP_KEY)) || []; } catch (e) { return []; } },
+    save(list) { try { localStorage.setItem(CMP_KEY, JSON.stringify(list)); } catch (e) { /* storage unavailable */ } syncCompare(); },
+    has(name) { return this.list().includes(name); },
+    toggle(name, on) {
+      const list = this.list().filter((n) => n !== name);
+      if (on) {
+        if (list.length >= CMP_MAX) { toast(`You can compare up to ${CMP_MAX} pieces. Remove one first.`); syncCompare(); return false; }
+        list.push(name);
+      }
+      this.save(list);
+      return true;
+    },
+    url(list = this.list()) { return `compare.html?items=${list.map(slugOf).join(',')}`; },
+  };
+  const isComparePage = !!$('[data-compare-page]');
+  const tray = document.createElement('section');
+  tray.className = 'cmp-tray';
+  tray.setAttribute('aria-label', 'Compare');
+  tray.hidden = true;
+  document.body.appendChild(tray);
+  function syncCompare() {
+    const list = compare.list();
+    $$('[data-compare-toggle]').forEach((box) => { box.checked = list.includes(box.dataset.name); });
+    if (isComparePage) return;
+    tray.hidden = !list.length;
+    document.body.classList.toggle('has-cmp-tray', list.length > 0);
+    if (!list.length) return;
+    const slots = Array.from({ length: CMP_MAX }, (_, i) => list[i]);
+    tray.innerHTML = `<div class="container cmp-tray__inner">
+      <p class="cmp-tray__title"><strong>Compare</strong> <span>${list.length} of ${CMP_MAX}</span></p>
+      <ul class="cmp-tray__list">${slots.map((n) => (n
+        ? `<li class="cmp-tray__item"><span class="cmp-tray__thumb">${productImg(n, { w: 120 })}</span><span class="cmp-tray__name">${escH(n)}</span><button type="button" class="cmp-tray__remove" data-cmp-remove="${escH(n)}" aria-label="Remove ${escH(n)} from compare"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></li>`
+        : '<li class="cmp-tray__item cmp-tray__item--empty" aria-hidden="true"><span class="cmp-tray__thumb"></span><span class="cmp-tray__name">Add a piece</span></li>')).join('')}</ul>
+      <div class="cmp-tray__actions">
+        <button type="button" class="cmp-tray__clear" data-cmp-clear>Clear</button>
+        ${list.length > 1 ? `<a class="btn btn--primary" href="${compare.url(list)}">Compare ${list.length}</a>` : '<span class="cmp-tray__hint">Pick one more to compare</span>'}
+      </div>
+    </div>`;
+  }
+  // tick boxes for static cards (shop and collection grids)
+  $$('[data-compare] .card').forEach((c) => {
+    const name = $('.card__name', c)?.textContent.trim();
+    const body = $('.card__body', c);
+    if (!name || !body || $('[data-compare-toggle]', c)) return;
+    body.insertAdjacentHTML('beforeend', `<label class="cmp-toggle"><input type="checkbox" data-compare-toggle data-name="${escH(name)}"><span>Compare</span></label>`);
+  });
+  document.addEventListener('change', (e) => {
+    const box = e.target.closest('[data-compare-toggle]');
+    if (!box) return;
+    if (compare.toggle(box.dataset.name, box.checked)) toast(box.checked ? `Added ${box.dataset.name} to compare` : `Removed ${box.dataset.name} from compare`);
+  });
+  tray.addEventListener('click', (e) => {
+    const rm = e.target.closest('[data-cmp-remove]');
+    if (rm) { compare.toggle(rm.dataset.cmpRemove, false); ($('[data-cmp-remove]', tray) || $('[data-cmp-clear]', tray) || document.body).focus(); }
+    if (e.target.closest('[data-cmp-clear]')) { compare.save([]); toast('Cleared your compare list'); }
+  });
+  // other tabs and the compare page keep the tray in step
+  window.addEventListener('storage', (e) => { if (e.key === CMP_KEY) syncCompare(); });
+  window.addEventListener('pageshow', syncCompare);
+  syncCompare();
+
+  window.Morrow = { addToCart, setCartCount, toast, applyDisplay, DISPLAY_KEY, productImg, photoUrl, compare };
 
   /* ---------- Newsletter ---------- */
   const form = $('[data-newsletter]');

@@ -1,5 +1,6 @@
-/* Morrow — search index and engine, shared by the header search panel (main.js loads this file
-   the first time search opens) and the search page (search.js).
+/* Morrow — product catalogue, search index and engine, and the shared product card.
+   Used by the header search panel (main.js loads this file the first time search opens), and by
+   the search, sale, new in and compare pages.
    The catalogue below mirrors the product cards in the HTML. In production, replace it with
    results from your search service (Algolia, Typesense, Shopify search…) and keep the same shape. */
 (() => {
@@ -31,6 +32,34 @@
     P({ name: 'Porto outdoor chair', cat: 'outdoor', rooms: ['outdoor'], price: 520, material: 'wood', colours: ['ochre', 'neutral'], stock: 'in', rating: 4.5, reviews: 28, added: '2026-05-20', pop: 22, photo: 29929810, meta: 'Ochre canvas, teak', swatches: [['Ochre', '#C28E2E'], ['Sand', '#D9CBB0']], tags: 'garden chair patio chair deck lounge teak canvas' }),
   ];
 
+  /* ---------- Specs, for the compare page (cm, kg) ---------- */
+  const SPECS = {
+    'Alder 3-seat sofa': { w: 220, d: 95, h: 78, seatH: 45, seatD: 58, door: 80, kg: 62, seats: 3, frame: 'Kiln-dried solid oak, pocket springs', cover: 'Bouclé, 70% recycled, zip-off covers', care: 'Covers wash at 30°C', assembly: 'Legs screw on', warranty: '10 years frame, 2 years fabric', made: 'Hickory, North Carolina' },
+    'Alder corner sofa': { w: 280, d: 160, h: 78, seatH: 45, seatD: 58, door: 80, kg: 98, seats: 5, frame: 'Kiln-dried solid oak, pocket springs', cover: 'Bouclé, 70% recycled, zip-off covers', care: 'Covers wash at 30°C', assembly: 'Two modules clip together, legs screw on', warranty: '10 years frame, 2 years fabric', made: 'Hickory, North Carolina' },
+    'Hale 2-seat sofa': { w: 170, d: 90, h: 80, seatH: 44, seatD: 55, door: 76, kg: 44, seats: 2, frame: 'Kiln-dried solid oak, walnut legs', cover: 'Washed European linen, zip-off covers', care: 'Covers wash at 30°C', assembly: 'Legs screw on', warranty: '10 years frame, 2 years fabric', made: 'Hickory, North Carolina' },
+    'Ren lounge chair': { w: 78, d: 84, h: 74, seatH: 40, seatD: 54, door: 76, kg: 21, seats: 1, frame: 'Solid walnut', cover: 'Vegetable-tanned aniline leather', care: 'Damp cloth; leather balm twice a year', assembly: 'Arrives assembled', warranty: '10 years frame, 2 years leather', made: 'Hickory, North Carolina' },
+    'Otto armchair': { w: 74, d: 80, h: 76, seatH: 44, seatD: 52, door: 70, kg: 18, seats: 1, frame: 'Kiln-dried solid oak', cover: 'Washed linen, zip-off cover', care: 'Cover washes at 30°C', assembly: 'Legs screw on', warranty: '10 years frame, 2 years fabric', made: 'Hickory, North Carolina' },
+    'Hale lounge chair': { w: 70, d: 78, h: 72, seatH: 42, seatD: 52, door: 70, kg: 14, seats: 1, frame: 'Blackened solid oak', cover: 'Bouclé, 70% recycled', care: 'Brush the loops; spot clean', assembly: 'Arrives assembled', warranty: '10 years frame, 2 years fabric', made: 'Hickory, North Carolina' },
+    'Drift coffee table': { w: 120, d: 60, h: 38, kg: 26, frame: 'Solid oak, oiled', care: 'Re-oil once or twice a year', assembly: 'Arrives assembled', warranty: '10 years', made: 'Småland, Sweden' },
+    'Tove side table': { w: 45, d: 45, h: 50, kg: 19, frame: 'Honed travertine, sealed', care: 'Use coasters; reseal once a year', assembly: 'Arrives assembled', warranty: '10 years', made: 'Tivoli, Italy' },
+    'Stilla sideboard': { w: 180, d: 45, h: 75, kg: 58, frame: 'Walnut veneer on birch ply, solid walnut legs', care: 'Re-oil the legs once a year', assembly: 'Legs screw on', warranty: '10 years', made: 'Småland, Sweden' },
+    'Lumen floor lamp': { w: 50, d: 50, h: 160, kg: 6, frame: 'Blackened steel, linen shade', care: 'Dust the shade with a soft brush', assembly: 'Shade clips on', warranty: '2 years', made: 'Asheville, North Carolina', extra: 'E26 LED bulb up to 60 W' },
+    'Halo pendant light': { w: 38, d: 38, h: 24, kg: 2, frame: 'Powder-coated recycled aluminium', care: 'Wipe with a dry cloth', assembly: 'Fit by an electrician', warranty: '2 years', made: 'Asheville, North Carolina', extra: 'E26 LED bulb up to 60 W, 2 m cord' },
+    'Mira wool rug': { w: 200, d: 300, h: 1.5, kg: 18, frame: 'Hand-tufted New Zealand wool, cotton backing', care: 'Vacuum without the beater bar; spot clean', assembly: 'Arrives rolled', warranty: '2 years', made: 'Jaipur, India' },
+    'Arc wall mirror': { w: 60, d: 3, h: 100, kg: 9, frame: 'Solid oak frame', care: 'Glass cleaner on the glass only', assembly: 'Wall fixings included', warranty: '10 years', made: 'Småland, Sweden' },
+    'Loma vase': { w: 18, d: 18, h: 30, kg: 1.6, frame: 'Glazed stoneware', care: 'Watertight; hand wash', assembly: 'Ready to use', warranty: '2 years', made: 'Stoke-on-Trent, England' },
+    'Terra planter': { w: 40, d: 40, h: 38, kg: 7, frame: 'Unglazed terracotta', care: 'Drainage hole and saucer', assembly: 'Ready to use', warranty: '2 years', made: 'Stoke-on-Trent, England' },
+    'Fold dining table': { w: 180, d: 90, h: 75, kg: 48, seats: 6, frame: 'Solid oak, oiled', care: 'Re-oil once or twice a year', assembly: 'Legs bolt on, tools included', warranty: '10 years', made: 'Småland, Sweden' },
+    'Fold dining chair': { w: 46, d: 52, h: 80, seatH: 46, seatD: 42, kg: 5, frame: 'Solid oak', care: 'Re-oil once a year', assembly: 'Arrives assembled', warranty: '10 years', made: 'Småland, Sweden' },
+    'Oslo dining chair': { w: 48, d: 50, h: 78, seatH: 46, seatD: 42, kg: 4.5, frame: 'Solid oak, woven paper-cord seat', care: 'Dust the seat; re-oil once a year', assembly: 'Arrives assembled', warranty: '10 years', made: 'Småland, Sweden' },
+    'Haven bed': { w: 168, d: 218, h: 100, kg: 70, frame: 'Kiln-dried solid oak, linen upholstered', care: 'Headboard cover washes at 30°C', assembly: 'Two-person assembly, about 40 minutes', warranty: '10 years frame, 2 years fabric', made: 'Hickory, North Carolina', extra: 'Queen mattress, 152 × 203 cm' },
+    'Linden bed': { w: 166, d: 214, h: 95, kg: 64, frame: 'Kiln-dried solid oak, linen upholstered', care: 'Headboard cover washes at 30°C', assembly: 'Two-person assembly, about 40 minutes', warranty: '10 years frame, 2 years fabric', made: 'Hickory, North Carolina', extra: 'Queen mattress, 152 × 203 cm' },
+    'Rowe desk': { w: 140, d: 65, h: 75, kg: 32, frame: 'Solid oak, oiled', care: 'Re-oil once or twice a year', assembly: 'Legs screw on', warranty: '10 years', made: 'Småland, Sweden', extra: 'Cable tray and grommet' },
+    'Porto outdoor chair': { w: 66, d: 80, h: 78, seatH: 38, seatD: 50, kg: 9, frame: 'FSC-certified teak, canvas sling', care: 'Store the sling indoors in winter; oil the teak yearly', assembly: 'Arrives folded', warranty: '5 years', made: 'Central Java, Indonesia' },
+  };
+  const slug = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  products.forEach((p) => Object.assign(p, SPECS[p.name], { id: slug(p.name) }));
+
   const CATS = {
     sofas: 'Sofas', armchairs: 'Armchairs', tables: 'Tables', chairs: 'Dining chairs', beds: 'Beds', desks: 'Desks',
     storage: 'Storage', lighting: 'Lighting', rugs: 'Rugs', decor: 'Decor', outdoor: 'Outdoor',
@@ -54,9 +83,11 @@
     { name: 'Outdoor', kind: 'Room', href: 'room.html#outdoor', photo: 29929810, keys: 'outdoor garden patio deck balcony' },
     { name: 'Nordic calm', kind: 'Collection', href: 'collection.html?c=nordic-calm', photo: 15585982, keys: 'nordic calm scandinavian pale oak white' },
     { name: 'Warm minimal', kind: 'Collection', href: 'collection.html?c=warm-minimal', photo: 5824527, keys: 'warm minimal walnut brass cognac' },
-    { name: 'Sale', kind: 'Offer', href: 'shop.html?sale=1', photo: 16825059, keys: 'sale discount offer deal reduced clearance' },
-    { name: 'New in', kind: 'Shop', href: 'shop.html?new=1', photo: 29508373, keys: 'new in new arrivals latest' },
+    { name: 'Sale', kind: 'Offer', href: 'sale.html', photo: 16825059, keys: 'sale discount offer deal reduced clearance' },
+    { name: 'New in', kind: 'Shop', href: 'new.html', photo: 29508373, keys: 'new in new arrivals latest' },
     { name: 'The slow season lookbook', kind: 'Lookbook', href: 'lookbook.html', photo: 27383302, keys: 'lookbook inspiration autumn winter looks' },
+    { name: 'Workshop seconds', kind: 'Offer', href: 'sale.html#seconds', photo: 15016524, keys: 'seconds refurbished returned outlet ex display clearance' },
+    { name: 'Compare products', kind: 'Tool', href: 'compare.html', photo: null, keys: 'compare comparison side by side difference versus vs' },
     { name: 'Gift cards', kind: 'Shop', href: 'gift-cards.html', photo: null, keys: 'gift card voucher present' },
   ];
 
@@ -125,6 +156,7 @@
     { title: 'Customer reviews', text: '4.8 out of 5 from 12,400 reviews, with photos from customers’ homes.', href: 'reviews.html', kind: 'Page', keys: 'reviews ratings customer photos' },
     { title: 'Sustainability', text: 'What our furniture is made of, where it comes from and our 2030 targets.', href: 'sustainability.html', kind: 'Page', keys: 'sustainability eco fsc recycled environment' },
     { title: 'Designers & makers', text: 'The designers and workshops behind every piece.', href: 'designers.html', kind: 'Page', keys: 'designers makers workshop craft' },
+    { title: 'Press', text: 'News, press releases, images and our press kit. Media contact: press@morrowhome.com.', href: 'press.html', kind: 'Page', keys: 'press media journalist news release kit logo images' },
     { title: 'Careers', text: 'Open roles in our workshop, showrooms, delivery teams and studio.', href: 'careers.html', kind: 'Page', keys: 'jobs careers hiring work' },
   ];
 
@@ -295,5 +327,62 @@
   const photo = (id, w = 400) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
   const money = (n) => '$' + n.toLocaleString('en-US');
 
-  window.MorrowSearch = { products, shortcuts, articles, help, popular, CATS, MATERIALS, COLOURS, search, highlight, esc, photo, money, fold };
+  /* ---------- Product cards, shared by search, sale, new in and compare ---------- */
+  const img = (id, sizes, w = [400, 800], alt = '', cls = 'ph') => (id
+    ? `<img class="${cls}" src="${photo(id, w[0])}" srcset="${w.map((x) => `${photo(id, x)} ${x}w`).join(', ')}" sizes="${sizes}" alt="${esc(alt)}" loading="lazy" decoding="async">`
+    : '');
+  const HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>';
+  const saving = (p) => (p.was ? Math.round((1 - p.price / p.was) * 100) : 0);
+  // card(product, query to highlight, { sizes })
+  const card = (p, q = '', { sizes = '(max-width: 560px) 50vw, (max-width: 1100px) 33vw, 320px' } = {}) => {
+    const off = saving(p);
+    const badge = off ? `<span class="badge badge--sale">Save ${off}%</span>` : p.badge ? `<span class="badge">${esc(p.badge)}</span>` : '';
+    const price = p.was ? `<span class="price__now">${money(p.price)}</span> <s>${money(p.was)}</s>` : money(p.price);
+    const stock = p.stock === 'in' ? '<span class="dot dot--in"></span>In stock, ships in 1–2 weeks' : '<span class="dot dot--order"></span>Made to order, 6–8 weeks';
+    const sw = p.swatches.map(([n, c], i) => `<button type="button" role="radio" aria-checked="${i === 0}" aria-label="${esc(n)}" style="--c:${c}"></button>`).join('');
+    return `<li class="card" data-name="${esc(p.name)}" data-id="${p.id}">
+      <a class="card__media" href="product.html" tabindex="-1" aria-hidden="true">${badge}${img(p.photo, sizes, [400, 800, 1200])}</a>
+      <button type="button" class="wish" aria-pressed="false" aria-label="Save ${esc(p.name)} to wishlist" data-card-wish>${HEART}</button>
+      <div class="card__body">
+        <h3 class="card__name"><a href="product.html">${highlight(p.name, q)}</a></h3>
+        <p class="card__meta">${highlight(p.meta, q)}</p>
+        <p class="card__rating"><span class="stars" aria-hidden="true">★</span> ${p.rating} <span>(${p.reviews})</span><span class="visually-hidden"> Rated ${p.rating} out of 5 from ${p.reviews} reviews</span></p>
+        <div class="swatches" role="radiogroup" aria-label="Color">${sw}</div>
+        <div class="card__foot">
+          <p class="price">${price}</p>
+          <button type="button" class="btn btn--small" data-card-add>Add to cart</button>
+        </div>
+        <p class="card__stock">${stock}</p>
+        <label class="cmp-toggle"><input type="checkbox" data-compare-toggle data-name="${esc(p.name)}"${window.Morrow?.compare?.has(p.name) ? ' checked' : ''}><span>Compare</span></label>
+      </div>
+    </li>`;
+  };
+  // add to cart, wishlist and swatches for cards rendered inside root (one listener, survives re-renders)
+  const bindCards = (root) => root.addEventListener('click', (e) => {
+    const toast = (m) => window.Morrow?.toast(m);
+    const add = e.target.closest('[data-card-add]');
+    if (add) {
+      const c = add.closest('.card');
+      const colour = c.querySelector('.swatches [aria-checked="true"]')?.getAttribute('aria-label');
+      window.Morrow?.addToCart(1);
+      toast(`Added ${c.dataset.name}${colour ? ` in ${colour.toLowerCase()}` : ''} to your cart`);
+      add.textContent = 'Added';
+      add.classList.add('is-added');
+      setTimeout(() => { add.textContent = 'Add to cart'; add.classList.remove('is-added'); }, 1600);
+      return;
+    }
+    const wish = e.target.closest('[data-card-wish]');
+    if (wish) {
+      const on = wish.getAttribute('aria-pressed') !== 'true';
+      wish.setAttribute('aria-pressed', String(on));
+      const name = wish.closest('.card').dataset.name;
+      toast(on ? `Saved ${name} to your wishlist` : `Removed ${name} from your wishlist`);
+      return;
+    }
+    const sw = e.target.closest('.swatches button');
+    if (sw) [...sw.parentElement.children].forEach((b) => b.setAttribute('aria-checked', String(b === sw)));
+  });
+  const byId = (id) => products.find((p) => p.id === id);
+
+  window.MorrowSearch = { products, shortcuts, articles, help, popular, CATS, MATERIALS, COLOURS, search, highlight, esc, photo, money, fold, img, card, bindCards, byId, saving, slug };
 })();
