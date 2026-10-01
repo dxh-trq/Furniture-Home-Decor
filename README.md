@@ -169,6 +169,10 @@ These appear on many pages. If one changes, search the whole site for the old va
 - **Warranty:** 10-year frame warranty.
 - **Showrooms:** Portland, Brooklyn, Chicago, Austin and Denver; Los Angeles opens 14 November 2026.
 - **Company:** 214 people, 6 partner workshops, 4.8 out of 5 from 12,400 reviews.
+- **Workshops (the "Made in" places on the compare page):** Hickory, North Carolina (upholstery, beds); Guimarães, Portugal (fabric, rugs); Växjö, Sweden (joinery, outdoor); Tivoli, Italy (stone); Stoke-on-Trent, UK (ceramics); Grand Rapids, Michigan (metal and lighting).
+- **Second life:** 2,300 pieces collected last year through returns and take-back; 71% resold as workshop seconds (up to 30% off, full warranty), 24% used for parts, 5% recycled.
+- **Sale:** the autumn sale runs until 12 October 2026 at midnight ET, up to 20% off. Product prices, ratings and sale prices come from the shop page, and every other page (collection, search, sale, compare) matches it.
+- **Press contact:** press@morrowhome.com (Priya Shah, placeholder), same-working-day replies.
 - **Spelling:** American English in all visible text (color, center, gray). Internal names such as `data-colour` and `.colour-opt` are left as they are.
 
 ## Photos

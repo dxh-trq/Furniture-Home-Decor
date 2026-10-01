@@ -531,7 +531,7 @@
     input.setAttribute('aria-invalid', String(!ok));
     msg.className = 'newsletter__msg ' + (ok ? 'is-success' : 'is-error');
     msg.textContent = ok
-      ? 'Subscribed. Your 10% code is on its way to your inbox.'
+      ? (form.dataset.success || 'Subscribed. Your 10% code is on its way to your inbox.')
       : 'Enter an email address like name@example.com.';
     if (ok) form.reset();
   });

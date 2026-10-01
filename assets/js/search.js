@@ -201,9 +201,9 @@
         <aside class="sr-help-card">
           <p class="sr-help-card__eyebrow">Can’t find it?</p>
           <h2 class="sr-help-card__title">A stylist can help, free</h2>
-          <p>Tell us what you’re looking for. We’ll suggest pieces, fabrics and sizes on a 30-minute video call.</p>
+          <p>Tell us what you’re looking for. We’ll suggest pieces, fabrics and sizes on a free 45-minute video call.</p>
           <div class="sr-help-card__actions">
-            <a class="btn btn--light" href="services.html">Book a free call</a>
+            <a class="btn btn--light" href="services.html">Book a free design call</a>
             <a class="sr-help-card__link" href="contact.html">Or message us</a>
           </div>
         </aside>
