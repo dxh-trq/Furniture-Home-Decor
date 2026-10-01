@@ -1,7 +1,8 @@
 /* Morrow — cookie banner. Shown on a visitor's first visit (on every page except the cookie policy, which has the
    full settings). "Accept all" and "Essential only" are equally easy; "Choose" opens per-category switches, which
    start off. Global Privacy Control keeps advertising off. Choices are saved in the same store as the privacy and
-   cookie pages (morrow-privacy-choices), and the footer's "Cookie settings" button reopens the banner.
+   cookie pages (morrow-privacy-choices). Visitors change them later on the cookie policy page, or call
+   window.Morrow.consent.open(), or add a button with data-consent-open anywhere.
    In production, load analytics and advertising tags only after consent: listen for the "morrow:consent" event
    or read window.Morrow.consent.get(). */
 (() => {
@@ -119,12 +120,12 @@
   $$('[data-consent-cat]').forEach((b) => b.addEventListener('click', () => {
     if (!b.disabled) b.setAttribute('aria-checked', String(b.getAttribute('aria-checked') !== 'true'));
   }));
-  // Escape closes the banner only when it was reopened from "Cookie settings" (a first-time choice is still needed)
+  // Escape closes the banner only when it was reopened (a first-time choice is still needed)
   el.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && get()) { e.preventDefault(); hide(); }
   });
 
-  /* ---------- Reopen from the footer ---------- */
+  /* ---------- Reopen from any [data-consent-open] button ---------- */
   document.querySelectorAll('[data-consent-open]').forEach((b) => b.addEventListener('click', () => {
     if (onCookiePage) {
       const panel = document.querySelector('.pv-choices__panel');

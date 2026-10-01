@@ -185,7 +185,6 @@ h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line
   border-radius: 50% 50% 0 0 / 62.5% 62.5% 0 0;
   overflow: hidden;
 }
-.scene__caption { margin-top: 12px; font-size: var(--fs-sm); color: var(--ink-2); text-align: right; }
 
 .hotspot {
   position: absolute; width: 36px; height: 36px; margin: -18px 0 0 -18px;
@@ -378,10 +377,7 @@ h1, h2, h3 { text-wrap: balance; font-weight: 600; letter-spacing: -0.02em; line
 .footer__bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding-block: 24px; position: relative; font-size: var(--fs-sm); }
 .footer__bottom::before { content: ""; position: absolute; top: 0; left: var(--gutter); right: var(--gutter); height: 1px; background: rgba(255, 255, 255, .12); }
 .footer__legal { display: flex; flex-wrap: wrap; gap: 8px 20px; }
-.footer__cookie { font: inherit; color: inherit; }
-.footer__cookie:hover { text-decoration: underline; text-underline-offset: 3px; }
 .co-footer ul { flex-wrap: wrap; }
-.co-footer .footer__cookie { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Cookie banner (consent.js) */
 .consent { position: fixed; left: 24px; bottom: 24px; z-index: 70; width: min(440px, calc(100vw - 48px)); max-height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain; border-radius: var(--radius); background: var(--paper); color: var(--ink); box-shadow: 0 24px 60px -18px rgba(28, 31, 27, .45), 0 0 0 1px rgba(28, 31, 27, .06); opacity: 0; transform: translateY(16px); transition: opacity .3s ease, transform .3s ease; }

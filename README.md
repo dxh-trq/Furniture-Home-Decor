@@ -115,7 +115,7 @@ Planning docs:
   - **Choices:** "Choose" opens a switch for Functional, Analytics and Advertising, all off to start, with Essential always on.
   - **Global Privacy Control:** if the browser sends it, advertising stays off.
   - **Where it saves:** choices go to `morrow-privacy-choices`, the same place the privacy and cookie pages use, so each shows what the others saved. If you save on the privacy page while the banner is open, its switches update straight away.
-  - **Reopening:** a "Cookie settings" button in every footer (including checkout) reopens the banner. On the cookie policy page it jumps to that page's settings instead.
+  - **Changing choices later:** the footer's "Cookies" link goes to the cookie policy page, which has the full settings. To add a button that reopens the banner, give it `data-consent-open`; on the cookie policy page it jumps to that page's settings instead.
   - **Accessibility:** it doesn't take focus when it first appears. Escape closes it only after a choice has been made. When it closes, focus returns to where you were.
   - **Loading your tags:** load analytics and advertising scripts only after consent. Listen for the `morrow:consent` event, or read `window.Morrow.consent.get()`; it returns `null` until someone chooses. `window.Morrow.consent.open()` reopens the settings.
 
